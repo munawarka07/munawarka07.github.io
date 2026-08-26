@@ -150,12 +150,12 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 .knowledge-hero h1{font-size:clamp(52px,6.7vw,90px);line-height:.94;letter-spacing:-.06em;margin:22px 0;font-weight:800}
 .knowledge-hero h1 span{background:linear-gradient(90deg,var(--blue),#4b87ef,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
 .knowledge-hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:720px}
-.hero-panel{min-height:420px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(145deg,rgba(255,255,255,.84),rgba(231,244,255,.78));box-shadow:var(--shadow-strong);position:relative;overflow:hidden;padding:28px}
-.hero-panel::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(28,95,212,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(28,95,212,.035) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(circle,#000,transparent 78%)}
+.hero-panel{min-height:420px;position:relative;overflow:visible;padding:28px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.hero-panel::before{content:"";position:absolute;inset:2% 0 0 8%;background-image:linear-gradient(rgba(28,95,212,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(28,95,212,.035) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(circle at 42% 48%,#000,transparent 72%);pointer-events:none}
 .hero-panel .big{position:relative;z-index:2;font-size:54px;font-weight:800;color:var(--blue);margin-top:105px;letter-spacing:-.05em}
 .hero-panel p{position:relative;z-index:2;font-size:13px;max-width:320px}
 .panel-chip{position:absolute;padding:10px 12px;border-radius:13px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow);font-size:10px;font-weight:800;animation:float 5s ease-in-out infinite}
-.pc-a{top:28px;left:26px}.pc-b{top:72px;right:24px;animation-delay:-1.5s}.pc-c{bottom:36px;left:38px;animation-delay:-3s}.pc-d{bottom:28px;right:36px;animation-delay:-4s}
+.pc-a{top:34px;left:30px}.pc-b{top:122px;left:112px;animation-delay:-1.5s}.pc-c{bottom:126px;left:44px;animation-delay:-3s}.pc-d{bottom:38px;left:138px;animation-delay:-4s}
 .searchbar{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
 .searchbar input{height:46px;border:0;outline:0;padding:0 10px;color:var(--text);background:transparent}
 .searchbar button{border:0;border-radius:12px;padding:0 18px;background:var(--navy);color:white;font-weight:800;cursor:pointer}
@@ -205,6 +205,17 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 .tool-card-btn{position:absolute;left:20px;bottom:18px;border:0;border-radius:11px;padding:10px 12px;background:var(--navy);color:#fff;font:800 11px 'Tajawal',sans-serif;cursor:pointer;transition:.25s;z-index:2}
 .tool-card-btn:hover{transform:translateY(-2px);background:var(--blue);box-shadow:0 10px 24px rgba(28,95,212,.18)}
 .k-card{padding-bottom:66px}.light-note{margin-top:18px;color:#7a8da1}
+
+/* no-box mobile visual */
+@media(max-width:900px){
+  .hero-panel{min-height:260px;padding:10px 0 0}
+  .hero-panel::before{inset:0 4%;background-size:34px 34px}
+  .pc-a{top:24px;left:8%}
+  .pc-b{top:78px;left:42%}
+  .pc-c{bottom:70px;left:14%}
+  .pc-d{bottom:20px;left:48%}
+}
+
 </style></head><body>
 <div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div>
 <header class="site-header"><div class="shell nav">
@@ -213,7 +224,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <a class="nav-cta" href="hr-hub/index.html">Explore Knowledge ↗</a><button class="menu-btn">Menu</button></div></header><main>
 <section class="knowledge-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid">
 <div class="reveal"><div class="eyebrow"><span class="dot"></span> CAREER HUB</div><h1>Learn. Prepare.<br><span>Grow.</span></h1><p>Practical resources for job search preparation, HR learning and professional development.</p></div>
-<div class="hero-panel reveal-right"><span class="panel-chip pc-a">CV</span><span class="panel-chip pc-b">Interview</span><span class="panel-chip pc-c">Learning</span><span class="panel-chip pc-d">Growth</span><div class="big">Career</div><p>Practical resources for job search preparation, HR learning and professional development.</p></div>
+<div class="hero-panel reveal-right"><span class="panel-chip pc-a">CV</span><span class="panel-chip pc-b">Interview</span><span class="panel-chip pc-c">Learning</span><span class="panel-chip pc-d">Growth</span></div>
 </div></section>
 <section class="section theme-blue" id="opportunities"><div class="shell">
 <div class="section-head reveal-left"><div><div class="section-label">01 / LIVE OPPORTUNITIES</div><h2>Find the right<br>next move.</h2></div><p>Approved opportunities submitted to Munawar.in appear here automatically. Search by role, location, department or work arrangement.</p></div>
