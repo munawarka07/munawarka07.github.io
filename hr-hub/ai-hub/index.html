@@ -248,6 +248,167 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 .aihub-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.ai-card{position:relative;padding:28px;min-height:280px;border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.74);box-shadow:var(--shadow);transition:.28s}.ai-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-strong)}.ai-card .num{position:absolute;right:22px;top:20px;font-size:12px;font-weight:800;color:#9aabc0}.ai-icon{width:52px;height:52px;border-radius:17px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(28,95,212,.12),rgba(54,200,223,.14));font-weight:800;color:var(--blue);margin-bottom:20px}.ai-card h3{font-size:24px;margin:0 0 10px}.ai-card p{color:var(--muted);line-height:1.7}.tags{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.tags span{font-size:11px;font-weight:700;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#f4f9ff}.launch{border:0;background:none;padding:0;color:var(--blue);font-weight:800;cursor:pointer}.category-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:26px 0}.cat{padding:15px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.7)}.cat b{display:block;color:var(--blue);font-size:12px;letter-spacing:.08em}.cat span{font-size:12px;color:var(--muted)}.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.principle{padding:24px;border:1px solid var(--line);border-radius:20px;background:rgba(255,255,255,.68)}.principle b{font-size:17px}.principle p{color:var(--muted);line-height:1.65}.ai-modal{position:fixed;inset:0;z-index:120;background:rgba(5,17,31,.58);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:18px}.ai-modal.open{display:flex}.ai-box{width:min(850px,100%);max-height:90vh;overflow:auto;background:#fff;border-radius:26px;padding:28px;position:relative;box-shadow:0 35px 100px rgba(6,26,55,.3)}.close-ai{position:absolute;right:17px;top:15px;width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:22px;cursor:pointer}.ai-box h2{font-size:32px;margin:7px 45px 8px 0}.ai-box>p{color:var(--muted);line-height:1.6}.tool-form{display:grid;gap:13px;margin-top:22px}.tool-form label{font-size:12px;font-weight:800;color:#38506a}.tool-form input,.tool-form select,.tool-form textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#f9fcff;font:inherit}.tool-form textarea{min-height:130px;resize:vertical}.form-two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.note{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#f5f9fe;color:#708297;font-size:12px;line-height:1.55}.tool-actions{display:flex;gap:10px;flex-wrap:wrap}.ai-frame{width:100%;height:76vh;border:0;border-radius:18px;background:#f7fbff}
 @media(max-width:900px){.aihub-grid,.principles{grid-template-columns:1fr}.category-row{grid-template-columns:1fr 1fr}.form-two{grid-template-columns:1fr}}@media(max-width:560px){.category-row{grid-template-columns:1fr}}
 </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"AI HR Hub | UAE Labour Law, Payroll & HR Assistants","description":"Use advanced HR brainstorming tools for UAE labour law, payroll, HR letters, job descriptions, policies, document quality, skills assessment and HR decisions.","url":"https://munawar.in/hr-hub/ai-hub/","isPartOf":{"@type":"WebSite","name":"Munawar.in","url":"https://munawar.in/"}}</script>
+
+<style id="munawar-responsive-spacing-v2">
+/* Compact hero + responsive optimization.
+   Visual design, fonts, API logic and page content are intentionally unchanged. */
+
+/* DESKTOP */
+.hero{
+  min-height:76vh !important;
+  padding-top:112px !important;
+  padding-bottom:52px !important;
+}
+.visual{height:500px !important;}
+
+.knowledge-hero{
+  min-height:58vh !important;
+  padding-top:108px !important;
+  padding-bottom:46px !important;
+}
+.knowledge-hero-grid{
+  gap:48px !important;
+}
+.hero-panel{
+  min-height:300px !important;
+}
+.hero-panel .big{
+  margin-top:68px !important;
+}
+
+/* slightly tighter transition into the next section */
+.knowledge-hero + .section,
+.knowledge-hero + .section-wave + .section{
+  scroll-margin-top:90px;
+}
+
+/* TABLET */
+@media (max-width:1050px){
+  .hero{
+    min-height:auto !important;
+    padding-top:104px !important;
+    padding-bottom:46px !important;
+  }
+  .hero-grid{
+    gap:34px !important;
+  }
+  .visual{
+    height:390px !important;
+  }
+
+  .knowledge-hero{
+    min-height:auto !important;
+    padding-top:104px !important;
+    padding-bottom:42px !important;
+  }
+  .knowledge-hero-grid{
+    gap:28px !important;
+  }
+  .knowledge-hero h1{
+    font-size:clamp(48px,8vw,72px) !important;
+  }
+  .hero-panel{
+    min-height:210px !important;
+    padding-top:6px !important;
+  }
+  .pc-a{top:16px !important;left:8% !important}
+  .pc-b{top:64px !important;left:42% !important}
+  .pc-c{bottom:58px !important;left:14% !important}
+  .pc-d{bottom:12px !important;left:48% !important}
+}
+
+/* MOBILE */
+@media (max-width:600px){
+  .site-header{
+    padding:10px 7px !important;
+  }
+  .site-header .shell.nav{
+    width:calc(100% - 10px) !important;
+  }
+  .nav{
+    padding:8px 9px !important;
+    gap:10px !important;
+  }
+  .brand-mark{
+    width:36px !important;
+    height:36px !important;
+  }
+
+  .hero{
+    padding-top:92px !important;
+    padding-bottom:34px !important;
+  }
+  .hero h1{
+    font-size:clamp(42px,13vw,54px) !important;
+    margin-top:18px !important;
+    margin-bottom:16px !important;
+  }
+  .hero p{
+    font-size:16px !important;
+    line-height:1.6 !important;
+  }
+  .visual{
+    height:310px !important;
+  }
+
+  .knowledge-hero{
+    padding-top:92px !important;
+    padding-bottom:30px !important;
+  }
+  .knowledge-hero-grid{
+    gap:16px !important;
+  }
+  .knowledge-hero h1{
+    font-size:clamp(40px,12vw,52px) !important;
+    line-height:.98 !important;
+    margin:18px 0 16px !important;
+  }
+  .knowledge-hero p{
+    font-size:16px !important;
+    line-height:1.62 !important;
+  }
+  .hero-panel{
+    min-height:155px !important;
+    padding:0 !important;
+  }
+  .hero-panel::before{
+    background-size:28px 28px !important;
+    inset:0 2% !important;
+  }
+  .panel-chip{
+    padding:8px 10px !important;
+    font-size:9px !important;
+  }
+  .pc-a{top:8px !important;left:5% !important}
+  .pc-b{top:47px !important;left:48% !important}
+  .pc-c{bottom:43px !important;left:12% !important}
+  .pc-d{bottom:4px !important;left:53% !important}
+
+  .section{
+    padding-top:64px !important;
+    padding-bottom:64px !important;
+  }
+  .section-head{
+    margin-bottom:26px !important;
+    gap:16px !important;
+  }
+  .section h2{
+    font-size:clamp(36px,10vw,48px) !important;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width:390px){
+  .knowledge-hero h1{font-size:39px !important}
+  .hero h1{font-size:42px !important}
+  .hero-panel{min-height:140px !important}
+  .nav-links.open{
+    left:8px !important;
+    right:8px !important;
+  }
+}
+</style>
+
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links"><a href="/hr-hub/">HR Hub</a><a href="/hr-hub/calculator/">Calculators</a><a href="/hr-hub/library/">Resources</a><a href="/career-hub/">Career Hub</a><a href="/hr-hub/ai-hub/">AI Hub</a><a href="/about/">About</a></nav><a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a><button class="menu-btn">Menu</button></div></header><main>
 <section class="knowledge-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid"><div class="reveal"><div class="eyebrow"><span class="dot"></span> AI HUB</div><h1>Practical AI for<br><span>modern HR decisions.</span></h1><p>An advanced HR brainstorming workspace for analysis, drafting, learning and structured decision support. Built to help HR professionals think more clearly - not replace professional judgement.</p></div><div class="hero-panel reveal-right"><span class="panel-chip pc-a">Analyze</span><span class="panel-chip pc-b">Decide</span><span class="panel-chip pc-c">Create</span><span class="panel-chip pc-d">Develop</span></div></div></section>
 <section class="section theme-blue"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">01 / HR INTELLIGENCE WORKSPACE</div><h2>Eight tools.<br>One HR thinking space.</h2></div><p>Each module is designed around a specific HR workflow rather than a generic chat box.</p></div><div class="category-row reveal"><div class="cat"><b>ADVISE</b><span>Labour Law · Payroll</span></div><div class="cat"><b>CREATE</b><span>Letters · Job Descriptions</span></div><div class="cat"><b>REVIEW</b><span>Policies · Documents</span></div><div class="cat"><b>DEVELOP & DECIDE</b><span>Skills · Decision Lab</span></div></div><div class="aihub-grid"><article class="ai-card reveal"><span class="num">01</span><div class="ai-icon">LAW</div><h3>AI UAE Labour Law Assistant</h3><p>Structure UAE employment scenarios into facts, HR checks, risk flags and questions to verify.</p><div class="tags"><span>Scenario analysis</span><span>HR checks</span><span>Risk flags</span></div><button class="launch" onclick="openTool(0)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">02</span><div class="ai-icon">PAY</div><h3>AI Payroll Assistant</h3><p>Analyze payroll situations, assumptions, controls and validation points before a payroll decision.</p><div class="tags"><span>Payroll logic</span><span>Validation</span><span>Reconciliation</span></div><button class="launch" onclick="openTool(1)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">03</span><div class="ai-icon">LTR</div><h3>AI HR Letter Generator</h3><p>Turn approved facts into a professional, editable HR communication draft.</p><div class="tags"><span>Letters</span><span>Employee comms</span><span>Editable</span></div><button class="launch" onclick="openTool(2)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">04</span><div class="ai-icon">JD</div><h3>Job Description Generator</h3><p>Create candidate-friendly job descriptions with responsibilities, requirements and competencies.</p><div class="tags"><span>Responsibilities</span><span>Requirements</span><span>Competencies</span></div><button class="launch" onclick="openTool(3)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">05</span><div class="ai-icon">POL</div><h3>HR Policy Assistant</h3><p>Brainstorm, structure or review HR policies, gaps, implementation questions and communication.</p><div class="tags"><span>Policy design</span><span>Gap review</span><span>Implementation</span></div><button class="launch" onclick="openTool(4)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">06</span><div class="ai-icon">DOC</div><h3>Document Quality Checker</h3><p>Review HR documents for clarity, completeness, tone, consistency and ambiguity.</p><div class="tags"><span>Quality score</span><span>Missing items</span><span>Improvements</span></div><button class="launch" onclick="openTool(5)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">07</span><div class="ai-icon">SKL</div><h3>HR Skill Assessment</h3><p>Assess practical HR capability and build strengths, gaps and a development roadmap.</p><div class="tags"><span>Capability score</span><span>Skill gaps</span><span>PDF roadmap</span></div><button class="launch" onclick="openTool(6)">Open workspace →</button></article><article class="ai-card reveal"><span class="num">08</span><div class="ai-icon">LAB</div><h3>HR Decision Lab</h3><p>Work through complex HR cases with options, risk flags, required checks and an action plan.</p><div class="tags"><span>Decision options</span><span>Risk level</span><span>Action plan</span></div><button class="launch" onclick="openTool(7)">Open workspace →</button></article></div></div></section>
