@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://munawar.in/sitemap.xml
