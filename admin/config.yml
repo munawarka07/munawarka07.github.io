@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: munawarka07/munawarka07.github.io
+  branch: main
+  base_url: https://munawar-cms-auth.munawarka07.workers.dev
+  auth_endpoint: auth
+
+publish_mode: simple
+site_url: https://munawar.in
+display_url: https://munawar.in
+logo_url: https://munawar.in/assets/images/munawar-profile.webp
+
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+collections:
+  - name: "legal_content"
+    label: "Legal Content"
+    files:
+      - name: "uae_labour_law"
+        label: "UAE Labour Law Guide"
+        file: "_data/labour_law.yml"
+        fields:
+          - label: "Last Reviewed"
+            name: "last_reviewed"
+            widget: "datetime"
+            date_format: "YYYY-MM-DD"
+            time_format: false
+            format: "YYYY-MM-DD"
+          - label: "Law Sections"
+            name: "sections"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.reference}}"
+            allow_add: true
+            collapsed: false
+            fields:
+              - { label: "ID", name: "id", widget: "string", hint: "Unique lowercase ID, e.g. annual-leave. Do not reuse an ID." }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - "Getting Hired"
+                  - "Working Time & Pay"
+                  - "Salary & Deductions"
+                  - "Leave & Time Off"
+                  - "Employment Ending"
+              - { label: "Search Keywords", name: "search", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Article / Reference", name: "reference", widget: "string" }
+              - { label: "Content", name: "content", widget: "text" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
