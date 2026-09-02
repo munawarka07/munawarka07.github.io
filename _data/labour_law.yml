@@ -1,58 +1,70 @@
-last_reviewed: "2026-09-02"
+last_reviewed: 2026-09-02
 sections:
-  - id: "probation-period"
-    category: "Getting Hired"
-    search: "probation contract hiring probation period"
-    title: "Probation Period"
-    reference: "Article 9"
-    content: "Probation may not exceed six months. If an employer terminates during probation, written notice of at least 14 days is required."
+  - id: probation-period
+    category: Getting Hired
+    search: probation contract hiring probation period
+    title: Probation Period
+    reference: Article 9
+    content: Probation may not exceed six months. If an employer terminates during
+      probation, written notice of at least 14 days is required.
     published: true
-  - id: "normal-working-hours"
-    category: "Working Time & Pay"
-    search: "hours overtime ramadan normal working hours"
-    title: "Normal Working Hours"
-    reference: "Article 17"
-    content: "The general statutory limit is eight hours per day or 48 hours per week, subject to exceptions and the Executive Regulation."
+  - id: normal-working-hours
+    category: Working Time & Pay
+    search: hours overtime ramadan normal working hours
+    title: Normal Working Hours
+    reference: Article 17
+    content: The general statutory limit is eight hours per day or 48 hours per
+      week, subject to exceptions and the Executive Regulation.
     published: true
-  - id: "ramadan-working-hours"
-    category: "Working Time & Pay"
-    search: "ramadan hours ramadan working hours"
-    title: "Ramadan Working Hours"
-    reference: "Executive Regulation"
-    content: "Normal working hours are reduced by two hours during Ramadan under the Executive Regulation."
+  - id: ramadan-working-hours
+    category: Working Time & Pay
+    search: ramadan hours ramadan working hours
+    title: Ramadan Working Hours
+    reference: Executive Regulation
+    content: Normal working hours are reduced by two hours during Ramadan under the
+      Executive Regulation.
     published: true
-  - id: "total-wage-deductions"
-    category: "Salary & Deductions"
-    search: "deduction salary 50 total wage deductions"
-    title: "Total Wage Deductions"
-    reference: "Article 25"
-    content: "Where there are multiple lawful reasons for deductions, the total deduction may not exceed 50% of the wage."
+  - id: total-wage-deductions
+    category: Salary & Deductions
+    search: deduction salary 50 total wage deductions
+    title: Total Wage Deductions
+    reference: Article 25
+    content: Where there are multiple lawful reasons for deductions, the total
+      deduction may not exceed 50% of the wage.
     published: true
-  - id: "annual-leave"
-    category: "Leave & Time Off"
-    search: "annual leave 30 days annual leave"
-    title: "Annual Leave"
-    reference: "Article 29"
-    content: "Employees are entitled to at least 30 days of annual leave for each year of extended service. Additional rules apply for service below one year."
+  - id: annual-leave
+    category: Leave & Time Off
+    search: annual leave 30 days annual leave
+    title: Annual Leave
+    reference: Article 29
+    content: Employees are entitled to at least 30 days of annual leave for each
+      year of extended service. Additional rules apply for service below one
+      year.
     published: true
-  - id: "maternity-leave"
-    category: "Leave & Time Off"
-    search: "maternity leave maternity leave"
-    title: "Maternity Leave"
-    reference: "Article 30"
-    content: "The Labour Relations Law provides statutory maternity leave and related protections. Conditions and additional leave situations should be checked against the current text."
+  - id: maternity-leave
+    category: Leave & Time Off
+    search: maternity leave maternity leave
+    title: Maternity Leave
+    reference: Article 30
+    content: The Labour Relations Law provides statutory maternity leave and related
+      protections. Conditions and additional leave situations should be checked
+      against the current text.
     published: true
-  - id: "end-of-service-gratuity"
-    category: "Employment Ending"
-    search: "eosb gratuity 21 30 end-of-service gratuity"
-    title: "End-of-Service Gratuity"
-    reference: "Article 51"
-    content: "A foreign full-time worker completing at least one year of continuous service is entitled to gratuity based on last basic wage: 21 days per year for the first five years and 30 days thereafter. Unpaid absence is excluded; the total gratuity is capped at two years' wage."
+  - id: end-of-service-gratuity
+    category: Employment Ending
+    search: eosb gratuity 21 30 end-of-service gratuity
+    title: End-of-Service Gratuity
+    reference: Article 51
+    content: "A foreign full-time worker completing at least one year of continuous
+      service is entitled to gratuity based on last basic wage: 21 days per year
+      for the first five years and 30 days thereafter. Unpaid absence is
+      excluded; the total gratuity is capped at two years' wage."
     published: true
-  - id: "final-entitlements"
-    category: "Employment Ending"
-    search: "final settlement 14 days final entitlements"
-    title: "Final Entitlements"
-    reference: "Article 53"
-    content: "The employer must pay wages and other statutory entitlements within 14 days from the end of the contract."
+  - id: final-entitlements
+    category: Employment Ending
+    search: final settlement 14 days final entitlements
+    title: Final Entitlements Test
+    reference: Article 53
+    content: The employer must pay wages and other statutory entitlements within 14
+      days from the end of the contract.
     published: true
