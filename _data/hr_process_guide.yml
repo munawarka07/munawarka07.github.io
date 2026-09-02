@@ -95,7 +95,7 @@ steps:
       - Residency
       - Renewal/cancellation
     published: true
-  - number: 8
+  - number: "08"
     title: HR Archiving & Audit
     description: Maintain a structured employee file and monthly operational archive
       so decisions, approvals and employee changes remain traceable.
@@ -106,10 +106,3 @@ steps:
       - Compliance evidence
       - Audit follow-up
     published: true
-  - published: true
-    number: "01"
-    title: ABC
-    description: ABC
-    checklist:
-      - "1"
-      - "2"
