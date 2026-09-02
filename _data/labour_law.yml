@@ -1,82 +1,141 @@
 page:
-  eyebrow: UAE LABOUR LAW
-  hero_line1: Employment rules.
-  hero_highlight: Explained clearly.
-  hero_description: Employment rules, explained in a practical and searchable format.
   hero_chips:
-  - Probation
-  - Leave
-  - Wages
-  - EOSB
-  notice_title: Educational reference.
-  notice_text: This page summarizes common provisions of Federal Decree-Law No. 33 of 2021 and its Executive Regulation. Always
-    check the latest official legislation and the facts of the individual case before making a legal or HR decision.
-  search_placeholder: Search probation, annual leave, overtime, EOSB...
-  search_button: Search
-  connected_label: 02 / CONNECTED KNOWLEDGE
+    - Probation
+    - Leave
+    - Wages
+    - EOSB
   connected_title: Go from rule to action.
-  connected_description: Legal guidance is more useful when it connects to questions, processes and calculators.
-last_reviewed: '2026-09-02'
+  connected_description: Legal guidance is more useful when it connects to
+    questions, processes and calculators.
+  search_button: Search
+  eyebrow: UAE LABOUR LAW
+  hero_highlight: Explained clearly.
+  notice_title: Educational reference.
+  notice_text: This page summarizes common provisions of Federal Decree-Law No. 33
+    of 2021 and its Executive Regulation. Always check the latest official
+    legislation and the facts of the individual case before making a legal or HR
+    decision.
+  hero_description: Employment rules, explained in a practical and searchable format.
+  hero_line1: Employment rules.
+  search_placeholder: Search probation, annual leave, overtime, EOSB...
+  connected_label: 02 / CONNECTED KNOWLEDGE
+last_reviewed: 2026-09-02
 sections:
-- id: probation-period
-  category: Getting Hired
-  search: probation contract hiring probation period
-  title: Probation Period
-  reference: Article 9
-  content: Probation may not exceed six months. If an employer terminates during probation, written notice of at least 14
-    days is required.
-  published: true
-- id: normal-working-hours
-  category: Working Time & Pay
-  search: hours overtime ramadan normal working hours
-  title: Normal Working Hours
-  reference: Article 17
-  content: The general statutory limit is eight hours per day or 48 hours per week, subject to exceptions and the Executive
-    Regulation.
-  published: true
-- id: ramadan-working-hours
-  category: Working Time & Pay
-  search: ramadan hours ramadan working hours
-  title: Ramadan Working Hours
-  reference: Executive Regulation
-  content: Normal working hours are reduced by two hours during Ramadan under the Executive Regulation.
-  published: true
-- id: total-wage-deductions
-  category: Salary & Deductions
-  search: deduction salary 50 total wage deductions
-  title: Total Wage Deductions
-  reference: Article 25
-  content: Where there are multiple lawful reasons for deductions, the total deduction may not exceed 50% of the wage.
-  published: true
-- id: annual-leave
-  category: Leave & Time Off
-  search: annual leave 30 days annual leave
-  title: Annual Leave
-  reference: Article 29
-  content: Employees are entitled to at least 30 days of annual leave for each year of extended service. Additional rules
-    apply for service below one year.
-  published: true
-- id: maternity-leave
-  category: Leave & Time Off
-  search: maternity leave maternity leave
-  title: Maternity Leave
-  reference: Article 30
-  content: The Labour Relations Law provides statutory maternity leave and related protections. Conditions and additional
-    leave situations should be checked against the current text.
-  published: true
-- id: end-of-service-gratuity
-  category: Employment Ending
-  search: eosb gratuity 21 30 end-of-service gratuity
-  title: End-of-Service Gratuity
-  reference: Article 51
-  content: 'A foreign full-time worker completing at least one year of continuous service is entitled to gratuity based on
-    last basic wage: 21 days per year for the first five years and 30 days thereafter. Unpaid absence is excluded; the total
-    gratuity is capped at two years'' wage.'
-  published: true
-- id: final-entitlements
-  category: Employment Ending
-  search: final settlement 14 days final entitlements
-  title: Final Entitlements
-  reference: Article 53
-  content: The employer must pay wages and other statutory entitlements within 14 days from the end of the contract.
-  published: true
+  - published: true
+    id: labour-law-objectives
+    category: Getting Hired
+    search: objectives purpose labour law employment rights employer worker labour
+      market
+    title: Labour Law Objectives
+    reference: Article 2
+    content: The Labour Relations Law aims to support an efficient and attractive
+      labour market, develop workforce capabilities, regulate employment
+      relationships and protect the rights of both employers and workers.
+  - published: true
+    id: equality-non-discrimination
+    category: Getting Hired
+    search: equality discrimination equal opportunity equal pay race colour sex
+      religion nationality disability
+    title: Equality & Non-Discrimination
+    reference: Article 4
+    content: Discrimination that undermines equal opportunity or equal treatment in
+      employment is prohibited on specified grounds. Women are entitled to equal
+      pay for the same work or work of equal value.
+  - published: true
+    id: recruitment-work-permits
+    category: Getting Hired
+    search: recruitment work permit hiring employment recruitment fees permit
+    title: Recruitment & Work Permits
+    reference: Article 6
+    content: Work may not be performed, and a worker may not be recruited or
+      employed, without the required Ministry work permit. Employers may not
+      charge workers recruitment or employment costs directly or indirectly.
+  - published: true
+    id: employment-contract
+    category: Getting Hired
+    search: employment contract work contract terms job offer agreement
+    title: Employment Contract
+    reference: Article 8
+    content: The employer and worker must enter into an employment contract in
+      accordance with the prescribed form and rules. Additional terms may be
+      included provided they do not conflict with the law and its Executive
+      Regulation.
+  - id: probation-period
+    category: Getting Hired
+    search: probation contract hiring probation period
+    title: Probation Period
+    reference: Article 9
+    content: Probation may not exceed six months. If an employer terminates during
+      probation, written notice of at least 14 days is required.
+    published: true
+  - published: true
+    id: non-competition-clause
+    category: Employment Ending
+    search: non compete non competition competitor business secrets clients
+      resignation restriction
+    title: Non-Competition Clause
+    reference: Article 10
+    content: Where a worker has access to clients or business secrets, a non-compete
+      restriction may be agreed if it is appropriately limited by time, place
+      and type of work. The restriction may not exceed two years after the
+      employment contract ends.
+  - id: normal-working-hours
+    category: Working Time & Pay
+    search: hours overtime ramadan normal working hours
+    title: Normal Working Hours
+    reference: Article 17
+    content: The general statutory limit is eight hours per day or 48 hours per
+      week, subject to exceptions and the Executive Regulation.
+    published: true
+  - id: ramadan-working-hours
+    category: Working Time & Pay
+    search: ramadan hours ramadan working hours
+    title: Ramadan Working Hours
+    reference: Executive Regulation
+    content: Normal working hours are reduced by two hours during Ramadan under the
+      Executive Regulation.
+    published: true
+  - id: total-wage-deductions
+    category: Salary & Deductions
+    search: deduction salary 50 total wage deductions
+    title: Total Wage Deductions
+    reference: Article 25
+    content: Where there are multiple lawful reasons for deductions, the total
+      deduction may not exceed 50% of the wage.
+    published: true
+  - id: annual-leave
+    category: Leave & Time Off
+    search: annual leave 30 days annual leave
+    title: Annual Leave
+    reference: Article 29
+    content: Employees are entitled to at least 30 days of annual leave for each
+      year of extended service. Additional rules apply for service below one
+      year.
+    published: true
+  - id: maternity-leave
+    category: Leave & Time Off
+    search: maternity leave maternity leave
+    title: Maternity Leave
+    reference: Article 30
+    content: The Labour Relations Law provides statutory maternity leave and related
+      protections. Conditions and additional leave situations should be checked
+      against the current text.
+    published: true
+  - id: end-of-service-gratuity
+    category: Employment Ending
+    search: eosb gratuity 21 30 end-of-service gratuity
+    title: End-of-Service Gratuity
+    reference: Article 51
+    content: "A foreign full-time worker completing at least one year of continuous
+      service is entitled to gratuity based on last basic wage: 21 days per year
+      for the first five years and 30 days thereafter. Unpaid absence is
+      excluded; the total gratuity is capped at two years' wage."
+    published: true
+  - id: final-entitlements
+    category: Employment Ending
+    search: final settlement 14 days final entitlements
+    title: Final Entitlements
+    reference: Article 53
+    content: The employer must pay wages and other statutory entitlements within 14
+      days from the end of the contract.
+    published: true
