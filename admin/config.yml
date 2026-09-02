@@ -9,43 +9,313 @@ publish_mode: simple
 site_url: https://munawar.in
 display_url: https://munawar.in
 logo_url: https://munawar.in/assets/images/munawar-profile.webp
-
 media_folder: assets/uploads
 public_folder: /assets/uploads
 
 collections:
-  - name: "legal_content"
-    label: "Legal Content"
+  - name: "website_content"
+    label: "Website Content"
+    editor:
+      preview: false
     files:
       - name: "uae_labour_law"
         label: "UAE Labour Law Guide"
         file: "_data/labour_law.yml"
         fields:
-          - label: "Last Reviewed"
-            name: "last_reviewed"
-            widget: "datetime"
-            date_format: "YYYY-MM-DD"
-            time_format: false
-            format: "YYYY-MM-DD"
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
           - label: "Law Sections"
             name: "sections"
             widget: "list"
             summary: "{{fields.title}} - {{fields.reference}}"
-            allow_add: true
-            collapsed: false
+            collapsed: true
             fields:
-              - { label: "ID", name: "id", widget: "string", hint: "Unique lowercase ID, e.g. annual-leave. Do not reuse an ID." }
-              - label: "Category"
-                name: "category"
-                widget: "select"
-                options:
-                  - "Getting Hired"
-                  - "Working Time & Pay"
-                  - "Salary & Deductions"
-                  - "Leave & Time Off"
-                  - "Employment Ending"
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
               - { label: "Search Keywords", name: "search", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Article / Reference", name: "reference", widget: "string" }
               - { label: "Content", name: "content", widget: "text" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "payroll_insights"
+        label: "Payroll Insights"
+        file: "_data/payroll_insights.yml"
+        fields:
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - label: "Payroll Insight Cards"
+            name: "insights"
+            widget: "list"
+            summary: "{{fields.category}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short Summary", name: "summary", widget: "text" }
+              - { label: "Key Takeaway", name: "takeaway", widget: "text" }
+              - { label: "Detailed Explanation", name: "detailed", widget: "text" }
+              - label: "Actions / What HR Should Do"
+                name: "actions"
+                widget: "list"
+                field: { label: "Action", name: "action", widget: "string" }
+              - { label: "Practical Example", name: "example", widget: "text" }
+              - label: "Related Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "hr_insights"
+        label: "HR Insights"
+        file: "_data/hr_insights.yml"
+        fields:
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - label: "HR Insight Cards"
+            name: "insights"
+            widget: "list"
+            summary: "{{fields.category}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short Summary", name: "summary", widget: "text" }
+              - { label: "Key Takeaway", name: "takeaway", widget: "text" }
+              - { label: "Detailed Explanation", name: "detailed", widget: "text" }
+              - label: "Actions / What HR Should Do"
+                name: "actions"
+                widget: "list"
+                field: { label: "Action", name: "action", widget: "string" }
+              - { label: "Practical Example", name: "example", widget: "text" }
+              - label: "Related Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "emirati_insights"
+        label: "Emirati Insights"
+        file: "_data/emirati_insights.yml"
+        fields:
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - label: "Emirati Insight Cards"
+            name: "insights"
+            widget: "list"
+            summary: "{{fields.category}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Short Summary", name: "summary", widget: "text" }
+              - { label: "Key Takeaway", name: "takeaway", widget: "text" }
+              - { label: "Detailed Explanation", name: "detailed", widget: "text" }
+              - label: "Actions / What HR Should Do"
+                name: "actions"
+                widget: "list"
+                field: { label: "Action", name: "action", widget: "string" }
+              - { label: "Practical Example", name: "example", widget: "text" }
+              - label: "Related Links"
+                name: "links"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "hr_process_guide"
+        label: "HR Process Guide"
+        file: "_data/hr_process_guide.yml"
+        fields:
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - label: "Process Steps"
+            name: "steps"
+            widget: "list"
+            summary: "{{fields.number}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "Step Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Checklist"
+                name: "checklist"
+                widget: "list"
+                field: { label: "Point", name: "point", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "labour_law_qa"
+        label: "Labour Law Q&A"
+        file: "_data/labour_law_qa.yml"
+        fields:
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - label: "Questions & Answers"
+            name: "questions"
+            widget: "list"
+            summary: "{{fields.category}} - {{fields.question}}"
+            collapsed: true
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+              - { label: "Search Keywords", name: "search", widget: "string", required: false }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "library"
+        label: "HR Library"
+        file: "_data/library.yml"
+        fields:
+          - { label: "Last Reviewed", name: "last_reviewed", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+          - label: "Documents"
+            name: "documents"
+            widget: "list"
+            summary: "{{fields.category}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "File Type", name: "file_type", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "File URL", name: "file_url", widget: "string" }
+              - { label: "Search Keywords", name: "search", widget: "string", required: false }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "about_points"
+        label: "About - Principles"
+        file: "_data/about_points.yml"
+        fields:
+          - label: "Principles"
+            name: "points"
+            widget: "list"
+            summary: "{{fields.number}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "contact"
+        label: "Contact Details"
+        file: "_data/contact.yml"
+        fields:
+          - label: "Contact Methods"
+            name: "contacts"
+            widget: "list"
+            summary: "{{fields.label}} - {{fields.value}}"
+            collapsed: true
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Link URL", name: "url", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Accessibility Label", name: "aria_label", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "experience"
+        label: "Experience & Education - Roles"
+        file: "_data/experience.yml"
+        fields:
+          - label: "Roles"
+            name: "roles"
+            widget: "list"
+            summary: "{{fields.period}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "Period", name: "period", widget: "string" }
+              - { label: "Company", name: "company", widget: "string" }
+              - { label: "Job Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - label: "Responsibility Blocks"
+                name: "detail_blocks"
+                widget: "list"
+                collapsed: true
+                fields:
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - label: "Points"
+                    name: "points"
+                    widget: "list"
+                    field: { label: "Point", name: "point", widget: "string" }
+              - label: "Impact Tags"
+                name: "impact_tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "skills"
+        label: "Skills & Expertise"
+        file: "_data/skills.yml"
+        fields:
+          - label: "Capabilities"
+            name: "capabilities"
+            widget: "list"
+            summary: "{{fields.index}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "Index", name: "index", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                field: { label: "Point", name: "point", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+          - label: "Systems"
+            name: "systems"
+            widget: "list"
+            summary: "{{fields.category}} - {{fields.name}}"
+            collapsed: true
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "System / Tool", name: "name", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+      - name: "projects"
+        label: "Projects & Awards"
+        file: "_data/projects.yml"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.number}} - {{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - label: "Metrics"
+                name: "metrics"
+                widget: "list"
+                field: { label: "Metric", name: "metric", widget: "string" }
+              - label: "Details"
+                name: "details"
+                widget: "list"
+                field: { label: "Point", name: "point", widget: "string" }
+              - { label: "Published", name: "published", widget: "boolean", default: true }
+          - label: "Award"
+            name: "award"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Facts"
+                name: "facts"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+          - label: "Impact Statistics"
+            name: "impact_stats"
+            widget: "list"
+            summary: "{{fields.value}} - {{fields.description}}"
+            fields:
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
               - { label: "Published", name: "published", widget: "boolean", default: true }

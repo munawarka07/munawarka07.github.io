@@ -1,0 +1,162 @@
+last_reviewed: '2026-09-02'
+documents:
+- id: asset-allocation-form
+  category: Onboarding
+  file_type: DOCX
+  title: Asset Allocation Form
+  description: Track company assets issued to employees.
+  file_url: /documents/asset-allocation-form.docx
+  search: onboarding asset allocation form track company assets issued to employees.
+  published: true
+- id: background-verification-form
+  category: Recruitment
+  file_type: DOCX
+  title: Background Verification Form
+  description: Structured employment and professional verification form.
+  file_url: /documents/background-verification-form.docx
+  search: recruitment background verification form structured employment and professional verification form.
+  published: true
+- id: bank-account-details-payroll
+  category: Payroll
+  file_type: DOCX
+  title: Bank Account Details & Payroll
+  description: Employee payroll bank-detail confirmation and change form.
+  file_url: /documents/bank-account-details-payroll.docx
+  search: payroll bank account details & payroll employee payroll bank-detail confirmation and change form.
+  published: true
+- id: employee-details-form
+  category: Onboarding
+  file_type: DOCX
+  title: Employee Details Form
+  description: Personal, contact, beneficiary, visa and joining information form.
+  file_url: /documents/employee-details-form.docx
+  search: onboarding employee details form personal, contact, beneficiary, visa and joining information form.
+  published: true
+- id: employment-letter
+  category: Letters
+  file_type: DOCX
+  title: Employment Letter
+  description: General current-employment confirmation template.
+  file_url: /documents/employment-letter.docx
+  search: letters employment letter general current-employment confirmation template.
+  published: true
+- id: end-of-contract
+  category: Offboarding
+  file_type: DOCX
+  title: End of Contract
+  description: Formal non-renewal / contract-end communication template.
+  file_url: /documents/end-of-contract.docx
+  search: offboarding end of contract formal non-renewal / contract-end communication template.
+  published: true
+- id: end-of-service-form
+  category: Payroll
+  file_type: XLS
+  title: End of Service Form
+  description: Editable end-of-service working form.
+  file_url: /documents/end-of-service-form.xls
+  search: payroll end of service form editable end-of-service working form.
+  published: true
+- id: exit-interview-form
+  category: Offboarding
+  file_type: DOCX
+  title: Exit Interview Form
+  description: Detailed employee exit-feedback questionnaire.
+  file_url: /documents/exit-interview-form.docx
+  search: offboarding exit interview form detailed employee exit-feedback questionnaire.
+  published: true
+- id: experience-letter
+  category: Letters
+  file_type: DOCX
+  title: Experience Letter
+  description: Employment experience and service confirmation template.
+  file_url: /documents/experience-letter.docx
+  search: letters experience letter employment experience and service confirmation template.
+  published: true
+- id: increment-letter
+  category: Letters
+  file_type: DOCX
+  title: Increment Letter
+  description: Salary revision / increment communication template.
+  file_url: /documents/increment-letter.docx
+  search: letters increment letter salary revision / increment communication template.
+  published: true
+- id: leave-request-form
+  category: Leave
+  file_type: DOCX
+  title: Leave Request Form
+  description: Employee leave application and approval form.
+  file_url: /documents/leave-request-form.docx
+  search: leave leave request form employee leave application and approval form.
+  published: true
+- id: noc-letter
+  category: Letters
+  file_type: DOCX
+  title: NOC Letter
+  description: General no-objection certificate template.
+  file_url: /documents/noc-letter.docx
+  search: letters noc letter general no-objection certificate template.
+  published: true
+- id: notice-period-waiver-letter
+  category: Offboarding
+  file_type: DOCX
+  title: Notice Period Waiver Letter
+  description: Notice waiver and revised last-working-day confirmation.
+  file_url: /documents/notice-period-waiver-letter.docx
+  search: offboarding notice period waiver letter notice waiver and revised last-working-day confirmation.
+  published: true
+- id: offer-letter
+  category: Recruitment
+  file_type: DOCX
+  title: Offer Letter
+  description: Detailed UAE employment offer template with editable placeholders.
+  file_url: /documents/offer-letter.docx
+  search: recruitment offer letter detailed uae employment offer template with editable placeholders.
+  published: true
+- id: promotion-letter-templates
+  category: Letters
+  file_type: ZIP
+  title: Promotion Letter Templates
+  description: Promotion letter versions with and without salary increment.
+  file_url: /documents/promotion-letter-templates.zip
+  search: letters promotion letter templates promotion letter versions with and without salary increment.
+  published: true
+- id: resignation-acceptance-letter
+  category: Offboarding
+  file_type: DOCX
+  title: Resignation Acceptance Letter
+  description: Resignation acknowledgement and exit-process communication.
+  file_url: /documents/resignation-acceptance-letter.docx
+  search: offboarding resignation acceptance letter resignation acknowledgement and exit-process communication.
+  published: true
+- id: salary-certificate
+  category: Letters
+  file_type: DOCX
+  title: Salary Certificate
+  description: Editable salary certificate with compensation breakdown.
+  file_url: /documents/salary-certificate.docx
+  search: letters salary certificate editable salary certificate with compensation breakdown.
+  published: true
+- id: salary-transfer-letter
+  category: Letters
+  file_type: DOCX
+  title: Salary Transfer Letter
+  description: Bank-facing salary transfer confirmation template.
+  file_url: /documents/salary-transfer-letter.docx
+  search: letters salary transfer letter bank-facing salary transfer confirmation template.
+  published: true
+- id: termination-letter-templates
+  category: Offboarding
+  file_type: ZIP
+  title: Termination Letter Templates
+  description: Termination templates for different employment situations.
+  file_url: /documents/termination-letter-templates.zip
+  search: offboarding termination letter templates termination templates for different employment situations.
+  published: true
+- id: warning-letter-templates
+  category: Employee Relations
+  file_type: ZIP
+  title: Warning Letter Templates
+  description: First and final warning letter templates.
+  file_url: /documents/warning-letter-templates.zip
+  search: employee relations warning letter templates first and final warning letter templates.
+  published: true

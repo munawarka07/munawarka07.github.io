@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -557,11 +559,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
     <div class="story-copy reveal-right">
       <p>My career began with payroll and finance foundations and gradually expanded into broader HR operations, employee lifecycle management, compliance, employee relations and people services.</p>
       <p>That journey shaped how I approach HR today: understand the detail, simplify the process, communicate clearly and keep the human experience in view.</p>
-      <div class="story-points">
-        <div class="story-point"><b>01</b><div><strong>Clarity over complexity</strong><span>Translate complicated processes into steps people can understand and use.</span></div></div>
-        <div class="story-point"><b>02</b><div><strong>Process with purpose</strong><span>Strong processes should improve both operational control and the employee experience.</span></div></div>
-        <div class="story-point"><b>03</b><div><strong>People at the center</strong><span>Policies, systems and payroll ultimately affect real people - that context matters.</span></div></div>
-      </div>
+      <div class="story-points">{% for item in site.data.about_points.points %}{% if item.published %}<div class="story-point"><b>{{ item.number | escape }}</b><div><strong>{{ item.title | escape }}</strong><span>{{ item.description | escape }}</span></div></div>{% endif %}{% endfor %}</div>
     </div>
   </div>
 </section>

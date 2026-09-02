@@ -1,0 +1,88 @@
+last_reviewed: '2026-09-02'
+questions:
+- id: what-is-the-maximum-probation-period
+  category: Probation
+  question: What is the maximum probation period?
+  answer: Up to six months. The same employer cannot place the worker on probation more than once.
+  search: what is the maximum probation period? up to six months. the same employer cannot place the worker on probation more
+    than once.
+  published: true
+- id: can-an-employer-terminate-during-probation
+  category: Probation
+  question: Can an employer terminate during probation?
+  answer: Yes, subject to at least 14 days' written notice under Article 9.
+  search: can an employer terminate during probation? yes, subject to at least 14 days' written notice under article 9.
+  published: true
+- id: what-are-normal-working-hours
+  category: Working Hours
+  question: What are normal working hours?
+  answer: Generally eight hours per day or 48 hours per week, subject to exceptions.
+  search: what are normal working hours? generally eight hours per day or 48 hours per week, subject to exceptions.
+  published: true
+- id: are-working-hours-reduced-during-ramadan
+  category: Working Hours
+  question: Are working hours reduced during Ramadan?
+  answer: Yes. The Executive Regulation reduces normal working hours by two hours during Ramadan.
+  search: are working hours reduced during ramadan? yes. the executive regulation reduces normal working hours by two hours
+    during ramadan.
+  published: true
+- id: what-is-the-maximum-total-deduction-from-wages
+  category: Salary
+  question: What is the maximum total deduction from wages?
+  answer: Where multiple lawful deduction reasons apply, the total deductions may not exceed 50% of the wage. The 85% figure
+    should not be used as the statutory total-deduction cap.
+  search: what is the maximum total deduction from wages? where multiple lawful deduction reasons apply, the total deductions
+    may not exceed 50% of the wage. the 85% figure should not be used as the statutory total-deduction cap.
+  published: true
+- id: how-much-annual-leave-is-provided-after-one-year
+  category: Annual Leave
+  question: How much annual leave is provided after one year?
+  answer: At least 30 days for each year of extended service, subject to the detailed rules in Article 29.
+  search: how much annual leave is provided after one year? at least 30 days for each year of extended service, subject to
+    the detailed rules in article 29.
+  published: true
+- id: when-does-standard-statutory-gratuity-start
+  category: EOSB
+  question: When does standard statutory gratuity start?
+  answer: A foreign full-time worker must complete at least one year of continuous service to qualify under Article 51.
+  search: when does standard statutory gratuity start? a foreign full-time worker must complete at least one year of continuous
+    service to qualify under article 51.
+  published: true
+- id: how-is-gratuity-calculated
+  category: EOSB
+  question: How is gratuity calculated?
+  answer: 'Using the last basic wage: 21 days per year for the first five years and 30 days per year thereafter, with proportional
+    entitlement for part-years after completing the first year.'
+  search: 'how is gratuity calculated? using the last basic wage: 21 days per year for the first five years and 30 days per
+    year thereafter, with proportional entitlement for part-years after completing the first year.'
+  published: true
+- id: do-unpaid-absence-days-count-toward-service
+  category: EOSB
+  question: Do unpaid absence days count toward service?
+  answer: No. Article 51 excludes days of absence without pay from the service period used for gratuity.
+  search: do unpaid absence days count toward service? no. article 51 excludes days of absence without pay from the service
+    period used for gratuity.
+  published: true
+- id: is-there-a-maximum-gratuity
+  category: EOSB
+  question: Is there a maximum gratuity?
+  answer: Yes. The total end-of-service gratuity for the foreign worker may not exceed two years' wage.
+  search: is there a maximum gratuity? yes. the total end-of-service gratuity for the foreign worker may not exceed two years'
+    wage.
+  published: true
+- id: when-should-final-wages-and-entitlements-be-paid
+  category: Final Settlement
+  question: When should final wages and entitlements be paid?
+  answer: Article 53 requires payment within 14 days from the end of the contract.
+  search: when should final wages and entitlements be paid? article 53 requires payment within 14 days from the end of the
+    contract.
+  published: true
+- id: can-the-employer-retain-an-employee-s-official-documents
+  category: Documents
+  question: Can the employer retain an employee's official documents?
+  answer: Employee documents should be handled in accordance with applicable law and official guidance. Retention of passports
+    has long been restricted; verify the current official position for the specific case.
+  search: can the employer retain an employee's official documents? employee documents should be handled in accordance with
+    applicable law and official guidance. retention of passports has long been restricted; verify the current official position
+    for the specific case.
+  published: true

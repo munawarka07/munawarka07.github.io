@@ -1,0 +1,167 @@
+last_reviewed: '2026-09-02'
+insights:
+- id: offboarding-deserves-the-same-care-as-onboarding
+  category: Employee Lifecycle
+  title: Offboarding deserves the same care as onboarding.
+  summary: An employee's final experience can influence reputation, referrals, rehire potential and how the wider workforce
+    views HR.
+  takeaway: Treat offboarding as an employee-experience moment, not only an administrative closure.
+  detailed: Offboarding is often reduced to asset return, visa cancellation and final settlement. But the employee is also
+    forming a final judgment about the organisation. A clear, respectful and well-controlled exit reduces uncertainty for
+    the employee and operational risk for the business.
+  actions:
+  - Use one owner or tracker for resignation, notice, handover, assets, access, leave, final payroll and cancellation steps.
+  - Explain timelines to the employee rather than leaving them to chase multiple teams.
+  - Capture exit feedback and recurring causes of resignation as workforce data.
+  example: An employee resigns after several years of service. Instead of HR contacting the employee only for forms, HR sends
+    a clear exit timeline, confirms final-pay inputs, coordinates IT and assets, and provides one point of contact until closure.
+  links:
+  - label: Process Guide
+    url: /hr-hub/hr-process-guide/
+  - label: EOSB Calculator
+    url: /hr-hub/calculator/
+  published: true
+- id: emiratisation-is-more-than-compliance
+  category: Emiratisation
+  title: Emiratisation is more than compliance.
+  summary: Meeting a numerical target is only the starting point. Sustainable Emiratisation requires meaningful work, development,
+    manager support and retention.
+  takeaway: Build Emiratisation around careers and capability, not only target achievement.
+  detailed: An organisation can technically hire UAE Nationals and still fail to build a sustainable Emiratisation strategy.
+    The stronger approach connects workforce planning, role design, recruitment, onboarding, development, compensation, succession
+    and retention.
+  actions:
+  - Forecast targets early instead of hiring close to a compliance deadline.
+  - Review whether roles provide real responsibility and career progression.
+  - Track retention, internal movement and development - not only the number hired.
+  example: A business reaches its required hiring number but experiences repeated early turnover. The better HR response is
+    to analyse role fit, manager support, career expectations and development opportunities rather than treating recruitment
+    volume as the only KPI.
+  links:
+  - label: Emirati Insights
+    url: /hr-hub/emirati-insights/
+  published: true
+- id: probation-is-a-two-way-evaluation
+  category: Performance
+  title: Probation is a two-way evaluation.
+  summary: The organisation evaluates performance and fit, while the employee evaluates leadership, clarity, culture and whether
+    the role matches what was promised.
+  takeaway: Use structured check-ins early rather than waiting for the end of probation.
+  detailed: Probation works best as an active management period. Waiting until the final weeks to discuss performance creates
+    avoidable risk and a poor employee experience. Early expectations and documented feedback allow both sides to understand
+    whether the relationship is working.
+  actions:
+  - Set measurable expectations during the first weeks.
+  - Schedule midpoint and pre-confirmation reviews.
+  - Document concerns, support provided and agreed actions.
+  - Coordinate any probation decision with the applicable notice requirements.
+  example: A new employee struggles with a core process in month two. A structured check-in identifies the gap, assigns training
+    and sets a review date, giving the employee a fair opportunity to improve before a confirmation decision.
+  links:
+  - label: Labour Law
+    url: /hr-hub/uae-labour-law/
+  - label: Labour Q&A
+    url: /hr-hub/labour-law-qa/
+  published: true
+- id: culture-is-everyone-s-responsibility
+  category: Culture
+  title: Culture is everyone's responsibility.
+  summary: Policies may describe the desired culture, but employees experience culture through managers, decisions, communication
+    and everyday behaviour.
+  takeaway: HR can guide culture, but everyone has to live it.
+  detailed: Culture is not created by HR campaigns alone. Employees judge the organisation by what happens when workload increases,
+    mistakes occur, managers make decisions or people raise concerns. HR can establish frameworks, but leadership behaviour
+    and team norms determine whether those frameworks are credible.
+  actions:
+  - Translate values into observable behaviours.
+  - Equip managers to handle feedback, conflict and recognition consistently.
+  - Use employee feedback and case trends to identify gaps between stated and experienced culture.
+  example: If a company says it values transparency but employees routinely learn about important changes through rumours,
+    the issue is not the wording of the value - it is the operating behaviour behind it.
+  links:
+  - label: HR Process Guide
+    url: /hr-hub/hr-process-guide/
+  published: true
+- id: policies-need-training
+  category: Policy
+  title: Policies need training.
+  summary: A technically correct policy is difficult to apply consistently when managers and employees do not understand what
+    it means in real situations.
+  takeaway: Policy publication is not the same as policy implementation.
+  detailed: Policies create value when people can interpret and apply them. HR should consider who makes decisions under the
+    policy, what evidence is required, what exceptions exist and how employees will understand their responsibilities.
+  actions:
+  - Launch major policies with practical examples and FAQs.
+  - Train managers separately where they have approval or decision responsibilities.
+  - Review recurring questions to identify unclear wording.
+  - Maintain version control and effective dates.
+  example: A leave policy may be available on the intranet, but if managers apply carry-forward rules differently, the business
+    still has a control problem. Training and examples create consistency.
+  links:
+  - label: Labour Law
+    url: /hr-hub/uae-labour-law/
+  - label: Document Center
+    url: /hr-hub/library/
+  published: true
+- id: small-operational-moments-matter
+  category: Employee Experience
+  title: Small operational moments matter.
+  summary: Response time, communication clarity, payroll accuracy and case handling shape how employees experience HR every
+    month.
+  takeaway: Operational discipline is part of employee experience.
+  detailed: Employee experience is not limited to engagement initiatives. An employee may interact with HR most often when
+    requesting a letter, correcting attendance, changing bank details, taking leave or asking about payroll. Reliability in
+    these routine moments builds trust.
+  actions:
+  - Set service expectations for common requests.
+  - Use templates without making communication feel robotic.
+  - Track recurring delays and handoff problems.
+  - Close the loop when a case is resolved.
+  example: An employee requesting a salary certificate may remember a same-day clear response more positively than a large
+    internal campaign that has little relevance to their daily needs.
+  links:
+  - label: Document Center
+    url: /hr-hub/library/
+  - label: HR Process Guide
+    url: /hr-hub/hr-process-guide/
+  published: true
+- id: hr-technology-should-remove-friction
+  category: Technology
+  title: HR technology should remove friction.
+  summary: An HR system creates value when it improves data quality, access, controls, automation and decision-making - not
+    simply because a process has become digital.
+  takeaway: Design the process before automating the process.
+  detailed: Automating a weak process can make the same problems happen faster. Before configuring a workflow, HR should understand
+    the process owner, required data, approvals, exceptions and desired output.
+  actions:
+  - Map the current process and remove unnecessary steps first.
+  - Define data ownership and validation rules.
+  - Design exception handling, not only the happy path.
+  - Measure adoption, turnaround and error reduction after launch.
+  example: If an onboarding workflow requires five approvals that nobody can explain, moving those five approvals into an
+    HRMS does not solve the underlying process problem.
+  links:
+  - label: Skills & Expertise
+    url: /skills-expertise/
+  published: true
+- id: hr-processes-should-keep-evolving
+  category: Continuous Improvement
+  title: HR processes should keep evolving.
+  summary: Repeated exceptions, manual work, reconciliation issues and employee confusion are useful signals that a process
+    may need redesign.
+  takeaway: Use recurring problems as process-improvement data.
+  detailed: Continuous improvement does not always require a large transformation project. HR can improve performance by identifying
+    repeated friction, measuring it, changing one part of the process and checking whether the result improves.
+  actions:
+  - Maintain an issue or exception log for recurring processes.
+  - Prioritise high-frequency and high-risk problems.
+  - Measure the baseline before changing the process.
+  - Standardise the improved method once it works.
+  example: If payroll repeatedly receives late attendance corrections from the same workflow, the solution may be an earlier
+    validation checkpoint rather than more last-minute payroll effort.
+  links:
+  - label: Payroll Insights
+    url: /hr-hub/payroll-insights/
+  - label: HR Process Guide
+    url: /hr-hub/hr-process-guide/
+  published: true

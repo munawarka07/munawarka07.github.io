@@ -1,0 +1,89 @@
+last_reviewed: '2026-09-02'
+steps:
+- number: '01'
+  title: Onboarding & Joining
+  description: Collect approved documents, confirm employment terms, complete visa/work-permit requirements, prepare employee
+    records, enroll applicable benefits and provide a structured induction.
+  checklist:
+  - Offer/contract approval
+  - Identity & visa documents
+  - Bank and payroll data
+  - Policy acknowledgements
+  - System access
+  published: true
+- number: '02'
+  title: Offboarding & Exit
+  description: Capture resignation/termination documentation, track notice and handover, complete clearance, calculate final
+    settlement inputs, process visa cancellation and issue final documents.
+  checklist:
+  - Exit approval
+  - Handover & assets
+  - Final attendance/leave
+  - EOSB/final settlement
+  - Visa cancellation
+  published: true
+- number: '03'
+  title: Payroll Input Collection
+  description: Close attendance and leave inputs, collect approved salary changes, joiners, exits, deductions, allowances,
+    bonuses and bank updates.
+  checklist:
+  - Attendance cut-off
+  - Approved changes
+  - Joiner/exit list
+  - Bank validation
+  - Exception log
+  published: true
+- number: '04'
+  title: Payroll Validation & Approval
+  description: Reconcile headcount and salary changes with the prior cycle, review unusual variances and ensure every adjustment
+    has approval before release.
+  checklist:
+  - Headcount reconciliation
+  - Variance review
+  - IBAN validation
+  - Approval trail
+  - Exception resolution
+  published: true
+- number: '05'
+  title: WPS / Payment
+  description: Prepare applicable WPS/SIF data, submit through the authorized channel, retain payment confirmation and investigate
+    rejected transactions.
+  checklist:
+  - SIF validation
+  - Payment file
+  - Bank confirmation
+  - Rejected-payment follow-up
+  published: true
+- number: '06'
+  title: UAE National Pension
+  description: Confirm the applicable pension scheme, register eligible employees, maintain contribution salary data and update
+    status changes with the competent pension authority.
+  checklist:
+  - Eligibility check
+  - Registration
+  - Contribution salary
+  - Monthly contribution
+  - Status update
+  published: true
+- number: '07'
+  title: Visa & Work Permit
+  description: Coordinate the applicable work permit, status change, medical/ID requirements and residency process according
+    to employer jurisdiction and employee status.
+  checklist:
+  - Permit category
+  - Documents
+  - Medical/ID
+  - Residency
+  - Renewal/cancellation
+  published: true
+- number: 08
+  title: HR Archiving & Audit
+  description: Maintain a structured employee file and monthly operational archive so decisions, approvals and employee changes
+    remain traceable.
+  checklist:
+  - Employee file
+  - Payroll archive
+  - Approvals
+  - Compliance evidence
+  - Audit follow-up
+  published: true

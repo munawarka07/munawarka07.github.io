@@ -1,0 +1,19 @@
+contacts:
+- label: Email
+  value: munawarkabduljabbar@gmail.com
+  url: mailto:munawarkabduljabbar@gmail.com
+  icon: '@'
+  aria_label: Email Munawar K A
+  published: true
+- label: LinkedIn
+  value: linkedin.com/in/munawar-k-a-5a3700243
+  url: https://www.linkedin.com/in/munawar-k-a-5a3700243/
+  icon: in
+  aria_label: Munawar K A on LinkedIn
+  published: true
+- label: Location
+  value: United Arab Emirates
+  url: ''
+  icon: ⌖
+  aria_label: ''
+  published: true

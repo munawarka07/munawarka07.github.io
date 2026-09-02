@@ -1,0 +1,113 @@
+last_reviewed: '2026-09-02'
+insights:
+- id: private-sector-emiratisation
+  category: Emiratisation
+  title: Private-sector Emiratisation
+  summary: Large private-sector employers are subject to ongoing Emiratisation targets, while specified smaller establishments
+    can also have UAE National hiring requirements.
+  takeaway: Check employer size, sector and the current MoHRE target before workforce planning.
+  detailed: Emiratisation requirements are not identical for every establishment. For companies with 50 or more employees,
+    MoHRE states a 2% annual growth requirement in Emiratis in skilled positions, implemented through semi-annual progress.
+    Specified establishments with 20-49 employees also have hiring requirements.
+  actions:
+  - Confirm whether the establishment falls within the target framework.
+  - Build the requirement into annual manpower planning.
+  - Track retention as well as hiring.
+  - Verify current MoHRE deadlines and financial consequences.
+  example: Rather than waiting until the final quarter, HR can forecast the required UAE National workforce at the start of
+    the year and monitor progress monthly.
+  links:
+  - label: MoHRE guidance
+    url: https://mohre.gov.ae/en/guidance-and-awareness-portal-new/emiratisation-targets
+  published: true
+- id: minimum-wage-for-emiratis
+  category: Compensation
+  title: Minimum wage for Emiratis
+  summary: MoHRE raised the private-sector minimum wage for Emiratis to AED 6,000 per month effective 1 January 2026, with
+    transition requirements for existing employees.
+  takeaway: Check the current MoHRE rule when reviewing UAE National contracts.
+  detailed: The 2026 change applies to new citizen work permits and permits being renewed or amended from 1 January 2026.
+    MoHRE also provided a transition period for establishments to adjust existing salaries by 30 June 2026.
+  actions:
+  - Review affected UAE National contracts and permit events.
+  - Coordinate payroll and contract amendments.
+  - Monitor MoHRE updates for compliance consequences.
+  example: A renewal or contract amendment should trigger a check that the salary meets the current UAE National minimum-wage
+    requirement.
+  links:
+  - label: MoHRE
+    url: https://www.mohre.gov.ae/en
+  published: true
+- id: gpssa-contribution-framework
+  category: Pension
+  title: GPSSA contribution framework
+  summary: 'Under the 2023 federal pension law, total contributions can be 26% of contribution-account salary: 11% insured
+    and 15% employer, with specified government support for qualifying private-sector cases.'
+  takeaway: Do not apply this rate without first confirming which pension law covers the employee.
+  detailed: GPSSA states that under Federal Decree-Law No. 57 of 2023 the insured bears 11% and the employer bears 15%. For
+    qualifying private-sector Emiratis with contribution-account salary below AED 20,000, the government bears 2.5 percentage
+    points from the employer's share.
+  actions:
+  - Confirm employee pension-law coverage.
+  - Validate contribution-account salary.
+  - Apply the correct employee/employer split.
+  - Reconcile monthly pension contributions with payroll.
+  example: Two UAE National employees may not necessarily be processed using the same pension rule if they are covered by
+    different pension-law frameworks.
+  links:
+  - label: GPSSA
+    url: https://www.gpssa.gov.ae/
+  published: true
+- id: older-pension-law-cases
+  category: Pension
+  title: Older pension-law cases
+  summary: GPSSA continues to administer insured persons covered under the earlier pension framework, which has different
+    contribution rules.
+  takeaway: Employee coverage must be identified before contribution percentages are configured.
+  detailed: Pension calculations should not be built around nationality alone. The applicable pension authority and law, employee
+    registration history and employment circumstances need to be established first.
+  actions:
+  - Maintain pension-scheme data in the employee master.
+  - Avoid one universal UAE National pension formula.
+  - Validate new joiners before the first payroll.
+  example: A payroll master with only a 'UAE National = yes/no' field may be insufficient for correct pension processing when
+    different schemes apply.
+  links:
+  - label: GPSSA
+    url: https://www.gpssa.gov.ae/
+  published: true
+- id: career-and-employment-support
+  category: Nafis
+  title: Career and employment support
+  summary: Nafis supports UAE Nationals in private-sector employment and development through government programmes.
+  takeaway: Treat programme eligibility as current-state data because benefits and conditions can change.
+  detailed: Nafis can form part of the wider Emiratisation ecosystem, but HR should distinguish between the employer's legal
+    Emiratisation obligations and separate programme eligibility or benefits.
+  actions:
+  - Use official Nafis/MoHRE channels for current programme conditions.
+  - Explain benefits accurately to employees.
+  - Avoid building permanent payroll assumptions around a benefit that may have eligibility conditions.
+  example: HR should verify the current programme conditions when advising a candidate rather than relying on an old internal
+    presentation.
+  links:
+  - label: MoHRE
+    url: https://www.mohre.gov.ae/en
+  published: true
+- id: meaningful-emiratisation
+  category: Employment
+  title: Meaningful Emiratisation
+  summary: Sustainable Emiratisation combines compliant hiring with meaningful roles, development, manager support and retention.
+  takeaway: Measure career quality and retention, not only target achievement.
+  detailed: A mature Emiratisation strategy connects compliance to talent strategy. Hiring should be followed by onboarding,
+    development, performance support, internal mobility and succession opportunities.
+  actions:
+  - Track early turnover and reasons.
+  - Review development and promotion outcomes.
+  - Equip managers to support UAE National career growth.
+  - Build talent pipelines before vacancies become urgent.
+  example: A department that meets its target but repeatedly loses UAE National employees within months should treat retention
+    as the next workforce problem to solve.
+  links:
+  - label: HR Insights
+    url: /hr-hub/hr-insights/
+  published: true

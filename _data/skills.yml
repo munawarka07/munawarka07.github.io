@@ -1,0 +1,112 @@
+capabilities:
+- index: 01 / PAYROLL
+  title: Payroll & Compensation
+  summary: End-to-end payroll understanding with focus on accuracy, controls and employee pay.
+  tags:
+  - WPS
+  - EOSB
+  - Proration
+  - Reconciliation
+  details:
+  - Payroll preparation, validation and monthly controls.
+  - Salary adjustments, deductions, allowances and final settlement inputs.
+  - EOSB, leave salary and payroll-related employee queries.
+  published: true
+- index: 02 / OPERATIONS
+  title: HR Operations
+  summary: Employee lifecycle administration from onboarding through separation.
+  tags:
+  - Onboarding
+  - Offboarding
+  - Leave
+  - Letters
+  details:
+  - Employee documentation, onboarding and HR administration.
+  - Leave, attendance, records and HR service delivery.
+  - Visa, work-permit and employee lifecycle coordination.
+  published: true
+- index: 03 / PEOPLE
+  title: Employee Relations
+  summary: Employee support and issue resolution grounded in process, communication and fairness.
+  tags:
+  - Grievance
+  - Queries
+  - Policy
+  - Support
+  details:
+  - Employee queries, grievances and operational issue resolution.
+  - Policy communication and practical employee guidance.
+  - Confidential handling of employee and payroll matters.
+  published: true
+- index: 04 / COMPLIANCE
+  title: UAE HR Compliance
+  summary: Working knowledge across UAE employment requirements and operational controls.
+  tags:
+  - Labour Law
+  - GPSSA
+  - ILOE
+  - Audit
+  details:
+  - UAE Labour Law application in daily HR operations.
+  - Pension-related coordination and employee administration.
+  - HR audit support and compliance checks.
+  published: true
+- index: 05 / DATA
+  title: Excel & HR Analytics
+  summary: Advanced spreadsheet capability for payroll, attendance, budgeting and reporting.
+  tags:
+  - LET
+  - INDEX-MATCH
+  - Pivots
+  - Dashboards
+  details:
+  - Advanced formulas, validation logic and automated calculations.
+  - Pivot tables, slicers and management dashboards.
+  - Payroll, attendance and workforce-budget analysis.
+  published: true
+- index: 06 / IMPROVEMENT
+  title: Process Improvement
+  summary: Turning repetitive HR work into clearer, faster and more controlled workflows.
+  tags:
+  - Automation
+  - SOP
+  - Controls
+  - Efficiency
+  details:
+  - Workflow simplification and recurring-process improvement.
+  - HR templates, trackers, dashboards and operational controls.
+  - Structured SOP thinking and process documentation.
+  published: true
+systems:
+- category: HRIS
+  name: Workday
+  description: Employee data & HR operations
+  published: true
+- category: HRIS
+  name: Darwinbox
+  description: Modern HR technology platform
+  published: true
+- category: HR / PAYROLL
+  name: Ramco
+  description: HR and payroll system exposure
+  published: true
+- category: ENTERPRISE
+  name: SAP
+  description: Enterprise-system exposure
+  published: true
+- category: HRMS
+  name: Oracle HRMS
+  description: HR information management
+  published: true
+- category: PROCUREMENT
+  name: Ariba
+  description: Enterprise workflow exposure
+  published: true
+- category: FINANCE
+  name: QuickBooks
+  description: Finance & accounting workflows
+  published: true
+- category: ANALYTICS
+  name: Microsoft Excel
+  description: Advanced formulas, pivots & dashboards
+  published: true

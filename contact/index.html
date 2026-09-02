@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7fbff"><title>Contact Munawar K A | UAE HR & Payroll</title>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Munawar.in">
@@ -420,11 +422,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 </div></section>
 <section class="section contact-details"><div class="shell">
 <div class="section-head reveal"><div><div class="section-label">CONTACT DETAILS</div><h2>Let’s connect.</h2></div><p>For professional networking, HR knowledge sharing, feedback or collaboration, reach out through the channel that works best for you.</p></div>
-<div class="contact-details-grid">
-<a class="contact-detail reveal" href="mailto:munawarkabduljabbar@gmail.com" aria-label="Email Munawar K A"><span class="contact-detail-icon">@</span><span><small>Email</small><span>munawarkabduljabbar@gmail.com</span></span></a>
-<a class="contact-detail reveal" href="https://www.linkedin.com/in/munawar-k-a-5a3700243/" target="_blank" rel="noopener noreferrer" aria-label="Munawar K A on LinkedIn"><span class="contact-detail-icon">in</span><span><small>LinkedIn</small><span>linkedin.com/in/munawar-k-a-5a3700243</span></span></a>
-<div class="contact-detail reveal"><span class="contact-detail-icon">⌖</span><span><small>Location</small><span>United Arab Emirates</span></span></div>
-</div></div></section>
+<div class="contact-details-grid">{% for item in site.data.contact.contacts %}{% if item.published %}{% if item.url and item.url != "" %}<a class="contact-detail reveal" href="{{ item.url | escape }}" aria-label="{{ item.aria_label | escape }}"><span class="contact-detail-icon">{{ item.icon | escape }}</span><span><small>{{ item.label | escape }}</small><span>{{ item.value | escape }}</span></span></a>{% else %}<div class="contact-detail reveal"><span class="contact-detail-icon">{{ item.icon | escape }}</span><span><small>{{ item.label | escape }}</small><span>{{ item.value | escape }}</span></span></div>{% endif %}{% endif %}{% endfor %}</div></div></section>
 <section class="section theme-blue"><div class="shell"><div class="final-cta reveal"><div class="section-label">PROFESSIONAL CONNECTION</div><h2>Knowledge is better<br>when it creates conversation.</h2><p>Use this page for professional networking, HR knowledge sharing or collaboration related to people operations, payroll and workplace learning.</p><div class="actions"><a class="btn primary" href="mailto:munawarkabduljabbar@gmail.com">Email Contact →</a><a class="btn secondary" href="/">Back to Home</a></div></div></div></section></main><footer><div class="shell"><div class="footer-grid">
 <div class="footer-brand"><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><p>Practical HR knowledge, tools and resources for the UAE workplace.</p></div>
 <div><strong>Knowledge</strong><a href="/hr-hub/uae-labour-law/">Labour Law</a><br><a href="/hr-hub/payroll-insights/">Payroll</a><br><a href="/hr-hub/hr-process-guide/">Process Guide</a></div>
