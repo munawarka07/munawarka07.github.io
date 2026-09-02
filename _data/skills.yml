@@ -1,3 +1,37 @@
+page:
+  eyebrow: SKILLS & EXPERTISE
+  hero_title_line1: Capability built
+  hero_title_highlight: practice.
+  hero_description: A practical skill set spanning HR operations, payroll, employee lifecycle management, HR technology, analytics,
+    compliance and people services.
+  primary_button: Explore Capabilities
+  secondary_button: Systems & Tools
+  radar_core_title: HR
+  radar_core_subtitle: Capability System
+  radar_bubbles:
+  - Payroll
+  - HR Operations
+  - Employee Relations
+  - HRIS & Data
+  - Compliance
+  marquee:
+  - PAYROLL
+  - HR OPERATIONS
+  - EMPLOYEE RELATIONS
+  - HRIS
+  - EXCEL
+  - UAE LABOUR LAW
+  - ANALYTICS
+  - PROCESS IMPROVEMENT
+  capabilities_label: 01 / CORE CAPABILITIES
+  capabilities_title: What I work with every day.
+  capabilities_description: Technical knowledge, operational execution and practical judgment developed in real HR environments.
+  systems_label: 02 / SYSTEMS & TECHNOLOGY
+  systems_title: Tools behind the work.
+  systems_description: HR platforms, enterprise systems and analytical tools supporting people operations and payroll.
+  cta_label: 03 / NEXT
+  cta_title: Capability matters most when it creates impact.
+  cta_description: Continue to Projects & Awards to explore selected improvements, achievements and professional recognition.
 capabilities:
 - index: 01 / PAYROLL
   title: Payroll & Compensation

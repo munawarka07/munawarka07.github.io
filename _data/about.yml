@@ -1,0 +1,88 @@
+page:
+  eyebrow: ABOUT THE PERSON BEHIND THE PLATFORM
+  hero_title: People operations with purpose & structure.
+  hero_description_1: My professional journey has developed across payroll, HR operations, employee services and process improvement
+    - building practical experience around the systems and decisions that keep people operations moving.
+  hero_description_2: I believe good HR is not only about policy and process. It is about creating clarity, maintaining trust
+    and making complex employee matters easier for people and organizations to navigate.
+  profile_chips:
+  - HR Operations
+  - Payroll
+  - People & Process
+  marquee:
+  - HR OPERATIONS
+  - PAYROLL
+  - EMPLOYEE SERVICES
+  - PROCESS IMPROVEMENT
+  - PEOPLE FIRST
+  - COMPLIANCE
+  facts_label: 01 / QUICK FACTS
+  facts_title: Experience behind the knowledge.
+  facts_description: A concise view of the areas that have shaped my professional experience and the perspective behind munawar.in.
+  approach_label: 02 / MY APPROACH
+  approach_title: HR works best when clarity meets empathy.
+  approach_paragraphs:
+  - My career began with payroll and finance foundations and gradually expanded into broader HR operations, employee lifecycle
+    management, compliance, employee relations and people services.
+  - 'That journey shaped how I approach HR today: understand the detail, simplify the process, communicate clearly and keep
+    the human experience in view.'
+  mvv_label: 03 / MISSION • VISION • VALUES
+  mvv_title: What guides the platform.
+  mvv_description: Munawar.in exists to make practical HR knowledge clearer, more useful and easier to access.
+facts:
+- number: '01'
+  value: HR Operations
+  description: Employee lifecycle, HR services and day-to-day people operations.
+  published: true
+- number: '02'
+  value: 5,000+
+  description: Large-scale workforce operations exposure.
+  published: true
+- number: '03'
+  value: Payroll
+  description: WPS, EOSB, payroll controls and employee pay processes.
+  published: true
+- number: '04'
+  value: People
+  description: Employee support, relations and practical problem solving.
+  published: true
+- number: '05'
+  value: Process
+  description: Compliance, structure, improvement and operational clarity.
+  published: true
+principles:
+- number: '01'
+  title: Clarity over complexity
+  description: Translate complicated processes into steps people can understand and use.
+  published: true
+- number: '02'
+  title: Process with purpose
+  description: Strong processes should improve both operational control and the employee experience.
+  published: true
+- number: '03'
+  title: People at the center
+  description: Policies, systems and payroll ultimately affect real people - that context matters.
+  published: true
+mission_vision_values:
+- index: 01 / MISSION
+  title: Make complexity clearer.
+  description: Share practical HR knowledge and experience in a way that helps people understand processes, make informed
+    decisions and approach HR with greater confidence.
+  values: []
+  published: true
+- index: 02 / VISION
+  title: Make HR knowledge more accessible.
+  description: Build a practical knowledge platform where professionals can explore people operations, payroll and workplace
+    topics through clear information, useful tools and real-world context.
+  values: []
+  published: true
+- index: 03 / VALUES
+  title: How the work should feel.
+  description: ''
+  values:
+  - Clarity
+  - Integrity
+  - Empathy
+  - Continuous Learning
+  - Knowledge Sharing
+  published: true

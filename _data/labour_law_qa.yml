@@ -1,3 +1,18 @@
+page:
+  eyebrow: LABOUR LAW Q&A
+  hero_line1: Questions answered.
+  hero_highlight: Without the clutter.
+  hero_description: Search common UAE employment questions and open concise answers.
+  hero_chips:
+  - Probation
+  - Leave
+  - Salary
+  - EOSB
+  notice_title: Quick-reference guidance only.
+  notice_text: Answers are intentionally short. Use the Labour Law page and official UAE legislation for full wording and
+    case-specific conditions.
+  search_placeholder: 'Ask or search: probation, leave, deduction, gratuity...'
+  search_button: Search
 last_reviewed: '2026-09-02'
 questions:
 - id: what-is-the-maximum-probation-period

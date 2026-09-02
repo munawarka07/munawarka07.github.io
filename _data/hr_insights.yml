@@ -1,3 +1,23 @@
+page:
+  eyebrow: HR INSIGHTS
+  hero_line1: Practical thinking.
+  hero_highlight: For real HR work.
+  hero_description: Practical observations on people operations, culture, employee experience and modern HR.
+  hero_chips:
+  - Culture
+  - Employee Lifecycle
+  - Technology
+  - Performance
+  section_label: 01 / EXPANDABLE KNOWLEDGE
+  section_title: Scan quickly. Expand when needed.
+  section_description: Every topic starts with a concise insight. Open the detailed view for context, practical actions, examples
+    and connected resources.
+  takeaway_label: 'Key takeaway:'
+  open_label: Read full insight
+  detail_label: Detailed explanation
+  actions_label: What HR should do
+  example_label: Practical example
+  related_label: Related knowledge
 last_reviewed: '2026-09-02'
 insights:
 - id: offboarding-deserves-the-same-care-as-onboarding

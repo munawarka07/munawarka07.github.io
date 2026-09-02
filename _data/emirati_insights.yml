@@ -1,3 +1,22 @@
+page:
+  eyebrow: EMIRATI INSIGHTS
+  hero_line1: National talent.
+  hero_highlight: Practical HR context.
+  hero_description: Emiratisation, pension and UAE National employment topics explained for practical HR use.
+  hero_chips:
+  - Emiratisation
+  - GPSSA
+  - Nafis
+  - UAE Nationals
+  section_label: 01 / EXPANDABLE KNOWLEDGE
+  section_title: Policy context. Practical action.
+  section_description: Open each topic for the operational context, HR actions, examples and links that support implementation.
+  takeaway_label: 'Key takeaway:'
+  open_label: Read full insight
+  detail_label: Detailed explanation
+  actions_label: What HR should do
+  example_label: Practical example
+  related_label: Related knowledge
 last_reviewed: '2026-09-02'
 insights:
 - id: private-sector-emiratisation

@@ -1,3 +1,23 @@
+page:
+  eyebrow: CONTACT
+  hero_title: Connect around people & process.
+  hero_description: Professional networking, HR knowledge sharing and collaboration.
+  hero_chips:
+  - HR
+  - Payroll
+  - Knowledge
+  - Collaboration
+  details_label: CONTACT DETAILS
+  details_title: Let’s connect.
+  details_description: For professional networking, HR knowledge sharing, feedback
+    or collaboration, reach out through the channel that works best for you.
+  cta_label: PROFESSIONAL CONNECTION
+  cta_title: Knowledge is better when it creates conversation.
+  cta_description: Use this page for professional networking, HR knowledge sharing
+    or collaboration related to people operations, payroll and workplace learning.
+  email_button: Email Contact
+  home_button: Back to Home
+  email_url: mailto:munawarkabduljabbar@gmail.com
 contacts:
 - label: Email
   value: munawarkabduljabbar@gmail.com

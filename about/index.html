@@ -500,10 +500,10 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
   <div class="aurora a1"></div><div class="aurora a2"></div>
   <div class="shell about-grid">
     <div class="reveal">
-      <div class="eyebrow"><span class="dot"></span> ABOUT THE PERSON BEHIND THE PLATFORM</div>
-      <h1>People operations<br>with <span>purpose & structure.</span></h1>
-      <p>My professional journey has developed across payroll, HR operations, employee services and process improvement - building practical experience around the systems and decisions that keep people operations moving.</p>
-      <p style="font-size:15px">I believe good HR is not only about policy and process. It is about creating clarity, maintaining trust and making complex employee matters easier for people and organizations to navigate.</p>
+      <div class="eyebrow"><span class="dot"></span> {{ site.data.about.page.eyebrow | escape }}</div>
+      <h1>{{ site.data.about.page.hero_title | escape }}</h1>
+      <p>{{ site.data.about.page.hero_description_1 | escape }}</p>
+      <p style="font-size:15px">{{ site.data.about.page.hero_description_2 | escape }}</p>
       <div class="actions">
         <a class="btn primary" href="#journey">Explore My Approach <span>→</span></a>
         <a class="btn secondary" href="#explore-more">View Career Sections</a>
@@ -516,17 +516,14 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
       <div class="portrait-placeholder profile-photo-frame">
         <img src="/assets/images/munawar-profile.webp" alt="Professional portrait" class="profile-photo" loading="lazy">
       </div>
-      <span class="profile-chip pc1">HR Operations</span>
-      <span class="profile-chip pc2">Payroll</span>
-      <span class="profile-chip pc3">People & Process</span>
+      {% for item in site.data.about.page.profile_chips %}<span class="profile-chip pc{{ forloop.index }}">{{ item | escape }}</span>{% endfor %}
     </div>
   </div>
 </section>
 
 <div class="marquee">
   <div class="track">
-    <span>HR OPERATIONS</span><span>PAYROLL</span><span>EMPLOYEE SERVICES</span><span>PROCESS IMPROVEMENT</span><span>PEOPLE FIRST</span><span>COMPLIANCE</span>
-    <span>HR OPERATIONS</span><span>PAYROLL</span><span>EMPLOYEE SERVICES</span><span>PROCESS IMPROVEMENT</span><span>PEOPLE FIRST</span><span>COMPLIANCE</span>
+    {% for item in site.data.about.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in site.data.about.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}
   </div>
 </div>
 
@@ -534,18 +531,14 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
   <div class="shell">
     <div class="section-head reveal-left">
       <div>
-        <div class="section-label">01 / QUICK FACTS</div>
-        <h2>Experience behind<br>the knowledge.</h2>
+        <div class="section-label">{{ site.data.about.page.facts_label | escape }}</div>
+        <h2>{{ site.data.about.page.facts_title | escape }}</h2>
       </div>
-      <p>A concise view of the areas that have shaped my professional experience and the perspective behind munawar.in.</p>
+      <p>{{ site.data.about.page.facts_description | escape }}</p>
     </div>
 
     <div class="fact-grid">
-      <div class="fact reveal"><span class="n">01</span><strong>HR Operations</strong><span>Employee lifecycle, HR services and day-to-day people operations.</span></div>
-      <div class="fact reveal delay1"><span class="n">02</span><strong>5,000+</strong><span>Large-scale workforce operations exposure.</span></div>
-      <div class="fact reveal delay2"><span class="n">03</span><strong>Payroll</strong><span>WPS, EOSB, payroll controls and employee pay processes.</span></div>
-      <div class="fact reveal delay3"><span class="n">04</span><strong>People</strong><span>Employee support, relations and practical problem solving.</span></div>
-      <div class="fact reveal"><span class="n">05</span><strong>Process</strong><span>Compliance, structure, improvement and operational clarity.</span></div>
+      {% for item in site.data.about.facts %}{% if item.published %}<div class="fact reveal"><span class="n">{{ item.number | escape }}</span><strong>{{ item.value | escape }}</strong><span>{{ item.description | escape }}</span></div>{% endif %}{% endfor %}
     </div>
   </div>
 </section>
@@ -553,13 +546,12 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <section class="section theme-dark" id="journey">
   <div class="shell story-grid">
     <div class="reveal-left">
-      <div class="section-label">02 / MY APPROACH</div>
-      <h2 style="margin-top:12px">HR works best<br>when clarity meets empathy.</h2>
+      <div class="section-label">{{ site.data.about.page.approach_label | escape }}</div>
+      <h2 style="margin-top:12px">{{ site.data.about.page.approach_title | escape }}</h2>
     </div>
     <div class="story-copy reveal-right">
-      <p>My career began with payroll and finance foundations and gradually expanded into broader HR operations, employee lifecycle management, compliance, employee relations and people services.</p>
-      <p>That journey shaped how I approach HR today: understand the detail, simplify the process, communicate clearly and keep the human experience in view.</p>
-      <div class="story-points">{% for item in site.data.about_points.points %}{% if item.published %}<div class="story-point"><b>{{ item.number | escape }}</b><div><strong>{{ item.title | escape }}</strong><span>{{ item.description | escape }}</span></div></div>{% endif %}{% endfor %}</div>
+      {% for item in site.data.about.page.approach_paragraphs %}<p>{{ item | escape }}</p>{% endfor %}
+      <div class="story-points">{% for item in site.data.about.principles %}{% if item.published %}<div class="story-point"><b>{{ item.number | escape }}</b><div><strong>{{ item.title | escape }}</strong><span>{{ item.description | escape }}</span></div></div>{% endif %}{% endfor %}</div>
     </div>
   </div>
 </section>
@@ -568,34 +560,14 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
   <div class="shell">
     <div class="section-head reveal-left">
       <div>
-        <div class="section-label">03 / MISSION • VISION • VALUES</div>
-        <h2>What guides<br>the platform.</h2>
+        <div class="section-label">{{ site.data.about.page.mvv_label | escape }}</div>
+        <h2>{{ site.data.about.page.mvv_title | escape }}</h2>
       </div>
-      <p>Munawar.in exists to make practical HR knowledge clearer, more useful and easier to access.</p>
+      <p>{{ site.data.about.page.mvv_description | escape }}</p>
     </div>
 
     <div class="mvv-grid">
-      <article class="mvv reveal">
-        <span class="index">01 / MISSION</span>
-        <h3>Make complexity clearer.</h3>
-        <p>Share practical HR knowledge and experience in a way that helps people understand processes, make informed decisions and approach HR with greater confidence.</p>
-      </article>
-      <article class="mvv reveal delay1">
-        <span class="index">02 / VISION</span>
-        <h3>Make HR knowledge more accessible.</h3>
-        <p>Build a practical knowledge platform where professionals can explore people operations, payroll and workplace topics through clear information, useful tools and real-world context.</p>
-      </article>
-      <article class="mvv reveal delay2">
-        <span class="index">03 / VALUES</span>
-        <h3>How the work should feel.</h3>
-        <div class="values">
-          <span class="value-chip">Clarity</span>
-          <span class="value-chip">Integrity</span>
-          <span class="value-chip">Empathy</span>
-          <span class="value-chip">Continuous Learning</span>
-          <span class="value-chip">Knowledge Sharing</span>
-        </div>
-      </article>
+      {% for item in site.data.about.mission_vision_values %}{% if item.published %}<article class="mvv reveal"><span class="index">{{ item.index | escape }}</span><h3>{{ item.title | escape }}</h3>{% if item.description and item.description != "" %}<p>{{ item.description | escape }}</p>{% endif %}{% if item.values %}<div class="values">{% for value in item.values %}<span class="value-chip">{{ value | escape }}</span>{% endfor %}</div>{% endif %}</article>{% endif %}{% endfor %}
     </div>
   </div>
 </section>

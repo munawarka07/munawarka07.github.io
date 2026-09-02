@@ -574,41 +574,30 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <div class="aurora a1"></div><div class="aurora a2"></div>
 <div class="shell exp-hero-grid">
 <div class="reveal">
-<div class="eyebrow"><span class="dot"></span> EXPERIENCE & EDUCATION</div>
-<h1>Built through<br><span>progression.</span></h1>
-<p>A career shaped across payroll, HR operations, employee services and team responsibility - supported by a finance foundation and continuous practical learning.</p>
-<div class="actions"><a class="btn primary" href="#experience">Explore Experience <span>↓</span></a><a class="btn secondary" href="#education">Education</a></div>
+<div class="eyebrow"><span class="dot"></span> {{ site.data.experience.page.eyebrow | escape }}</div>
+<h1>{{ site.data.experience.page.hero_title_line1 | escape }}<br><span>{{ site.data.experience.page.hero_title_highlight | escape }}</span></h1>
+<p>{{ site.data.experience.page.hero_description | escape }}</p>
+<div class="actions"><a class="btn primary" href="#experience">{{ site.data.experience.page.primary_button | escape }} <span>↓</span></a><a class="btn secondary" href="#education">{{ site.data.experience.page.secondary_button | escape }}</a></div>
 </div>
 <div class="career-map reveal-right" aria-hidden="true">
 <div class="career-line"></div><div class="career-node cn1"></div><div class="career-node cn2"></div><div class="career-node cn3"></div><div class="career-node cn4"></div>
-<div class="map-card mc1"><i>FOUNDATION</i><strong>Finance & Payroll</strong><span>Accuracy • controls • pay</span></div>
-<div class="map-card mc2"><i>GROWTH</i><strong>HR Operations</strong><span>Lifecycle • services • compliance</span></div>
-<div class="map-card mc3"><i>LEADERSHIP</i><strong>Team Responsibility</strong><span>Scale • coordination • delivery</span></div>
-<div class="map-card mc4"><i>TODAY</i><strong>Payroll Specialist</strong><span>People • process • insight</span></div>
+{% for item in site.data.experience.page.career_map %}<div class="map-card mc{{ forloop.index }}"><i>{{ item.stage | escape }}</i><strong>{{ item.title | escape }}</strong><span>{{ item.description | escape }}</span></div>{% endfor %}
 </div>
 </div>
 </section>
 
-<div class="marquee"><div class="track">
-<span>PAYROLL</span><span>HR OPERATIONS</span><span>EMPLOYEE LIFECYCLE</span><span>TEAM LEADERSHIP</span><span>UAE HR</span><span>PROCESS IMPROVEMENT</span>
-<span>PAYROLL</span><span>HR OPERATIONS</span><span>EMPLOYEE LIFECYCLE</span><span>TEAM LEADERSHIP</span><span>UAE HR</span><span>PROCESS IMPROVEMENT</span>
-</div></div>
+<div class="marquee"><div class="track">{% for item in site.data.experience.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in site.data.experience.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}</div></div>
 
 <section class="section theme-blue">
 <div class="shell">
-<div class="section-head reveal-left"><div><div class="section-label">01 / PROGRESSION</div><h2>From numbers<br>to people operations.</h2></div><p>The experience has expanded step by step - from payroll and finance discipline into broader HR operations, employee services and specialist payroll responsibility.</p></div>
-<div class="progression">
-<div class="progress-card reveal"><span class="step">01 / FOUNDATION</span><h3>Payroll & Finance</h3><p>Built accuracy, reconciliation, payroll processing and financial control foundations.</p></div>
-<div class="progress-card reveal delay1"><span class="step">02 / OPERATIONS</span><h3>HR Operations</h3><p>Expanded into onboarding, offboarding, employee services, compliance and lifecycle support.</p></div>
-<div class="progress-card reveal delay2"><span class="step">03 / SCALE</span><h3>Team & Workforce</h3><p>Worked across large employee populations with team coordination and operational responsibility.</p></div>
-<div class="progress-card reveal delay3"><span class="step">04 / SPECIALISM</span><h3>Payroll Specialist</h3><p>Combining payroll depth with broader HR operations understanding and process thinking.</p></div>
-</div>
+<div class="section-head reveal-left"><div><div class="section-label">{{ site.data.experience.page.progression_label | escape }}</div><h2>{{ site.data.experience.page.progression_title | escape }}</h2></div><p>{{ site.data.experience.page.progression_description | escape }}</p></div>
+<div class="progression">{% for item in site.data.experience.progression %}{% if item.published %}<div class="progress-card reveal"><span class="step">{{ item.step | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.description | escape }}</p></div>{% endif %}{% endfor %}</div>
 </div>
 </section>
 
 <section class="section theme-dark" id="experience">
 <div class="shell">
-<div class="section-head reveal-left"><div><div class="section-label">02 / CAREER TIMELINE</div><h2>Professional<br>experience.</h2></div><p>A concise career view. The final site can retain detailed responsibilities while keeping the page readable and visually structured.</p></div>
+<div class="section-head reveal-left"><div><div class="section-label">{{ site.data.experience.page.experience_label | escape }}</div><h2>{{ site.data.experience.page.experience_title | escape }}</h2></div><p>{{ site.data.experience.page.experience_description | escape }}</p></div>
 
 <div class="timeline">{% for item in site.data.experience.roles %}{% if item.published %}<div class="role reveal-right"><div class="role-date">{{ item.period | escape }}</div><span class="role-dot"></span><div class="role-card"><span class="company">{{ item.company | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.summary | escape }}</p><div class="role-tags">{% for tag in item.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="role-toggle" type="button"><span>View detailed responsibilities</span><span>+</span></button><div class="role-details"><div class="role-details-inner"><div class="detail-grid">{% for block in item.detail_blocks %}<div class="detail-box"><h4>{{ block.heading | escape }}</h4><ul>{% for point in block.points %}<li>{{ point | escape }}</li>{% endfor %}</ul></div>{% endfor %}</div><div class="impact-row">{% for tag in item.impact_tags %}<span class="impact-pill">{{ tag | escape }}</span>{% endfor %}</div></div></div></div></div>{% endif %}{% endfor %}</div>
 </div>
@@ -616,31 +605,10 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 
 <section class="section theme-mist" id="education">
 <div class="shell">
-<div class="section-head reveal-left"><div><div class="section-label">03 / EDUCATION</div><h2>The academic<br>foundation.</h2></div><p>Formal education in commerce and finance created the numerical and business foundation that later developed into payroll and HR operations expertise.</p></div>
+<div class="section-head reveal-left"><div><div class="section-label">{{ site.data.experience.page.education_label | escape }}</div><h2>{{ site.data.experience.page.education_title | escape }}</h2></div><p>{{ site.data.experience.page.education_description | escape }}</p></div>
 <div class="edu-grid">
-<div class="edu-main reveal">
-<span class="year">2017 - 2020</span>
-<h3>Bachelor of Commerce - Finance</h3>
-<p>University of Calicut, Faculty of Commerce and Management Studies. The program provided a foundation across finance, accounting, commerce and business disciplines.</p>
-<div class="edu-detail">
-<div><small>University</small><strong>University of Calicut</strong></div>
-<div><small>Major</small><strong>Finance</strong></div>
-<div><small>Duration</small><strong>3 Years</strong></div>
-<div><small>Mode</small><strong>Regular</strong></div>
-</div>
-</div>
-<div class="edu-side reveal-right">
-<div class="section-label" style="color:#7de6f1">CONTINUOUS LEARNING</div>
-<h3>Learning beyond the classroom.</h3>
-<p>Professional capability continues to develop through practical work, systems exposure, labour-law learning, payroll knowledge and process improvement.</p>
-<div class="learning-list">
-<div>UAE Labour Law & HR Compliance</div>
-<div>Payroll, WPS & EOSB</div>
-<div>HRIS / HRMS Systems</div>
-<div>Excel, Analytics & Dashboards</div>
-<div>HR Operations & Employee Lifecycle</div>
-</div>
-</div>
+<div>{% for item in site.data.experience.education %}{% if item.published %}<div class="edu-main reveal" style="margin-bottom:18px"><span class="year">{{ item.period | escape }}</span><h3>{{ item.qualification | escape }}</h3><p>{{ item.description | escape }}</p><div class="edu-detail">{% for detail in item.details %}<div><small>{{ detail.label | escape }}</small><strong>{{ detail.value | escape }}</strong></div>{% endfor %}</div></div>{% endif %}{% endfor %}</div>
+<div class="edu-side reveal-right"><div class="section-label" style="color:#7de6f1">{{ site.data.experience.page.continuous_label | escape }}</div><h3>{{ site.data.experience.page.continuous_title | escape }}</h3><p>{{ site.data.experience.page.continuous_description | escape }}</p><div class="learning-list">{% for item in site.data.experience.continuous_learning %}<div>{{ item | escape }}</div>{% endfor %}</div></div>
 </div>
 </div>
 </section>
@@ -648,9 +616,9 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <section class="section">
 <div class="shell">
 <div class="final-cta reveal">
-<div class="section-label">04 / NEXT</div>
-<h2>Experience explains the journey.<br>Skills show the capability.</h2>
-<p>Continue to the Skills & Expertise section to explore the systems, HR capabilities and operational knowledge developed through this experience.</p>
+<div class="section-label">{{ site.data.experience.page.cta_label | escape }}</div>
+<h2>{{ site.data.experience.page.cta_title | escape }}</h2>
+<p>{{ site.data.experience.page.cta_description | escape }}</p>
 <div class="actions"><a class="btn primary" href="/skills-expertise/">Skills & Expertise <span>→</span></a><a class="btn secondary" href="/about/">Back to About</a></div>
 </div>
 </div>

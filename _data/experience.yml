@@ -1,3 +1,68 @@
+page:
+  eyebrow: EXPERIENCE & EDUCATION
+  hero_title_line1: Built through
+  hero_title_highlight: progression.
+  hero_description: A career shaped across payroll, HR operations, employee services and team responsibility - supported by
+    a finance foundation and continuous practical learning.
+  primary_button: Explore Experience
+  secondary_button: Education
+  career_map:
+  - stage: FOUNDATION
+    title: Finance & Payroll
+    description: Accuracy • controls • pay
+  - stage: GROWTH
+    title: HR Operations
+    description: Lifecycle • services • compliance
+  - stage: LEADERSHIP
+    title: Team Responsibility
+    description: Scale • coordination • delivery
+  - stage: TODAY
+    title: Payroll Specialist
+    description: People • process • insight
+  marquee:
+  - PAYROLL
+  - HR OPERATIONS
+  - EMPLOYEE LIFECYCLE
+  - TEAM LEADERSHIP
+  - UAE HR
+  - PROCESS IMPROVEMENT
+  progression_label: 01 / PROGRESSION
+  progression_title: From numbers to people operations.
+  progression_description: The experience has expanded step by step - from payroll and finance discipline into broader HR
+    operations, employee services and specialist payroll responsibility.
+  experience_label: 02 / CAREER TIMELINE
+  experience_title: Professional experience.
+  experience_description: A concise career view. Open a role to explore the detailed responsibilities, capability areas and
+    impact behind it.
+  education_label: 03 / EDUCATION
+  education_title: The academic foundation.
+  education_description: Formal education in commerce and finance created the numerical and business foundation that later
+    developed into payroll and HR operations expertise.
+  continuous_label: CONTINUOUS LEARNING
+  continuous_title: Learning beyond the classroom.
+  continuous_description: Professional capability continues to develop through practical work, systems exposure, labour-law
+    learning, payroll knowledge and process improvement.
+  cta_label: 04 / NEXT
+  cta_title: Experience explains the journey. Skills show the capability.
+  cta_description: Continue to the Skills & Expertise section to explore the systems, HR capabilities and operational knowledge
+    developed through this experience.
+progression:
+- step: 01 / FOUNDATION
+  title: Payroll & Finance
+  description: Built accuracy, reconciliation, payroll processing and financial control foundations.
+  published: true
+- step: 02 / OPERATIONS
+  title: HR Operations
+  description: Expanded into onboarding, offboarding, employee services, compliance and lifecycle support.
+  published: true
+- step: 03 / SCALE
+  title: Team & Workforce
+  description: Worked across large employee populations with team coordination and operational responsibility.
+  published: true
+- step: 04 / SPECIALISM
+  title: Payroll Specialist
+  description: Combining payroll depth with broader HR operations understanding and process thinking.
+  published: true
 roles:
 - period: 2025 - Present
   company: IMKAN PROPERTIES • ABU DHABI
@@ -148,3 +213,26 @@ roles:
   - EOSB
   - Reconciliation
   published: true
+education:
+- period: 2017 - 2020
+  qualification: Bachelor of Commerce - Finance
+  institution: University of Calicut
+  faculty: Faculty of Commerce and Management Studies
+  description: University of Calicut, Faculty of Commerce and Management Studies. The program provided a foundation across
+    finance, accounting, commerce and business disciplines.
+  details:
+  - label: University
+    value: University of Calicut
+  - label: Major
+    value: Finance
+  - label: Duration
+    value: 3 Years
+  - label: Mode
+    value: Regular
+  published: true
+continuous_learning:
+- UAE Labour Law & HR Compliance
+- Payroll, WPS & EOSB
+- HRIS / HRMS Systems
+- Excel, Analytics & Dashboards
+- HR Operations & Employee Lifecycle

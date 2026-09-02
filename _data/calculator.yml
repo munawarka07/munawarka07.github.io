@@ -1,0 +1,77 @@
+hero:
+  eyebrow: HR CALCULATORS
+  title: Calculate. Understand the logic.
+  description: Transparent estimators for payroll, EOSB and leave values, with assumptions shown beside the result.
+  chips:
+  - Payroll
+  - EOSB
+  - Leave
+  - Formula
+notice:
+  title: Educational estimators.
+  text: Results are indicative only. Employer policy, contract terms, employee category and current UAE law may change the
+    correct payroll or entitlement calculation.
+payroll:
+  tab: Payroll
+  label: PAYROLL PRORATION
+  title: Prorated salary
+  salary_label: Monthly Salary (AED)
+  method_label: Proration Method
+  calendar_option: Calendar days in start month
+  fixed_option: Fixed 30-day basis
+  date_from_label: Date From
+  date_till_label: Date Till
+  calculate_button: Calculate
+  reset_button: Reset
+  result_label: ESTIMATED PRORATED SALARY
+  payable_days_label: Payable Days
+  divisor_label: Divisor
+  daily_rate_label: Daily Rate
+eosb:
+  tab: EOSB
+  label: STANDARD STATUTORY EOSB ESTIMATOR
+  title: End-of-service gratuity
+  start_date_label: Start Date
+  end_date_label: End Date
+  basic_salary_label: Last Basic Salary (AED)
+  unpaid_days_label: Unpaid Absence Days
+  calculate_button: Calculate
+  reset_button: Reset
+  result_label: ESTIMATED EOSB
+  eligible_service_label: Eligible Service
+  first_five_label: First 5 Years
+  above_five_label: Above 5 Years
+  note: 'Uses Article 51 assumptions for an eligible foreign full-time worker: at least one year continuous service, last
+    basic wage, 21 days/year for first five years, 30 days/year thereafter, unpaid absence excluded, and statutory two-year
+    wage cap.'
+leave:
+  tab: Leave
+  label: LEAVE VALUE ESTIMATOR
+  title: Leave balance value
+  salary_label: Salary Basis (AED)
+  balance_label: Leave Balance Days
+  calculate_button: Calculate
+  reset_button: Reset
+  result_label: SIMPLE DAILY-RATE VALUE
+  daily_rate_label: Daily Rate
+  balance_days_label: Balance Days
+  formula_label: Formula
+  formula_text: Salary ÷ 30 × days
+  note: This tool intentionally uses a simple 30-day daily-rate estimate. The legally correct wage basis can differ depending
+    on whether the calculation is leave pay, encashment during employment, or settlement on termination.
+related:
+  kicker: Explore next
+  title: More UAE HR resources
+  description: Use the calculators together with the underlying HR guidance and official rules.
+  cards:
+  - title: UAE Labour Law
+    description: Understand leave, wages, termination and gratuity context.
+    link: /hr-hub/uae-labour-law/
+  - title: Payroll Insights
+    description: Review WPS, payroll controls and salary processing.
+    link: /hr-hub/payroll-insights/
+  - title: HR Templates
+    description: Download practical letters, forms and payroll documents.
+    link: /hr-hub/library/
+  official_note: For regulated calculations, verify the current rule with MoHRE and the applicable employment terms. End-of-service
+    gratuity for eligible foreign full-time employees is based on the last basic wage under the current federal framework.

@@ -1,0 +1,137 @@
+hero:
+  eyebrow: AI HUB
+  title: Practical AI for modern HR decisions.
+  description: An advanced HR brainstorming workspace for analysis, drafting, learning and structured decision support. Built
+    to help HR professionals think more clearly - not replace professional judgement.
+  chips:
+  - Analyze
+  - Decide
+  - Create
+  - Develop
+workspace:
+  label: 01 / HR INTELLIGENCE WORKSPACE
+  title: Eight tools. One HR thinking space.
+  description: Each module is designed around a specific HR workflow rather than a generic chat box.
+  categories:
+  - title: ADVISE
+    description: Labour Law · Payroll
+  - title: CREATE
+    description: Letters · Job Descriptions
+  - title: REVIEW
+    description: Policies · Documents
+  - title: DEVELOP & DECIDE
+    description: Skills · Decision Lab
+tools:
+  law:
+    number: '01'
+    icon: LAW
+    title: AI UAE Labour Law Assistant
+    description: Structure UAE employment scenarios into facts, HR checks, risk flags and questions to verify.
+    tags:
+    - Scenario analysis
+    - HR checks
+    - Risk flags
+    button: Open workspace
+  payroll:
+    number: '02'
+    icon: PAY
+    title: AI Payroll Assistant
+    description: Analyze payroll situations, assumptions, controls and validation points before a payroll decision.
+    tags:
+    - Payroll logic
+    - Validation
+    - Reconciliation
+    button: Open workspace
+  letter:
+    number: '03'
+    icon: LTR
+    title: AI HR Letter Generator
+    description: Turn approved facts into a professional, editable HR communication draft.
+    tags:
+    - Letters
+    - Employee comms
+    - Editable
+    button: Open workspace
+  jd:
+    number: '04'
+    icon: JD
+    title: Job Description Generator
+    description: Create candidate-friendly job descriptions with responsibilities, requirements and competencies.
+    tags:
+    - Responsibilities
+    - Requirements
+    - Competencies
+    button: Open workspace
+  policy:
+    number: '05'
+    icon: POL
+    title: HR Policy Assistant
+    description: Brainstorm, structure or review HR policies, gaps, implementation questions and communication.
+    tags:
+    - Policy design
+    - Gap review
+    - Implementation
+    button: Open workspace
+  document:
+    number: '06'
+    icon: DOC
+    title: Document Quality Checker
+    description: Review HR documents for clarity, completeness, tone, consistency and ambiguity.
+    tags:
+    - Quality score
+    - Missing items
+    - Improvements
+    button: Open workspace
+  skills:
+    number: '07'
+    icon: SKL
+    title: HR Skill Assessment
+    description: Assess practical HR capability and build strengths, gaps and a development roadmap.
+    tags:
+    - Capability score
+    - Skill gaps
+    - PDF roadmap
+    button: Open workspace
+  decision:
+    number: 08
+    icon: LAB
+    title: HR Decision Lab
+    description: Work through complex HR cases with options, risk flags, required checks and an action plan.
+    tags:
+    - Decision options
+    - Risk level
+    - Action plan
+    button: Open workspace
+thinking:
+  label: 02 / HOW THE HUB THINKS
+  title: AI output should support judgement.
+  description: Brainstorming is separated from verified rules. Current law, policy and company-specific facts still need validation
+    before action.
+  principles:
+  - title: Facts before output
+    description: Structured inputs reduce guessing and force the scenario to include the facts that matter.
+  - title: Explain the logic
+    description: Payroll and decision tools surface assumptions, checks and risks instead of giving an unexplained answer.
+  - title: Human review stays essential
+    description: Generated analysis and drafts are working material, not a substitute for current official guidance or employer
+      policy.
+cta:
+  label: HR × AI
+  title: Better questions. Better HR thinking.
+  description: Structure complex work, challenge assumptions and turn HR knowledge into practical next steps.
+  primary_button: Explore HR Hub
+  secondary_button: Career Hub
+related:
+  kicker: Explore next
+  title: Ground AI answers in HR context
+  description: Use AI for structured thinking, then verify regulated decisions against current official guidance.
+  cards:
+  - title: UAE Labour Law
+    description: Review practical employment-law guidance.
+    link: /hr-hub/uae-labour-law/
+  - title: Payroll Insights
+    description: Explore payroll controls and WPS context.
+    link: /hr-hub/payroll-insights/
+  - title: HR Process Guide
+    description: Turn HR questions into repeatable processes.
+    link: /hr-hub/hr-process-guide/

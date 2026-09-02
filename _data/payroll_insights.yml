@@ -1,17 +1,42 @@
+page:
+  eyebrow: PAYROLL INSIGHTS
+  hero_line1: Payroll with
+  hero_highlight: control & clarity.
+  hero_description: Controls, compliance and practical lessons for reliable payroll operations.
+  hero_chips:
+  - WPS
+  - EOSB
+  - Deductions
+  - Controls
+  section_label: 01 / EXPANDABLE KNOWLEDGE
+  section_title: Controls first. Detail on demand.
+  section_description: Payroll topics remain easy to scan, while each card expands into operational guidance, controls, examples
+    and related resources.
+  takeaway_label: 'Key takeaway:'
+  open_label: Read full insight
+  detail_label: Detailed explanation
+  actions_label: What HR / Payroll should do
+  example_label: Practical example
+  related_label: Related knowledge
 last_reviewed: '2026-09-02'
 insights:
 - id: manual-payroll-creates-risk
   category: Controls
   title: Manual payroll creates risk.
-  summary: As payroll complexity grows, uncontrolled spreadsheets and manual handoffs increase the risk of missed changes, duplicate entries and incorrect payments.
+  summary: As payroll complexity grows, uncontrolled spreadsheets and manual handoffs increase the risk of missed changes,
+    duplicate entries and incorrect payments.
   takeaway: Use structured validation and systems where scale justifies them.
-  detailed: 'Payroll combines many moving inputs: joiners, leavers, attendance, unpaid leave, salary revisions, allowances, bonuses, deductions, bank changes, retro adjustments and final settlements. Manual processing can work at small scale, but the control environment becomes more important as volume and complexity grow.'
+  detailed: 'Payroll combines many moving inputs: joiners, leavers, attendance, unpaid leave, salary revisions, allowances,
+    bonuses, deductions, bank changes, retro adjustments and final settlements. Manual processing can work at small scale,
+    but the control environment becomes more important as volume and complexity grow.'
   actions:
   - Separate input, calculation, review and approval responsibilities where practical.
   - Lock source data after cut-off and document late changes.
   - Use reconciliation against the prior month and approved HR master data.
   - Protect formulas and maintain version control.
-  example: A salary revision is received by email after the payroll file has already been updated. Without a controlled change log, one version may include the revision while another does not. A formal exception register makes the final decision traceable.
+  example: A salary revision is received by email after the payroll file has already been updated. Without a controlled change
+    log, one version may include the revision while another does not. A formal exception register makes the final decision
+    traceable.
   links:
   - label: Process Guide
     url: /hr-hub/hr-process-guide/
@@ -23,13 +48,15 @@ insights:
   title: Payroll and policy changes must stay connected.
   summary: Attendance, leave, allowance, deduction and bonus policies can directly change payroll outcomes.
   takeaway: Involve payroll before policy changes go live.
-  detailed: A policy may appear to be an HR-only change but can create new payroll calculations, data requirements, cut-offs or WPS implications. Payroll should understand the operational rule before the first affected cycle.
+  detailed: A policy may appear to be an HR-only change but can create new payroll calculations, data requirements, cut-offs
+    or WPS implications. Payroll should understand the operational rule before the first affected cycle.
   actions:
   - Perform a payroll-impact review before policy launch.
   - Define the effective date and treatment of transition cases.
   - Test calculations using sample employees.
   - Communicate required input changes to managers and HR operations.
-  example: A new unpaid-leave rule is announced mid-month. Payroll needs to know the daily-rate method, effective date, approval source and how corrections will be handled before the cut-off.
+  example: A new unpaid-leave rule is announced mid-month. Payroll needs to know the daily-rate method, effective date, approval
+    source and how corrections will be handled before the cut-off.
   links:
   - label: Labour Law
     url: /hr-hub/uae-labour-law/
@@ -41,13 +68,15 @@ insights:
   title: Payroll recordkeeping is a control.
   summary: Approvals, payslips, adjustment evidence and payment records need a structured archive.
   takeaway: If a payroll decision is not documented, defending it later becomes difficult.
-  detailed: Payroll questions often arise months after a payment. A good archive allows the team to reconstruct what changed, who approved it, how it was calculated and what was paid without depending on personal memory.
+  detailed: Payroll questions often arise months after a payment. A good archive allows the team to reconstruct what changed,
+    who approved it, how it was calculated and what was paid without depending on personal memory.
   actions:
   - Archive the final approved payroll version.
   - Retain supporting approvals for one-off adjustments.
   - Keep bank/WPS confirmation and rejected-payment follow-up.
   - Use consistent file naming and restricted access.
-  example: An employee asks why a deduction occurred six months ago. A structured archive should allow payroll to retrieve the approval, calculation and payslip evidence quickly.
+  example: An employee asks why a deduction occurred six months ago. A structured archive should allow payroll to retrieve
+    the approval, calculation and payslip evidence quickly.
   links:
   - label: Document Center
     url: /hr-hub/library/
@@ -55,15 +84,18 @@ insights:
 - id: control-off-cycle-payments
   category: Off-Cycle
   title: Control off-cycle payments.
-  summary: Advances, relocation amounts, corrections and other one-off payments need the same discipline as the normal payroll cycle.
+  summary: Advances, relocation amounts, corrections and other one-off payments need the same discipline as the normal payroll
+    cycle.
   takeaway: Create a defined off-cycle workflow.
-  detailed: Off-cycle payments can bypass the normal reconciliation and approval rhythm. That makes clear ownership, coding, approval and later reconciliation especially important.
+  detailed: Off-cycle payments can bypass the normal reconciliation and approval rhythm. That makes clear ownership, coding,
+    approval and later reconciliation especially important.
   actions:
   - Define which cases qualify for off-cycle payment.
   - Require documented approval before processing.
   - Record whether the amount must be recovered or reflected in the next payroll.
   - Reconcile the off-cycle amount with the monthly payroll record.
-  example: An urgent relocation payment is made before payroll. If it is not logged correctly, the same allowance may be paid again in the monthly run.
+  example: An urgent relocation payment is made before payroll. If it is not logged correctly, the same allowance may be paid
+    again in the monthly run.
   links:
   - label: Process Guide
     url: /hr-hub/hr-process-guide/
@@ -73,13 +105,16 @@ insights:
   title: Deductions need a lawful basis.
   summary: Salary deductions should follow applicable law, policy, documentation and authorization.
   takeaway: The UAE Labour Relations Law limits aggregate deductions for multiple lawful reasons to 50% of the wage.
-  detailed: Article 25 lists situations in which deductions may be made and places conditions or limits on them. A company rule should not be used to override the statutory framework. Payroll should identify the deduction reason, evidence and applicable cap before processing.
+  detailed: Article 25 lists situations in which deductions may be made and places conditions or limits on them. A company
+    rule should not be used to override the statutory framework. Payroll should identify the deduction reason, evidence and
+    applicable cap before processing.
   actions:
   - Identify the legal/policy basis for every deduction code.
   - Keep employee authorization where required.
   - Review individual and aggregate deduction limits.
   - Escalate unusual deductions instead of processing them automatically.
-  example: If several recoveries apply in the same month, payroll should not simply deduct every amount requested. The aggregate statutory limit and the specific conditions for each deduction must be checked.
+  example: If several recoveries apply in the same month, payroll should not simply deduct every amount requested. The aggregate
+    statutory limit and the specific conditions for each deduction must be checked.
   links:
   - label: Labour Law
     url: /hr-hub/uae-labour-law/
@@ -89,15 +124,18 @@ insights:
 - id: payroll-data-is-sensitive
   category: Confidentiality
   title: Payroll data is sensitive.
-  summary: Salary, bank and personal information should be restricted to authorized roles and shared only through appropriate channels.
+  summary: Salary, bank and personal information should be restricted to authorized roles and shared only through appropriate
+    channels.
   takeaway: Treat payroll information as sensitive personal data.
-  detailed: Payroll files can contain salary, allowances, bank details, identification data and deductions. Access should be based on job need, and exports or email attachments should be controlled carefully.
+  detailed: Payroll files can contain salary, allowances, bank details, identification data and deductions. Access should
+    be based on job need, and exports or email attachments should be controlled carefully.
   actions:
   - Use role-based access where systems support it.
   - Avoid broad distribution lists for payroll files.
   - Password-protect or use approved secure channels for sensitive exports.
   - Remove unnecessary personal data from working reports.
-  example: A payroll variance file sent to a large email group may reveal salaries to people who do not need them. The control should begin with limiting the data and recipients.
+  example: A payroll variance file sent to a large email group may reveal salaries to people who do not need them. The control
+    should begin with limiting the data and recipients.
   links:
   - label: HR Process Guide
     url: /hr-hub/hr-process-guide/
@@ -105,15 +143,18 @@ insights:
 - id: reconcile-before-release
   category: Validation
   title: Reconcile before release.
-  summary: Headcount, salary changes, allowances, deductions and bank changes should be compared with approved inputs and the prior cycle.
+  summary: Headcount, salary changes, allowances, deductions and bank changes should be compared with approved inputs and
+    the prior cycle.
   takeaway: A variance review catches errors before employees do.
-  detailed: Payroll validation is stronger when it is risk-based. Instead of checking only the grand total, review employee-level movements and unusual patterns such as zero pay, large net-pay changes, new bank accounts or unexpected deductions.
+  detailed: Payroll validation is stronger when it is risk-based. Instead of checking only the grand total, review employee-level
+    movements and unusual patterns such as zero pay, large net-pay changes, new bank accounts or unexpected deductions.
   actions:
   - Compare current and prior-cycle gross and net pay.
   - Review joiners, exits and employees with large variances.
   - Validate bank changes independently.
   - Check payroll totals against approved funding/payment values.
-  example: An employee's net pay falls sharply because an unpaid-leave entry was duplicated. A variance threshold can flag the employee before the payroll is released.
+  example: An employee's net pay falls sharply because an unpaid-leave entry was duplicated. A variance threshold can flag
+    the employee before the payroll is released.
   links:
   - label: Process Guide
     url: /hr-hub/hr-process-guide/
@@ -123,13 +164,15 @@ insights:
   title: Communicate payroll cut-offs clearly.
   summary: Late attendance corrections and unapproved changes create rework, rushed checks and avoidable employee issues.
   takeaway: Publish cut-offs and make exceptions visible and auditable.
-  detailed: A cut-off is a control point, not just an administrative deadline. Stakeholders should know what must be submitted, who approves it, what happens to late items and who can authorize an exception.
+  detailed: A cut-off is a control point, not just an administrative deadline. Stakeholders should know what must be submitted,
+    who approves it, what happens to late items and who can authorize an exception.
   actions:
   - Publish a recurring payroll calendar.
   - Send targeted reminders before cut-off.
   - Use an exception log after the deadline.
   - Analyse recurring late submitters and root causes.
-  example: If a manager submits an allowance after cut-off, payroll should record whether it is approved as an exception or moved to the next cycle rather than quietly editing the final file.
+  example: If a manager submits an allowance after cut-off, payroll should record whether it is approved as an exception or
+    moved to the next cycle rather than quietly editing the final file.
   links:
   - label: Process Guide
     url: /hr-hub/hr-process-guide/
@@ -137,15 +180,19 @@ insights:
 - id: gratuity-needs-the-correct-salary-basis
   category: EOSB
   title: Gratuity needs the correct salary basis.
-  summary: For eligible foreign full-time workers under the standard statutory framework, gratuity uses the last basic wage, not total salary.
+  summary: For eligible foreign full-time workers under the standard statutory framework, gratuity uses the last basic wage,
+    not total salary.
   takeaway: Verify service eligibility, unpaid absence and the applicable EOSB regime before calculating.
-  detailed: 'Under Article 51, an eligible foreign full-time worker completing at least one year of continuous service receives gratuity based on the last basic wage: 21 days per year for the first five years and 30 days per year thereafter. Unpaid absence is excluded and the statutory gratuity is capped at two years'' wage.'
+  detailed: 'Under Article 51, an eligible foreign full-time worker completing at least one year of continuous service receives
+    gratuity based on the last basic wage: 21 days per year for the first five years and 30 days per year thereafter. Unpaid
+    absence is excluded and the statutory gratuity is capped at two years'' wage.'
   actions:
   - Confirm whether the employee is under the standard gratuity system or another applicable scheme.
   - Use the last basic wage for the statutory calculation.
   - Exclude unpaid absence from eligible service.
   - Apply proportional entitlement for eligible part-years and the statutory cap.
-  example: An employee with seven years of eligible service should not have all seven years calculated at 30 days. The first five years use the 21-day rate and the remaining eligible service uses 30 days.
+  example: An employee with seven years of eligible service should not have all seven years calculated at 30 days. The first
+    five years use the 21-day rate and the remaining eligible service uses 30 days.
   links:
   - label: EOSB Calculator
     url: /hr-hub/calculator/
@@ -155,15 +202,18 @@ insights:
 - id: end-of-contract-payments-are-time-sensitive
   category: Final Settlement
   title: End-of-contract payments are time-sensitive.
-  summary: Final payroll requires coordination across attendance, leave, gratuity, recoveries, assets and other contractual or statutory entitlements.
+  summary: Final payroll requires coordination across attendance, leave, gratuity, recoveries, assets and other contractual
+    or statutory entitlements.
   takeaway: Build the exit process backward from the legal payment deadline.
-  detailed: Article 53 requires the employer to pay the worker's wages and other entitlements within 14 days from the end of the contract. HR and payroll therefore need timely inputs from managers, IT, administration and other stakeholders.
+  detailed: Article 53 requires the employer to pay the worker's wages and other entitlements within 14 days from the end
+    of the contract. HR and payroll therefore need timely inputs from managers, IT, administration and other stakeholders.
   actions:
   - Trigger final-settlement data collection as soon as the exit is confirmed.
   - Validate last working day, leave, unpaid absence and salary basis.
   - Separate lawful recoveries from unsupported deductions.
   - Maintain final approval and payment evidence.
-  example: If clearance begins only after the last working day, the organisation may lose valuable time. Starting the checklist earlier helps payroll meet the statutory timeline.
+  example: If clearance begins only after the last working day, the organisation may lose valuable time. Starting the checklist
+    earlier helps payroll meet the statutory timeline.
   links:
   - label: Labour Law
     url: /hr-hub/uae-labour-law/

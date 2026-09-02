@@ -1,3 +1,23 @@
+page:
+  eyebrow: PROJECTS & AWARDS
+  hero_title: Work measured by impact.
+  hero_description: Selected improvements, high-volume HR initiatives and professional recognition that reflect a practical
+    approach to people operations, payroll and process improvement.
+  marquee:
+  - PROCESS IMPROVEMENT
+  - HR OPERATIONS
+  - WORKFORCE SCALE
+  - COMPLIANCE
+  - EMPLOYEE EXPERIENCE
+  - RECOGNITION
+  projects_label: 01 / SELECTED PROJECTS
+  projects_title: Turning work into improvement.
+  projects_description: Each project is shown as a concise overview first. Open any card to explore the operational detail
+    behind it.
+  recognition_label: 02 / PROFESSIONAL RECOGNITION
+  recognition_title: Recognition built on relationships.
+  recognition_description: Professional recognition matters most when it reflects consistency, service quality and the trust
+    created through day-to-day work.
 projects:
 - number: 01 / WORKFORCE OPERATIONS
   title: Large-Scale HR Operations

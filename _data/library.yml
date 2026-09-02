@@ -1,3 +1,19 @@
+page:
+  eyebrow: DOCUMENT CENTER
+  hero_line1: Practical resources.
+  hero_highlight: Ready when needed.
+  hero_description: A searchable HR resource library for letters, forms, payroll controls and lifecycle checklists.
+  hero_chips:
+  - Letters
+  - Forms
+  - Checklists
+  - Payroll
+  search_placeholder: Search offer letter, payroll, warning, offboarding...
+  search_button: Search
+  download_label: Download
+  notice_title: 'Editable resource library:'
+  notice_text: Download buttons are connected to the actual reusable templates stored in the website /documents folder. Personal
+    sample identifiers have been replaced with reusable placeholders where applicable.
 last_reviewed: '2026-09-02'
 documents:
 - id: asset-allocation-form

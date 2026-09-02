@@ -1,3 +1,17 @@
+page:
+  eyebrow: HR PROCESS GUIDE
+  hero_line1: Repeatable HR.
+  hero_highlight: Clearer execution.
+  hero_description: Practical workflows and checklists for recurring HR operations.
+  hero_chips:
+  - Onboarding
+  - Payroll
+  - Pension
+  - Offboarding
+  section_label: 01 / PROCESS MAP
+  section_title: From request to closure.
+  section_description: Use each process card as a simple operating checklist and adapt it to your organization’s approvals,
+    systems and policies.
 last_reviewed: '2026-09-02'
 steps:
 - number: '01'

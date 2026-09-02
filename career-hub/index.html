@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7fbff"><title>UAE HR Career Hub | CV, Interview & Career Resources</title>
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Munawar.in">
@@ -415,24 +417,19 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <nav class="nav-links"><a href="/hr-hub/">HR Hub</a><a href="/hr-hub/calculator/">Calculators</a><a href="/hr-hub/library/">Resources</a><a href="/career-hub/">Career Hub</a><a href="/hr-hub/ai-hub/">AI Hub</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
 <a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a><button class="menu-btn">Menu</button></div></header><main>
 <section class="knowledge-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid">
-<div class="reveal"><div class="eyebrow"><span class="dot"></span> CAREER HUB</div><h1>Learn. Prepare.<br><span>Grow.</span></h1><p>Practical resources for job search preparation, HR learning and professional development.</p></div>
-<div class="hero-panel reveal-right"><span class="panel-chip pc-a">CV</span><span class="panel-chip pc-b">Interview</span><span class="panel-chip pc-c">Learning</span><span class="panel-chip pc-d">Growth</span></div>
+<div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.career_hub.hero.eyebrow | escape }}</div><h1>{{ site.data.career_hub.hero.title | escape }}</h1><p>{{ site.data.career_hub.hero.description | escape }}</p></div>
+<div class="hero-panel reveal-right">{% for item in site.data.career_hub.hero.chips %}<span class="panel-chip {% cycle 'pc-a', 'pc-b', 'pc-c', 'pc-d' %}">{{ item | escape }}</span>{% endfor %}</div>
 </div></section>
 <section class="section theme-blue" id="opportunities"><div class="shell">
-<div class="section-head reveal-left"><div><div class="section-label">01 / LIVE OPPORTUNITIES</div><h2>Find the right<br>next move.</h2></div><p>Approved opportunities submitted to Munawar.in appear here automatically. Search by role, location, department or work arrangement.</p></div>
-<div class="job-toolbar reveal"><input id="jobSearch" placeholder="Search job title, company or keyword..."><select id="jobDepartment"><option value="">All departments</option></select><select id="jobLocation"><option value="">All locations</option></select><select id="jobMode"><option value="">All work modes</option><option>On-site</option><option>Hybrid</option><option>Remote</option></select></div>
-<div class="job-status reveal"><span id="jobStatusText">Connecting to opportunities...</span><b id="jobCount">0 jobs</b></div>
-<div class="jobs-grid" id="jobsGrid"><div class="job-empty">Live opportunities will appear here once the Google Sheet connection is enabled.</div></div>
+<div class="section-head reveal-left"><div><div class="section-label">{{ site.data.career_hub.opportunities.label | escape }}</div><h2>{{ site.data.career_hub.opportunities.title | escape }}</h2></div><p>{{ site.data.career_hub.opportunities.description | escape }}</p></div>
+<div class="job-toolbar reveal"><input id="jobSearch" placeholder="{{ site.data.career_hub.opportunities.search_placeholder | escape }}"><select id="jobDepartment"><option value="">{{ site.data.career_hub.opportunities.all_departments | escape }}</option></select><select id="jobLocation"><option value="">{{ site.data.career_hub.opportunities.all_locations | escape }}</option></select><select id="jobMode"><option value="">{{ site.data.career_hub.opportunities.all_work_modes | escape }}</option><option>On-site</option><option>Hybrid</option><option>Remote</option></select></div>
+<div class="job-status reveal"><span id="jobStatusText">{{ site.data.career_hub.opportunities.loading_text | escape }}</span><b id="jobCount">0 jobs</b></div>
+<div class="jobs-grid" id="jobsGrid"><div class="job-empty">{{ site.data.career_hub.opportunities.empty_text | escape }}</div></div>
 </div></section>
 <section class="section" id="career-tools"><div class="shell">
-<div class="section-head reveal-left"><div><div class="section-label">02 / CAREER TOOLS</div><h2>Prepare with<br>more clarity.</h2></div><p>Four practical tools in one place. Use AI only when you need personalized guidance - otherwise each card gives you the core principle at a glance.</p></div>
-<div class="knowledge-grid">
-<article class="k-card reveal"><div class="k-icon">CV</div><span class="num">01</span><h3>CV Review</h3><p>Upload your CV for structured feedback on clarity, ATS readiness, impact and achievement wording.</p><button class="tool-card-btn" onclick="openAI('cv')">Upload & review CV ↗</button></article>
-<article class="k-card reveal"><div class="k-icon">Q</div><span class="num">02</span><h3>Interview Preparation</h3><p>Use a job description or target role to generate realistic questions, answer guidance and preparation points.</p><button class="tool-card-btn" onclick="openAI('interview')">Prepare interview ↗</button></article>
-<article class="k-card reveal"><div class="k-icon">↗</div><span class="num">03</span><h3>HR Learning Path</h3><p>Turn your current experience and target role into a focused 90-day learning roadmap.</p><button class="tool-card-btn" onclick="openAI('learning')">Build my roadmap ↗</button></article>
-<article class="k-card reveal"><div class="k-icon">◎</div><span class="num">04</span><h3>Professional Growth</h3><p>Get practical suggestions for projects, skills, exposure and measurable career progression.</p><button class="tool-card-btn" onclick="openAI('growth')">Plan my growth ↗</button></article>
-</div>
-<div class="ai-note light-note">AI-generated guidance is educational and may be incomplete. Do not upload confidential employer, employee, payroll, banking, identity or medical information.</div>
+<div class="section-head reveal-left"><div><div class="section-label">{{ site.data.career_hub.tools.label | escape }}</div><h2>{{ site.data.career_hub.tools.title | escape }}</h2></div><p>{{ site.data.career_hub.tools.description | escape }}</p></div>
+<div class="knowledge-grid">{% for item in site.data.career_hub.tools.cards %}{% if item.published %}<article class="k-card reveal"><div class="k-icon">{{ item.icon | escape }}</div><span class="num">{{ item.number | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.description | escape }}</p><button class="tool-card-btn" onclick="openAI('{{ item.tool_key | escape }}')">{{ item.button | escape }} ↗</button></article>{% endif %}{% endfor %}</div>
+<div class="ai-note light-note">{{ site.data.career_hub.tools.ai_note | escape }}</div>
 </div></section></main><div class="modal" id="aiModal"><div class="modal-box"><button class="modal-close" onclick="closeModal('aiModal')">×</button><iframe id="aiFrame" title="AI Career Tool"></iframe></div></div>
 <div class="modal" id="jobModal"><div class="modal-box"><button class="modal-close" onclick="closeModal('jobModal')">×</button><div class="job-detail" id="jobDetail"></div></div></div><footer><div class="shell"><div class="footer-grid">
 <div class="footer-brand"><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><p>Practical HR knowledge, tools and resources for the UAE workplace.</p></div>
