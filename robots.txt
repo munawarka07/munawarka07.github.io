@@ -2,4 +2,8 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
+User-agent: OAI-SearchBot
+Disallow: /admin/
+Allow: /
+
 Sitemap: https://munawar.in/sitemap.xml
