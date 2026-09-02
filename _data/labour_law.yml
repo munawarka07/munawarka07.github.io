@@ -63,7 +63,7 @@ sections:
   - id: final-entitlements
     category: Employment Ending
     search: final settlement 14 days final entitlements
-    title: Final Entitlements Test
+    title: Final Entitlements
     reference: Article 53
     content: The employer must pay wages and other statutory entitlements within 14
       days from the end of the contract.
