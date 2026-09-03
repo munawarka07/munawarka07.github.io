@@ -513,6 +513,32 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 .knowledge-hero + .section{position:relative;z-index:1;}
 .knowledge-hero .shell{position:relative;z-index:2;}
 </style>
+
+<style id="aihub-homepage-only-final-fix">
+/* AI Hub homepage only: keep the complete hero safely below the fixed navigation. */
+@media (min-width:1051px){
+  .knowledge-hero{
+    min-height:680px!important;
+    padding:190px 0 80px!important;
+    align-items:flex-start!important;
+  }
+  .knowledge-hero-grid{align-items:center!important;}
+}
+@media (min-width:821px) and (max-width:1050px){
+  .knowledge-hero{
+    min-height:auto!important;
+    padding:155px 0 64px!important;
+    align-items:flex-start!important;
+  }
+}
+@media (max-width:820px){
+  .knowledge-hero{
+    min-height:auto!important;
+    padding:125px 0 56px!important;
+    align-items:flex-start!important;
+  }
+}
+</style>
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links global-nav" aria-label="Primary navigation">
 <div class="nav-menu"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
 <a href="/hr-hub/"><strong>HR Hub Overview</strong><small>All HR knowledge and tools</small></a>
