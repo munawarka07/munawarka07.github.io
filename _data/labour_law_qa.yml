@@ -103,3 +103,11 @@ questions:
     answer: Probation may not exceed six months, and the same employer may not place
       the same worker on probation more than once.
     search: UAE probation 6 months maximum probation
+  - published: true
+    id: non-compete-clause-uae
+    category: Non-Compete
+    question: When can a non-compete clause be used in the UAE?
+    answer: A non-compete clause may be agreed where the worker's role gives access
+      to the employer's clients or business secrets and a restriction is
+      necessary to protect legitimate business interests.
+    search: UAE non compete clause clients business secrets
