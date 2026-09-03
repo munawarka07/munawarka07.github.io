@@ -2406,6 +2406,11 @@ collections:
     name: description
     widget: text
     hint: "1–2 sentence summary used on article cards and search results."
+  - label: Cover Image
+    name: featured_image
+    widget: image
+    required: false
+    hint: "Used on the Articles listing page and article cards. Recommended: wide 16:9 image."
   - label: Published Date
     name: date
     widget: datetime
