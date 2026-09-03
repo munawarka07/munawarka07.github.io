@@ -23,3 +23,46 @@ questions:
     answer: "Yes. A worker must have the appropriate work permit before legally
       working for a private-sector employer, subject to applicable permit rules.
       "
+  - published: true
+    id: who-pays-recruitment-costs-uae
+    category: Recruitment & Work Permits
+    question: Who pays recruitment and employment costs in the UAE?
+    answer: The employer must bear recruitment and employment costs and may not
+      charge these costs to the worker directly or indirectly.
+    search: UAE recruitment fees visa costs employer employee recruitment cost
+  - published: true
+    id: can-employer-charge-recruitment-fees
+    category: Recruitment & Work Permits
+    question: Can an employer recover recruitment fees from an employee?
+    answer: No. Recruitment and employment costs may not be charged to the worker
+      directly or indirectly.
+    search: recruitment fee deduction employee UAE visa cost recruitment costs
+  - published: true
+    id: recruitment-agency-licence-uae
+    category: Recruitment & Work Permits
+    question: Can anyone provide recruitment or employment mediation services in the UAE?
+    answer: No. Recruitment and employment mediation activities require the
+      appropriate licence from the Ministry or competent authority.
+    search: UAE recruitment agency licence employment agency MOHRE
+  - published: true
+    id: work-for-another-employer-uae
+    category: Recruitment & Work Permits
+    question: Can an employee work for another employer in the UAE?
+    answer: Only where the applicable work-permit and employment requirements are
+      satisfied. An employee should not work for another employer without the
+      required authorisation.
+    search: second job UAE another employer part time permit MOHRE
+  - published: true
+    id: employment-contract-required-uae
+    category: Employment Contracts
+    question: Is an employment contract required in the UAE private sector?
+    answer: Yes. The employer and worker must enter into an employment contract in
+      accordance with the prescribed legal and regulatory requirements.
+    search: UAE employment contract required MOHRE labour contract
+  - published: true
+    id: fixed-term-contract-uae
+    category: Employment Contracts
+    question: What type of employment contract is used in the UAE private sector?
+    answer: UAE private-sector employment uses fixed-term employment contracts in
+      accordance with the Labour Law and its implementing rules.
+    search: UAE fixed term contract limited contract employment contract
