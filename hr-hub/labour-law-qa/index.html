@@ -178,6 +178,10 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 .filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 24px}
 .filter-btn{padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#53677c;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}
 .filter-btn.active,.filter-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.qa-filter-wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:16px 0 24px}
+.qa-filter-wrap .filter-row{margin:0;flex:1}
+.qa-result-count{font-size:11px;font-weight:700;color:var(--muted);white-space:nowrap}
+@media(max-width:760px){.qa-filter-wrap{align-items:flex-start;flex-direction:column}.qa-filter-wrap .filter-row{width:100%}.filter-btn{padding:9px 11px}}
 .info-note{padding:16px 18px;border:1px solid rgba(28,95,212,.13);border-radius:16px;background:rgba(28,95,212,.04);color:#5d7187;font-size:12px;line-height:1.7}
 .source-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
 .source-link{padding:9px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--blue);font-size:10px;font-weight:800}
@@ -408,7 +412,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.labour_law_qa.page.eyebrow | escape }}</div><h1>{{ site.data.labour_law_qa.page.hero_line1 | escape }}<br><span>{{ site.data.labour_law_qa.page.hero_highlight | escape }}</span></h1><p>{{ site.data.labour_law_qa.page.hero_description | escape }}</p></div>
 <div class="hero-panel reveal-right">{% for item in site.data.labour_law_qa.page.hero_chips %}<span class="panel-chip {% cycle 'pc-a', 'pc-b', 'pc-c', 'pc-d' %}">{{ item | escape }}</span>{% endfor %}</div>
 </div></section>
-<section class="section theme-blue"><div class="shell"><div class="info-note"><strong>{{ site.data.labour_law_qa.page.notice_title | escape }}</strong> {{ site.data.labour_law_qa.page.notice_text | escape }}</div><div style="height:22px"></div><div class="searchbar"><input id="qaSearch" placeholder="{{ site.data.labour_law_qa.page.search_placeholder | escape }}"><button onclick="filterQA()">{{ site.data.labour_law_qa.page.search_button | escape }}</button></div><div class="accordion">{% for item in site.data.labour_law_qa.questions %}{% if item.published %}<div class="acc-item qa-item" id="{{ item.id | escape }}" data-cat="{{ item.category | escape }}" data-search="{{ item.search | escape }}"><button class="acc-head"><span><small>{{ item.category | escape }}</small>{{ item.question | escape }}</span><b>+</b></button><div class="acc-body"><div class="acc-inner"><div class="acc-content">{{ item.answer | escape }}</div></div></div></div>{% endif %}{% endfor %}</div></div></section></main><footer><div class="shell"><div class="footer-grid">
+<section class="section theme-blue"><div class="shell"><div class="info-note"><strong>{{ site.data.labour_law_qa.page.notice_title | escape }}</strong> {{ site.data.labour_law_qa.page.notice_text | escape }}</div><div style="height:22px"></div><div class="searchbar"><input id="qaSearch" placeholder="{{ site.data.labour_law_qa.page.search_placeholder | escape }}"><button onclick="filterQA()">{{ site.data.labour_law_qa.page.search_button | escape }}</button></div><div class="qa-filter-wrap"><div class="filter-row" id="qaFilters" aria-label="Filter questions by topic"><button class="filter-btn active" type="button" data-group="all">All</button><button class="filter-btn" type="button" data-group="hiring">Hiring & Contracts</button><button class="filter-btn" type="button" data-group="probation">Probation</button><button class="filter-btn" type="button" data-group="working">Working Time</button><button class="filter-btn" type="button" data-group="salary">Salary & WPS</button><button class="filter-btn" type="button" data-group="leave">Leave</button><button class="filter-btn" type="button" data-group="protection">Worker Protection</button><button class="filter-btn" type="button" data-group="disciplinary">Disciplinary</button><button class="filter-btn" type="button" data-group="ending">Resignation & Termination</button><button class="filter-btn" type="button" data-group="eosb">EOSB</button><button class="filter-btn" type="button" data-group="final">Final Settlement</button></div><div class="qa-result-count" id="qaResultCount" aria-live="polite"></div></div><div class="accordion">{% for item in site.data.labour_law_qa.questions %}{% if item.published %}<div class="acc-item qa-item" id="{{ item.id | escape }}" data-cat="{{ item.category | escape }}" data-search="{{ item.search | escape }} {{ item.question | escape }} {{ item.answer | escape }}"><button class="acc-head"><span><small>{{ item.category | escape }}</small>{{ item.question | escape }}</span><b>+</b></button><div class="acc-body"><div class="acc-inner"><div class="acc-content">{{ item.answer | escape }}</div></div></div></div>{% endif %}{% endfor %}</div></div></section></main><footer><div class="shell"><div class="footer-grid">
 <div class="footer-brand"><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><p>Practical HR knowledge, tools and resources for the UAE workplace.</p></div>
 <div><strong>Knowledge</strong><a href="/hr-hub/uae-labour-law/">Labour Law</a><br><a href="/hr-hub/payroll-insights/">Payroll</a><br><a href="/hr-hub/hr-process-guide/">Process Guide</a></div>
 <div><strong>Resources</strong><a href="/hr-hub/calculator/">Calculators</a><br><a href="/hr-hub/library/">Document Center</a><br><a href="/career-hub/">Career Hub</a><br/><a href="/hr-hub/ai-hub/">AI Hub</a></div>
@@ -421,4 +425,22 @@ const prog=document.getElementById('scrollProgress');if(prog)window.addEventList
 const glow=document.getElementById('cursorGlow');if(glow&&matchMedia('(pointer:fine)').matches)window.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});else if(glow)glow.style.display='none';
 document.querySelectorAll('.acc-head').forEach(b=>b.onclick=()=>{const body=b.nextElementSibling;const open=body.classList.toggle('open');b.querySelector('b').textContent=open?'×':'+'});
 function showToast(t){const x=document.getElementById('toast');if(!x)return;x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)}
-function filterQA(){const q=document.getElementById('qaSearch').value.toLowerCase();document.querySelectorAll('.qa-item').forEach(c=>c.classList.toggle('hidden',q&&!c.dataset.search.includes(q)))}</script></body></html>
+let qaActiveGroup='all';
+const qaGroupMap={
+  hiring:['recruitment & work permits','employment contracts','non-compete','employer obligations','employee obligations'],
+  probation:['probation'],
+  working:['working hours','overtime'],
+  salary:['salary & wps','salary & deductions'],
+  leave:['public holidays','annual leave','maternity leave','parental leave','sick leave','other statutory leave'],
+  protection:['worker protection'],
+  disciplinary:['disciplinary action'],
+  ending:['resignation & notice','termination','absence'],
+  eosb:['eosb / gratuity','eosb','gratuity'],
+  final:['final settlement']
+};
+function qaNormalize(v){return (v||'').toString().trim().toLowerCase()}
+function qaMatchesGroup(category,group){if(group==='all')return true;const cat=qaNormalize(category);return (qaGroupMap[group]||[]).some(x=>cat===x||cat.includes(x))}
+function filterQA(){const input=document.getElementById('qaSearch');const q=qaNormalize(input?input.value:'');const items=[...document.querySelectorAll('.qa-item')];let visible=0;items.forEach(c=>{const searchText=qaNormalize(c.dataset.search);const category=c.dataset.cat||'';const matchesText=!q||searchText.includes(q);const matchesGroup=qaMatchesGroup(category,qaActiveGroup);const show=matchesText&&matchesGroup;c.classList.toggle('hidden',!show);if(show)visible++});const counter=document.getElementById('qaResultCount');if(counter)counter.textContent=visible+' question'+(visible===1?'':'s')}
+document.querySelectorAll('#qaFilters .filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{qaActiveGroup=btn.dataset.group||'all';document.querySelectorAll('#qaFilters .filter-btn').forEach(x=>x.classList.remove('active'));btn.classList.add('active');filterQA()})});
+const qaSearch=document.getElementById('qaSearch');if(qaSearch){qaSearch.addEventListener('input',filterQA);qaSearch.addEventListener('keydown',e=>{if(e.key==='Enter')filterQA()})}
+filterQA();</script></body></html>
