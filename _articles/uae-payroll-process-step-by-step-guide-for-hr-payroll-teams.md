@@ -6,7 +6,7 @@ description: A practical step-by-step guide to the UAE payroll process, covering
   payroll inputs, attendance, leave, salary calculations, deductions, WPS
   processing, validation and month-end payroll controls for HR and payroll
   teams.
-date: 2026-09-03
+date: 2026-08-31
 reading_time: 12 min read
 seo_title: "UAE Payroll Process: Step-by-Step Guide for HR Teams"
 seo_description: Learn the UAE payroll process step by step, from payroll inputs
