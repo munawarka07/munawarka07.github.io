@@ -86,12 +86,12 @@ tools:
     number: '07'
     icon: SKL
     title: HR Skill Assessment
-    description: Assess practical HR capability and build strengths, gaps and a development roadmap.
+    description: Take a level-based real-life HR self-assessment with practical scenarios, capability results and focused development areas.
     tags:
-    - Capability score
-    - Skill gaps
-    - PDF roadmap
-    button: Open workspace
+    - Level-based questions
+    - Practical scenarios
+    - Development roadmap
+    button: Start assessment
   decision:
     number: 08
     icon: LAB
