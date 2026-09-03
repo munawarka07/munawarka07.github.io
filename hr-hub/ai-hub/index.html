@@ -493,6 +493,26 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 <style id="skill-assessment-v3">
 .skill-assess{display:none}.skill-assess.open{display:block}.skill-intro{display:grid;gap:18px}.skill-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.skill-stage{margin-top:18px}.skill-progress{height:8px;border-radius:999px;background:#e8f0f8;overflow:hidden;margin:14px 0 24px}.skill-progress>span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:width .3s ease}.skill-count{font-size:13px;font-weight:800;color:var(--blue)}.skill-question{font-size:22px;line-height:1.35;margin:8px 0 18px;color:var(--navy)}.skill-options{display:grid;gap:10px}.skill-option{width:100%;text-align:left;border:1px solid var(--line);background:#fbfdff;border-radius:15px;padding:15px 16px;cursor:pointer;transition:.2s;color:#243c55}.skill-option:hover{border-color:rgba(28,95,212,.4);background:#f3f8ff;transform:translateY(-1px)}.skill-option.selected{border-color:var(--blue);background:#eef6ff;box-shadow:0 0 0 2px rgba(28,95,212,.08)}.skill-option b{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#eaf2fb;margin-right:10px;color:var(--blue)}.skill-nav{display:flex;justify-content:space-between;gap:10px;margin-top:20px}.skill-btn{border:0;border-radius:13px;padding:12px 17px;font-weight:800;cursor:pointer}.skill-btn.primary{background:var(--navy);color:white}.skill-btn.secondary{background:#eef4fa;color:var(--navy)}.skill-btn:disabled{opacity:.4;cursor:not-allowed}.skill-result-head{padding:22px;border-radius:20px;background:linear-gradient(135deg,#0c2340,#1c5fd4);color:#fff}.skill-score{font-size:54px;font-weight:800;letter-spacing:-.05em}.skill-result-head p{color:rgba(255,255,255,.8)!important}.domain-list{display:grid;gap:12px;margin:22px 0}.domain-row{display:grid;grid-template-columns:150px 1fr 48px;gap:12px;align-items:center}.domain-row b{font-size:14px}.domain-bar{height:9px;background:#e8f0f8;border-radius:999px;overflow:hidden}.domain-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:999px}.result-panels{display:grid;grid-template-columns:1fr 1fr;gap:14px}.result-panel{padding:18px;border:1px solid var(--line);border-radius:17px;background:#fbfdff}.result-panel h3{font-size:18px;margin:0 0 10px}.result-panel ul{margin:0;padding-left:20px}.result-panel li{font-size:15px!important;margin:6px 0}.skill-disclaimer{font-size:13px!important;color:var(--muted);margin-top:18px}.skill-reset{margin-top:18px}.skill-required{color:#b42318;font-size:13px;display:none;margin-top:8px}@media(max-width:700px){.skill-intro-grid,.result-panels{grid-template-columns:1fr}.domain-row{grid-template-columns:110px 1fr 42px}.skill-question{font-size:19px}}
 </style>
+
+<style id="aihub-header-overlap-fix-v1">
+/* Keep the fixed navigation completely clear of the AI Hub hero/content. */
+@media(min-width:1051px){
+  .knowledge-hero{
+    padding-top:150px!important;
+    padding-bottom:58px!important;
+    min-height:62vh!important;
+  }
+}
+@media(min-width:821px) and (max-width:1050px){
+  .knowledge-hero{padding-top:132px!important;}
+}
+@media(max-width:820px){
+  .knowledge-hero{padding-top:112px!important;}
+}
+/* Prevent the next content block from visually riding into the hero boundary. */
+.knowledge-hero + .section{position:relative;z-index:1;}
+.knowledge-hero .shell{position:relative;z-index:2;}
+</style>
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark">M</span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links global-nav" aria-label="Primary navigation">
 <div class="nav-menu"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
 <a href="/hr-hub/"><strong>HR Hub Overview</strong><small>All HR knowledge and tools</small></a>
