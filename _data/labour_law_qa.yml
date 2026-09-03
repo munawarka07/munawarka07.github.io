@@ -14,4 +14,12 @@ page:
   hero_line1: Questions answered.
   search_placeholder: "Ask or search: probation, leave, deduction, gratuity..."
 last_reviewed: 2026-09-02
-questions: []
+questions:
+  - published: true
+    id: work-permit-required-uae
+    category: Recruitment & Work Permits
+    question: Is a work permit required to work in the UAE private sector?
+    search: UAE work permit MOHRE employment permit work legally UAE
+    answer: "Yes. A worker must have the appropriate work permit before legally
+      working for a private-sector employer, subject to applicable permit rules.
+      "
