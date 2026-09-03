@@ -6,7 +6,7 @@ description: A practical step-by-step guide to the UAE payroll process, covering
   payroll inputs, attendance, leave, salary calculations, deductions, WPS
   processing, validation and month-end payroll controls for HR and payroll
   teams.
-featured_image: /assets/uploads/chatgpt-image-sep-3-2026-03_56_48-pm.png
+featured_image: /assets/uploads/chatgpt-image-sep-3-2026-04_26_43-pm.png
 date: 2026-08-31
 reading_time: 12 min read
 seo_title: "UAE Payroll Process: Step-by-Step Guide for HR Teams"
@@ -35,7 +35,7 @@ This guide explains a practical **end-to-end UAE payroll process** that HR and p
 
 A typical monthly payroll cycle can be organised into the following stages:
 
-![UAE payroll process step-by-step workflow for HR and payroll teams](/assets/uploads/chatgpt-image-sep-3-2026-03_05_13-pm.png "UAE Payroll Process – Step-by-Step Guide")
+![UAE payroll process step-by-step workflow for HR and payroll teams](/assets/uploads/chatgpt-image-sep-3-2026-04_21_41-pm.png "UAE Payroll Process – Step-by-Step Guide")
 
 **Payroll Cut-Off → Employee Data Validation → Payroll Inputs → Attendance & Leave → Salary Calculation → Variable Payments & Deductions → Pension → Payroll Review → Approval → WPS/Salary Processing → Payslips → Reconciliation**
 
