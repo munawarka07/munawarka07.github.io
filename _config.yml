@@ -1,0 +1,12 @@
+title: Munawar.in
+url: https://munawar.in
+collections:
+  articles:
+    output: true
+    permalink: /articles/:name/
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: article

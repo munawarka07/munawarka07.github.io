@@ -2378,3 +2378,75 @@ collections:
         name: published
         widget: boolean
         default: true
+
+- name: articles
+  label: Articles
+  label_singular: Article
+  folder: _articles
+  create: true
+  delete: true
+  editor:
+    preview: false
+  slug: "{{slug}}"
+  summary: "{{date}} — {{title}}"
+  sortable_fields: [date, title, category]
+  fields:
+  - label: Title
+    name: title
+    widget: string
+  - label: URL Slug
+    name: slug
+    widget: string
+    hint: "Short SEO-friendly URL, e.g. uae-payroll-process-guide"
+  - label: Category
+    name: category
+    widget: select
+    options: [HR, Payroll, Labour Law, Emiratisation, Career, HR Technology]
+  - label: Short Description
+    name: description
+    widget: text
+    hint: "1–2 sentence summary used on article cards and search results."
+  - label: Published Date
+    name: date
+    widget: datetime
+    date_format: YYYY-MM-DD
+    time_format: false
+    format: YYYY-MM-DD
+  - label: Updated Date
+    name: updated
+    widget: datetime
+    required: false
+    date_format: YYYY-MM-DD
+    time_format: false
+    format: YYYY-MM-DD
+  - label: Reading Time
+    name: reading_time
+    widget: string
+    required: false
+    hint: "Example: 7 min read"
+  - label: Article Content
+    name: body
+    widget: markdown
+  - label: SEO Title
+    name: seo_title
+    widget: string
+    required: false
+    hint: "Optional. Keep natural and concise; title is used if blank."
+  - label: SEO Description
+    name: seo_description
+    widget: text
+    required: false
+  - label: Search Keywords
+    name: keywords
+    widget: string
+    required: false
+    hint: "Natural topic phrases for internal search; do not keyword-stuff."
+  - label: Featured
+    name: featured
+    widget: boolean
+    default: false
+    required: false
+  - label: Published
+    name: published
+    widget: boolean
+    default: true
