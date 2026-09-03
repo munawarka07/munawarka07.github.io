@@ -66,3 +66,40 @@ questions:
     answer: UAE private-sector employment uses fixed-term employment contracts in
       accordance with the Labour Law and its implementing rules.
     search: UAE fixed term contract limited contract employment contract
+  - published: true
+    id: renew-employment-contract-uae
+    category: Employment Contracts
+    question: Can a UAE employment contract be renewed?
+    answer: Yes. A fixed-term employment contract may be renewed or extended by
+      agreement between the employer and worker.
+    search: UAE contract renewal employment contract extension
+  - published: true
+    id: continue-working-after-contract-expiry
+    category: Employment Contracts
+    question: What happens if an employee continues working after the contract expires?
+    answer: If both parties continue implementing the contract after expiry without
+      an express new agreement, the original contract may be treated as
+      implicitly extended under the applicable legal rules.
+    search: expired employment contract continue working UAE renewal
+  - published: true
+    id: renewal-continuous-service-uae
+    category: Employment Contracts
+    question: Does contract renewal affect continuous service?
+    answer: Generally, renewal or extension does not reset the employment
+      relationship. The relevant periods are included in continuous service for
+      applicable statutory entitlements.
+    search: continuous service UAE contract renewal gratuity service
+  - published: true
+    id: better-benefits-than-labour-law
+    category: Employment Contracts
+    question: Can an employment contract provide better benefits than UAE Labour Law?
+    answer: Yes. An employment contract or company policy may provide benefits more
+      favourable to the employee than the statutory minimum.
+    search: UAE labour law better benefits company policy contract
+  - published: true
+    id: maximum-probation-period-uae
+    category: Probation
+    question: What is the maximum probation period in the UAE?
+    answer: Probation may not exceed six months, and the same employer may not place
+      the same worker on probation more than once.
+    search: UAE probation 6 months maximum probation
