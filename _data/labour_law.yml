@@ -139,3 +139,14 @@ sections:
     content: The employer must pay wages and other statutory entitlements within 14
       days from the end of the contract.
     published: true
+  - published: true
+    id: employer-obligations
+    category: Getting Hired
+    search: employer obligations records documents safety training employee rights
+      workplace
+    title: Employer Obligations
+    reference: Article 13
+    content: Employers have statutory duties covering matters such as employee
+      records, official documents, workplace requirements, occupational safety,
+      employee awareness of rights and obligations, medical care and other
+      employment requirements.
