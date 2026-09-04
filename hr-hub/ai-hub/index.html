@@ -932,5 +932,45 @@ function retakeSkillAssessment(){stopSkillTimer();document.getElementById('skill
 function resetSkillAssessment(clear=true){stopSkillTimer();skillPaused=false;skillPauseCount=0;document.getElementById('skillPauseOverlay')?.classList.remove('open');skillState={level:'',name:'',region:'',focus:'',index:0,answers:[],questions:[],attempt:1,result:null};showSkillStage('skillIntro');document.getElementById('skillRequired').style.display='none';document.getElementById('skillInstructionRequired').style.display='none';if(clear){['skillName','skillLevel','skillRegion','skillFocus'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=''})}}
 // Escape key is intentionally ignored while the protected skill-assessment window is open.
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElementById('skillModal')?.classList.contains('open')){e.preventDefault();e.stopImmediatePropagation()}},true);
+
+
+/* Anonymous assessment analytics — no candidate name, email or answer content is transmitted. */
+const SKILL_ANALYTICS_ENDPOINT='https://munawar-cms-auth.munawarka07.workers.dev/assessment/complete';
+function skillAnalyticsEventId(){
+  const k='munawarSkillAnalyticsEventV1';
+  const fingerprint=[skillState.level,skillState.region,skillState.focus,skillState.attempt,skillStartedAt].join('|');
+  let saved=null;try{saved=JSON.parse(sessionStorage.getItem(k)||'null')}catch(e){}
+  if(saved&&saved.fingerprint===fingerprint)return saved.id;
+  const id=(crypto?.randomUUID?.()||('mhr-'+Date.now()+'-'+Math.random().toString(36).slice(2)));
+  try{sessionStorage.setItem(k,JSON.stringify({fingerprint,id}))}catch(e){}
+  return id;
+}
+function skillScoreBand(score){
+  if(score>=90)return'90-100';if(score>=80)return'80-89';if(score>=70)return'70-79';if(score>=60)return'60-69';return'0-59';
+}
+async function recordSkillCompletion(){
+  const r=skillState.result;if(!r||skillState._analyticsSent)return;
+  skillState._analyticsSent=true;
+  const payload={
+    eventId:skillAnalyticsEventId(),
+    region:skillState.region||'unknown',
+    focus:skillState.focus||'unknown',
+    level:skillState.level||'unknown',
+    score:Number(r.overall)||0,
+    scoreBand:skillScoreBand(Number(r.overall)||0),
+    timedOut:!!r.timedOut,
+    timeUsed:Number(r.timeUsed)||0,
+    questionCount:Number(r.total)||0,
+    version:'assessment-v7.2'
+  };
+  try{
+    await fetch(SKILL_ANALYTICS_ENDPOINT,{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  }catch(e){/* Analytics must never interrupt the assessment or report. */}
+}
+const _finishSkillAssessmentAnalytics=finishSkillAssessment;
+finishSkillAssessment=function(reason='submit'){
+  _finishSkillAssessmentAnalytics(reason);
+  if(skillState.result)recordSkillCompletion();
+};
 </script>
 </body></html>
