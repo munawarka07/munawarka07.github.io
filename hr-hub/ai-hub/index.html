@@ -1485,4 +1485,44 @@ renderSkillResults=function(){
   window.SKILL_ASSESSMENT_BANK_SIZE=1500;
 })();
 </script>
+
+<script id="skill-assessment-stage-flow-hotfix-v11-1">
+/* Fix: the legacy stage controller omitted the Instructions stage, which stopped the assessment flow after profile submission. */
+window.showSkillStage = function(id){
+  ['skillIntro','skillInstructions','skillQuestions','skillResults'].forEach(function(stageId){
+    var el=document.getElementById(stageId);
+    if(el) el.classList.toggle('open',stageId===id);
+  });
+  var box=document.querySelector('#skillModal .ai-box');
+  if(box) box.scrollTop=0;
+};
+
+/* Keep profile -> instructions -> exam routing on the repaired controller. */
+window.prepareSkillInstructions = function(){
+  var name=(document.getElementById('skillName')?.value||'').trim();
+  var level=document.getElementById('skillLevel')?.value||'';
+  var region=document.getElementById('skillRegion')?.value||'';
+  var focus=document.getElementById('skillFocus')?.value||'';
+  var req=document.getElementById('skillRequired');
+  if(!name||!level||!region||!focus){ if(req) req.style.display='block'; return false; }
+  if(req) req.style.display='none';
+  skillState={...skillState,name:name,level:level,region:region,focus:focus};
+  var mins=typeof skillExamMinutes==='function'?skillExamMinutes(level,focus):30;
+  var summary=document.getElementById('skillProfileSummary');
+  if(summary){
+    summary.innerHTML='<div class="skill-profile-item"><small>Candidate</small><strong>'+skillEscape(name)+'</strong></div>'+
+      '<div class="skill-profile-item"><small>Experience</small><strong>'+skillEscape(SKILL_LEVEL_LABELS[level]||level)+'</strong></div>'+
+      '<div class="skill-profile-item"><small>Context</small><strong>'+skillEscape(SKILL_REGION_LABELS[region]||region)+'</strong></div>'+
+      '<div class="skill-profile-item"><small>Specialism</small><strong>'+skillEscape(SKILL_FOCUS_LABELS[focus]||focus)+'</strong></div>';
+  }
+  var timeText=document.getElementById('skillInstructionTime');
+  if(timeText) timeText.innerHTML='You have <strong>'+mins+' minutes</strong> for 20 questions'+(focus==='payroll'?' (including additional calculation time)':'')+'. The countdown starts when the exam begins.';
+  var honour=document.getElementById('skillHonour'); if(honour) honour.checked=false;
+  var instReq=document.getElementById('skillInstructionRequired'); if(instReq) instReq.style.display='none';
+  window.showSkillStage('skillInstructions');
+  return false;
+};
+
+window.backToSkillProfile=function(){ window.showSkillStage('skillIntro'); return false; };
+</script>
 </body></html>
