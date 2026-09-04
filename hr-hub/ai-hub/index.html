@@ -575,6 +575,29 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 }
 </style>
 
+
+<style id="skill-report-clean-meta-close-v1">
+/* Skill assessment only: keep the explicit close control visible while the inner report scrolls. */
+#skillModal .close-ai{
+  position:fixed!important;
+  top:5vh!important;
+  right:max(14px, calc((100vw - 850px)/2 - 52px))!important;
+  left:auto!important;
+  z-index:140!important;
+  width:44px!important;
+  height:44px!important;
+  display:grid!important;
+  place-items:center!important;
+  border:1px solid rgba(12,35,64,.14)!important;
+  background:#fff!important;
+  color:#0c2340!important;
+  box-shadow:0 10px 30px rgba(6,26,55,.18)!important;
+}
+@media(max-width:980px){
+  #skillModal .close-ai{top:10px!important;right:10px!important;width:42px!important;height:42px!important;}
+}
+</style>
+
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark"><img src="/assets/images/munawar-logo.png" alt="Munawar.in logo" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links global-nav" aria-label="Primary navigation">
 <div class="nav-menu"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
 <a href="/hr-hub/"><strong>HR Hub Overview</strong><small>All HR knowledge and tools</small></a>
@@ -900,7 +923,7 @@ function skillTimeUsed(){const limit=skillExamLimit(skillState.level,skillState.
 const _renderSkillQuestionV7=renderSkillQuestion;
 renderSkillQuestion=function(){_renderSkillQuestionV7();const n=document.querySelector('#skillQuestions .skill-exam-note');if(n){let badge=n.querySelector('.skill-context-inline');if(!badge){badge=document.createElement('span');badge.className='skill-context-inline';n.appendChild(badge)}badge.textContent=`${SKILL_REGION_LABELS[skillState.region]} · ${SKILL_FOCUS_LABELS[skillState.focus]} · ${skillExamMinutes(skillState.level,skillState.focus)} min session`;}}
 const _renderSkillResultsV7=renderSkillResults;
-renderSkillResults=function(){_renderSkillResultsV7();const r=skillState.result;if(!r)return;const meta=document.getElementById('skillMeta');if(meta){const prefix=`<span class="skill-meta-pill context-pill">${skillEscape(SKILL_REGION_LABELS[skillState.region])}</span><span class="skill-meta-pill context-pill">${skillEscape(SKILL_FOCUS_LABELS[skillState.focus])}</span>`;meta.innerHTML=prefix+meta.innerHTML}
+renderSkillResults=function(){_renderSkillResultsV7();const r=skillState.result;if(!r)return;const meta=document.getElementById('skillMeta');if(meta){meta.innerHTML=`<span class="skill-meta-pill context-pill">${skillEscape(SKILL_FOCUS_LABELS[skillState.focus])}</span><span class="skill-meta-pill">${skillEscape(SKILL_LEVEL_LABELS[skillState.level])}</span><span class="skill-meta-pill">${r.correct}/${r.total} correct</span><span class="skill-meta-pill time-pill">Time ${skillFormatTime(r.timeUsed)}</span><span class="skill-meta-pill">${r.date.toLocaleDateString()}</span>`}
  const qualifiedRows=r.rows.filter(x=>x.total>=2);const strengths=qualifiedRows.filter(x=>x.p>=80).sort((a,b)=>b.p-a.p||b.total-a.total).slice(0,4);const gaps=qualifiedRows.filter(x=>x.wrong>0&&x.p<80).sort((a,b)=>a.p-b.p||b.total-a.total).slice(0,4);
  document.getElementById('skillStrengths').innerHTML=(strengths.length?strengths:[...qualifiedRows].sort((a,b)=>b.p-a.p).slice(0,3)).map(x=>`<li><strong>${skillEscape(x.d)}</strong> — ${x.p}% (${x.correct}/${x.total})</li>`).join('')||'<li class="skill-gap-none">No domain had enough evidence in this attempt to label it a confirmed strength.</li>';
  if(gaps.length){document.getElementById('skillGapHeading').textContent='Priority areas to improve';document.getElementById('skillGaps').innerHTML=gaps.map(x=>`<li><strong>${skillEscape(x.d)}</strong> — ${x.p}% (${x.correct}/${x.total}); ${x.wrong} missed</li>`).join('');document.getElementById('skillActionHeading').textContent='Development focus based on this attempt';document.getElementById('skillActions').innerHTML=gaps.map(x=>`<li><strong>${skillEscape(x.d)}:</strong> ${skillEscape(SKILL_ACTIONS[x.d]||'Build more hands-on exposure through realistic cases, structured feedback and documented practice.')}</li>`).join('')}
