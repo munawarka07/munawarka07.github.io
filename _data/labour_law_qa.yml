@@ -214,3 +214,10 @@ questions:
     answer: Yes. Sexual harassment, bullying and verbal, physical or psychological
       violence against workers are prohibited.
     search: UAE workplace harassment bullying employee protection
+  - published: true
+    id: forced-labour-uae
+    category: Worker Protection
+    question: Is forced labour prohibited in the UAE?
+    answer: Yes. Workers may not be forced or threatened into performing work or
+      providing services against their will.
+    search: UAE forced labour employee rights threats worker
