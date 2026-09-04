@@ -789,6 +789,64 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
   }
 }
 </style>
+
+<style id="skill-exam-screen-extra-large-v1">
+/* ONLY enlarge the active assessment exam screen. */
+#skillModal:has(#skillQuestions.open){
+  align-items:flex-start!important;
+  overflow-y:auto!important;
+  padding:18px!important;
+}
+#skillModal:has(#skillQuestions.open) .ai-box{
+  width:min(1320px,calc(100vw - 36px))!important;
+  height:auto!important;
+  min-height:min(920px,calc(100vh - 36px))!important;
+  max-height:none!important;
+  overflow:visible!important;
+  margin:auto!important;
+  padding:34px 38px!important;
+}
+#skillModal #skillQuestions.open{
+  height:auto!important;
+  min-height:820px!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+#skillModal #skillQuestions.open #skillQuestionText{
+  min-height:0!important;
+  max-height:none!important;
+  height:auto!important;
+  overflow:visible!important;
+}
+#skillModal #skillQuestions.open #skillOptions{
+  display:grid!important;
+  flex:none!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  gap:12px!important;
+}
+#skillModal #skillQuestions.open #skillOptions .skill-option{
+  display:block!important;
+  height:auto!important;
+  min-height:68px!important;
+  max-height:none!important;
+  overflow:visible!important;
+  white-space:normal!important;
+  line-height:1.55!important;
+  padding:16px 18px!important;
+}
+#skillModal #skillQuestions.open .skill-nav{
+  position:static!important;
+  margin-top:22px!important;
+}
+@media(max-width:760px){
+ #skillModal:has(#skillQuestions.open){padding:8px!important}
+ #skillModal:has(#skillQuestions.open) .ai-box{width:calc(100vw - 16px)!important;min-height:calc(100vh - 16px)!important;padding:22px 16px!important}
+ #skillModal #skillQuestions.open{min-height:calc(100vh - 60px)!important}
+}
+</style>
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark"><img src="/assets/images/munawar-logo.png" alt="Munawar.in logo" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links global-nav" aria-label="Primary navigation">
 <div class="nav-menu"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
 <a href="/hr-hub/"><strong>HR Hub Overview</strong><small>All HR knowledge and tools</small></a>
