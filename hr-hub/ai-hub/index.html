@@ -798,7 +798,7 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 <a class="nav-top nav-simple" href="/articles/">Articles</a><a class="nav-top nav-simple" href="/about/">About</a><a class="nav-top nav-simple" href="/contact/">Contact</a>
 </nav><button class="global-search-trigger" id="globalSearchTrigger" type="button" aria-label="Search Munawar.in" title="Search Munawar.in (Ctrl/⌘ K)">⌕</button><a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a><button class="menu-btn">Menu</button></div></header><main>
 <section class="knowledge-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid"><div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.ai_hub.hero.eyebrow | escape }}</div><h1>{{ site.data.ai_hub.hero.title | escape }}</h1><p>{{ site.data.ai_hub.hero.description | escape }}</p></div><div class="hero-panel reveal-right">{% for item in site.data.ai_hub.hero.chips %}<span class="panel-chip {% cycle 'pc-a', 'pc-b', 'pc-c', 'pc-d' %}">{{ item | escape }}</span>{% endfor %}</div></div></section>
-<section class="section theme-blue"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.ai_hub.workspace.label | escape }}</div><h2>{{ site.data.ai_hub.workspace.title | escape }}</h2></div><p>{{ site.data.ai_hub.workspace.description | escape }}</p></div><div class="category-row reveal">{% for item in site.data.ai_hub.workspace.categories %}<div class="cat"><b>{{ item.title | escape }}</b><span>{{ item.description | escape }}</span></div>{% endfor %}</div><div class="aihub-grid"><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.law.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.law.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.law.title | escape }}</h3><p>{{ site.data.ai_hub.tools.law.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.law.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(0)">{{ site.data.ai_hub.tools.law.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.payroll.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.payroll.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.payroll.title | escape }}</h3><p>{{ site.data.ai_hub.tools.payroll.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.payroll.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(1)">{{ site.data.ai_hub.tools.payroll.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.letter.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.letter.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.letter.title | escape }}</h3><p>{{ site.data.ai_hub.tools.letter.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.letter.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(2)">{{ site.data.ai_hub.tools.letter.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.jd.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.jd.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.jd.title | escape }}</h3><p>{{ site.data.ai_hub.tools.jd.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.jd.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(3)">{{ site.data.ai_hub.tools.jd.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.policy.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.policy.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.policy.title | escape }}</h3><p>{{ site.data.ai_hub.tools.policy.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.policy.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(4)">{{ site.data.ai_hub.tools.policy.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.document.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.document.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.document.title | escape }}</h3><p>{{ site.data.ai_hub.tools.document.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.document.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(5)">{{ site.data.ai_hub.tools.document.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.skills.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.skills.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.skills.title | escape }}</h3><p>{{ site.data.ai_hub.tools.skills.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.skills.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(6)">{{ site.data.ai_hub.tools.skills.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.decision.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.decision.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.decision.title | escape }}</h3><p>{{ site.data.ai_hub.tools.decision.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.decision.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(7)">{{ site.data.ai_hub.tools.decision.button | escape }} →</button></article></div></div></section>
+<section class="section theme-blue"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.ai_hub.workspace.label | escape }}</div><h2>{{ site.data.ai_hub.workspace.title | escape }}</h2></div><p>{{ site.data.ai_hub.workspace.description | escape }}</p></div><div class="category-row reveal">{% for item in site.data.ai_hub.workspace.categories %}<div class="cat"><b>{{ item.title | escape }}</b><span>{{ item.description | escape }}</span></div>{% endfor %}</div><div class="aihub-grid"><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.law.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.law.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.law.title | escape }}</h3><p>{{ site.data.ai_hub.tools.law.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.law.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(0)">{{ site.data.ai_hub.tools.law.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.payroll.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.payroll.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.payroll.title | escape }}</h3><p>{{ site.data.ai_hub.tools.payroll.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.payroll.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(1)">{{ site.data.ai_hub.tools.payroll.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.letter.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.letter.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.letter.title | escape }}</h3><p>{{ site.data.ai_hub.tools.letter.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.letter.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(2)">{{ site.data.ai_hub.tools.letter.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.jd.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.jd.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.jd.title | escape }}</h3><p>{{ site.data.ai_hub.tools.jd.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.jd.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(3)">{{ site.data.ai_hub.tools.jd.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.policy.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.policy.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.policy.title | escape }}</h3><p>{{ site.data.ai_hub.tools.policy.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.policy.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(4)">{{ site.data.ai_hub.tools.policy.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.document.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.document.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.document.title | escape }}</h3><p>{{ site.data.ai_hub.tools.document.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.document.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(5)">{{ site.data.ai_hub.tools.document.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.skills.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.skills.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.skills.title | escape }}</h3><p>{{ site.data.ai_hub.tools.skills.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.skills.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" type="button" onclick="openSkillAssessmentSafe(event)">{{ site.data.ai_hub.tools.skills.button | escape }} →</button></article><article class="ai-card reveal"><span class="num">{{ site.data.ai_hub.tools.decision.number | escape }}</span><div class="ai-icon">{{ site.data.ai_hub.tools.decision.icon | escape }}</div><h3>{{ site.data.ai_hub.tools.decision.title | escape }}</h3><p>{{ site.data.ai_hub.tools.decision.description | escape }}</p><div class="tags">{% for tag in site.data.ai_hub.tools.decision.tags %}<span>{{ tag | escape }}</span>{% endfor %}</div><button class="launch" onclick="openTool(7)">{{ site.data.ai_hub.tools.decision.button | escape }} →</button></article></div></div></section>
 <section class="section"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.ai_hub.thinking.label | escape }}</div><h2>{{ site.data.ai_hub.thinking.title | escape }}</h2></div><p>{{ site.data.ai_hub.thinking.description | escape }}</p></div><div class="principles">{% for item in site.data.ai_hub.thinking.principles %}<div class="principle reveal"><b>{{ item.title | escape }}</b><p>{{ item.description | escape }}</p></div>{% endfor %}</div></div></section>
 <section class="section theme-blue"><div class="shell"><div class="final-cta reveal"><div class="section-label">{{ site.data.ai_hub.cta.label | escape }}</div><h2>{{ site.data.ai_hub.cta.title | escape }}</h2><p>{{ site.data.ai_hub.cta.description | escape }}</p><div class="actions"><a class="btn primary" href="/hr-hub/">{{ site.data.ai_hub.cta.primary_button | escape }} →</a><a class="btn secondary" href="/career-hub/">{{ site.data.ai_hub.cta.secondary_button | escape }}</a></div></div></div></section><section class="seo-related" aria-labelledby="related-resources"><div class="shell"><div class="seo-kicker">{{ site.data.ai_hub.related.kicker | escape }}</div><h2 id="related-resources">{{ site.data.ai_hub.related.title | escape }}</h2><p class="seo-intro">{{ site.data.ai_hub.related.description | escape }}</p><div class="seo-link-grid">{% for item in site.data.ai_hub.related.cards %}<a class="seo-link-card" href="{{ item.link | escape }}"><strong>{{ item.title | escape }} →</strong><span>{{ item.description | escape }}</span></a>{% endfor %}</div></div></section></main>
 <div class="ai-modal" id="aiModal"><div class="ai-box"><button class="close-ai" onclick="closeTool()">×</button><iframe class="ai-frame" id="aiFrame" title="Munawar.in AI Hub Tool"></iframe></div></div>
@@ -924,101 +924,7 @@ function buildSkillReportHTML(){if(!skillState.result)return'';const clone=docum
 function skillPdfStyles(){return `*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Tajawal,Arial,sans-serif;color:#0c2340}#skillPdfWrap{width:760px;margin:0 auto;padding:18px 14px 24px;background:#fff}#skillPdfWrap .skill-assess{display:block!important;padding:0!important;max-height:none!important;overflow:visible!important;background:#fff!important}#skillPdfWrap .skill-result-head{background:linear-gradient(135deg,#0d2c50,#2460d4)!important;color:#fff!important;border-radius:20px!important;padding:24px!important;margin-bottom:24px!important;break-inside:avoid!important}#skillPdfWrap .skill-score{font-size:58px!important;font-weight:900!important;line-height:1!important;margin:14px 0 18px!important}#skillPdfWrap .skill-result-head h2{font-size:28px!important;line-height:1.35!important;margin:0 0 12px!important;color:#fff!important}#skillPdfWrap .skill-result-head p{color:#e8f2ff!important;font-size:15px!important}#skillPdfWrap .skill-meta-row{display:flex!important;flex-wrap:wrap!important;gap:6px!important;margin-top:14px!important}#skillPdfWrap .skill-meta-pill{background:#f2f7ff!important;color:#1c5fd4!important;border-radius:999px!important;padding:8px 11px!important;font-weight:700!important;font-size:11px!important}#skillPdfWrap .domain-list{display:grid!important;gap:11px!important;margin:18px 0 22px!important}#skillPdfWrap .domain-row{display:grid!important;grid-template-columns:145px 1fr 50px!important;gap:10px!important;align-items:center!important;font-size:13px!important}#skillPdfWrap .domain-bar{height:10px!important;border-radius:999px!important;background:#e8f0f8!important;overflow:hidden!important}#skillPdfWrap .domain-bar span{display:block!important;height:100%!important;background:linear-gradient(90deg,#2563d9,#2fc2d1)!important;border-radius:999px!important}#skillPdfWrap .result-panels{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important;margin-bottom:14px!important}#skillPdfWrap .result-panel{border:1px solid #dce6ef!important;background:#fbfdff!important;border-radius:16px!important;padding:17px!important;break-inside:avoid!important}#skillPdfWrap .result-panel li{margin:7px 0!important;font-size:13px!important;line-height:1.55!important}#skillPdfWrap .skill-review-heading{margin:24px 0 5px!important;font-size:22px!important}#skillPdfWrap .skill-report-note{font-size:12px!important;color:#61758a!important}#skillPdfWrap .skill-review{display:grid!important;gap:10px!important;margin-top:12px!important}#skillPdfWrap .skill-review-card{border:1px solid #dce7f2!important;border-left:4px solid #b42318!important;border-radius:12px!important;padding:14px!important;background:#fff!important;break-inside:avoid!important;page-break-inside:avoid!important}#skillPdfWrap .skill-review-card.correct{border-left-color:#15803d!important}#skillPdfWrap .skill-review-top{display:flex!important;justify-content:space-between!important;gap:10px!important;align-items:center!important;margin-bottom:8px!important}#skillPdfWrap .skill-status{font-size:11px!important;font-weight:800!important;border-radius:999px!important;padding:5px 8px!important}#skillPdfWrap .skill-status.ok{background:#e9f8ef!important;color:#137333!important}#skillPdfWrap .skill-status.bad{background:#fff0ee!important;color:#b42318!important}#skillPdfWrap .skill-review-q,#skillPdfWrap .skill-answer-line,#skillPdfWrap .skill-explain{font-size:12.5px!important;line-height:1.55!important;margin:5px 0!important}#skillPdfWrap .skill-disclaimer{margin-top:18px!important;padding-top:12px!important;border-top:1px solid #dce6ef!important;color:#61758a!important;font-size:10px!important}@media print{#skillPdfWrap{width:100%!important;padding:0!important}.skill-review-card,.result-panel,.skill-result-head{break-inside:avoid!important;page-break-inside:avoid!important}}`}
 function downloadSkillReport(){if(!skillState.result)return;const file=`Munawar-HR-Skill-Assessment-${skillState.name.replace(/[^a-z0-9]+/gi,'-')}-Attempt-${skillState.attempt}.pdf`,wrap=document.createElement('div'),style=document.createElement('style');wrap.id='skillPdfWrap';wrap.innerHTML=buildSkillReportHTML();style.textContent=skillPdfStyles();document.head.appendChild(style);document.body.appendChild(wrap);if(window.html2pdf){html2pdf().set({margin:[7,7,7,7],filename:file,image:{type:'jpeg',quality:.98},html2canvas:{scale:2,useCORS:true,backgroundColor:'#fff',scrollY:0},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},pagebreak:{mode:['css','legacy']}}).from(wrap).save().then(()=>{wrap.remove();style.remove()}).catch(()=>{wrap.remove();style.remove();printSkillReport()})}else{wrap.remove();style.remove();printSkillReport()}}
 function printSkillReport(){const w=window.open('','_blank');if(!w)return alert('Please allow pop-ups to generate the report.');w.document.write(`<html><head><title>Munawar.in HR Skill Assessment</title><style>${skillPdfStyles()}</style></head><body><div id="skillPdfWrap">${buildSkillReportHTML()}</div><script>window.onload=()=>window.print()<\/script>
-<script id="skill-assessment-v10-4-submit-controller">
-/* Single authoritative navigation/submission controller.
-   This intentionally overrides the layered legacy handlers above. */
-window.skillAdvanceFinal = function(event){
-  if(event){ event.preventDefault(); event.stopPropagation(); }
-  try{
-    if(!window.skillState || !Array.isArray(skillState.questions) || !skillState.questions.length) return false;
-    const currentAnswer = skillState.answers[skillState.index];
-    if(currentAnswer === null || typeof currentAnswer === 'undefined') return false;
 
-    if(skillState.index < skillState.questions.length - 1){
-      skillState.index += 1;
-      renderSkillQuestion();
-      return false;
-    }
-
-    return window.finishSkillAssessmentFinal('submit');
-  }catch(err){
-    console.error('Assessment navigation error:', err);
-    const btn=document.getElementById('skillNext');
-    if(btn){ btn.disabled=false; btn.textContent='Submit assessment →'; }
-    alert('The assessment could not be submitted. Please try once more.');
-    return false;
-  }
-};
-
-window.finishSkillAssessmentFinal = function(reason='submit'){
-  if(skillState._submittingFinal) return false;
-
-  if(reason==='submit'){
-    const unanswered = skillState.answers.filter(a=>a===null || typeof a==='undefined').length;
-    if(unanswered>0 && !confirm(`You still have ${unanswered} unanswered question${unanswered>1?'s':''}. Submit anyway?`)){
-      return false;
-    }
-  }
-
-  skillState._submittingFinal = true;
-  try{
-    if(typeof stopSkillTimer==='function') stopSkillTimer();
-
-    if(window.skillPaused){
-      skillPaused=false;
-      const pauseOverlay=document.getElementById('skillPauseOverlay');
-      if(pauseOverlay){
-        pauseOverlay.classList.remove('open');
-        pauseOverlay.setAttribute('aria-hidden','true');
-      }
-    }
-
-    window.skillTimedOut = reason==='time' || !!window.skillTimedOut;
-
-    /* renderSkillResults sets skillState.result and builds the complete report. */
-    renderSkillResults();
-
-    /* Force the result stage visible even if a later cosmetic result extension errors. */
-    if(typeof showSkillStage==='function') showSkillStage('skillResults');
-    const results=document.getElementById('skillResults');
-    const questions=document.getElementById('skillQuestions');
-    if(results) results.classList.add('open');
-    if(questions) questions.classList.remove('open');
-
-    const box=document.querySelector('#skillModal .ai-box');
-    if(box) box.scrollTop=0;
-
-    /* Analytics is deliberately non-blocking. */
-    if(skillState.result && typeof recordSkillCompletion==='function'){
-      Promise.resolve(recordSkillCompletion()).catch(()=>{});
-    }
-    return false;
-  }catch(err){
-    console.error('Assessment submission error:', err);
-
-    /* If the score was already computed before a presentation-layer error,
-       still expose the result screen rather than trapping the candidate. */
-    if(skillState.result){
-      try{
-        if(typeof showSkillStage==='function') showSkillStage('skillResults');
-        document.getElementById('skillResults')?.classList.add('open');
-        document.getElementById('skillQuestions')?.classList.remove('open');
-        if(typeof recordSkillCompletion==='function') Promise.resolve(recordSkillCompletion()).catch(()=>{});
-        return false;
-      }catch(_){}
-    }
-
-    skillState._submittingFinal=false;
-    const btn=document.getElementById('skillNext');
-    if(btn){ btn.disabled=false; btn.textContent='Submit assessment →'; }
-    alert('The assessment could not be submitted. Please try once more.');
-    return false;
-  }
-};
-
-/* Timer expiry uses the same final submission path. */
-window.finishSkillAssessment = window.finishSkillAssessmentFinal;
-</script>
 
 </body></html>`);w.document.close()}
 
@@ -1188,4 +1094,42 @@ async function recordSkillCompletion(){
 }
 
 </script>
+
+<script id="skill-assessment-safe-opener-v10-5">
+window.openSkillAssessmentSafe = function(event){
+  if(event){ event.preventDefault(); event.stopPropagation(); }
+  const modal = document.getElementById('skillModal');
+  if(!modal) return false;
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+
+  try{
+    if(typeof resetSkillAssessment === 'function'){
+      resetSkillAssessment(false);
+    }else{
+      ['skillIntro','skillInstructions','skillQuestions','skillResults'].forEach(function(id){
+        const el=document.getElementById(id);
+        if(el) el.classList.toggle('open', id==='skillIntro');
+      });
+    }
+  }catch(err){
+    console.error('Assessment reset error:',err);
+    const intro=document.getElementById('skillIntro');
+    if(intro) intro.classList.add('open');
+  }
+  return false;
+};
+
+/* Preserve openTool(6) compatibility for any other existing trigger. */
+if(typeof window.openTool === 'function'){
+  const originalOpenTool = window.openTool;
+  window.openTool = function(i){
+    if(Number(i)===6) return window.openSkillAssessmentSafe();
+    return originalOpenTool(i);
+  };
+}
+</script>
+
 </body></html>
