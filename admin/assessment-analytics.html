@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Assessment Analytics | Munawar.in Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f5f8fc;--panel:#fff;--navy:#0c2340;--blue:#1c5fd4;--blue2:#4e8fff;
+  --cyan:#36c8df;--text:#132b45;--muted:#6a7e93;--line:#e4ebf3;
+  --shadow:0 18px 50px rgba(20,60,110,.10);--radius:20px
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Tajawal",sans-serif;background:
+radial-gradient(circle at 12% 5%,rgba(54,200,223,.08),transparent 25%),
+radial-gradient(circle at 88% 4%,rgba(78,143,255,.09),transparent 24%),
+var(--bg);color:var(--text);min-height:100vh}
+button,input{font:inherit}
+.topbar{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;position:sticky;top:0;z-index:10}
+.brand{font-weight:800;letter-spacing:.02em;color:var(--navy)}
+.brand span{color:var(--blue)}
+.top-actions{display:flex;gap:10px;align-items:center}
+.top-actions a,.top-actions button{border:1px solid var(--line);background:#fff;color:var(--navy);padding:9px 13px;border-radius:10px;text-decoration:none;font-weight:700;cursor:pointer}
+.wrap{width:min(1280px,calc(100% - 34px));margin:34px auto 60px}
+.hero{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:24px}
+.eyebrow{font-size:12px;font-weight:800;color:var(--blue);letter-spacing:.12em;text-transform:uppercase}
+h1{margin:7px 0 6px;font-size:34px;color:var(--navy)}
+.subtitle{color:var(--muted);font-size:15px}
+.status{display:inline-flex;align-items:center;gap:8px;background:#eef9f2;color:#1b7c45;border:1px solid #d7f0df;border-radius:999px;padding:8px 12px;font-weight:700;font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:#20a15c}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}
+.kpi .label{font-size:13px;color:var(--muted);font-weight:700}
+.kpi .value{font-size:36px;font-weight:800;color:var(--navy);margin-top:7px}
+.kpi .hint{font-size:12px;color:#8293a6;margin-top:4px}
+.section{margin-top:20px}
+.section h2{font-size:18px;color:var(--navy);margin:0 0 14px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.bar-row{margin:12px 0}
+.bar-head{display:flex;justify-content:space-between;gap:16px;font-size:13px;font-weight:700;margin-bottom:6px}
+.bar{height:9px;background:#edf2f7;border-radius:999px;overflow:hidden}
+.bar>i{display:block;height:100%;background:linear-gradient(90deg,var(--blue),var(--cyan));border-radius:999px}
+.empty{color:var(--muted);font-size:14px;padding:18px 0}
+.lock{position:fixed;inset:0;background:rgba(8,24,43,.45);backdrop-filter:blur(8px);display:grid;place-items:center;z-index:100;padding:20px}
+.login{width:min(460px,100%);background:#fff;border-radius:24px;padding:28px;box-shadow:0 30px 90px rgba(0,0,0,.22)}
+.login .icon{width:48px;height:48px;border-radius:15px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#fff;font-size:22px;margin-bottom:16px}
+.login h2{font-size:25px;color:var(--navy);margin:0 0 8px}
+.login p{color:var(--muted);line-height:1.55;margin:0 0 18px}
+.login input{width:100%;border:1px solid #ccd8e4;background:#f9fbfd;padding:13px 14px;border-radius:12px;outline:none}
+.login input:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(28,95,212,.08)}
+.login button{width:100%;margin-top:12px;border:0;background:linear-gradient(135deg,var(--blue),#238ddf);color:white;padding:13px;border-radius:12px;font-weight:800;cursor:pointer}
+.err{min-height:20px;margin-top:10px;color:#b42318;font-size:13px}
+.loading{opacity:.55;pointer-events:none}
+.footer-note{margin-top:22px;font-size:12px;color:#8394a6;text-align:right}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.three{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+@media(max-width:560px){.topbar{padding:0 16px}.wrap{width:min(100% - 22px,1280px);margin-top:22px}.hero{display:block}.status{margin-top:12px}.grid{grid-template-columns:1fr 1fr}.kpi .value{font-size:30px}h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">MUNAWAR<span>.IN</span> · ADMIN</div>
+  <div class="top-actions">
+    <button id="refreshBtn" type="button">↻ Refresh</button>
+    <a href="/admin/">← Content Manager</a>
+  </div>
+</div>
+
+<main class="wrap" id="dashboard">
+  <div class="hero">
+    <div>
+      <div class="eyebrow">HR Skill Assessment</div>
+      <h1>Assessment Analytics</h1>
+      <div class="subtitle">Anonymous usage and performance statistics. No candidate names, emails or answers are stored.</div>
+    </div>
+    <div class="status"><span class="dot"></span> Analytics connected</div>
+  </div>
+
+  <div class="grid">
+    <div class="card kpi"><div class="label">Total Tests</div><div class="value" id="total">0</div><div class="hint">All completed assessments</div></div>
+    <div class="card kpi"><div class="label">Today</div><div class="value" id="today">0</div><div class="hint">Completed today · UAE time</div></div>
+    <div class="card kpi"><div class="label">This Month</div><div class="value" id="month">0</div><div class="hint">Current calendar month</div></div>
+    <div class="card kpi"><div class="label">Average Score</div><div class="value"><span id="avgScore">0</span><small style="font-size:18px">%</small></div><div class="hint">Across completed assessments</div></div>
+  </div>
+
+  <div class="section three">
+    <div class="card kpi"><div class="label">Average Completion Time</div><div class="value"><span id="avgTime">0</span><small style="font-size:18px"> min</small></div></div>
+    <div class="card kpi"><div class="label">UAE Context</div><div class="value" id="uae">0</div></div>
+    <div class="card kpi"><div class="label">Global Context</div><div class="value" id="global">0</div></div>
+  </div>
+
+  <div class="section two">
+    <div class="card">
+      <h2>Score Distribution</h2>
+      <div id="scoreBands"></div>
+    </div>
+    <div class="card">
+      <h2>Assessment Context</h2>
+      <div id="contextBars"></div>
+    </div>
+  </div>
+
+  <div class="section two">
+    <div class="card">
+      <h2>Assessment Specialisms</h2>
+      <div id="specialisms"></div>
+    </div>
+    <div class="card">
+      <h2>Experience Levels</h2>
+      <div id="experience"></div>
+    </div>
+  </div>
+
+  <div class="footer-note">Last refreshed: <span id="lastRefresh">—</span> · Timed-out assessments: <span id="timedOut">0</span></div>
+</main>
+
+<div class="lock" id="lock">
+  <div class="login">
+    <div class="icon">▣</div>
+    <h2>Assessment Analytics</h2>
+    <p>Enter your private admin analytics key. The key is kept only for this browser session and is not added to the page URL.</p>
+    <input id="keyInput" type="password" autocomplete="current-password" placeholder="Admin analytics key">
+    <button id="loginBtn" type="button">Open Analytics</button>
+    <div class="err" id="loginError"></div>
+  </div>
+</div>
+
+<script>
+const ENDPOINT = "https://munawar-cms-auth.munawarka07.workers.dev/assessment-stats";
+const $ = id => document.getElementById(id);
+let adminKey = sessionStorage.getItem("munawar_assessment_admin_key") || "";
+
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]))}
+
+function rows(obj){
+  const entries = Object.entries(obj || {});
+  if(!entries.length) return '<div class="empty">No completed assessments yet.</div>';
+  const max = Math.max(...entries.map(([,v])=>Number(v)||0),1);
+  return entries.map(([k,v])=>{
+    const n=Number(v)||0, pct=Math.round(n/max*100);
+    return `<div class="bar-row"><div class="bar-head"><span>${esc(k)}</span><b>${n}</b></div><div class="bar"><i style="width:${pct}%"></i></div></div>`;
+  }).join("");
+}
+
+async function loadStats(key){
+  $("dashboard").classList.add("loading");
+  try{
+    const res = await fetch(ENDPOINT + "?key=" + encodeURIComponent(key), {cache:"no-store"});
+    const data = await res.json();
+    if(!res.ok || !data.ok) throw new Error(data.error || "Unable to load analytics.");
+
+    $("total").textContent = data.totals?.all ?? 0;
+    $("today").textContent = data.totals?.today ?? 0;
+    $("month").textContent = data.totals?.thisMonth ?? 0;
+    $("avgScore").textContent = data.performance?.averageScore ?? 0;
+    $("avgTime").textContent = data.performance?.averageTimeMinutes ?? 0;
+    $("timedOut").textContent = data.performance?.timedOut ?? 0;
+    $("uae").textContent = data.context?.UAE ?? 0;
+    $("global").textContent = data.context?.Global ?? 0;
+
+    $("scoreBands").innerHTML = rows(data.scoreBands);
+    $("contextBars").innerHTML = rows(data.context);
+    $("specialisms").innerHTML = rows(data.specialisms);
+    $("experience").innerHTML = rows(data.experienceLevels);
+
+    const dt = data.generatedAt ? new Date(data.generatedAt) : new Date();
+    $("lastRefresh").textContent = dt.toLocaleString("en-AE", {timeZone:"Asia/Dubai"});
+    $("lock").style.display="none";
+    $("loginError").textContent="";
+    return true;
+  }catch(err){
+    $("loginError").textContent = err.message === "Unauthorized." ? "Incorrect admin key." : err.message;
+    $("lock").style.display="grid";
+    return false;
+  }finally{
+    $("dashboard").classList.remove("loading");
+  }
+}
+
+$("loginBtn").addEventListener("click", async()=>{
+  const key=$("keyInput").value.trim();
+  if(!key){$("loginError").textContent="Enter your admin key.";return}
+  if(await loadStats(key)){
+    adminKey=key;
+    sessionStorage.setItem("munawar_assessment_admin_key",key);
+  }
+});
+$("keyInput").addEventListener("keydown",e=>{if(e.key==="Enter")$("loginBtn").click()});
+$("refreshBtn").addEventListener("click",()=>{if(adminKey)loadStats(adminKey);else $("lock").style.display="grid"});
+
+if(adminKey) loadStats(adminKey);
+</script>
+</body>
+</html>
