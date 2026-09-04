@@ -600,6 +600,110 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 
 
 
+
+<style id="skill-assessment-v10-fixed-exam-shell">
+/* Fixed assessment geometry: question length must not move the navigation. */
+#skillModal .ai-box{
+  width:min(900px,calc(100vw - 36px))!important;
+  height:min(760px,90vh)!important;
+  max-height:90vh!important;
+  overflow:hidden!important;
+  display:flex!important;
+  flex-direction:column!important;
+}
+#skillModal .skill-assess{
+  width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+}
+#skillModal #skillQuestions.open{
+  display:flex!important;
+  flex-direction:column!important;
+  height:100%!important;
+  min-height:0!important;
+  overflow:hidden!important;
+}
+#skillModal #skillQuestions .skill-exam-note{
+  flex:0 0 auto!important;
+}
+#skillModal #skillQuestions .skill-progress{
+  flex:0 0 auto!important;
+}
+#skillModal #skillQuestions .skill-domain{
+  flex:0 0 auto!important;
+}
+#skillModal #skillQuestionText{
+  flex:0 0 auto!important;
+  min-height:60px!important;
+  max-height:92px!important;
+  overflow:auto!important;
+  margin-bottom:14px!important;
+}
+#skillModal #skillOptions{
+  flex:1 1 auto!important;
+  min-height:0!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+  padding:2px 5px 8px 2px!important;
+  align-content:start!important;
+  scrollbar-gutter:stable!important;
+}
+#skillModal #skillOptions .skill-option{
+  flex:none!important;
+  min-height:58px!important;
+}
+#skillModal #skillQuestions .skill-nav{
+  flex:0 0 auto!important;
+  margin-top:14px!important;
+  padding-top:14px!important;
+  border-top:1px solid var(--line)!important;
+  background:#fff!important;
+}
+#skillModal #skillBack,
+#skillModal #skillNext{
+  min-width:132px!important;
+  min-height:44px!important;
+}
+#skillModal #skillResults.open,
+#skillModal #skillIntro.open,
+#skillModal #skillInstructions.open{
+  overflow-y:auto!important;
+  height:100%!important;
+  scrollbar-gutter:stable!important;
+}
+
+@media(max-width:700px){
+  #skillModal{
+    padding:8px!important;
+  }
+  #skillModal .ai-box{
+    width:100%!important;
+    height:calc(100dvh - 16px)!important;
+    max-height:calc(100dvh - 16px)!important;
+    border-radius:20px!important;
+    padding:20px 16px 16px!important;
+  }
+  #skillModal #skillQuestionText{
+    min-height:54px!important;
+    max-height:88px!important;
+    font-size:19px!important;
+  }
+  #skillModal #skillOptions .skill-option{
+    min-height:54px!important;
+    padding:12px 13px!important;
+  }
+  #skillModal #skillQuestions .skill-nav{
+    margin-top:10px!important;
+    padding-top:10px!important;
+  }
+  #skillModal #skillBack,
+  #skillModal #skillNext{
+    min-width:0!important;
+    flex:1 1 0!important;
+  }
+}
+</style>
+
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark"><img src="/assets/images/munawar-logo.png" alt="Munawar.in logo" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links global-nav" aria-label="Primary navigation">
 <div class="nav-menu"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
 <a href="/hr-hub/"><strong>HR Hub Overview</strong><small>All HR knowledge and tools</small></a>
@@ -923,15 +1027,21 @@ async function recordSkillCompletion(){
     score:Number(r.overall)||0,
     timedOut:!!r.timedOut,
     timeSeconds:Number(r.timeUsed)||0,
-    version:'assessment-v10.2-authored'
+    version:'assessment-v10.3-fixed-submit-layout'
   };
   try{
     await fetch(SKILL_ANALYTICS_ENDPOINT,{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
   }catch(e){/* Analytics must never interrupt the assessment or report. */}
 }
-const _finishSkillAssessmentAnalytics=finishSkillAssessment;
 finishSkillAssessment=function(reason='submit'){
-  _finishSkillAssessmentAnalytics(reason);
+  if(reason==='submit'&&skillState.answers.some(a=>a===null)){
+    const unanswered=skillState.answers.filter(a=>a===null).length;
+    if(!confirm(`You still have ${unanswered} unanswered question${unanswered>1?'s':''}. Submit anyway?`))return;
+  }
+  stopSkillTimer();
+  if(skillPaused)resumeSkillAssessment();
+  skillTimedOut=reason==='time'||skillTimedOut;
+  renderSkillResults();
   if(skillState.result)recordSkillCompletion();
 };
 </script>
