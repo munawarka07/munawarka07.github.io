@@ -1086,7 +1086,7 @@ async function recordSkillCompletion(){
     score:Number(r.overall)||0,
     timedOut:!!r.timedOut,
     timeSeconds:Number(r.timeUsed)||0,
-    version:'assessment-v10.7-lexical-state-fixed'
+    version:'assessment-v10.8-stable-result-renderer'
   };
   try{
     await fetch(SKILL_ANALYTICS_ENDPOINT,{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
@@ -1132,6 +1132,153 @@ if(typeof window.openTool === 'function'){
 }
 </script>
 
+
+
+<script id="skill-assessment-final-renderer-v10-8">
+window.renderSkillResultsStable = function(){
+  const domains={};
+  let correct=0;
+
+  const review=skillState.questions.map(function(q,i){
+    const ai=skillState.answers[i];
+    const chosen=(ai===null || typeof ai==='undefined') ? null : q.options[ai];
+    const best=q.options.find(function(o){return !!o.correct;});
+    const ok=!!(chosen && chosen.correct);
+    if(ok) correct++;
+
+    if(!domains[q.domain]) domains[q.domain]={correct:0,total:0};
+    domains[q.domain].total++;
+    if(ok) domains[q.domain].correct++;
+
+    return {
+      domain:q.domain,
+      question:q.question,
+      chosen:chosen ? chosen.text : 'No answer',
+      best:best ? best.text : '',
+      explanation:q.explanation || 'The strongest response is the one that best balances evidence, risk, employee impact, compliance and business outcome.',
+      ok:ok,
+      unanswered:!chosen
+    };
+  });
+
+  const rows=Object.keys(domains).map(function(d){
+    const v=domains[d];
+    return {d:d,p:Math.round(v.correct/v.total*100),correct:v.correct,total:v.total,wrong:v.total-v.correct};
+  }).sort(function(a,b){return b.p-a.p;});
+
+  const timeUsed=(typeof skillTimeUsed==='function') ? skillTimeUsed() : 0;
+  const r={
+    overall:Math.round(correct/skillState.questions.length*100),
+    correct:correct,
+    total:skillState.questions.length,
+    rows:rows,
+    review:review,
+    date:new Date(),
+    timeUsed:timeUsed,
+    pauses:(typeof skillPauseCount!=='undefined' ? skillPauseCount : 0),
+    timedOut:(typeof skillTimedOut!=='undefined' ? !!skillTimedOut : false)
+  };
+  skillState.result=r;
+
+  let title,summary;
+  if(r.overall===100){
+    title='Exceptional performance on this attempt';
+    summary='You answered every assessed scenario correctly. This attempt did not identify a material development gap at your selected experience level.';
+  }else if(r.overall>=85){
+    title='Strong capability for your current level';
+    summary='You demonstrated consistently strong practical judgement. Development priorities below are limited to domains where this attempt produced evidence of a gap.';
+  }else if(r.overall>=70){
+    title='Solid capability with targeted development needs';
+    summary='You demonstrated a useful practical base. The report identifies the specific domains and decisions that need greater consistency.';
+  }else if(r.overall>=55){
+    title='Developing practical capability';
+    summary='You have a working foundation, but several situations need stronger judgement, calculation accuracy or control discipline.';
+  }else{
+    title='Core capability needs strengthening';
+    summary='This attempt identified material gaps in practical decision-making. Use the detailed review as a focused development plan before progressing to more complex responsibilities.';
+  }
+
+  const score=document.getElementById('skillScore');
+  const resultTitle=document.getElementById('skillResultTitle');
+  const resultSummary=document.getElementById('skillResultSummary');
+  const meta=document.getElementById('skillMeta');
+  const domainResults=document.getElementById('skillDomainResults');
+  const strengthsEl=document.getElementById('skillStrengths');
+  const gapsEl=document.getElementById('skillGaps');
+  const actionsEl=document.getElementById('skillActions');
+  const reviewEl=document.getElementById('skillReview');
+
+  if(score) score.textContent=r.overall+'%';
+  if(resultTitle) resultTitle.textContent=skillState.name+', '+title;
+  if(resultSummary) resultSummary.textContent=summary+(r.timedOut?' The assessment was automatically submitted when the timer expired.':'');
+
+  const focusLabel=(typeof SKILL_FOCUS_LABELS!=='undefined' && SKILL_FOCUS_LABELS[skillState.focus]) ? SKILL_FOCUS_LABELS[skillState.focus] : (skillState.focus||'Comprehensive HR');
+  const levelLabel=(typeof SKILL_LEVEL_LABELS!=='undefined' && SKILL_LEVEL_LABELS[skillState.level]) ? SKILL_LEVEL_LABELS[skillState.level] : skillState.level;
+  const fmtTime=(typeof skillFormatTime==='function') ? skillFormatTime(r.timeUsed) : '';
+
+  if(meta) meta.innerHTML=
+    '<span class="skill-meta-pill context-pill">'+skillEscape(focusLabel)+'</span>'+
+    '<span class="skill-meta-pill">'+skillEscape(levelLabel)+'</span>'+
+    '<span class="skill-meta-pill">'+r.correct+'/'+r.total+' correct</span>'+
+    (fmtTime?'<span class="skill-meta-pill time-pill">Time '+skillEscape(fmtTime)+'</span>':'')+
+    '<span class="skill-meta-pill">'+r.date.toLocaleDateString()+'</span>';
+
+  if(domainResults) domainResults.innerHTML=rows.map(function(x){
+    return '<div class="domain-row"><b>'+skillEscape(x.d)+'</b><div class="domain-bar"><span style="width:'+x.p+'%"></span></div><strong>'+x.p+'%</strong></div>';
+  }).join('');
+
+  const qualified=rows.filter(function(x){return x.total>=2;});
+  const strengths=qualified.filter(function(x){return x.p>=80;}).sort(function(a,b){return b.p-a.p||b.total-a.total;}).slice(0,4);
+  const fallback=qualified.slice().sort(function(a,b){return b.p-a.p;}).slice(0,3);
+  const gaps=qualified.filter(function(x){return x.wrong>0&&x.p<80;}).sort(function(a,b){return a.p-b.p||b.total-a.total;}).slice(0,4);
+
+  if(strengthsEl) strengthsEl.innerHTML=(strengths.length?strengths:fallback).map(function(x){
+    return '<li><strong>'+skillEscape(x.d)+'</strong> — '+x.p+'% ('+x.correct+'/'+x.total+')</li>';
+  }).join('') || '<li class="skill-gap-none">No domain had enough evidence in this attempt to label it a confirmed strength.</li>';
+
+  const gapHeading=document.getElementById('skillGapHeading');
+  const actionHeading=document.getElementById('skillActionHeading');
+
+  if(gaps.length){
+    if(gapHeading) gapHeading.textContent='Priority areas to improve';
+    if(gapsEl) gapsEl.innerHTML=gaps.map(function(x){
+      return '<li><strong>'+skillEscape(x.d)+'</strong> — '+x.p+'% ('+x.correct+'/'+x.total+'); '+x.wrong+' missed</li>';
+    }).join('');
+    if(actionHeading) actionHeading.textContent='Development focus based on this attempt';
+    if(actionsEl) actionsEl.innerHTML=gaps.map(function(x){
+      const action=(typeof SKILL_ACTIONS!=='undefined' && SKILL_ACTIONS[x.d]) ? SKILL_ACTIONS[x.d] : 'Build more hands-on exposure through realistic cases, structured feedback and documented practice.';
+      return '<li><strong>'+skillEscape(x.d)+':</strong> '+skillEscape(action)+'</li>';
+    }).join('');
+  }else{
+    if(gapHeading) gapHeading.textContent='Priority areas to improve';
+    if(gapsEl) gapsEl.innerHTML='<li class="skill-gap-none"><strong>No priority development gap identified in this attempt.</strong> Your assessed domains met the current-level benchmark.</li>';
+    if(actionHeading) actionHeading.textContent='Progression recommendation';
+    if(actionsEl) actionsEl.innerHTML='<li class="skill-gap-none">No remedial development action is indicated from this attempt. Consider a harder experience level or retake later with a fresh question set.</li>';
+  }
+
+  if(reviewEl) reviewEl.innerHTML=review.map(function(x,i){
+    return '<article class="skill-review-card '+(x.ok?'correct':'incorrect')+'">'+
+      '<div class="skill-review-top"><b>'+skillEscape(x.domain)+' · Question '+(i+1)+'</b><span class="skill-status '+(x.ok?'ok':'bad')+'">'+(x.ok?'✓ Correct':x.unanswered?'○ Unanswered':'✕ Incorrect')+'</span></div>'+
+      '<div class="skill-review-q">'+skillEscape(x.question)+'</div>'+
+      '<div class="skill-answer-line"><strong>Your answer:</strong> '+skillEscape(x.chosen)+'</div>'+
+      (x.ok?'':'<div class="skill-answer-line"><strong>Strongest answer:</strong> '+skillEscape(x.best)+'</div>')+
+      '<p class="skill-explain"><strong>Why:</strong> '+skillEscape(x.explanation)+'</p></article>';
+  }).join('');
+
+  const progress=document.getElementById('skillProgressBar');
+  if(progress) progress.style.width='100%';
+
+  ['skillIntro','skillInstructions','skillQuestions','skillResults'].forEach(function(id){
+    const el=document.getElementById(id);
+    if(el) el.classList.toggle('open',id==='skillResults');
+  });
+
+  const results=document.getElementById('skillResults');
+  if(results) results.scrollTop=0;
+
+  return r;
+};
+</script>
 
 <script id="skill-assessment-navigation-v10-6">
 /* Single stable controller for Previous/Next/Submit and timer expiry. */
@@ -1185,7 +1332,7 @@ window.finishSkillAssessmentStable = function(reason='submit'){
 
     skillTimedOut = reason==='time' || !!skillTimedOut;
 
-    renderSkillResults();
+    window.renderSkillResultsStable();
 
     if(skillState.result && typeof recordSkillCompletion==='function'){
       Promise.resolve(recordSkillCompletion()).catch(function(){});
@@ -1200,7 +1347,7 @@ window.finishSkillAssessmentStable = function(reason='submit'){
       btn.disabled=false;
       btn.textContent='Submit assessment →';
     }
-    window.alert('The assessment could not be submitted. Please try again.');
+    window.alert('Result generation error. Please refresh once and retry the assessment.');
     return false;
   }
 };
