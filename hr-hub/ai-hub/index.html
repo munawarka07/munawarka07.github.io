@@ -1086,7 +1086,7 @@ async function recordSkillCompletion(){
     score:Number(r.overall)||0,
     timedOut:!!r.timedOut,
     timeSeconds:Number(r.timeUsed)||0,
-    version:'assessment-v10.6-navigation-fixed'
+    version:'assessment-v10.7-lexical-state-fixed'
   };
   try{
     await fetch(SKILL_ANALYTICS_ENDPOINT,{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
@@ -1138,7 +1138,7 @@ if(typeof window.openTool === 'function'){
 window.skillNextStable = function(event){
   if(event){ event.preventDefault(); event.stopPropagation(); }
 
-  if(!window.skillState || !Array.isArray(skillState.questions) || !skillState.questions.length){
+  if(typeof skillState === 'undefined' || !Array.isArray(skillState.questions) || !skillState.questions.length){
     return false;
   }
 
@@ -1174,8 +1174,8 @@ window.finishSkillAssessmentStable = function(reason='submit'){
   try{
     if(typeof stopSkillTimer==='function') stopSkillTimer();
 
-    if(window.skillPaused){
-      window.skillPaused=false;
+    if(skillPaused){
+      skillPaused=false;
       const overlay=document.getElementById('skillPauseOverlay');
       if(overlay){
         overlay.classList.remove('open');
@@ -1183,7 +1183,7 @@ window.finishSkillAssessmentStable = function(reason='submit'){
       }
     }
 
-    window.skillTimedOut = reason==='time' || !!window.skillTimedOut;
+    skillTimedOut = reason==='time' || !!skillTimedOut;
 
     renderSkillResults();
 
