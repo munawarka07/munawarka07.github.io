@@ -104,6 +104,66 @@ questions:
       the same worker on probation more than once.
     search: UAE probation 6 months maximum probation
   - published: true
+    id: probation-counts-service-uae
+    category: Probation
+    question: Does probation count towards an employee's service?
+    answer: Yes. If the worker successfully completes probation and continues
+      employment, the probation period forms part of the worker's service.
+    search: probation continuous service UAE gratuity probation
+  - published: true
+    id: employer-terminate-probation-uae
+    category: Probation
+    question: Can an employer terminate an employee during probation?
+    answer: Yes. The employer may terminate employment during probation by giving at
+      least 14 days' written notice.
+    search: UAE probation termination 14 days notice employer
+  - published: true
+    id: employee-resign-probation-uae
+    category: Probation
+    question: Can an employee resign during probation in the UAE?
+    answer: Yes. Different notice requirements apply depending on whether the worker
+      intends to leave the UAE or move to another UAE employer.
+    search: resign probation UAE resignation probation notice
+  - published: true
+    id: probation-change-employer-notice
+    category: Probation
+    question: What notice is required during probation to join another UAE employer?
+    answer: The worker must generally give the current employer at least one month's
+      written notice when moving to another UAE employer during probation.
+    search: probation change employer UAE one month notice
+  - published: true
+    id: probation-leave-uae-notice
+    category: Probation
+    question: What notice is required during probation if the employee is leaving
+      the UAE?
+    answer: The worker must generally give at least 14 days' written notice when
+      terminating employment during probation to leave the UAE.
+    search: probation leave UAE resignation 14 days notice
+  - published: true
+    id: probation-recruitment-cost-new-employer
+    category: Probation
+    question: Who bears recruitment costs when a worker changes employers during
+      probation?
+    answer: The new employer generally compensates the original employer for
+      recruitment or contracting costs unless otherwise agreed, subject to the
+      applicable rules.
+    search: probation recruitment cost new employer UAE
+  - published: true
+    id: probation-twice-same-employer
+    category: Probation
+    question: Can the same employer place an employee on probation twice?
+    answer: No. The same employer may not place the same worker on probation more
+      than once.
+    search: second probation UAE same employer probation twice
+  - published: true
+    id: annual-leave-during-probation
+    category: Probation
+    question: Can an employee take annual leave during probation?
+    answer: An employer may allow a worker to take leave from the worker's annual
+      leave entitlement during probation, subject to the applicable rules and
+      employer approval.
+    search: annual leave during probation UAE leave probation
+  - published: true
     id: non-compete-clause-uae
     category: Non-Compete
     question: When can a non-compete clause be used in the UAE?
