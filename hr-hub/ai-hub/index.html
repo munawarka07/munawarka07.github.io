@@ -598,6 +598,18 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 }
 </style>
 
+
+<style id="skill-assessment-v9-integrity">
+#skillOptions .skill-option{
+  min-height:92px!important;
+  display:grid!important;
+  grid-template-columns:38px 1fr!important;
+  align-items:center!important;
+}
+@media(max-width:560px){
+  #skillOptions .skill-option{min-height:104px!important}
+}
+</style>
 </head><body><div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div><header class="site-header"><div class="shell nav"><a class="brand" href="/"><span class="brand-mark"><img src="/assets/images/munawar-logo.png" alt="Munawar.in logo" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a><nav class="nav-links global-nav" aria-label="Primary navigation">
 <div class="nav-menu"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
 <a href="/hr-hub/"><strong>HR Hub Overview</strong><small>All HR knowledge and tools</small></a>
@@ -779,7 +791,67 @@ const SKILL_EXPLANATIONS={
 function skillEscape(v){return String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
 function skillShuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function skillChoiceLabel(text){return String(text).replace(/\s+/g,' ').trim()}
-function buildSkillPool(level){const base=SKILL_BANK[level]||[];return base.map((q,bi)=>{let opts=q[2].map((text,oi)=>({text,correct:oi===q[3]}));opts=skillShuffle(opts);return{id:`${level}-${bi}`,baseId:`${level}-${bi}`,domain:q[0],question:q[1],options:opts,explanation:SKILL_EXPLANATIONS[q[0]]||'The strongest option applies structured, evidence-based HR judgement and appropriate controls.'}})}
+
+/* V9 option-integrity layer
+   Every option within the same question is rendered to the SAME word count.
+   Padding is neutral, deterministic from question/option identity, and never
+   depends on whether an option is correct. This removes answer-length as a cue. */
+const SKILL_NEUTRAL_TAILS={
+  3:['Record it clearly.','Keep it traceable.','Note it appropriately.','Document it clearly.'],
+  4:['Record the action clearly.','Preserve the supporting context.','Communicate the outcome clearly.','Keep the handoff traceable.','Record the resulting decision.'],
+  5:['Keep the case record current.','Note the decision rationale clearly.','Retain the relevant case context.','Keep the next step visible.','Document the next action clearly.']
+};
+function skillWordCount(v){
+  const m=String(v||'').match(/\b[\w’'-]+\b/g);
+  return m?m.length:0;
+}
+function skillStableHash(v){
+  let h=0;v=String(v);
+  for(let i=0;i<v.length;i++){h=((h<<5)-h)+v.charCodeAt(i);h|=0}
+  return Math.abs(h);
+}
+function skillPickTail(words,seed){
+  const arr=SKILL_NEUTRAL_TAILS[words]||SKILL_NEUTRAL_TAILS[3];
+  return arr[skillStableHash(seed)%arr.length];
+}
+function skillPadChoice(text,target,seed){
+  let out=skillChoiceLabel(text);
+  let diff=target-skillWordCount(out),step=0;
+  while(diff>0&&step<20){
+    let n;
+    if(diff===3||diff===4||diff===5)n=diff;
+    else{
+      const candidates=[3,4,5].filter(x=>diff-x===0||diff-x>=3);
+      n=candidates[skillStableHash(seed+'|'+step)%candidates.length];
+    }
+    out+=' '+skillPickTail(n,seed+'|'+step);
+    diff=target-skillWordCount(out);
+    step++;
+  }
+  return out;
+}
+function skillEqualizeOptions(qid,choices){
+  const clean=choices.map(skillChoiceLabel);
+  const target=Math.max(...clean.map(skillWordCount))+7;
+  return clean.map((text,oi)=>skillPadChoice(text,target,`${qid}|${oi}`));
+}
+function buildSkillPool(level){
+  const base=SKILL_BANK[level]||[];
+  return base.map((q,bi)=>{
+    const qid=`${level}-${bi}`;
+    const equalized=skillEqualizeOptions(qid,q[2]);
+    let opts=equalized.map((text,oi)=>({text,correct:oi===q[3]}));
+    opts=skillShuffle(opts);
+    return{
+      id:qid,
+      baseId:qid,
+      domain:q[0],
+      question:q[1],
+      options:opts,
+      explanation:SKILL_EXPLANATIONS[q[0]]||'The strongest option applies structured, evidence-based HR judgement and appropriate controls.'
+    }
+  })
+}
 function skillHistoryKey(level){return 'munawarSkillSeenV5_'+level}
 function selectSkillQuestions(level){const pool=buildSkillPool(level);let seen=[];try{seen=JSON.parse(localStorage.getItem(skillHistoryKey(level))||'[]')}catch(e){}let fresh=skillShuffle(pool.filter(q=>!seen.includes(q.id)));let chosen=fresh.slice(0,SKILL_TEST_SIZE);if(chosen.length<SKILL_TEST_SIZE){const used=skillShuffle(pool.filter(q=>!chosen.some(c=>c.id===q.id)));chosen=chosen.concat(used.slice(0,SKILL_TEST_SIZE-chosen.length));seen=[]}const nextSeen=[...seen,...chosen.map(q=>q.id)].slice(-30);try{localStorage.setItem(skillHistoryKey(level),JSON.stringify(nextSeen))}catch(e){}return skillShuffle(chosen)}
 function skillAttemptNumber(level){const k='munawarSkillAttemptV5_'+level;let n=1;try{n=(parseInt(localStorage.getItem(k)||'0',10)||0)+1;localStorage.setItem(k,n)}catch(e){}return n}
@@ -935,9 +1007,9 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.getElement
 
 
 /* Anonymous assessment analytics — no candidate name, email or answer content is transmitted. */
-const SKILL_ANALYTICS_ENDPOINT='https://munawar-cms-auth.munawarka07.workers.dev/assessment/complete';
+const SKILL_ANALYTICS_ENDPOINT='https://munawar-cms-auth.munawarka07.workers.dev/assessment-complete';
 function skillAnalyticsEventId(){
-  const k='munawarSkillAnalyticsEventV1';
+  const k='munawarSkillAnalyticsEventV3';
   const fingerprint=[skillState.level,skillState.region,skillState.focus,skillState.attempt,skillStartedAt].join('|');
   let saved=null;try{saved=JSON.parse(sessionStorage.getItem(k)||'null')}catch(e){}
   if(saved&&saved.fingerprint===fingerprint)return saved.id;
@@ -952,16 +1024,14 @@ async function recordSkillCompletion(){
   const r=skillState.result;if(!r||skillState._analyticsSent)return;
   skillState._analyticsSent=true;
   const payload={
-    eventId:skillAnalyticsEventId(),
-    region:skillState.region||'unknown',
-    focus:skillState.focus||'unknown',
-    level:skillState.level||'unknown',
+    attemptId:skillAnalyticsEventId(),
+    context:skillState.region||'uae',
+    specialism:skillState.focus||'comprehensive',
+    experience:skillState.level||'unknown',
     score:Number(r.overall)||0,
-    scoreBand:skillScoreBand(Number(r.overall)||0),
     timedOut:!!r.timedOut,
-    timeUsed:Number(r.timeUsed)||0,
-    questionCount:Number(r.total)||0,
-    version:'assessment-v7.2'
+    timeSeconds:Number(r.timeUsed)||0,
+    version:'assessment-v9'
   };
   try{
     await fetch(SKILL_ANALYTICS_ENDPOINT,{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
