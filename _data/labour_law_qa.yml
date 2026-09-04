@@ -171,3 +171,46 @@ questions:
       to the employer's clients or business secrets and a restriction is
       necessary to protect legitimate business interests.
     search: UAE non compete clause clients business secrets
+  - published: true
+    id: maximum-non-compete-period
+    category: Non-Compete
+    question: How long can a UAE non-compete restriction last?
+    answer: A post-employment non-compete restriction may not exceed two years from
+      the end of the employment contract.
+    search: UAE non compete two years maximum period
+  - published: true
+    id: valid-non-compete-conditions
+    category: Non-Compete
+    question: What should a UAE non-compete clause specify?
+    answer: It should be appropriately limited by time, geographical area and type
+      of work to the extent necessary to protect legitimate business interests.
+    search: valid non compete UAE time place work restriction
+  - published: true
+    id: non-compete-joining-competitor
+    category: Non-Compete
+    question: Does a non-compete clause automatically prevent joining a competitor?
+    answer: Not necessarily. Enforceability depends on the legal requirements,
+      wording and scope of the restriction, circumstances of termination and
+      facts of the case.
+    search: UAE non compete competitor enforceable new job
+  - published: true
+    id: employment-discrimination-uae
+    category: Worker Protection
+    question: Is employment discrimination prohibited in the UAE private sector?
+    answer: Yes. Discrimination on specified grounds that prejudices equal
+      opportunity or equal treatment in employment is prohibited.
+    search: UAE discrimination employment equal opportunity worker rights
+  - published: true
+    id: equal-pay-men-women-uae
+    category: Worker Protection
+    question: Are women entitled to equal pay for equal work in the UAE?
+    answer: Yes. A woman is entitled to the same wage as a man for the same work or
+      work of equal value in accordance with the law.
+    search: UAE equal pay women men same work salary
+  - published: true
+    id: workplace-harassment-uae
+    category: Worker Protection
+    question: Is workplace harassment prohibited in the UAE?
+    answer: Yes. Sexual harassment, bullying and verbal, physical or psychological
+      violence against workers are prohibited.
+    search: UAE workplace harassment bullying employee protection
