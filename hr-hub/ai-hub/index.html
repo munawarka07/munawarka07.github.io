@@ -973,7 +973,75 @@ function resetSkillAssessment(clear=true){skillState={level:'',name:'',index:0,a
 function buildSkillReportHTML(){if(!skillState.result)return'';const clone=document.getElementById('skillResults').cloneNode(true);clone.id='skillPdfReport';clone.classList.add('open');clone.querySelectorAll('.skill-result-actions').forEach(x=>x.remove());clone.querySelectorAll('[id]').forEach(x=>x.removeAttribute('id'));return clone.outerHTML}
 function skillPdfStyles(){return `*{box-sizing:border-box}body{margin:0;background:#fff;font-family:Tajawal,Arial,sans-serif;color:#0c2340}#skillPdfWrap{width:760px;margin:0 auto;padding:18px 14px 24px;background:#fff}#skillPdfWrap .skill-assess{display:block!important;padding:0!important;max-height:none!important;overflow:visible!important;background:#fff!important}#skillPdfWrap .skill-result-head{background:linear-gradient(135deg,#0d2c50,#2460d4)!important;color:#fff!important;border-radius:20px!important;padding:24px!important;margin-bottom:24px!important;break-inside:avoid!important}#skillPdfWrap .skill-score{font-size:58px!important;font-weight:900!important;line-height:1!important;margin:14px 0 18px!important}#skillPdfWrap .skill-result-head h2{font-size:28px!important;line-height:1.35!important;margin:0 0 12px!important;color:#fff!important}#skillPdfWrap .skill-result-head p{color:#e8f2ff!important;font-size:15px!important}#skillPdfWrap .skill-meta-row{display:flex!important;flex-wrap:wrap!important;gap:6px!important;margin-top:14px!important}#skillPdfWrap .skill-meta-pill{background:#f2f7ff!important;color:#1c5fd4!important;border-radius:999px!important;padding:8px 11px!important;font-weight:700!important;font-size:11px!important}#skillPdfWrap .domain-list{display:grid!important;gap:11px!important;margin:18px 0 22px!important}#skillPdfWrap .domain-row{display:grid!important;grid-template-columns:145px 1fr 50px!important;gap:10px!important;align-items:center!important;font-size:13px!important}#skillPdfWrap .domain-bar{height:10px!important;border-radius:999px!important;background:#e8f0f8!important;overflow:hidden!important}#skillPdfWrap .domain-bar span{display:block!important;height:100%!important;background:linear-gradient(90deg,#2563d9,#2fc2d1)!important;border-radius:999px!important}#skillPdfWrap .result-panels{display:grid!important;grid-template-columns:1fr 1fr!important;gap:14px!important;margin-bottom:14px!important}#skillPdfWrap .result-panel{border:1px solid #dce6ef!important;background:#fbfdff!important;border-radius:16px!important;padding:17px!important;break-inside:avoid!important}#skillPdfWrap .result-panel li{margin:7px 0!important;font-size:13px!important;line-height:1.55!important}#skillPdfWrap .skill-review-heading{margin:24px 0 5px!important;font-size:22px!important}#skillPdfWrap .skill-report-note{font-size:12px!important;color:#61758a!important}#skillPdfWrap .skill-review{display:grid!important;gap:10px!important;margin-top:12px!important}#skillPdfWrap .skill-review-card{border:1px solid #dce7f2!important;border-left:4px solid #b42318!important;border-radius:12px!important;padding:14px!important;background:#fff!important;break-inside:avoid!important;page-break-inside:avoid!important}#skillPdfWrap .skill-review-card.correct{border-left-color:#15803d!important}#skillPdfWrap .skill-review-top{display:flex!important;justify-content:space-between!important;gap:10px!important;align-items:center!important;margin-bottom:8px!important}#skillPdfWrap .skill-status{font-size:11px!important;font-weight:800!important;border-radius:999px!important;padding:5px 8px!important}#skillPdfWrap .skill-status.ok{background:#e9f8ef!important;color:#137333!important}#skillPdfWrap .skill-status.bad{background:#fff0ee!important;color:#b42318!important}#skillPdfWrap .skill-review-q,#skillPdfWrap .skill-answer-line,#skillPdfWrap .skill-explain{font-size:12.5px!important;line-height:1.55!important;margin:5px 0!important}#skillPdfWrap .skill-disclaimer{margin-top:18px!important;padding-top:12px!important;border-top:1px solid #dce6ef!important;color:#61758a!important;font-size:10px!important}@media print{#skillPdfWrap{width:100%!important;padding:0!important}.skill-review-card,.result-panel,.skill-result-head{break-inside:avoid!important;page-break-inside:avoid!important}}`}
 function downloadSkillReport(){if(!skillState.result)return;const file=`Munawar-HR-Skill-Assessment-${skillState.name.replace(/[^a-z0-9]+/gi,'-')}-Attempt-${skillState.attempt}.pdf`,wrap=document.createElement('div'),style=document.createElement('style');wrap.id='skillPdfWrap';wrap.innerHTML=buildSkillReportHTML();style.textContent=skillPdfStyles();document.head.appendChild(style);document.body.appendChild(wrap);if(window.html2pdf){html2pdf().set({margin:[7,7,7,7],filename:file,image:{type:'jpeg',quality:.98},html2canvas:{scale:2,useCORS:true,backgroundColor:'#fff',scrollY:0},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'},pagebreak:{mode:['css','legacy']}}).from(wrap).save().then(()=>{wrap.remove();style.remove()}).catch(()=>{wrap.remove();style.remove();printSkillReport()})}else{wrap.remove();style.remove();printSkillReport()}}
-function printSkillReport(){const w=window.open('','_blank');if(!w)return alert('Please allow pop-ups to generate the report.');w.document.write(`<html><head><title>Munawar.in HR Skill Assessment</title><style>${skillPdfStyles()}</style></head><body><div id="skillPdfWrap">${buildSkillReportHTML()}</div><script>window.onload=()=>window.print()<\/script>
+function printSkillReport(){const w=window.open('','_blank');if(!w)return alert('Please allow pop-ups to generate the report.');w.document.write(`<html><head><title>Munawar.in HR Skill Assessment</title><style>${skillPdfStyles()}</style>
+<style id="skill-assessment-dynamic-exam-box-final">
+/* FINAL: Question-stage window grows with its content.
+   No answer card or question text is clipped.
+   Only if the full exam exceeds the viewport does the whole white window scroll. */
+#skillModal .ai-box:has(#skillQuestions.open){
+  height:auto!important;
+  max-height:calc(100dvh - 36px)!important;
+  overflow-y:auto!important;
+  overflow-x:hidden!important;
+}
+#skillModal #skillQuestions.open{
+  display:block!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+#skillModal #skillQuestionText{
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+}
+#skillModal #skillOptions{
+  display:grid!important;
+  grid-template-columns:1fr!important;
+  gap:10px!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  overflow:visible!important;
+  scrollbar-gutter:auto!important;
+  padding:2px 0 4px!important;
+}
+#skillModal #skillOptions .skill-option{
+  display:flex!important;
+  align-items:flex-start!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:58px!important;
+  max-height:none!important;
+  overflow:visible!important;
+  white-space:normal!important;
+  text-overflow:clip!important;
+  line-height:1.55!important;
+  padding:15px 16px!important;
+}
+#skillModal #skillOptions .skill-option b{
+  flex:0 0 26px!important;
+}
+#skillModal #skillQuestions .skill-nav{
+  position:static!important;
+  margin-top:18px!important;
+  padding-top:14px!important;
+}
+@media(max-width:700px){
+  #skillModal .ai-box:has(#skillQuestions.open){
+    height:auto!important;
+    max-height:calc(100dvh - 16px)!important;
+    overflow-y:auto!important;
+  }
+  #skillModal #skillOptions .skill-option{
+    min-height:54px!important;
+    padding:12px 13px!important;
+  }
+}
+</style>
+</head><body><div id="skillPdfWrap">${buildSkillReportHTML()}</div><script>window.onload=()=>window.print()<\/script>
 
 
 </body></html>`);w.document.close()}
