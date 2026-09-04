@@ -834,7 +834,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeTool()});
 <div class="ai-modal" id="skillModal" aria-hidden="true"><div class="ai-box"><button class="close-ai" type="button" onclick="closeSkillAssessment()">×</button>
 <div id="skillIntro" class="skill-assess open"><div class="skill-intro"><div><div class="section-label">PROFESSIONAL HR CAPABILITY ASSESSMENT</div><h2>HR Skill Assessment</h2><p>Configure your assessment profile first. The exam blueprint changes by experience, geographic context and HR specialism so the questions match the work you actually perform.</p><p class="skill-intro-note"><strong>Built as a serious situational-judgement assessment.</strong> Every session uses a timed mix of practical cases, judgement decisions and numerical problems. Several responses may be defensible at first glance — choose the single strongest professional response.</p></div><div class="skill-intro-grid"><div class="tool-form"><label for="skillName">Candidate name</label><input id="skillName" type="text" placeholder="Enter your name"></div><div class="tool-form"><label for="skillLevel">Current HR experience</label><select id="skillLevel"><option value="">Select experience slab</option><option value="starter">0–1 year · Foundation</option><option value="developing">2–4 years · Independent practitioner</option><option value="experienced">5–8 years · Senior / specialist</option><option value="leader">9+ years · Lead / manager</option></select></div><div class="tool-form"><label for="skillRegion">Assessment context</label><select id="skillRegion"><option value="">Select assessment context</option><option value="uae">UAE · HR practice + UAE employment context</option><option value="global">Global · General international HR practice</option></select></div><div class="tool-form"><label for="skillFocus">Assessment specialism</label><select id="skillFocus"><option value="">Select your HR scope</option><option value="comprehensive">Comprehensive HR · All major HR disciplines</option><option value="payroll">Payroll & Compensation Controls</option><option value="lifecycle">Employee Lifecycle · Onboarding to Offboarding</option><option value="talent">Recruitment, Talent & Workforce</option><option value="relations">Employee Relations & Workplace Cases</option><option value="operations">HR Operations, Process & Compliance</option><option value="analytics">HRIS, Data & People Analytics</option><option value="strategy">HRBP, Strategy & Leadership</option></select></div></div><div class="skill-required" id="skillRequired">Please complete all four fields before continuing.</div><div class="tool-actions"><button class="skill-btn primary" type="button" onclick="prepareSkillInstructions()">Review exam instructions →</button></div></div></div>
 <div id="skillInstructions" class="skill-assess"><div class="skill-instructions"><div class="section-label">BEFORE YOU BEGIN</div><h2>Assessment instructions</h2><p class="skill-instructions-lead">Read these rules carefully. The timer starts only after you click <strong>Start timed assessment</strong>.</p><div class="skill-profile-card" id="skillProfileSummary"></div><div class="skill-instruction-grid"><div class="skill-instruction-card"><span>01</span><div><strong>20 professional questions</strong><p>A balanced mix of situational judgement, HR controls, case analysis and role-relevant numerical problems.</p></div></div><div class="skill-instruction-card"><span>02</span><div><strong>Single best response</strong><p>More than one option may sound reasonable. Choose the response that is strongest when evidence, risk, employee impact, compliance and business outcomes are considered together.</p></div></div><div class="skill-instruction-card"><span>03</span><div><strong>Strict timed session</strong><p id="skillInstructionTime">Your time limit will appear here.</p></div></div><div class="skill-instruction-card"><span>04</span><div><strong>Maximum 3 pauses</strong><p>Each pause freezes the timer. While paused, the exam is locked until you explicitly continue.</p></div></div><div class="skill-instruction-card"><span>05</span><div><strong>Automatic submission</strong><p>When the timer reaches 00:00, the assessment ends automatically. Unanswered questions are recorded as unanswered and score zero.</p></div></div><div class="skill-instruction-card"><span>06</span><div><strong>Assessment integrity</strong><p>For a meaningful result, do not use AI, web search, colleagues or answer-pattern guessing. A basic calculator or scratchpad may be used for numerical payroll questions.</p></div></div><div class="skill-instruction-card"><span>07</span><div><strong>You may review answers</strong><p>Use Previous/Next while time remains. You can change an answer before final submission.</p></div></div><div class="skill-instruction-card"><span>08</span><div><strong>Protected exam window</strong><p>Clicking outside the assessment will not close it. Use only the × button; closing an active session will require confirmation and the attempt will be lost.</p></div></div></div><label class="skill-honour"><input id="skillHonour" type="checkbox"> <span>I have read the instructions and will complete this assessment independently so the result reflects my actual capability.</span></label><div class="skill-required" id="skillInstructionRequired">Please confirm that you have read the assessment instructions.</div><div class="tool-actions skill-instruction-actions"><button class="skill-btn secondary" type="button" onclick="backToSkillProfile()">← Edit profile</button><button class="skill-btn primary" type="button" onclick="startSkillAssessment()">Start timed assessment →</button></div></div></div>
-<div id="skillQuestions" class="skill-assess"><div class="skill-exam-toolbar"><div class="skill-count" id="skillCount"></div><div class="skill-timer-wrap"><span class="skill-timer" id="skillTimer">00:00</span><button class="skill-pause-btn" id="skillPauseBtn" type="button" onclick="pauseSkillAssessment()">Pause · 3 left</button></div></div><div class="skill-progress"><span id="skillProgressBar"></span></div><div class="skill-exam-note">Choose the <strong>single best response</strong>. Several options may be reasonable; select the one that best balances evidence, control, employee impact, compliance and business judgement.</div><div id="skillDomain" class="section-label"></div><h3 class="skill-question" id="skillQuestionText"></h3><div class="skill-options" id="skillOptions"></div><div class="skill-nav"><button class="skill-btn secondary" id="skillBack" type="button" onclick="skillPrev()">← Previous</button><button class="skill-btn primary" id="skillNext" type="button" onclick="skillAdvanceFinal(event)" disabled>Next →</button></div></div>
+<div id="skillQuestions" class="skill-assess"><div class="skill-exam-toolbar"><div class="skill-count" id="skillCount"></div><div class="skill-timer-wrap"><span class="skill-timer" id="skillTimer">00:00</span><button class="skill-pause-btn" id="skillPauseBtn" type="button" onclick="pauseSkillAssessment()">Pause · 3 left</button></div></div><div class="skill-progress"><span id="skillProgressBar"></span></div><div class="skill-exam-note">Choose the <strong>single best response</strong>. Several options may be reasonable; select the one that best balances evidence, control, employee impact, compliance and business judgement.</div><div id="skillDomain" class="section-label"></div><h3 class="skill-question" id="skillQuestionText"></h3><div class="skill-options" id="skillOptions"></div><div class="skill-nav"><button class="skill-btn secondary" id="skillBack" type="button" onclick="skillPrev()">← Previous</button><button class="skill-btn primary" id="skillNext" type="button" onclick="skillNextStable(event)" disabled>Next →</button></div></div>
 <div id="skillPauseOverlay" class="skill-pause-overlay" aria-hidden="true"><div class="skill-pause-card"><div class="section-label">ASSESSMENT PAUSED</div><h3>Your timer is paused</h3><p>Your answers are preserved. You can pause a maximum of three times in one session.</p><div class="skill-pause-time" id="skillPauseTime">00:00</div><button class="skill-btn primary" type="button" onclick="resumeSkillAssessment()">Continue assessment →</button></div></div>
 <div id="skillResults" class="skill-assess"><div class="skill-result-head"><div class="section-label" style="color:#9fd8ff">YOUR PRACTICAL CAPABILITY REPORT</div><div class="skill-score" id="skillScore"></div><h2 id="skillResultTitle"></h2><p id="skillResultSummary"></p><div class="skill-meta-row" id="skillMeta"></div></div><div class="domain-list" id="skillDomainResults"></div><div class="result-panels"><div class="result-panel"><h3>Current strengths</h3><ul id="skillStrengths"></ul></div><div class="result-panel"><h3 id="skillGapHeading">Priority areas to improve</h3><ul id="skillGaps"></ul></div></div><div class="result-panel" style="margin-top:14px"><h3 id="skillActionHeading">Development focus based on this attempt</h3><ul id="skillActions"></ul></div><h3 class="skill-review-heading">Question-by-question review</h3><p class="skill-report-note">Review your answer, the strongest answer and the reasoning behind each scenario.</p><div class="skill-review" id="skillReview"></div><p class="skill-disclaimer">This is a practical HR capability self-assessment and does not constitute a professional certification or legal advice. UAE employment-law scenarios should always be verified against current official sources and the facts of the specific case.</p><div class="skill-result-actions"><button class="skill-btn pdf" type="button" onclick="downloadSkillReport()">Download detailed PDF report ↓</button><button class="skill-btn secondary" type="button" onclick="retakeSkillAssessment()">Retake with new questions ↻</button></div></div>
 </div></div>
@@ -1086,7 +1086,7 @@ async function recordSkillCompletion(){
     score:Number(r.overall)||0,
     timedOut:!!r.timedOut,
     timeSeconds:Number(r.timeUsed)||0,
-    version:'assessment-v10.4-submit-controller'
+    version:'assessment-v10.6-navigation-fixed'
   };
   try{
     await fetch(SKILL_ANALYTICS_ENDPOINT,{method:'POST',mode:'cors',credentials:'omit',keepalive:true,headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
@@ -1130,6 +1130,83 @@ if(typeof window.openTool === 'function'){
     return originalOpenTool(i);
   };
 }
+</script>
+
+
+<script id="skill-assessment-navigation-v10-6">
+/* Single stable controller for Previous/Next/Submit and timer expiry. */
+window.skillNextStable = function(event){
+  if(event){ event.preventDefault(); event.stopPropagation(); }
+
+  if(!window.skillState || !Array.isArray(skillState.questions) || !skillState.questions.length){
+    return false;
+  }
+
+  const answer = skillState.answers[skillState.index];
+  if(answer === null || typeof answer === 'undefined') return false;
+
+  if(skillState.index < skillState.questions.length - 1){
+    skillState.index += 1;
+    renderSkillQuestion();
+    return false;
+  }
+
+  return window.finishSkillAssessmentStable('submit');
+};
+
+window.finishSkillAssessmentStable = function(reason='submit'){
+  if(skillState._finalizing) return false;
+
+  if(reason==='submit'){
+    const unanswered = skillState.answers.filter(function(a){
+      return a===null || typeof a==='undefined';
+    }).length;
+    if(unanswered>0){
+      const ok = window.confirm(
+        'You still have '+unanswered+' unanswered question'+(unanswered>1?'s':'')+'. Submit anyway?'
+      );
+      if(!ok) return false;
+    }
+  }
+
+  skillState._finalizing = true;
+
+  try{
+    if(typeof stopSkillTimer==='function') stopSkillTimer();
+
+    if(window.skillPaused){
+      window.skillPaused=false;
+      const overlay=document.getElementById('skillPauseOverlay');
+      if(overlay){
+        overlay.classList.remove('open');
+        overlay.setAttribute('aria-hidden','true');
+      }
+    }
+
+    window.skillTimedOut = reason==='time' || !!window.skillTimedOut;
+
+    renderSkillResults();
+
+    if(skillState.result && typeof recordSkillCompletion==='function'){
+      Promise.resolve(recordSkillCompletion()).catch(function(){});
+    }
+
+    return false;
+  }catch(err){
+    console.error('Assessment finalization error:',err);
+    skillState._finalizing=false;
+    const btn=document.getElementById('skillNext');
+    if(btn){
+      btn.disabled=false;
+      btn.textContent='Submit assessment →';
+    }
+    window.alert('The assessment could not be submitted. Please try again.');
+    return false;
+  }
+};
+
+/* Timer expiry and any older internal call use the same final path. */
+window.finishSkillAssessment = window.finishSkillAssessmentStable;
 </script>
 
 </body></html>
