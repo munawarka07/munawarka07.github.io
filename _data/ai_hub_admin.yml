@@ -1,0 +1,33 @@
+tools:
+- key: law
+  label: AI UAE Labour Law Assistant
+  enabled: true
+  order: 10
+- key: payroll
+  label: AI Payroll Assistant
+  enabled: true
+  order: 20
+- key: letter
+  label: AI HR Letter Generator
+  enabled: true
+  order: 30
+- key: jd
+  label: Job Description Generator
+  enabled: true
+  order: 40
+- key: policy
+  label: HR Policy Assistant
+  enabled: true
+  order: 50
+- key: document
+  label: Document Quality Checker
+  enabled: true
+  order: 60
+- key: skills
+  label: HR Skill Assessment
+  enabled: true
+  order: 70
+- key: decision
+  label: HR Decision Lab
+  enabled: true
+  order: 80

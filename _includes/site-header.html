@@ -1,0 +1,12 @@
+{% assign nav_groups = site.data.navigation.groups | where: "visible", true | sort: "order" %}
+{% assign nav_items = site.data.navigation.items | where: "visible", true | sort: "order" %}
+{% assign simple_links = site.data.navigation.simple_links | where: "visible", true | sort: "order" %}
+<header class="site-header"><div class="shell nav">
+<a class="brand" href="{{ page.brand_href | default: '/' }}"><span class="brand-mark"><img alt="{{ site.data.site_settings.branding.logo_alt | escape }}" src="{{ site.data.site_settings.branding.logo | escape }}" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a>
+<nav aria-label="Primary navigation" class="nav-links global-nav">
+{% for group in nav_groups %}{% assign children = nav_items | where: "parent", group.id | sort: "order" %}<div class="nav-menu"><a class="nav-top" href="{{ group.href | escape }}">{{ group.label | escape }} <span class="nav-chevron">⌄</span></a><div class="nav-dropdown{% if group.wide %} nav-wide{% endif %}">{% for item in children %}<a href="{{ item.href | escape }}"><strong>{{ item.label | escape }}</strong><small>{{ item.description | escape }}</small></a>{% endfor %}</div></div>{% endfor %}
+{% for item in simple_links %}<a class="nav-top nav-simple" href="{{ item.href | escape }}">{{ item.label | escape }}</a>{% endfor %}
+</nav>
+{% if site.data.site_settings.search.enabled %}<button aria-label="{{ site.data.site_settings.search.aria_label | escape }}" class="global-search-trigger" id="globalSearchTrigger" title="{{ site.data.site_settings.search.button_title | escape }}" type="button">⌕</button>{% endif %}
+{% if page.nav_cta_text and page.nav_cta_href %}<a class="nav-cta" href="{{ page.nav_cta_href | escape }}">{{ page.nav_cta_text | escape }}</a>{% elsif page.collection == 'articles' %}<a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a>{% endif %}<button class="menu-btn">Menu</button></div></header>
+{% include site-announcement.html %}

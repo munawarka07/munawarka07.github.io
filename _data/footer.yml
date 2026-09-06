@@ -1,0 +1,148 @@
+main:
+  columns:
+  - heading: Knowledge
+    links:
+    - label: HR Hub
+      href: /hr-hub/
+    - label: Calculators
+      href: /hr-hub/calculator/
+    - label: Resources
+      href: /hr-hub/library/
+  - heading: Explore
+    links:
+    - label: Career Hub
+      href: /career-hub/
+    - label: AI Hub
+      href: /hr-hub/ai-hub/
+    - label: Articles
+      href: /articles/
+    - label: About
+      href: /about/
+    - label: Contact
+      href: /contact/
+  - heading: Focus
+    text_lines:
+    - HR Operations
+    - Payroll
+    - UAE Labour Law
+    - People & Process
+hr:
+  columns:
+  - heading: Knowledge
+    links:
+    - label: Labour Law
+      href: /hr-hub/uae-labour-law/
+    - label: Payroll
+      href: /hr-hub/payroll-insights/
+    - label: Process Guide
+      href: /hr-hub/hr-process-guide/
+  - heading: Resources
+    links:
+    - label: Calculators
+      href: /hr-hub/calculator/
+    - label: Document Center
+      href: /hr-hub/library/
+    - label: Career Hub
+      href: /career-hub/
+    - label: AI Hub
+      href: /hr-hub/ai-hub/
+  - heading: Important
+    text_lines:
+    - Educational content only.
+    - Verify current official guidance for legal, payroll and pension decisions.
+profile:
+  columns:
+  - heading: About
+    links:
+    - label: About Me
+      href: /about/
+    - label: Experience
+      href: /experience-education/
+    - label: Skills
+      href: /skills-expertise/
+  - heading: Knowledge
+    links:
+    - label: HR Hub
+      href: /hr-hub/
+    - label: Calculators
+      href: /hr-hub/calculator/
+    - label: Resources
+      href: /hr-hub/library/
+  - heading: Focus
+    text_lines:
+    - HR Operations
+    - Payroll
+    - People & Process
+    - Knowledge Sharing
+experience:
+  columns:
+  - heading: About
+    links:
+    - label: About Me
+      href: /about/
+    - label: Experience
+      href: /experience-education/
+    - label: Skills
+      href: /skills-expertise/
+  - heading: Knowledge
+    links:
+    - label: HR Hub
+      href: /hr-hub/
+    - label: Calculators
+      href: /hr-hub/calculator/
+    - label: Resources
+      href: /hr-hub/library/
+  - heading: Focus
+    text_lines:
+    - HR Operations
+    - Payroll
+    - People & Process
+    - Knowledge Sharing
+about:
+  columns:
+  - heading: About
+    links:
+    - label: About Me
+      href: /about/
+    - label: Experience
+      href: /experience-education/
+    - label: Skills
+      href: /skills-expertise/
+  - heading: Knowledge
+    links:
+    - label: HR Hub
+      href: /hr-hub/
+    - label: Calculators
+      href: /hr-hub/calculator/
+    - label: Resources
+      href: /hr-hub/library/
+  - heading: Focus
+    text_lines:
+    - HR Operations
+    - Payroll
+    - People & Process
+    - Knowledge Sharing
+ai:
+  columns:
+  - heading: Knowledge
+    links:
+    - label: Labour Law
+      href: /hr-hub/uae-labour-law/
+    - label: Payroll
+      href: /hr-hub/payroll-insights/
+    - label: Process Guide
+      href: /hr-hub/hr-process-guide/
+  - heading: Resources
+    links:
+    - label: Calculators
+      href: /hr-hub/calculator/
+    - label: Document Center
+      href: /hr-hub/library/
+    - label: Career Hub
+      href: /career-hub/
+    - label: AI Hub
+      href: /hr-hub/ai-hub/
+  - heading: Important
+    text_lines:
+    - Educational and brainstorming support only.
+    - Verify current official guidance for legal, payroll and policy decisions.

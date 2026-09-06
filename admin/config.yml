@@ -2455,3 +2455,380 @@ collections:
     name: published
     widget: boolean
     default: true
+
+
+- name: site_management
+  label: Site Management
+  editor:
+    preview: false
+  files:
+  - name: navigation
+    label: Navigation Manager
+    file: _data/navigation.yml
+    fields:
+    - label: Dropdown Menus
+      name: groups
+      widget: list
+      summary: "{{fields.order}} · {{fields.label}}"
+      fields:
+      - {label: ID, name: id, widget: string, hint: "Stable internal ID. Do not change unless you also update item Parent values."}
+      - {label: Menu Label, name: label, widget: string}
+      - {label: Main Link, name: href, widget: string}
+      - {label: Wide Dropdown, name: wide, widget: boolean, default: false}
+      - {label: Visible, name: visible, widget: boolean, default: true}
+      - {label: Order, name: order, widget: number, value_type: int, min: 1}
+    - label: Dropdown Items
+      name: items
+      widget: list
+      summary: "{{fields.parent}} · {{fields.order}} · {{fields.label}}"
+      hint: "To move a page to another dropdown, simply change Parent. No HTML editing is required."
+      fields:
+      - label: Parent
+        name: parent
+        widget: select
+        options:
+        - {label: HR Hub, value: hr}
+        - {label: Calculators, value: calculators}
+        - {label: Resources, value: resources}
+        - {label: Career Hub, value: career}
+        - {label: AI Hub, value: ai}
+      - {label: Label, name: label, widget: string}
+      - {label: Description, name: description, widget: string}
+      - {label: Link, name: href, widget: string}
+      - {label: Visible, name: visible, widget: boolean, default: true}
+      - {label: Order, name: order, widget: number, value_type: int, min: 1}
+    - label: Simple Top Links
+      name: simple_links
+      widget: list
+      summary: "{{fields.order}} · {{fields.label}}"
+      fields:
+      - {label: Label, name: label, widget: string}
+      - {label: Link, name: href, widget: string}
+      - {label: Visible, name: visible, widget: boolean, default: true}
+      - {label: Order, name: order, widget: number, value_type: int, min: 1}
+
+  - name: global_settings
+    label: Branding, Search & Announcement
+    file: _data/site_settings.yml
+    fields:
+    - label: Branding
+      name: branding
+      widget: object
+      fields:
+      - {label: Site Name, name: site_name, widget: string}
+      - {label: Logo, name: logo, widget: image}
+      - {label: Logo Alt Text, name: logo_alt, widget: string}
+      - {label: Favicon ICO, name: favicon_ico, widget: string}
+      - {label: 48px Favicon, name: favicon_48, widget: string}
+      - {label: 192px Favicon, name: favicon_192, widget: string}
+      - {label: Apple Touch Icon, name: apple_touch_icon, widget: string}
+      - {label: Browser Theme Colour, name: theme_color, widget: color}
+    - label: Global Search
+      name: search
+      widget: object
+      fields:
+      - {label: Enabled, name: enabled, widget: boolean, default: true}
+      - {label: Button Tooltip, name: button_title, widget: string}
+      - {label: Accessibility Label, name: aria_label, widget: string}
+    - label: Global Announcement
+      name: announcement
+      widget: object
+      fields:
+      - {label: Enabled, name: enabled, widget: boolean, default: false}
+      - {label: Title, name: title, widget: string, required: false}
+      - {label: Message, name: message, widget: text, required: false}
+      - {label: Link Text, name: link_text, widget: string, required: false}
+      - {label: Link URL, name: link_url, widget: string, required: false}
+      - {label: Dismissible, name: dismissible, widget: boolean, default: true}
+    - label: Footer Global Text
+      name: footer
+      widget: object
+      fields:
+      - {label: Copyright, name: copyright, widget: string}
+      - {label: Tagline, name: tagline, widget: string}
+      - {label: Brand Description, name: brand_description, widget: text}
+
+  - name: footer
+    label: Footer Manager
+    file: _data/footer.yml
+    fields:
+    - label: Main / Articles Footer
+      name: main
+      widget: object
+      fields: &footer_variant_fields
+      - label: Columns
+        name: columns
+        widget: list
+        fields:
+        - {label: Heading, name: heading, widget: string}
+        - label: Links
+          name: links
+          widget: list
+          required: false
+          fields:
+          - {label: Label, name: label, widget: string}
+          - {label: Link, name: href, widget: string}
+        - label: Text Lines
+          name: text_lines
+          widget: list
+          required: false
+          field: {label: Line, name: line, widget: string}
+    - label: HR / Career Footer
+      name: hr
+      widget: object
+      fields: *footer_variant_fields
+    - label: Profile Footer
+      name: profile
+      widget: object
+      fields: *footer_variant_fields
+    - label: Experience Footer
+      name: experience
+      widget: object
+      fields: *footer_variant_fields
+    - label: About Footer
+      name: about
+      widget: object
+      fields: *footer_variant_fields
+    - label: AI Hub Footer
+      name: ai
+      widget: object
+      fields: *footer_variant_fields
+
+  - name: seo
+    label: SEO Manager
+    file: _data/seo.yml
+    fields:
+    - label: Homepage
+      name: home
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: About
+      name: about
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Experience & Education
+      name: experience
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Projects & Awards
+      name: projects
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Skills & Expertise
+      name: skills
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Contact
+      name: contact
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Career Hub
+      name: career_hub
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Articles
+      name: articles
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: HR Hub
+      name: hr_hub
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: UAE Labour Law
+      name: uae_labour_law
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Labour Law Q&A
+      name: labour_law_qa
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: HR Insights
+      name: hr_insights
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Payroll Insights
+      name: payroll_insights
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: HR Process Guide
+      name: hr_process_guide
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Emirati Insights
+      name: emirati_insights
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: Calculators
+      name: calculator
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: HR Library
+      name: library
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+    - label: AI Hub
+      name: ai_hub
+      widget: object
+      collapsed: true
+      fields:
+      - {label: SEO Title, name: title, widget: string}
+      - {label: Meta Description, name: description, widget: text}
+      - {label: Canonical URL, name: canonical, widget: string}
+      - {label: Search Engine Indexing, name: indexable, widget: boolean, default: true}
+      - {label: Robots Directive, name: robots, widget: string}
+      - {label: Social Title, name: og_title, widget: string}
+      - {label: Social Description, name: og_description, widget: text}
+
+  - name: ai_hub_display
+    label: AI Hub Tool Visibility & Order
+    file: _data/ai_hub_admin.yml
+    fields:
+    - label: Tools
+      name: tools
+      widget: list
+      summary: "{{fields.order}} · {{fields.label}}"
+      hint: "Reorder tools using Order, or temporarily hide a tool without changing its working code."
+      fields:
+      - label: Tool Key
+        name: key
+        widget: select
+        options: [law, payroll, letter, jd, policy, document, skills, decision]
+      - {label: Admin Label, name: label, widget: string}
+      - {label: Enabled, name: enabled, widget: boolean, default: true}
+      - {label: Order, name: order, widget: number, value_type: int, min: 1}

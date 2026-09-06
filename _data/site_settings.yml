@@ -1,0 +1,24 @@
+branding:
+  site_name: MUNAWAR.IN
+  logo: /assets/images/munawar-logo.png
+  logo_alt: Munawar.in logo
+  favicon_ico: /favicon.ico
+  favicon_48: /favicon-48x48.png
+  favicon_192: /favicon-192x192.png
+  apple_touch_icon: /apple-touch-icon.png
+  theme_color: '#f7fbff'
+search:
+  enabled: true
+  button_title: Search Munawar.in (Ctrl/⌘ K)
+  aria_label: Search Munawar.in
+announcement:
+  enabled: false
+  title: ''
+  message: ''
+  link_text: ''
+  link_url: ''
+  dismissible: true
+footer:
+  copyright: © 2026 Munawar.in
+  tagline: People-First. Process-Driven.
+  brand_description: Practical HR knowledge, tools and resources for the UAE workplace.

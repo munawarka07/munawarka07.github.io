@@ -1,0 +1,189 @@
+groups:
+- id: hr
+  label: HR Hub
+  href: /hr-hub/
+  wide: true
+  visible: true
+  order: 10
+- id: calculators
+  label: Calculators
+  href: /hr-hub/calculator/
+  wide: false
+  visible: true
+  order: 20
+- id: resources
+  label: Resources
+  href: /hr-hub/library/
+  wide: false
+  visible: true
+  order: 30
+- id: career
+  label: Career Hub
+  href: /career-hub/
+  wide: false
+  visible: true
+  order: 40
+- id: ai
+  label: AI Hub
+  href: /hr-hub/ai-hub/
+  wide: true
+  visible: true
+  order: 50
+items:
+- parent: hr
+  label: HR Hub Overview
+  description: All HR knowledge and tools
+  href: /hr-hub/
+  visible: true
+  order: 10
+- parent: hr
+  label: UAE Labour Law
+  description: Article-based employment rules
+  href: /hr-hub/uae-labour-law/
+  visible: true
+  order: 20
+- parent: hr
+  label: Labour Law Q&A
+  description: Quick answers to common questions
+  href: /hr-hub/labour-law-qa/
+  visible: true
+  order: 30
+- parent: hr
+  label: HR Insights
+  description: Practical people operations guidance
+  href: /hr-hub/hr-insights/
+  visible: true
+  order: 40
+- parent: hr
+  label: Payroll Insights
+  description: Controls, compliance and payroll practice
+  href: /hr-hub/payroll-insights/
+  visible: true
+  order: 50
+- parent: hr
+  label: HR Process Guide
+  description: Step-by-step HR workflows
+  href: /hr-hub/hr-process-guide/
+  visible: true
+  order: 60
+- parent: hr
+  label: Emirati Insights
+  description: Emiratisation and UAE workforce topics
+  href: /hr-hub/emirati-insights/
+  visible: true
+  order: 70
+- parent: calculators
+  label: Payroll Calculator
+  description: Salary proration estimator
+  href: /hr-hub/calculator/#pay
+  visible: true
+  order: 10
+- parent: calculators
+  label: EOSB Calculator
+  description: End-of-service gratuity estimator
+  href: /hr-hub/calculator/#eosb
+  visible: true
+  order: 20
+- parent: calculators
+  label: Leave Calculator
+  description: Leave balance value estimator
+  href: /hr-hub/calculator/#leave
+  visible: true
+  order: 30
+- parent: resources
+  label: HR Library
+  description: Letters, forms and downloadable templates
+  href: /hr-hub/library/
+  visible: true
+  order: 10
+- parent: resources
+  label: Process Guides
+  description: Practical HR workflows
+  href: /hr-hub/hr-process-guide/
+  visible: true
+  order: 20
+- parent: resources
+  label: Quick Q&A
+  description: Find a concise employment answer
+  href: /hr-hub/labour-law-qa/
+  visible: true
+  order: 30
+- parent: career
+  label: Opportunities
+  description: Browse approved job opportunities
+  href: /career-hub/#opportunities
+  visible: true
+  order: 10
+- parent: career
+  label: Career Tools
+  description: CV, interview and growth tools
+  href: /career-hub/#tools
+  visible: true
+  order: 20
+- parent: career
+  label: Career Hub Overview
+  description: Learning and professional development
+  href: /career-hub/
+  visible: true
+  order: 30
+- parent: ai
+  label: Labour Law Assistant
+  description: Structure UAE employment scenarios
+  href: /hr-hub/ai-hub/#law
+  visible: true
+  order: 10
+- parent: ai
+  label: Payroll Assistant
+  description: Analyze payroll situations and controls
+  href: /hr-hub/ai-hub/#payroll
+  visible: true
+  order: 20
+- parent: ai
+  label: HR Letter Generator
+  description: Draft professional HR communications
+  href: /hr-hub/ai-hub/#letter
+  visible: true
+  order: 30
+- parent: ai
+  label: Job Description Generator
+  description: Build structured job descriptions
+  href: /hr-hub/ai-hub/#jd
+  visible: true
+  order: 40
+- parent: ai
+  label: HR Policy Assistant
+  description: Review policy structure and clarity
+  href: /hr-hub/ai-hub/#policy
+  visible: true
+  order: 50
+- parent: ai
+  label: Document Quality Checker
+  description: Review HR document quality
+  href: /hr-hub/ai-hub/#document
+  visible: true
+  order: 60
+- parent: ai
+  label: HR Skill Assessment
+  description: Identify development areas
+  href: /hr-hub/ai-hub/#skill
+  visible: true
+  order: 70
+- parent: ai
+  label: HR Decision Lab
+  description: Think through HR decisions
+  href: /hr-hub/ai-hub/#decision
+  visible: true
+  order: 80
+simple_links:
+- label: Articles
+  href: /articles/
+  visible: true
+  order: 10
+- label: About
+  href: /about/
+  visible: true
+  order: 20
+- label: Contact
+  href: /contact/
+  visible: true
+  order: 30
