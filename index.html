@@ -1,15 +1,16 @@
 ---
-seo_key: about
-brand_href: /
-nav_cta_text: Explore Journey ↗
-nav_cta_href: '#explore-more'
-footer_variant: profile
+seo_key: home
+brand_href: '#top'
+nav_cta_text: Explore Knowledge ↗
+nav_cta_href: /hr-hub/
+footer_variant: main
 ---
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 {% include site-seo.html %}
 {% include site-head.html %}
 
@@ -29,9 +30,8 @@ footer_variant: profile
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
-
 :root{--bg:#f7fbff;--panel:rgba(255,255,255,.72);--text:#0b1b2d;--muted:#617286;--line:rgba(11,27,45,.10);--blue:#1c5fd4;--blue2:#4e8fff;--cyan:#36c8df;--navy:#0c2340;--shadow:0 18px 60px rgba(23,77,140,.12);--shadow2:0 30px 90px rgba(23,77,140,.18);--max:1480px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Tajawal',sans-serif;color:var(--text);background:radial-gradient(circle at 15% 10%,rgba(54,200,223,.10),transparent 25%),radial-gradient(circle at 85% 8%,rgba(78,143,255,.10),transparent 25%),linear-gradient(180deg,#fbfdff 0%,#f7fbff 60%,#f4f9ff 100%);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background-image:linear-gradient(rgba(12,35,64,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(12,35,64,.025) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.45),transparent 85%)}a{text-decoration:none;color:inherit}button,input{font:inherit}.shell{width:min(var(--max),calc(100% - 32px));margin:auto}.noise{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
 .site-header{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 16px;transition:.3s}.site-header.scrolled{padding:10px 16px;background:rgba(247,251,255,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;gap:28px;padding:10px 14px 10px 12px;border:1px solid transparent;border-radius:18px;transition:.3s}.site-header.scrolled .nav{background:rgba(255,255,255,.74);border-color:var(--line);box-shadow:0 10px 35px rgba(23,77,140,.07)}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}.brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),var(--cyan));color:white;box-shadow:0 10px 25px rgba(28,95,212,.20)}.brand-name{font-size:15px}.brand-name span{color:var(--blue)}.nav-links{display:flex;gap:24px;margin-left:auto}.nav-links a{font-size:13px;color:#42556a;font-weight:600;position:relative}.nav-links a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:linear-gradient(90deg,var(--blue),var(--cyan));transition:.25s}.nav-links a:hover:after{right:0}.nav-cta{padding:10px 14px;border-radius:12px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;box-shadow:0 12px 30px rgba(12,35,64,.14)}.menu-btn{display:none;margin-left:auto;border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 11px;color:var(--navy);font-weight:700}
@@ -177,130 +177,6 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 
 @media(max-width:1050px){.hero-grid,.tools-wrap,.purpose-grid{grid-template-columns:1fr}.visual{height:500px}.knowledge-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:820px){.nav-links,.nav-cta{display:none}.menu-btn{display:block}.nav-links.open{display:flex;position:absolute;left:16px;right:16px;top:72px;flex-direction:column;background:rgba(255,255,255,.97);padding:22px;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}.section-head{align-items:flex-start;flex-direction:column}.footer-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.shell{width:min(var(--max),calc(100% - 22px))}.hero{padding-top:110px;min-height:auto}.hero h1{font-size:52px}.hero p{font-size:17px}.visual{height:390px}.o1{width:210px;height:210px}.o2{width:290px;height:290px}.o3{width:360px;height:360px}.core{width:150px;height:150px}.core b{font-size:32px}.float-card{min-width:135px;padding:11px}.f1{left:0}.f2{right:0}.f3{left:2%}.f4{right:0}.knowledge-grid{grid-template-columns:1fr}.tools-wrap{padding:26px}.section{padding:78px 0}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}.search-box{grid-template-columns:1fr}.search-box button{height:44px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 
-
-/* ABOUT PAGE OVERRIDES */
-.about-hero{
-  min-height:92vh;
-  display:flex;align-items:center;
-  padding:135px 0 80px;
-  position:relative;overflow:hidden
-}
-.about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:64px;align-items:center}
-.about-hero h1{
-  font-size:clamp(54px,6.8vw,92px);
-  line-height:.95;letter-spacing:-.06em;margin:22px 0 22px;font-weight:800
-}
-.about-hero h1 span{
-  background:linear-gradient(90deg,var(--blue),#4685ef,var(--cyan));
-  -webkit-background-clip:text;background-clip:text;color:transparent
-}
-.about-hero p{font-size:clamp(17px,1.7vw,21px);line-height:1.72;color:var(--muted);max-width:720px}
-.portrait-wrap{
-  height:560px;position:relative;border-radius:34px;
-  background:
-    radial-gradient(circle at 30% 18%,rgba(54,200,223,.18),transparent 28%),
-    linear-gradient(145deg,#eef7ff,#dbeeff 48%,#eef7ff);
-  border:1px solid var(--line);
-  box-shadow:var(--shadow-strong);
-  overflow:hidden
-}
-.portrait-wrap::before{
-  content:"";position:absolute;inset:22px;border-radius:28px;
-  border:1px solid rgba(28,95,212,.12);
-  background-image:
-    linear-gradient(rgba(28,95,212,.035) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(28,95,212,.035) 1px,transparent 1px);
-  background-size:36px 36px
-}
-.portrait-placeholder{
-  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:270px;height:360px;border-radius:34px;
-  background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,255,255,.72));
-  box-shadow:0 25px 70px rgba(23,77,140,.14);
-  display:grid;place-items:center;text-align:center;padding:22px
-}
-.portrait-placeholder strong{font-size:30px;color:var(--blue)}
-.portrait-placeholder span{font-size:12px;color:var(--muted);line-height:1.5}
-.profile-photo-frame{padding:0;overflow:hidden;background:#dceeff;width:330px;height:440px;border:1px solid rgba(255,255,255,.75)}
-.profile-photo{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;transform:scale(1.01);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s ease}
-.portrait-wrap:hover .profile-photo{transform:scale(1.045);filter:saturate(1.03) contrast(1.02)}
-.profile-photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(8,36,68,.08));pointer-events:none}
-@media(max-width:560px){.profile-photo-frame{width:245px;height:330px}.profile-photo{object-position:center 15%}}
-.profile-orbit{
-  position:absolute;border:1px solid rgba(28,95,212,.13);border-radius:50%;
-  animation:spin 26s linear infinite
-}
-.po1{width:330px;height:330px;left:-80px;top:45px}
-.po2{width:260px;height:260px;right:-70px;bottom:25px;animation-direction:reverse;animation-duration:34s}
-.profile-chip{
-  position:absolute;padding:11px 14px;border-radius:14px;background:rgba(255,255,255,.80);
-  border:1px solid var(--line);backdrop-filter:blur(14px);box-shadow:var(--shadow);
-  font-size:11px;font-weight:700
-}
-.pc1{left:22px;top:72px} .pc2{right:22px;top:160px} .pc3{left:36px;bottom:54px}
-
-.fact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.fact{
-  min-height:170px;padding:18px;border-radius:20px;
-  background:rgba(255,255,255,.74);border:1px solid var(--line);
-  position:relative;overflow:hidden;transition:.28s
-}
-.fact:hover{transform:translateY(-6px);box-shadow:var(--shadow-strong)}
-.fact .n{font-size:10px;color:var(--blue);font-weight:800;letter-spacing:.12em}
-.fact strong{display:block;margin-top:40px;font-size:22px;line-height:1.1}
-.fact span{display:block;margin-top:8px;font-size:12px;color:var(--muted);line-height:1.45}
-
-.story-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
-.story-copy p{font-size:18px;line-height:1.8;color:var(--muted);margin-top:0}
-.story-points{display:grid;gap:12px}
-.story-point{
-  padding:18px;border:1px solid rgba(255,255,255,.12);border-radius:18px;
-  background:rgba(255,255,255,.06);display:grid;grid-template-columns:42px 1fr;gap:14px
-}
-.story-point b{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(125,230,241,.10);color:#7de6f1}
-.story-point strong{display:block;color:#fff;margin-bottom:5px}
-.story-point span{font-size:12px;color:#bdd0e3;line-height:1.55}
-
-.mvv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.mvv{
-  min-height:340px;padding:24px;border-radius:24px;border:1px solid var(--line);
-  background:#fff;position:relative;overflow:hidden;transition:.3s
-}
-.mvv:hover{transform:translateY(-7px);box-shadow:var(--shadow-strong)}
-.mvv .index{font-size:10px;color:var(--blue);font-weight:800}
-.mvv h3{font-size:30px;line-height:1.08;margin:76px 0 12px}
-.mvv p{color:var(--muted);font-size:14px;line-height:1.72}
-.values{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.value-chip{padding:8px 10px;border-radius:999px;background:var(--bg-soft);border:1px solid var(--line);font-size:11px;color:var(--navy);font-weight:700}
-
-.child-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.child-card{
-  min-height:300px;padding:22px;border-radius:24px;border:1px solid rgba(255,255,255,.12);
-  background:rgba(255,255,255,.07);position:relative;overflow:hidden;transition:.3s;color:#fff
-}
-.child-card:hover{transform:translateY(-8px);background:rgba(255,255,255,.10);box-shadow:0 30px 80px rgba(0,0,0,.18)}
-.child-card .idx{font-size:10px;color:#7de6f1;font-weight:800}
-.child-card h3{font-size:29px;line-height:1.08;margin:84px 0 12px}
-.child-card p{font-size:13px;color:#bdd0e3;line-height:1.65;max-width:300px}
-.child-card .go{position:absolute;right:20px;bottom:18px;color:#7de6f1;font-weight:800}
-
-@media(max-width:1050px){
-  .about-grid,.story-grid{grid-template-columns:1fr}
-  .portrait-wrap{height:500px}
-  .fact-grid{grid-template-columns:repeat(3,1fr)}
-}
-@media(max-width:760px){
-  .fact-grid{grid-template-columns:repeat(2,1fr)}
-  .mvv-grid,.child-grid{grid-template-columns:1fr}
-}
-@media(max-width:560px){
-  .about-hero{padding-top:115px;min-height:auto}
-  .about-hero h1{font-size:48px}
-  .portrait-wrap{height:400px}
-  .portrait-placeholder{width:220px;height:290px}
-  .fact-grid{grid-template-columns:1fr}
-}
-
 /* === FINAL SITE ALIGNMENT PATCH === */
 :root{--max:1480px}
 .site-header .shell.nav{width:min(var(--max),calc(100% - 48px))}
@@ -325,7 +201,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 .doc-card p{font-size:14px;line-height:1.6}.doc-card button{font-size:12.5px}.seo-link-card span,.seo-official{font-size:14px}.global-search-result p{font-size:13px}.global-search-helper{font-size:12.5px}
 @media(max-width:820px){.nav-links a{font-size:15px}.nav-dropdown strong{font-size:14px}.nav-dropdown small{font-size:12.5px}.acc-content,.detail-block p,.detail-block li{font-size:16px}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfilePage","@id":"https://munawar.in/about/#webpage","url":"https://munawar.in/about/","name":"About Munawar K A | HR Operations &amp; Payroll Professional UAE","description":"Learn about Munawar K A, an HR operations and payroll professional focused on practical UAE HR processes, payroll and people operations.","inLanguage":"en","mainEntity":{"@id":"https://munawar.in/#person"},"dateModified":"2026-09-01T00:00:00+04:00","publisher":{"@type":"Person","@id":"https://munawar.in/#person","name":"Munawar K A"}},{"@type":"Person","@id":"https://munawar.in/#person","name":"Munawar K A","url":"https://munawar.in/","jobTitle":"HR Operations and Payroll Professional"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://munawar.in/"},{"@type":"ListItem","position":2,"name":"About","item":"https://munawar.in/about/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://munawar.in/#website","url":"https://munawar.in/","name":"Munawar.in","description":"Practical UAE HR, payroll, labour law, calculators, AI tools and downloadable HR resources for HR professionals and employees.","inLanguage":"en"},{"@type":"Person","@id":"https://munawar.in/#person","name":"Munawar K A","url":"https://munawar.in/","jobTitle":"HR Operations and Payroll Professional","knowsAbout":["UAE HR Operations","Payroll","UAE Labour Law","Employee Lifecycle","HR Processes"]}]}</script>
 
 <style id="munawar-responsive-spacing-v2">
 /* Compact hero + responsive optimization.
@@ -546,150 +422,23 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 <div class="noise"></div>
 <div class="scroll-progress" id="scrollProgress"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
-
 {% include site-header.html %}
-
-<main>
-<section class="about-hero">
-  <div class="aurora a1"></div><div class="aurora a2"></div>
-  <div class="shell about-grid">
-    <div class="reveal">
-      <div class="eyebrow"><span class="dot"></span> {{ site.data.about.page.eyebrow | escape }}</div>
-      <h1>{{ site.data.about.page.hero_title | escape }}</h1>
-      <p>{{ site.data.about.page.hero_description_1 | escape }}</p>
-      <p style="font-size:15px">{{ site.data.about.page.hero_description_2 | escape }}</p>
-      <div class="actions">
-        <a class="btn primary" href="#journey">Explore My Approach <span>→</span></a>
-        <a class="btn secondary" href="#explore-more">View Career Sections</a>
-      </div>
-    </div>
-
-    <div class="portrait-wrap reveal-right">
-      <div class="profile-orbit po1"></div>
-      <div class="profile-orbit po2"></div>
-      <div class="portrait-placeholder profile-photo-frame">
-        <img src="/assets/images/munawar-profile.webp" alt="Professional portrait" class="profile-photo" loading="lazy">
-      </div>
-      {% for item in site.data.about.page.profile_chips %}<span class="profile-chip pc{{ forloop.index }}">{{ item | escape }}</span>{% endfor %}
-    </div>
-  </div>
-</section>
-
-<div class="marquee">
-  <div class="track">
-    {% for item in site.data.about.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in site.data.about.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}
-  </div>
-</div>
-
-<section class="section theme-blue">
-  <div class="shell">
-    <div class="section-head reveal-left">
-      <div>
-        <div class="section-label">{{ site.data.about.page.facts_label | escape }}</div>
-        <h2>{{ site.data.about.page.facts_title | escape }}</h2>
-      </div>
-      <p>{{ site.data.about.page.facts_description | escape }}</p>
-    </div>
-
-    <div class="fact-grid">
-      {% for item in site.data.about.facts %}{% if item.published %}<div class="fact reveal"><span class="n">{{ item.number | escape }}</span><strong>{{ item.value | escape }}</strong><span>{{ item.description | escape }}</span></div>{% endif %}{% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section theme-dark" id="journey">
-  <div class="shell story-grid">
-    <div class="reveal-left">
-      <div class="section-label">{{ site.data.about.page.approach_label | escape }}</div>
-      <h2 style="margin-top:12px">{{ site.data.about.page.approach_title | escape }}</h2>
-    </div>
-    <div class="story-copy reveal-right">
-      {% for item in site.data.about.page.approach_paragraphs %}<p>{{ item | escape }}</p>{% endfor %}
-      <div class="story-points">{% for item in site.data.about.principles %}{% if item.published %}<div class="story-point"><b>{{ item.number | escape }}</b><div><strong>{{ item.title | escape }}</strong><span>{{ item.description | escape }}</span></div></div>{% endif %}{% endfor %}</div>
-    </div>
-  </div>
-</section>
-
-<section class="section theme-mist">
-  <div class="shell">
-    <div class="section-head reveal-left">
-      <div>
-        <div class="section-label">{{ site.data.about.page.mvv_label | escape }}</div>
-        <h2>{{ site.data.about.page.mvv_title | escape }}</h2>
-      </div>
-      <p>{{ site.data.about.page.mvv_description | escape }}</p>
-    </div>
-
-    <div class="mvv-grid">
-      {% for item in site.data.about.mission_vision_values %}{% if item.published %}<article class="mvv reveal"><span class="index">{{ item.index | escape }}</span><h3>{{ item.title | escape }}</h3>{% if item.description and item.description != "" %}<p>{{ item.description | escape }}</p>{% endif %}{% if item.values %}<div class="values">{% for value in item.values %}<span class="value-chip">{{ value | escape }}</span>{% endfor %}</div>{% endif %}</article>{% endif %}{% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section theme-dark" id="explore-more">
-  <div class="shell">
-    <div class="section-head reveal-left">
-      <div>
-        <div class="section-label">04 / CONTINUE EXPLORING</div>
-        <h2>More of the<br>professional journey.</h2>
-      </div>
-      <p>Explore the detailed career history, capability areas and evidence of impact behind the platform.</p>
-    </div>
-
-    <div class="child-grid">
-      <a class="child-card reveal" href="/experience-education/">
-        <span class="idx">01 / EXPERIENCE</span>
-        <h3>Experience & Education</h3>
-        <p>Career journey, professional roles, responsibilities and academic background.</p>
-        <span class="go">Explore ↗</span>
-      </a>
-      <a class="child-card reveal delay1" href="/skills-expertise/">
-        <span class="idx">02 / CAPABILITY</span>
-        <h3>Skills & Expertise</h3>
-        <p>HR operations, payroll, employee relations, technology, data and professional systems.</p>
-        <span class="go">Explore ↗</span>
-      </a>
-      <a class="child-card reveal delay2" href="/projects-awards/">
-        <span class="idx">03 / IMPACT</span>
-        <h3>Projects & Awards</h3>
-        <p>Selected projects, process improvements, achievements and professional recognition.</p>
-        <span class="go">Explore ↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="shell">
-    <div class="final-cta reveal">
-      <div class="section-label">05 / THE PLATFORM</div>
-      <h2>Experience becomes more valuable<br>when it can be shared.</h2>
-      <p>Munawar.in turns practical experience into knowledge, resources and tools designed to help others navigate HR with greater clarity.</p>
-      <div class="actions">
-        <a class="btn primary" href="/#knowledge">Explore HR Hub <span>→</span></a>
-        <a class="btn secondary" href="/">Back to Home</a>
-      </div>
-    </div>
-  </div>
-</section>
+<main id="top">
+<section class="hero">
+<div class="aurora a1"></div><div class="aurora a2"></div><div class="shell hero-grid"><div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.home.hero.eyebrow | escape }}</div><h1>{{ site.data.home.hero.title_line1 | escape }}<br/><span class="gradient">{{ site.data.home.hero.title_highlight | escape }}</span></h1><p>{{ site.data.home.hero.description | escape }}</p><div class="actions"><a class="btn primary" href="#knowledge">{{ site.data.home.hero.primary_button | escape }} <span>→</span></a><a class="btn secondary" href="#tools">{{ site.data.home.hero.secondary_button | escape }}</a></div><div class="hero-metrics">{% for item in site.data.home.hero.metrics %}<div class="metric"><strong>{{ item.value | escape }}</strong><span>{{ item.label | escape }}</span></div>{% endfor %}</div></div><div aria-hidden="true" class="visual reveal delay1"><div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div><div class="core"><div><b>{{ site.data.home.hero.core_title | escape }}</b><span>{{ site.data.home.hero.core_subtitle | escape }}</span></div></div>{% for item in site.data.home.hero.visual_cards %}<div class="float-card f{{ forloop.index }}"><i>{{ item.number | escape }}</i><strong>{{ item.title | escape }}</strong><small>{{ item.subtitle | escape }}</small></div>{% endfor %}</div></div></section>
+<div class="marquee"><div class="track">{% for item in site.data.home.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in site.data.home.marquee %}<span>{{ item | escape }}</span>{% endfor %}</div></div>
+<section class="section theme-blue" id="knowledge"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.home.knowledge.label | escape }}</div><h2>{{ site.data.home.knowledge.title | escape }}</h2></div><p>{{ site.data.home.knowledge.description | escape }}</p></div><div class="search-box reveal delay1"><input id="knowledgeSearch" placeholder="{{ site.data.home.knowledge.search_placeholder | escape }}"/><button onclick="fakeSearch()">{{ site.data.home.knowledge.search_button | escape }}</button></div><div style="height:18px"></div><div class="knowledge-grid">{% for item in site.data.home.knowledge.cards %}{% if item.published %}<a class="k-card reveal" data-search="{{ item.search | escape }}" href="{{ item.link | escape }}"><div class="k-icon">{{ item.icon | escape }}</div><span class="num">{{ item.number | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.description | escape }}</p><span class="go">Explore ↗</span></a>{% endif %}{% endfor %}</div></div></section>
+<section class="section theme-dark" id="tools"><div class="shell"><div class="tools-wrap reveal-right"><div><div class="section-label" style="color:#76dcec">{{ site.data.home.tools.label | escape }}</div><h2 style="margin-top:12px">{{ site.data.home.tools.title | escape }}</h2><p>{{ site.data.home.tools.description | escape }}</p><div class="actions"><a class="btn primary" href="/hr-hub/calculator/">{{ site.data.home.tools.button | escape }} <span>→</span></a></div><div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:22px">{% for item in site.data.home.tools.pills %}<span class="floating-pill">{{ item | escape }}</span>{% endfor %}</div></div><div class="tool-list">{% for item in site.data.home.tools.items %}<a href="/hr-hub/calculator/"><span>0{{ forloop.index }}</span><strong>{{ item | escape }}</strong><i>↗</i></a>{% endfor %}</div></div></div></section>
+<section class="section theme-mist" id="resources"><div class="shell"><div class="section-head reveal-right"><div><div class="section-label">{{ site.data.home.resources.label | escape }}</div><h2>{{ site.data.home.resources.title | escape }}</h2></div><p>{{ site.data.home.resources.description | escape }}</p></div><div class="purpose-grid"><div class="purpose-card reveal"><div class="section-label">{{ site.data.home.resources.card_label | escape }}</div><h3>{{ site.data.home.resources.card_title | escape }}</h3><p>{{ site.data.home.resources.card_description | escape }}</p><div class="actions"><a class="btn primary" href="/hr-hub/library/">{{ site.data.home.resources.button | escape }} <span>→</span></a></div></div><div class="purpose-links reveal delay1">{% for item in site.data.home.resources.links %}<a href="/hr-hub/library/"><span>{{ item | escape }}</span><b>↗</b></a>{% endfor %}</div></div></div></section>
+<section class="section theme-dark" id="career"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.home.career.label | escape }}</div><h2>{{ site.data.home.career.title | escape }}</h2></div><p>{{ site.data.home.career.description | escape }}</p></div><div class="knowledge-grid">{% for item in site.data.home.career.cards %}{% if item.published %}<a class="k-card reveal" href="/career-hub/"><div class="k-icon">{{ item.icon | escape }}</div><span class="num">{{ item.number | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.description | escape }}</p><span class="go">Explore ↗</span></a>{% endif %}{% endfor %}</div></div></section>
+<section class="section" id="platform"><div class="shell"><div class="final-cta reveal"><div class="section-label">{{ site.data.home.platform.label | escape }}</div><h2>{{ site.data.home.platform.title | escape }}</h2><p>{{ site.data.home.platform.description | escape }}</p><div class="actions"><a class="btn primary" href="/about/">{{ site.data.home.platform.primary_button | escape }} <span>→</span></a><a class="btn secondary" href="#knowledge">{{ site.data.home.platform.secondary_button | escape }}</a></div></div></div></section>
+<!-- AI HUB -->
+<section class="section theme-blue" id="ai-hub"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.home.ai.label | escape }}</div><h2>{{ site.data.home.ai.title | escape }}</h2></div><p>{{ site.data.home.ai.description | escape }}</p></div><div class="knowledge-grid">{% for item in site.data.home.ai.cards %}{% if item.published %}<a class="k-card reveal" href="{{ item.link | escape }}"><div class="k-icon">{{ item.icon | escape }}</div><span class="num">{{ item.number | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.description | escape }}</p><span class="go">{{ item.action | escape }} ↗</span></a>{% endif %}{% endfor %}</div></div></section>
+<!-- END AI HUB -->
 </main>
-
 {% include site-footer.html %}
-
 <script>
-const header=document.querySelector('.site-header');
-window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>18));
-
-const menuBtn=document.querySelector('.menu-btn');
-const nav=document.querySelector('.nav-links');
-menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
-
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
-  })
-},{threshold:.10,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+const header=document.querySelector('.site-header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>18));const menuBtn=document.querySelector('.menu-btn');const nav=document.querySelector('.nav-links');menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}})},{threshold:.10,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));const visual=document.querySelector('.visual');if(window.matchMedia('(pointer:fine)').matches){window.addEventListener('mousemove',e=>{const x=(e.clientX/window.innerWidth-.5)*12;const y=(e.clientY/window.innerHeight-.5)*12;visual.style.transform=`translate3d(${x*.28}px,${y*.28}px,0)`})}function fakeSearch(){const q=document.getElementById('knowledgeSearch').value.trim().toLowerCase();const cards=[...document.querySelectorAll('.k-card[data-search]')];if(!q){cards.forEach(c=>c.style.display='');return}cards.forEach(c=>c.style.display=c.dataset.search.includes(q)?'':'none');document.querySelector('.knowledge-grid').scrollIntoView({behavior:'smooth',block:'start'})}document.getElementById('knowledgeSearch').addEventListener('keydown',e=>{if(e.key==='Enter')fakeSearch()});
 
 const progress=document.getElementById('scrollProgress');
 window.addEventListener('scroll',()=>{
@@ -700,11 +449,12 @@ window.addEventListener('scroll',()=>{
 const glow=document.getElementById('cursorGlow');
 if(glow && window.matchMedia('(pointer:fine)').matches){
   window.addEventListener('mousemove',e=>{
-    glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';
+    glow.style.left=e.clientX+'px';
+    glow.style.top=e.clientY+'px';
   });
 }else if(glow){glow.style.display='none'}
 
-document.querySelectorAll('.fact,.mvv,.child-card').forEach(card=>{
+document.querySelectorAll('.k-card,.purpose-card,.metric').forEach(card=>{
   card.addEventListener('mousemove',e=>{
     if(!window.matchMedia('(pointer:fine)').matches)return;
     const r=card.getBoundingClientRect();
@@ -714,6 +464,7 @@ document.querySelectorAll('.fact,.mvv,.child-card').forEach(card=>{
   });
   card.addEventListener('mouseleave',()=>card.style.transform='');
 });
+
 </script>
 <div class="global-search-overlay" id="globalSearchOverlay" aria-hidden="true"><div class="global-search-panel" role="dialog" aria-modal="true" aria-label="Search Munawar.in"><div class="global-search-head"><div class="global-search-input-wrap"><span>⌕</span><input id="globalSearchInput" type="search" autocomplete="off" placeholder="Search Labour Law, Q&amp;A, calculators, templates, payroll, career tools..."></div><button class="global-search-close" id="globalSearchClose" type="button" aria-label="Close search">×</button></div><div class="global-search-helper">Search across Munawar.in. Try “annual leave”, “gratuity”, “salary deduction”, “offer letter” or “CV”.</div><div class="global-search-results" id="globalSearchResults"></div></div></div>
 <div id="globalSearchData" hidden>
