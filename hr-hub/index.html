@@ -5,7 +5,15 @@ nav_cta_text: Explore Knowledge ↗
 nav_cta_href: /hr-hub/
 footer_variant: hr
 ---
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<script>
+(function(){
+  var path = window.location.pathname.toLowerCase();
+  if (path === "/hr-hub/index.html".toLowerCase()) {
+    window.location.replace("/hr-hub/" + window.location.search + window.location.hash);
+  }
+})();
+</script><meta name="viewport" content="width=device-width,initial-scale=1">
 {% include site-seo.html %}
 {% include site-head.html %}
 
