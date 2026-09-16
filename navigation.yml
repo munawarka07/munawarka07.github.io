@@ -1,0 +1,38 @@
+about_items:
+  - label: About
+    href: /about/
+    description: Profile, approach and professional story
+  - label: Experience & Education
+    href: /experience-education/
+    description: Career journey and academic background
+  - label: Skills & Expertise
+    href: /skills-expertise/
+    description: Core HR, payroll and operational capabilities
+  - label: Projects & Awards
+    href: /projects-awards/
+    description: Selected projects, impact and recognition
+hr_items:
+  - label: UAE Labour Law
+    href: /hr-hub/uae-labour-law/
+    description: Practical UAE employment law guidance
+  - label: Labour Law Q&A
+    href: /hr-hub/labour-law-qa/
+    description: Quick answers to common employment questions
+  - label: Payroll Insights
+    href: /hr-hub/payroll-insights/
+    description: Payroll controls, compliance and practice
+  - label: HR Process Guide
+    href: /hr-hub/hr-process-guide/
+    description: Step-by-step HR workflows
+  - label: HR Insights
+    href: /hr-hub/hr-insights/
+    description: Practical people operations guidance
+  - label: Emirati Insights
+    href: /hr-hub/emirati-insights/
+    description: Emiratisation and UAE workforce topics
+  - label: Calculator
+    href: /hr-hub/calculator/
+    description: Payroll, EOSB and leave calculators
+  - label: Library
+    href: /hr-hub/library/
+    description: HR letters, forms and downloadable templates

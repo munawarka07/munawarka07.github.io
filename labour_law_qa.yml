@@ -1,0 +1,223 @@
+page:
+  hero_chips:
+    - Probation
+    - Leave
+    - Salary
+    - EOSB
+  search_button: Search
+  eyebrow: LABOUR LAW Q&A
+  hero_highlight: Without the clutter.
+  notice_title: Quick-reference guidance only.
+  notice_text: Answers are intentionally short. Use the Labour Law page and
+    official UAE legislation for full wording and case-specific conditions.
+  hero_description: Search common UAE employment questions and open concise answers.
+  hero_line1: Questions answered.
+  search_placeholder: "Ask or search: probation, leave, deduction, gratuity..."
+last_reviewed: 2026-09-02
+questions:
+  - published: true
+    id: work-permit-required-uae
+    category: Recruitment & Work Permits
+    question: Is a work permit required to work in the UAE private sector?
+    search: UAE work permit MOHRE employment permit work legally UAE
+    answer: "Yes. A worker must have the appropriate work permit before legally
+      working for a private-sector employer, subject to applicable permit rules.
+      "
+  - published: true
+    id: who-pays-recruitment-costs-uae
+    category: Recruitment & Work Permits
+    question: Who pays recruitment and employment costs in the UAE?
+    answer: The employer must bear recruitment and employment costs and may not
+      charge these costs to the worker directly or indirectly.
+    search: UAE recruitment fees visa costs employer employee recruitment cost
+  - published: true
+    id: can-employer-charge-recruitment-fees
+    category: Recruitment & Work Permits
+    question: Can an employer recover recruitment fees from an employee?
+    answer: No. Recruitment and employment costs may not be charged to the worker
+      directly or indirectly.
+    search: recruitment fee deduction employee UAE visa cost recruitment costs
+  - published: true
+    id: recruitment-agency-licence-uae
+    category: Recruitment & Work Permits
+    question: Can anyone provide recruitment or employment mediation services in the UAE?
+    answer: No. Recruitment and employment mediation activities require the
+      appropriate licence from the Ministry or competent authority.
+    search: UAE recruitment agency licence employment agency MOHRE
+  - published: true
+    id: work-for-another-employer-uae
+    category: Recruitment & Work Permits
+    question: Can an employee work for another employer in the UAE?
+    answer: Only where the applicable work-permit and employment requirements are
+      satisfied. An employee should not work for another employer without the
+      required authorisation.
+    search: second job UAE another employer part time permit MOHRE
+  - published: true
+    id: employment-contract-required-uae
+    category: Employment Contracts
+    question: Is an employment contract required in the UAE private sector?
+    answer: Yes. The employer and worker must enter into an employment contract in
+      accordance with the prescribed legal and regulatory requirements.
+    search: UAE employment contract required MOHRE labour contract
+  - published: true
+    id: fixed-term-contract-uae
+    category: Employment Contracts
+    question: What type of employment contract is used in the UAE private sector?
+    answer: UAE private-sector employment uses fixed-term employment contracts in
+      accordance with the Labour Law and its implementing rules.
+    search: UAE fixed term contract limited contract employment contract
+  - published: true
+    id: renew-employment-contract-uae
+    category: Employment Contracts
+    question: Can a UAE employment contract be renewed?
+    answer: Yes. A fixed-term employment contract may be renewed or extended by
+      agreement between the employer and worker.
+    search: UAE contract renewal employment contract extension
+  - published: true
+    id: continue-working-after-contract-expiry
+    category: Employment Contracts
+    question: What happens if an employee continues working after the contract expires?
+    answer: If both parties continue implementing the contract after expiry without
+      an express new agreement, the original contract may be treated as
+      implicitly extended under the applicable legal rules.
+    search: expired employment contract continue working UAE renewal
+  - published: true
+    id: renewal-continuous-service-uae
+    category: Employment Contracts
+    question: Does contract renewal affect continuous service?
+    answer: Generally, renewal or extension does not reset the employment
+      relationship. The relevant periods are included in continuous service for
+      applicable statutory entitlements.
+    search: continuous service UAE contract renewal gratuity service
+  - published: true
+    id: better-benefits-than-labour-law
+    category: Employment Contracts
+    question: Can an employment contract provide better benefits than UAE Labour Law?
+    answer: Yes. An employment contract or company policy may provide benefits more
+      favourable to the employee than the statutory minimum.
+    search: UAE labour law better benefits company policy contract
+  - published: true
+    id: maximum-probation-period-uae
+    category: Probation
+    question: What is the maximum probation period in the UAE?
+    answer: Probation may not exceed six months, and the same employer may not place
+      the same worker on probation more than once.
+    search: UAE probation 6 months maximum probation
+  - published: true
+    id: probation-counts-service-uae
+    category: Probation
+    question: Does probation count towards an employee's service?
+    answer: Yes. If the worker successfully completes probation and continues
+      employment, the probation period forms part of the worker's service.
+    search: probation continuous service UAE gratuity probation
+  - published: true
+    id: employer-terminate-probation-uae
+    category: Probation
+    question: Can an employer terminate an employee during probation?
+    answer: Yes. The employer may terminate employment during probation by giving at
+      least 14 days' written notice.
+    search: UAE probation termination 14 days notice employer
+  - published: true
+    id: employee-resign-probation-uae
+    category: Probation
+    question: Can an employee resign during probation in the UAE?
+    answer: Yes. Different notice requirements apply depending on whether the worker
+      intends to leave the UAE or move to another UAE employer.
+    search: resign probation UAE resignation probation notice
+  - published: true
+    id: probation-change-employer-notice
+    category: Probation
+    question: What notice is required during probation to join another UAE employer?
+    answer: The worker must generally give the current employer at least one month's
+      written notice when moving to another UAE employer during probation.
+    search: probation change employer UAE one month notice
+  - published: true
+    id: probation-leave-uae-notice
+    category: Probation
+    question: What notice is required during probation if the employee is leaving
+      the UAE?
+    answer: The worker must generally give at least 14 days' written notice when
+      terminating employment during probation to leave the UAE.
+    search: probation leave UAE resignation 14 days notice
+  - published: true
+    id: probation-recruitment-cost-new-employer
+    category: Probation
+    question: Who bears recruitment costs when a worker changes employers during
+      probation?
+    answer: The new employer generally compensates the original employer for
+      recruitment or contracting costs unless otherwise agreed, subject to the
+      applicable rules.
+    search: probation recruitment cost new employer UAE
+  - published: true
+    id: probation-twice-same-employer
+    category: Probation
+    question: Can the same employer place an employee on probation twice?
+    answer: No. The same employer may not place the same worker on probation more
+      than once.
+    search: second probation UAE same employer probation twice
+  - published: true
+    id: annual-leave-during-probation
+    category: Probation
+    question: Can an employee take annual leave during probation?
+    answer: An employer may allow a worker to take leave from the worker's annual
+      leave entitlement during probation, subject to the applicable rules and
+      employer approval.
+    search: annual leave during probation UAE leave probation
+  - published: true
+    id: non-compete-clause-uae
+    category: Non-Compete
+    question: When can a non-compete clause be used in the UAE?
+    answer: A non-compete clause may be agreed where the worker's role gives access
+      to the employer's clients or business secrets and a restriction is
+      necessary to protect legitimate business interests.
+    search: UAE non compete clause clients business secrets
+  - published: true
+    id: maximum-non-compete-period
+    category: Non-Compete
+    question: How long can a UAE non-compete restriction last?
+    answer: A post-employment non-compete restriction may not exceed two years from
+      the end of the employment contract.
+    search: UAE non compete two years maximum period
+  - published: true
+    id: valid-non-compete-conditions
+    category: Non-Compete
+    question: What should a UAE non-compete clause specify?
+    answer: It should be appropriately limited by time, geographical area and type
+      of work to the extent necessary to protect legitimate business interests.
+    search: valid non compete UAE time place work restriction
+  - published: true
+    id: non-compete-joining-competitor
+    category: Non-Compete
+    question: Does a non-compete clause automatically prevent joining a competitor?
+    answer: Not necessarily. Enforceability depends on the legal requirements,
+      wording and scope of the restriction, circumstances of termination and
+      facts of the case.
+    search: UAE non compete competitor enforceable new job
+  - published: true
+    id: employment-discrimination-uae
+    category: Worker Protection
+    question: Is employment discrimination prohibited in the UAE private sector?
+    answer: Yes. Discrimination on specified grounds that prejudices equal
+      opportunity or equal treatment in employment is prohibited.
+    search: UAE discrimination employment equal opportunity worker rights
+  - published: true
+    id: equal-pay-men-women-uae
+    category: Worker Protection
+    question: Are women entitled to equal pay for equal work in the UAE?
+    answer: Yes. A woman is entitled to the same wage as a man for the same work or
+      work of equal value in accordance with the law.
+    search: UAE equal pay women men same work salary
+  - published: true
+    id: workplace-harassment-uae
+    category: Worker Protection
+    question: Is workplace harassment prohibited in the UAE?
+    answer: Yes. Sexual harassment, bullying and verbal, physical or psychological
+      violence against workers are prohibited.
+    search: UAE workplace harassment bullying employee protection
+  - published: true
+    id: forced-labour-uae
+    category: Worker Protection
+    question: Is forced labour prohibited in the UAE?
+    answer: Yes. Workers may not be forced or threatened into performing work or
+      providing services against their will.
+    search: UAE forced labour employee rights threats worker

@@ -1,0 +1,56 @@
+hero:
+  eyebrow: CAREER HUB
+  title: Learn. Prepare. Grow.
+  description: Practical resources for job search preparation, HR learning and professional development.
+  chips:
+  - CV
+  - Interview
+  - Learning
+  - Growth
+opportunities:
+  label: 01 / LIVE OPPORTUNITIES
+  title: Find the right next move.
+  description: Approved opportunities submitted to Munawar.in appear here automatically. Search by role, location, department
+    or work arrangement.
+  search_placeholder: Search job title, company or keyword...
+  all_departments: All departments
+  all_locations: All locations
+  all_work_modes: All work modes
+  loading_text: Connecting to opportunities...
+  empty_text: Live opportunities will appear here once the Google Sheet connection is enabled.
+tools:
+  label: 02 / CAREER TOOLS
+  title: Prepare with more clarity.
+  description: Four practical tools in one place. Use AI only when you need personalized guidance - otherwise each card gives
+    you the core principle at a glance.
+  cards:
+  - icon: CV
+    number: '01'
+    title: CV Review
+    description: Upload your CV for structured feedback on clarity, ATS readiness, impact and achievement wording.
+    button: Upload & review CV
+    tool_key: cv
+    published: true
+  - icon: Q
+    number: '02'
+    title: Interview Preparation
+    description: Use a job description or target role to generate realistic questions, answer guidance and preparation points.
+    button: Prepare interview
+    tool_key: interview
+    published: true
+  - icon: ↗
+    number: '03'
+    title: HR Learning Path
+    description: Turn your current experience and target role into a focused 90-day learning roadmap.
+    button: Build my roadmap
+    tool_key: learning
+    published: true
+  - icon: ◎
+    number: '04'
+    title: Professional Growth
+    description: Get practical suggestions for projects, skills, exposure and measurable career progression.
+    button: Plan my growth
+    tool_key: growth
+    published: true
+  ai_note: AI-generated guidance is educational and may be incomplete. Do not upload confidential employer, employee, payroll,
+    banking, identity or medical information.

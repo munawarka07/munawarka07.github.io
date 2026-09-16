@@ -1,0 +1,200 @@
+hero:
+  eyebrow: HR • PAYROLL • PEOPLE • PROCESS
+  title_line1: People-First.
+  title_highlight: Process-Driven.
+  description: Practical HR knowledge, tools and insights designed to make the UAE workplace easier to understand and everyday
+    people operations easier to navigate.
+  primary_button: Explore HR Hub
+  secondary_button: Try HR Tools
+  metrics:
+  - value: UAE
+    label: HR Knowledge Focus
+  - value: Practical
+    label: Guides & Tools
+  - value: Accessible
+    label: Learning First
+  core_title: HR
+  core_subtitle: Knowledge System
+  visual_cards:
+  - number: '01'
+    title: UAE Labour Law
+    subtitle: Clear explanations
+  - number: '02'
+    title: Payroll & EOSB
+    subtitle: Practical insights
+  - number: '03'
+    title: HR Processes
+    subtitle: Step-by-step guides
+  - number: '04'
+    title: Calculators
+    subtitle: Useful HR tools
+marquee:
+- UAE LABOUR LAW
+- PAYROLL
+- WPS
+- EOSB
+- HR OPERATIONS
+- EMIRATISATION
+- PEOPLE SERVICES
+- HR TOOLS
+knowledge:
+  label: 01 / KNOWLEDGE
+  title: Complex HR topics. Made practical.
+  description: Explore structured knowledge built around the questions, processes and challenges HR professionals encounter
+    in everyday work.
+  search_placeholder: Search labour law, payroll, EOSB, leave, WPS, onboarding...
+  search_button: Search
+  cards:
+  - icon: §
+    number: '01'
+    title: UAE Labour Law
+    description: Understand employment rules, employee entitlements and workplace requirements with clearer explanations.
+    link: /hr-hub/uae-labour-law/
+    search: labour law leave probation overtime notice termination
+    published: true
+  - icon: ₳
+    number: '02'
+    title: Payroll Insights
+    description: Explore WPS, salary administration, EOSB, controls and practical payroll knowledge.
+    link: /hr-hub/payroll-insights/
+    search: payroll wps eosb salary gratuity deductions
+    published: true
+  - icon: ⌘
+    number: '03'
+    title: HR Process Guide
+    description: Step-by-step guidance through employee lifecycle, payroll and people operations processes.
+    link: /hr-hub/hr-process-guide/
+    search: onboarding offboarding process pension visa hr process
+    published: true
+  - icon: ◎
+    number: '04'
+    title: Emirati Insights
+    description: Explore Emiratisation, pension, Nafis and UAE National employment topics in one place.
+    link: /hr-hub/emirati-insights/
+    search: emirati emiratisation nafis pension gpssa uae national
+    published: true
+  - icon: '?'
+    number: '05'
+    title: Labour Law Q&A
+    description: Quick answers to commonly encountered UAE employment questions.
+    link: /hr-hub/labour-law-qa/
+    search: question answer labour law faq
+    published: true
+  - icon: ✦
+    number: '06'
+    title: HR Insights
+    description: Ideas and practical observations across people operations, culture and workplace practices.
+    link: /hr-hub/hr-insights/
+    search: hr insights people culture employee relations performance
+    published: true
+  - icon: ▤
+    number: '07'
+    title: HR Library
+    description: Templates, guides, checklists and practical HR resources organized for easier use.
+    link: '#resources'
+    search: library templates documents letters checklist
+    published: true
+  - icon: ∑
+    number: 08
+    title: HR Calculators
+    description: Interactive tools for payroll, EOSB and leave-related calculations.
+    link: '#tools'
+    search: calculator payroll eosb leave tool
+    published: true
+tools:
+  label: 02 / TOOLS
+  title: From information to answers.
+  description: Use practical calculators designed around common HR and payroll tasks. Each tool will explain the logic behind
+    the result instead of only showing a number.
+  button: Open Calculators
+  pills:
+  - Live Results
+  - Formula Breakdown
+  - Mobile Friendly
+  items:
+  - Payroll Calculator
+  - EOSB Calculator
+  - Leave Balance Calculator
+  - More HR Utilities
+resources:
+  label: 03 / RESOURCES
+  title: Useful things you can actually take away.
+  description: Reference material, templates and practical resources designed to support everyday HR work and learning.
+  card_label: DOCUMENT CENTER
+  card_title: HR templates, letters & checklists.
+  card_description: A structured document library for commonly used HR communication, onboarding, payroll, employee relations
+    and offboarding materials.
+  button: Explore Documents
+  links:
+  - Offer & Employment Letters
+  - Payroll & Salary Documents
+  - Employee Relations Templates
+  - Offboarding & Exit Forms
+career:
+  label: 04 / CAREER
+  title: Learn. Prepare. Grow.
+  description: Practical career guidance and professional resources for people building their path in HR and related functions.
+  cards:
+  - icon: CV
+    number: '01'
+    title: Career Hub
+    description: Practical resources for professional growth and job search preparation.
+    published: true
+  - icon: ↗
+    number: '02'
+    title: Interview Preparation
+    description: Structure your examples, clarify your experience and prepare with confidence.
+    published: true
+  - icon: ◎
+    number: '03'
+    title: HR Learning
+    description: Build stronger HR knowledge through focused, practical learning paths.
+    published: true
+  - icon: ✦
+    number: '04'
+    title: Professional Development
+    description: Grow through better systems knowledge, analytics, labour law and HR operations capability.
+    published: true
+platform:
+  label: 05 / THE PLATFORM
+  title: Built from experience. Created for sharing.
+  description: Munawar.in brings together practical HR knowledge, structured resources and useful tools in one place - helping
+    professionals understand complex topics and apply them with greater clarity.
+  primary_button: About the Platform
+  secondary_button: Start Exploring
+ai:
+  label: 06 / AI INTELLIGENCE
+  title: Eight tools. One HR thinking space.
+  description: Practical AI tools built for HR decisions, payroll, UAE labour law, policies, documents, skills and workforce
+    scenarios.
+  cards:
+  - icon: AI
+    number: '01'
+    title: Munawar.in AI Hub
+    description: Eight purpose-built AI tools in one HR intelligence workspace. Analyze, create, review, develop and make
+      better-informed HR decisions.
+    link: /hr-hub/ai-hub/
+    action: Explore AI Hub
+    published: true
+  - icon: LAW
+    number: '02'
+    title: AI UAE Labour Law
+    description: Structure UAE employment scenarios into facts, verification points, HR checks and practical next steps.
+    link: /hr-hub/ai-hub/?tool=law
+    action: Open Tool
+    published: true
+  - icon: PAY
+    number: '03'
+    title: AI Payroll Assistant
+    description: Review payroll scenarios, assumptions, AED calculations, controls, risks and reconciliation points.
+    link: /hr-hub/ai-hub/?tool=payroll
+    action: Open Tool
+    published: true
+  - icon: HR
+    number: '04'
+    title: HR Decision Lab
+    description: Think through complex HR cases with structured options, missing facts, risks, documentation and escalation
+      points.
+    link: /hr-hub/ai-hub/?tool=decision
+    action: Open Tool
+    published: true

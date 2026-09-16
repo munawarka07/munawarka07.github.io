@@ -1,0 +1,10 @@
+{% assign seo = site.data.seo[page.seo_key] %}{% if seo %}
+<title>{{ seo.title | escape }}</title>
+<meta name="description" content="{{ seo.description | escape }}">
+<meta name="robots" content="{% if seo.indexable %}{{ seo.robots | escape }}{% else %}noindex,nofollow{% endif %}">
+<meta name="author" content="Munawar.in">
+<link rel="canonical" href="{{ seo.canonical | escape }}">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="Munawar.in">
+<meta property="og:title" content="{{ seo.og_title | default: seo.title | escape }}"><meta property="og:description" content="{{ seo.og_description | default: seo.description | escape }}"><meta property="og:url" content="{{ seo.canonical | escape }}">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="{{ seo.og_title | default: seo.title | escape }}"><meta name="twitter:description" content="{{ seo.og_description | default: seo.description | escape }}">
+{% endif %}

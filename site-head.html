@@ -1,0 +1,6 @@
+{% assign s = site.data.site_settings.branding %}
+<link rel="icon" href="{{ s.favicon_ico | escape }}" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ s.favicon_48 | escape }}">
+<link rel="icon" type="image/png" sizes="192x192" href="{{ s.favicon_192 | escape }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ s.apple_touch_icon | escape }}">
+<meta name="theme-color" content="{{ s.theme_color | escape }}">

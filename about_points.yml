@@ -1,0 +1,13 @@
+points:
+- number: '01'
+  title: Clarity over complexity
+  description: Translate complicated processes into steps people can understand and use.
+  published: true
+- number: '02'
+  title: Process with purpose
+  description: Strong processes should improve both operational control and the employee experience.
+  published: true
+- number: '03'
+  title: People at the center
+  description: Policies, systems and payroll ultimately affect real people - that context matters.
+  published: true

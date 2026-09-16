@@ -1,0 +1,70 @@
+MUNAWAR.IN - CMS CONTENT GUIDE
+================================
+
+ADMIN URL
+https://munawar.in/admin/
+
+PURPOSE
+This CMS manages normal website content while keeping technical engines protected.
+Publishing creates a GitHub commit and GitHub Pages/Jekyll rebuilds the live website.
+
+WHAT YOU CAN EDIT
+- Homepage content, cards, metrics, links and calls-to-action
+- HR Hub landing content and resource cards
+- UAE Labour Law content
+- Payroll Insights
+- HR Insights
+- Emirati Insights
+- HR Process Guide
+- Labour Law Q&A
+- HR Library resource metadata and links
+- About page content, facts, principles, mission, vision and values
+- Contact page content and contact methods
+- Experience roles, summaries, tags, detailed responsibility groups and bullet points
+- Education and qualifications, including future MBA or other qualifications
+- Continuous learning topics
+- Skills, competencies, nested detailed explanations and systems/tools
+- Projects, awards, detailed points and impact statistics
+- Career Hub display text and AI tool labels
+- AI Hub display content
+- Calculator display text and labels
+
+ADDING A FUTURE MBA OR QUALIFICATION
+1. Open Website Content.
+2. Open Experience & Education - Complete Page.
+3. Go to Education & Qualifications.
+4. Click Add Education.
+5. Enter period, qualification, institution, faculty, description and optional detail rows.
+6. Keep Published enabled and Publish.
+
+DETAILED EXPERIENCE CONTENT
+Each role can contain:
+Role -> Summary -> Tags -> Detailed Responsibility Groups -> Responsibility Points -> Impact Tags.
+You can add, remove and reorder these items.
+
+SKILLS / COMPETENCIES
+Each capability can contain:
+Capability -> Summary -> Tags -> Detailed Explanation Points.
+Systems and tools are also repeatable and reorderable.
+
+IMPORTANT PROTECTED AREAS
+The CMS intentionally does NOT expose technical implementation such as:
+- Career Hub API endpoint / Google Apps Script pipeline
+- AI/API request logic
+- Calculator formulas and JavaScript calculation logic
+- GitHub/Cloudflare authentication and OAuth secrets
+- Core JavaScript behavior
+- Core page layout/CSS templates
+- Redirect architecture and critical SEO infrastructure
+
+Some CMS fields are marked DO NOT CHANGE because JavaScript depends on their fixed values.
+Edit the visible title/description around them, but leave those technical keys unchanged.
+
+SAFE PUBLISHING PRACTICE
+- Make content changes in the CMS.
+- Review spelling, links and published/hidden status.
+- Publish.
+- Wait for the GitHub Pages deployment to complete.
+- Check the affected public page once after deployment.
+
+This package is designed so normal content updates do not require editing HTML.

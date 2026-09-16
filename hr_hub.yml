@@ -1,0 +1,107 @@
+hero:
+  eyebrow: HR KNOWLEDGE HUB
+  title: Understand HR. Apply it with confidence.
+  description: A practical gateway to UAE HR knowledge, payroll, people operations, tools and resources.
+  chips:
+  - Labour Law
+  - Payroll
+  - Processes
+  - Tools
+knowledge:
+  label: 01 / KNOWLEDGE AREAS
+  title: Start with what you need.
+  description: Eight connected areas built around practical UAE HR work. Move between law, Q&A, process, payroll, tools and
+    resources without losing context.
+  search_placeholder: Search labour law, payroll, EOSB, pension, onboarding...
+  search_button: Search
+  cards:
+  - icon: §
+    number: '01'
+    title: UAE Labour Law
+    description: Employment rights, leave, working time, probation, termination and EOSB.
+    link: /hr-hub/uae-labour-law/
+    published: true
+  - icon: '?'
+    number: '02'
+    title: Labour Law Q&A
+    description: Searchable answers to common UAE employment questions.
+    link: /hr-hub/labour-law-qa/
+    published: true
+  - icon: ✦
+    number: '03'
+    title: HR Insights
+    description: Practical thinking on people operations, culture and employee lifecycle.
+    link: /hr-hub/hr-insights/
+    published: true
+  - icon: ₳
+    number: '04'
+    title: Payroll Insights
+    description: WPS, EOSB, payroll controls, deductions and salary administration.
+    link: /hr-hub/payroll-insights/
+    published: true
+  - icon: ⌘
+    number: '05'
+    title: HR Process Guide
+    description: Step-by-step onboarding, exit, payroll, visa and pension workflows.
+    link: /hr-hub/hr-process-guide/
+    published: true
+  - icon: ◎
+    number: '06'
+    title: Emirati Insights
+    description: Emiratisation, GPSSA, Nafis and UAE National employment guidance.
+    link: /hr-hub/emirati-insights/
+    published: true
+  - icon: ▤
+    number: '07'
+    title: Document Center
+    description: HR letters, checklists, templates and practical resources.
+    link: /hr-hub/library/
+    published: true
+  - icon: ∑
+    number: 08
+    title: Calculators
+    description: Interactive payroll, EOSB and leave tools with formula breakdowns.
+    link: /hr-hub/calculator/
+    published: true
+purpose:
+  label: 02 / EXPLORE BY PURPOSE
+  title: Not sure where to start?
+  description: Choose the outcome you need and jump directly to the right area.
+  cards:
+  - kicker: I NEED TO UNDERSTAND A RULE
+    title: UAE Labour Law
+    description: Use topic-based legal guidance with article references and official-source links.
+    link: /hr-hub/uae-labour-law/
+    published: true
+  - kicker: I HAVE A QUESTION
+    title: Labour Law Q&A
+    description: Search quick answers and connect them to the relevant legal topic.
+    link: /hr-hub/labour-law-qa/
+    published: true
+  - kicker: I NEED A PROCESS
+    title: HR Process Guide
+    description: Follow practical workflows and checklists for recurring HR activities.
+    link: /hr-hub/hr-process-guide/
+    published: true
+  - kicker: I NEED A NUMBER
+    title: HR Calculators
+    description: Estimate payroll, EOSB and leave values with transparent formulas.
+    link: /hr-hub/calculator/
+    published: true
+related:
+  kicker: Explore next
+  title: Start with the task you need to solve
+  description: The HR Hub connects UAE employment guidance with practical payroll tools, templates and process resources.
+  cards:
+  - title: UAE Labour Law
+    description: Practical reference for employment rules and common HR topics.
+    link: /hr-hub/uae-labour-law/
+    published: true
+  - title: HR Calculators
+    description: Gratuity, payroll, salary proration and leave calculations.
+    link: /hr-hub/calculator/
+    published: true
+  - title: HR Templates
+    description: Ready-to-use HR letters, forms and payroll documents.
+    link: /hr-hub/library/
+    published: true

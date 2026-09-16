@@ -1,0 +1,181 @@
+home:
+  title: UAE HR, Payroll & Labour Law Resources | Munawar.in
+  description: Practical UAE HR resources for labour law, payroll, gratuity, HR calculators,
+    templates, Emiratisation, HR processes and AI-assisted HR tools.
+  canonical: https://munawar.in/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE HR, Payroll & Labour Law Resources | Munawar.in
+  og_description: Practical UAE HR resources for labour law, payroll, gratuity, HR
+    calculators, templates, Emiratisation, HR processes and AI-assisted HR tools.
+  indexable: true
+about:
+  title: About Munawar K A | UAE HR Operations & Payroll Professional
+  description: Learn about Munawar K A, a UAE HR operations and payroll professional
+    focused on practical people operations, payroll controls and HR process improvement.
+  canonical: https://munawar.in/about/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: About Munawar K A | UAE HR Operations & Payroll Professional
+  og_description: Learn about Munawar K A, a UAE HR operations and payroll professional
+    focused on practical people operations, payroll controls and HR process improvement.
+  indexable: true
+experience:
+  title: HR & Payroll Experience and Education | Munawar K A
+  description: Explore Munawar K A’s HR operations and payroll experience, education
+    and professional progression in the UAE.
+  canonical: https://munawar.in/experience-education/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: HR & Payroll Experience and Education | Munawar K A
+  og_description: Explore Munawar K A’s HR operations and payroll experience, education
+    and professional progression in the UAE.
+  indexable: true
+projects:
+  title: HR Projects, Process Improvements & Recognition | Munawar K A
+  description: Explore HR operations, payroll, automation and process-improvement
+    projects, achievements and professional recognition.
+  canonical: https://munawar.in/projects-awards/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: HR Projects, Process Improvements & Recognition | Munawar K A
+  og_description: Explore HR operations, payroll, automation and process-improvement
+    projects, achievements and professional recognition.
+  indexable: true
+skills:
+  title: HR & Payroll Skills | UAE HR Operations Expertise
+  description: Explore practical HR operations, payroll, HRIS, employee lifecycle,
+    reporting, compliance coordination and process-improvement capabilities.
+  canonical: https://munawar.in/skills-expertise/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: HR & Payroll Skills | UAE HR Operations Expertise
+  og_description: Explore practical HR operations, payroll, HRIS, employee lifecycle,
+    reporting, compliance coordination and process-improvement capabilities.
+  indexable: true
+contact:
+  title: Contact Munawar K A | UAE HR & Payroll
+  description: Contact Munawar K A for professional networking, feedback and questions
+    about the UAE HR resources available on Munawar.in.
+  canonical: https://munawar.in/contact/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: Contact Munawar K A | UAE HR & Payroll
+  og_description: Contact Munawar K A for professional networking, feedback and questions
+    about the UAE HR resources available on Munawar.in.
+  indexable: true
+career_hub:
+  title: UAE HR Career Hub | CV, Interview & Career Resources
+  description: Practical UAE career resources for HR and payroll professionals, including
+    job-search preparation, interview guidance and professional development tools.
+  canonical: https://munawar.in/career-hub/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE HR Career Hub | CV, Interview & Career Resources
+  og_description: Practical UAE career resources for HR and payroll professionals,
+    including job-search preparation, interview guidance and professional development
+    tools.
+  indexable: true
+articles:
+  title: UAE HR & Payroll Articles | Munawar.in
+  description: Practical UAE HR, payroll, labour law, Emiratisation and people operations
+    articles from Munawar.in.
+  canonical: https://munawar.in/articles/
+  robots: index,follow,max-image-preview:large
+  og_title: UAE HR & Payroll Articles | Munawar.in
+  og_description: Practical, readable articles for UAE HR and payroll professionals.
+  indexable: true
+hr_hub:
+  title: UAE HR Hub | Labour Law, Payroll, Calculators & Templates
+  description: Explore practical UAE HR guidance on labour law, payroll, WPS, gratuity,
+    Emiratisation, HR processes, calculators, templates and AI tools.
+  canonical: https://munawar.in/hr-hub/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE HR Hub | Labour Law, Payroll, Calculators & Templates
+  og_description: Explore practical UAE HR guidance on labour law, payroll, WPS, gratuity,
+    Emiratisation, HR processes, calculators, templates and AI tools.
+  indexable: true
+uae_labour_law:
+  title: UAE Labour Law Guide 2026 | Leave, Gratuity & Employment
+  description: Practical UAE Labour Law guide covering employment, leave, wages, termination
+    and end-of-service gratuity, with links to official UAE sources.
+  canonical: https://munawar.in/hr-hub/uae-labour-law/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE Labour Law Guide 2026 | Leave, Gratuity & Employment
+  og_description: Practical UAE Labour Law guide covering employment, leave, wages,
+    termination and end-of-service gratuity, with links to official UAE sources.
+  indexable: true
+labour_law_qa:
+  title: UAE Labour Law Questions & Answers | Practical HR Guide
+  description: Practical UAE Labour Law Q&A on leave, salary, notice, termination,
+    gratuity and workplace rules, with guidance to verify official requirements.
+  canonical: https://munawar.in/hr-hub/labour-law-qa/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE Labour Law Questions & Answers | Practical HR Guide
+  og_description: Practical UAE Labour Law Q&A on leave, salary, notice, termination,
+    gratuity and workplace rules, with guidance to verify official requirements.
+  indexable: true
+hr_insights:
+  title: HR Insights UAE | Employee Lifecycle & People Operations
+  description: Practical UAE HR insights on employee lifecycle, people operations,
+    HR controls, documentation, employee experience and process improvement.
+  canonical: https://munawar.in/hr-hub/hr-insights/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: HR Insights UAE | Employee Lifecycle & People Operations
+  og_description: Practical UAE HR insights on employee lifecycle, people operations,
+    HR controls, documentation, employee experience and process improvement.
+  indexable: true
+payroll_insights:
+  title: UAE Payroll Guide | WPS, Salary Processing & Controls
+  description: Practical UAE payroll guidance covering WPS, salary processing, payroll
+    controls, deductions, reconciliations and common payroll operations.
+  canonical: https://munawar.in/hr-hub/payroll-insights/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE Payroll Guide | WPS, Salary Processing & Controls
+  og_description: Practical UAE payroll guidance covering WPS, salary processing,
+    payroll controls, deductions, reconciliations and common payroll operations.
+  indexable: true
+hr_process_guide:
+  title: UAE HR Process Guide | Onboarding, Payroll & Offboarding
+  description: Step-by-step UAE HR process guidance covering onboarding, employee
+    records, payroll coordination, leave, changes, compliance checks and offboarding.
+  canonical: https://munawar.in/hr-hub/hr-process-guide/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE HR Process Guide | Onboarding, Payroll & Offboarding
+  og_description: Step-by-step UAE HR process guidance covering onboarding, employee
+    records, payroll coordination, leave, changes, compliance checks and offboarding.
+  indexable: true
+emirati_insights:
+  title: UAE Emiratisation Guide 2026 | Targets & HR Insights
+  description: Practical Emiratisation guidance for UAE private-sector HR teams, including
+    workforce planning, current target context and links to official MoHRE guidance.
+  canonical: https://munawar.in/hr-hub/emirati-insights/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE Emiratisation Guide 2026 | Targets & HR Insights
+  og_description: Practical Emiratisation guidance for UAE private-sector HR teams,
+    including workforce planning, current target context and links to official MoHRE
+    guidance.
+  indexable: true
+calculator:
+  title: UAE Gratuity, Payroll & Leave Calculators | Munawar.in
+  description: Free UAE HR calculators for end-of-service gratuity, salary proration,
+    leave salary and payroll calculations with clear formulas and practical guidance.
+  canonical: https://munawar.in/hr-hub/calculator/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: UAE Gratuity, Payroll & Leave Calculators | Munawar.in
+  og_description: Free UAE HR calculators for end-of-service gratuity, salary proration,
+    leave salary and payroll calculations with clear formulas and practical guidance.
+  indexable: true
+library:
+  title: Free UAE HR Templates, Letters & Forms | Munawar.in
+  description: Download practical HR templates, letters, payroll forms, leave forms,
+    salary certificates, warning letters, termination templates and employee documents.
+  canonical: https://munawar.in/hr-hub/library/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: Free UAE HR Templates, Letters & Forms | Munawar.in
+  og_description: Download practical HR templates, letters, payroll forms, leave forms,
+    salary certificates, warning letters, termination templates and employee documents.
+  indexable: true
+ai_hub:
+  title: AI HR Tools UAE | Labour Law, Payroll & HR Assistants
+  description: Use AI-assisted HR tools for UAE labour law brainstorming, payroll
+    questions, HR letters, job descriptions, policies, document checks and HR decisions.
+  canonical: https://munawar.in/hr-hub/ai-hub/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: AI HR Tools UAE | Labour Law, Payroll & HR Assistants
+  og_description: Use AI-assisted HR tools for UAE labour law brainstorming, payroll
+    questions, HR letters, job descriptions, policies, document checks and HR decisions.
+  indexable: true

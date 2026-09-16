@@ -1,37 +1,20 @@
-MUNAWAR.IN - FULL WEBSITE V1
+MUNAWAR.IN ASSESSMENT ANALYTICS ADMIN
 
-This package is ready for GitHub Pages preview.
+Upload these two files into your existing /admin/ folder:
 
-Main pages:
-- index.html
-- about.html
-- experience-education.html
-- skills-expertise.html
-- projects-awards.html
-- career-hub.html
-- contact.html
+1) assessment-analytics.html
+2) assessment-analytics-link.js
 
-HR Hub:
-- hr-hub/index.html
-- hr-hub/uae-labour-law.html
-- hr-hub/labour-law-qa.html
-- hr-hub/hr-insights.html
-- hr-hub/payroll-insights.html
-- hr-hub/hr-process-guide.html
-- hr-hub/emirati-insights.html
-- hr-hub/library.html
-- hr-hub/calculator.html
+Then add this ONE line to your existing /admin/index.html immediately before </body>:
 
-Document Center:
-The visual library is complete. Actual DOCX/XLSX/PDF template files should be added to /documents before public launch.
+<script src="/admin/assessment-analytics-link.js"></script>
 
-IMPORTANT:
-Legal, payroll, pension and Emiratisation pages are educational. Current official source links are included. Re-check official rules before relying on content operationally.
+After GitHub Pages deploys:
+- Open https://munawar.in/admin/
+- A blue "Assessment Analytics" button will appear at the bottom-right.
+- Click it.
+- Enter your ASSESSMENT_ADMIN_KEY.
+- The dashboard shows visual results instead of raw JSON.
 
-GitHub Pages:
-Upload the CONTENTS of this folder to the repository root.
-Settings > Pages > Deploy from branch > main > /(root).
-Test the github.io preview before moving munawar.in from Google Sites.
-
-V2 CONTENT UPDATE:
-HR Insights, Payroll Insights and Emirati Insights now use expandable detail cards with practical actions, examples and related-resource links.
+The key is stored only in sessionStorage for the current browser session.
+No assessment names, emails, IP addresses or individual answers are displayed by this dashboard.
