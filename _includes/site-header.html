@@ -1,12 +1,28 @@
-{% assign nav_groups = site.data.navigation.groups | where: "visible", true | sort: "order" %}
-{% assign nav_items = site.data.navigation.items | where: "visible", true | sort: "order" %}
-{% assign simple_links = site.data.navigation.simple_links | where: "visible", true | sort: "order" %}
 <header class="site-header"><div class="shell nav">
-<a class="brand" href="{{ page.brand_href | default: '/' }}"><span class="brand-mark"><img alt="{{ site.data.site_settings.branding.logo_alt | escape }}" src="{{ site.data.site_settings.branding.logo | escape }}" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a>
+<a class="brand" href="/"><span class="brand-mark"><img alt="{{ site.data.site_settings.branding.logo_alt | escape }}" src="{{ site.data.site_settings.branding.logo | escape }}" style="display:block;width:68%;height:68%;object-fit:contain"/></span><span class="brand-name">MUNAWAR<span>.IN</span></span></a>
 <nav aria-label="Primary navigation" class="nav-links global-nav">
-{% for group in nav_groups %}{% assign children = nav_items | where: "parent", group.id | sort: "order" %}<div class="nav-menu"><a class="nav-top" href="{{ group.href | escape }}">{{ group.label | escape }} <span class="nav-chevron">⌄</span></a><div class="nav-dropdown{% if group.wide %} nav-wide{% endif %}">{% for item in children %}<a href="{{ item.href | escape }}"><strong>{{ item.label | escape }}</strong><small>{{ item.description | escape }}</small></a>{% endfor %}</div></div>{% endfor %}
-{% for item in simple_links %}<a class="nav-top nav-simple" href="{{ item.href | escape }}">{{ item.label | escape }}</a>{% endfor %}
+<a class="nav-top nav-simple" data-section="home" href="/">Home</a>
+<div class="nav-menu" data-section="about"><a class="nav-top" href="/about/">About <span class="nav-chevron">⌄</span></a><div class="nav-dropdown">
+<a href="/about/"><strong>About</strong><small>Profile and professional story</small></a>
+<a href="/experience-education/"><strong>Experience &amp; Education</strong><small>Career journey and qualifications</small></a>
+<a href="/skills-expertise/"><strong>Skills &amp; Expertise</strong><small>HR, payroll and operational capabilities</small></a>
+<a href="/projects-awards/"><strong>Projects &amp; Awards</strong><small>Selected work, projects and recognition</small></a>
+</div></div>
+<div class="nav-menu" data-section="hr"><a class="nav-top" href="/hr-hub/">HR Hub <span class="nav-chevron">⌄</span></a><div class="nav-dropdown nav-wide">
+<a href="/hr-hub/uae-labour-law/"><strong>UAE Labour Law</strong><small>Article-based employment rules</small></a>
+<a href="/hr-hub/labour-law-qa/"><strong>Labour Law Q&amp;A</strong><small>Quick answers to common questions</small></a>
+<a href="/hr-hub/payroll-insights/"><strong>Payroll Insights</strong><small>Controls, compliance and payroll practice</small></a>
+<a href="/hr-hub/hr-process-guide/"><strong>HR Process Guide</strong><small>Step-by-step HR workflows</small></a>
+<a href="/hr-hub/hr-insights/"><strong>HR Insights</strong><small>Practical people operations guidance</small></a>
+<a href="/hr-hub/emirati-insights/"><strong>Emirati Insights</strong><small>Emiratisation and UAE workforce topics</small></a>
+<a href="/hr-hub/calculator/"><strong>Calculator</strong><small>Payroll, EOSB and leave calculators</small></a>
+<a href="/hr-hub/library/"><strong>Library</strong><small>Letters, forms and practical resources</small></a>
+</div></div>
+<a class="nav-top nav-simple" data-section="ai" href="/hr-hub/ai-hub/">AI Hub</a>
+<a class="nav-top nav-simple" data-section="career" href="/career-hub/">Career Hub</a>
+<a class="nav-top nav-simple" data-section="articles" href="/articles/">Articles</a>
+<a class="nav-top nav-simple" data-section="contact" href="/contact/">Contact</a>
 </nav>
 {% if site.data.site_settings.search.enabled %}<button aria-label="{{ site.data.site_settings.search.aria_label | escape }}" class="global-search-trigger" id="globalSearchTrigger" title="{{ site.data.site_settings.search.button_title | escape }}" type="button">⌕</button>{% endif %}
-{% if page.nav_cta_text and page.nav_cta_href %}<a class="nav-cta" href="{{ page.nav_cta_href | escape }}">{{ page.nav_cta_text | escape }}</a>{% elsif page.collection == 'articles' %}<a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a>{% endif %}<button class="menu-btn">Menu</button></div></header>
+{% if page.nav_cta_text and page.nav_cta_href %}<a class="nav-cta" href="{{ page.nav_cta_href | escape }}">{{ page.nav_cta_text | escape }}</a>{% elsif page.collection == 'articles' %}<a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a>{% endif %}<button class="menu-btn" aria-label="Open navigation" aria-expanded="false">Menu</button></div></header>
 {% include site-announcement.html %}
