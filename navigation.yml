@@ -1,38 +1,30 @@
-about_items:
-  - label: About
-    href: /about/
-    description: Profile, approach and professional story
-  - label: Experience & Education
-    href: /experience-education/
-    description: Career journey and academic background
-  - label: Skills & Expertise
-    href: /skills-expertise/
-    description: Core HR, payroll and operational capabilities
-  - label: Projects & Awards
-    href: /projects-awards/
-    description: Selected projects, impact and recognition
-hr_items:
-  - label: UAE Labour Law
-    href: /hr-hub/uae-labour-law/
-    description: Practical UAE employment law guidance
-  - label: Labour Law Q&A
-    href: /hr-hub/labour-law-qa/
-    description: Quick answers to common employment questions
-  - label: Payroll Insights
-    href: /hr-hub/payroll-insights/
-    description: Payroll controls, compliance and practice
-  - label: HR Process Guide
-    href: /hr-hub/hr-process-guide/
-    description: Step-by-step HR workflows
-  - label: HR Insights
-    href: /hr-hub/hr-insights/
-    description: Practical people operations guidance
-  - label: Emirati Insights
-    href: /hr-hub/emirati-insights/
-    description: Emiratisation and UAE workforce topics
-  - label: Calculator
-    href: /hr-hub/calculator/
-    description: Payroll, EOSB and leave calculators
-  - label: Library
-    href: /hr-hub/library/
-    description: HR letters, forms and downloadable templates
+groups:
+- id: about
+  label: About
+  href: /about/
+  visible: true
+  order: 20
+- id: hr
+  label: HR Hub
+  href: /hr-hub/
+  visible: true
+  order: 30
+items:
+- {parent: about, label: About, href: /about/, visible: true, order: 10}
+- {parent: about, label: Experience & Education, href: /experience-education/, visible: true, order: 20}
+- {parent: about, label: Skills & Expertise, href: /skills-expertise/, visible: true, order: 30}
+- {parent: about, label: Projects & Awards, href: /projects-awards/, visible: true, order: 40}
+- {parent: hr, label: UAE Labour Law, href: /hr-hub/uae-labour-law/, visible: true, order: 10}
+- {parent: hr, label: Labour Law Q&A, href: /hr-hub/labour-law-qa/, visible: true, order: 20}
+- {parent: hr, label: Payroll Insights, href: /hr-hub/payroll-insights/, visible: true, order: 30}
+- {parent: hr, label: HR Process Guide, href: /hr-hub/hr-process-guide/, visible: true, order: 40}
+- {parent: hr, label: HR Insights, href: /hr-hub/hr-insights/, visible: true, order: 50}
+- {parent: hr, label: Emirati Insights, href: /hr-hub/emirati-insights/, visible: true, order: 60}
+- {parent: hr, label: Calculator, href: /hr-hub/calculator/, visible: true, order: 70}
+- {parent: hr, label: Library, href: /hr-hub/library/, visible: true, order: 80}
+simple_links:
+- {label: Home, href: /, visible: true, order: 10}
+- {label: AI Hub, href: /hr-hub/ai-hub/, visible: true, order: 40}
+- {label: Career Hub, href: /career-hub/, visible: true, order: 50}
+- {label: Articles, href: /articles/, visible: true, order: 60}
+- {label: Contact, href: /contact/, visible: true, order: 70}
