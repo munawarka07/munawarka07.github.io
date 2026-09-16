@@ -1,11 +1,15 @@
 ---
-seo_key: projects
+seo_key: about
 brand_href: /
-nav_cta_text: Explore Impact ↗
-nav_cta_href: '#projects'
+nav_cta_text: Explore Journey ↗
+nav_cta_href: '#explore-more'
 footer_variant: profile
 ---
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 {% include site-seo.html %}
 {% include site-head.html %}
 
@@ -22,8 +26,11 @@ footer_variant: profile
 
 
 
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
 
+
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
 
 :root{--bg:#f7fbff;--panel:rgba(255,255,255,.72);--text:#0b1b2d;--muted:#617286;--line:rgba(11,27,45,.10);--blue:#1c5fd4;--blue2:#4e8fff;--cyan:#36c8df;--navy:#0c2340;--shadow:0 18px 60px rgba(23,77,140,.12);--shadow2:0 30px 90px rgba(23,77,140,.18);--max:1480px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Tajawal',sans-serif;color:var(--text);background:radial-gradient(circle at 15% 10%,rgba(54,200,223,.10),transparent 25%),radial-gradient(circle at 85% 8%,rgba(78,143,255,.10),transparent 25%),linear-gradient(180deg,#fbfdff 0%,#f7fbff 60%,#f4f9ff 100%);overflow-x:hidden}body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-3;background-image:linear-gradient(rgba(12,35,64,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(12,35,64,.025) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,rgba(0,0,0,.45),transparent 85%)}a{text-decoration:none;color:inherit}button,input{font:inherit}.shell{width:min(var(--max),calc(100% - 32px));margin:auto}.noise{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.018;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}
@@ -214,6 +221,11 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 }
 .portrait-placeholder strong{font-size:30px;color:var(--blue)}
 .portrait-placeholder span{font-size:12px;color:var(--muted);line-height:1.5}
+.profile-photo-frame{padding:0;overflow:hidden;background:#dceeff;width:330px;height:440px;border:1px solid rgba(255,255,255,.75)}
+.profile-photo{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;transform:scale(1.01);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s ease}
+.portrait-wrap:hover .profile-photo{transform:scale(1.045);filter:saturate(1.03) contrast(1.02)}
+.profile-photo-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(8,36,68,.08));pointer-events:none}
+@media(max-width:560px){.profile-photo-frame{width:245px;height:330px}.profile-photo{object-position:center 15%}}
 .profile-orbit{
   position:absolute;border:1px solid rgba(28,95,212,.13);border-radius:50%;
   animation:spin 26s linear infinite
@@ -289,136 +301,6 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
   .fact-grid{grid-template-columns:1fr}
 }
 
-
-/* EXPERIENCE PAGE */
-.exp-hero{min-height:76vh;display:flex;align-items:center;padding:135px 0 80px;position:relative;overflow:hidden}
-.exp-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:65px;align-items:center}
-.exp-hero h1{font-size:clamp(54px,7vw,96px);line-height:.92;letter-spacing:-.065em;margin:22px 0;font-weight:800}
-.exp-hero h1 span{background:linear-gradient(90deg,var(--blue),#4b87ef,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.exp-hero p{font-size:19px;line-height:1.75;color:var(--muted);max-width:720px}
-.career-map{height:440px;position:relative}
-.career-line{position:absolute;left:50%;top:8%;bottom:8%;width:2px;background:linear-gradient(var(--cyan),var(--blue));opacity:.35}
-.career-node{position:absolute;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:#fff;border:4px solid var(--blue);box-shadow:0 0 0 8px rgba(28,95,212,.08);animation:nodePulse 3s ease-in-out infinite}
-.cn1{top:10%}.cn2{top:34%;animation-delay:-.7s}.cn3{top:58%;animation-delay:-1.4s}.cn4{top:82%;animation-delay:-2.1s}
-@keyframes nodePulse{50%{box-shadow:0 0 0 15px rgba(54,200,223,.04)}}
-.map-card{position:absolute;width:205px;padding:15px;border-radius:17px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(14px)}
-.map-card strong{display:block;font-size:14px}.map-card span{font-size:11px;color:var(--muted)}.map-card i{font-style:normal;color:var(--blue);font-size:10px;font-weight:800}
-.mc1{left:2%;top:2%}.mc2{right:1%;top:28%}.mc3{left:1%;top:53%}.mc4{right:2%;top:77%}
-
-.timeline{position:relative;max-width:1000px;margin:auto}
-.timeline::before{content:"";position:absolute;left:164px;top:0;bottom:0;width:1px;background:rgba(255,255,255,.15)}
-.role{display:grid;grid-template-columns:135px 1fr;gap:58px;padding:0 0 52px;position:relative}
-.role-date{text-align:right;color:#7de6f1;font-size:12px;font-weight:700;padding-top:8px}
-.role-dot{position:absolute;left:157px;top:7px;width:15px;height:15px;border-radius:50%;background:#7de6f1;border:4px solid #0c2340;box-shadow:0 0 0 5px rgba(125,230,241,.10)}
-.role-card{padding:25px;border-radius:22px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.065);transition:.3s}
-.role-card:hover{transform:translateX(8px);background:rgba(255,255,255,.09);box-shadow:0 25px 65px rgba(0,0,0,.16)}
-.role-card .company{font-size:11px;color:#7de6f1;font-weight:800;letter-spacing:.08em}
-.role-card h3{font-size:27px;margin:8px 0 8px;color:#fff}
-.role-card p{color:#b9cada;line-height:1.7;font-size:14px}
-.role-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}
-.role-tags span{padding:7px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.11);color:#c6d8e8;font-size:10px}
-
-.edu-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
-.edu-main,.edu-side{padding:28px;border-radius:25px;background:#fff;border:1px solid var(--line);box-shadow:0 20px 70px rgba(23,77,140,.07)}
-.edu-main .year{font-size:11px;color:var(--blue);font-weight:800;letter-spacing:.1em}
-.edu-main h3{font-size:34px;margin:55px 0 8px;line-height:1.1}
-.edu-main p,.edu-side p{color:var(--muted);line-height:1.7}
-.edu-detail{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:24px}
-.edu-detail div{padding:14px;border-radius:14px;background:var(--bg-soft);border:1px solid var(--line)}
-.edu-detail small{display:block;color:var(--muted);font-size:10px}.edu-detail strong{font-size:13px}
-.edu-side{background:linear-gradient(145deg,#0c2340,#12385e);color:#fff}
-.edu-side h3{font-size:28px;margin:55px 0 10px}.edu-side p{color:#bdd0e3}
-.learning-list{display:grid;gap:9px;margin-top:20px}
-.learning-list div{padding:12px 13px;border:1px solid rgba(255,255,255,.11);border-radius:13px;font-size:12px;color:#d5e3ef}
-
-.progression{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.progress-card{min-height:210px;padding:19px;border-radius:21px;border:1px solid var(--line);background:rgba(255,255,255,.76);position:relative;transition:.3s}
-.progress-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
-.progress-card .step{font-size:10px;color:var(--blue);font-weight:800}.progress-card h3{font-size:20px;margin-top:65px}.progress-card p{font-size:12px;line-height:1.55;color:var(--muted)}
-
-
-.role-toggle{
-  display:flex;align-items:center;justify-content:space-between;gap:14px;
-  width:100%;margin-top:18px;padding:12px 14px;border-radius:13px;
-  border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);
-  color:#dce8f3;font-weight:700;font-size:12px;cursor:pointer;transition:.25s
-}
-.role-toggle:hover{background:rgba(255,255,255,.09);transform:translateY(-1px)}
-.role-toggle span:last-child{color:#7de6f1;font-size:18px;transition:.3s}
-.role-toggle.open span:last-child{transform:rotate(45deg)}
-.role-details{
-  display:grid;grid-template-rows:0fr;
-  transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1),margin .35s ease;
-  margin-top:0
-}
-.role-details.open{grid-template-rows:1fr;margin-top:16px}
-.role-details-inner{overflow:hidden}
-.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-.detail-box{
-  padding:16px;border-radius:15px;border:1px solid rgba(255,255,255,.10);
-  background:rgba(255,255,255,.045)
-}
-.detail-box h4{margin:0 0 9px;font-size:13px;color:#fff}
-.detail-box ul{margin:0;padding-left:18px}
-.detail-box li{color:#b9cada;font-size:12px;line-height:1.6;margin-bottom:5px}
-.impact-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-.impact-pill{padding:8px 10px;border-radius:999px;background:rgba(125,230,241,.08);border:1px solid rgba(125,230,241,.13);color:#bfeaf0;font-size:10px;font-weight:700}
-@media(max-width:700px){.detail-grid{grid-template-columns:1fr}}
-
-@media(max-width:950px){
- .exp-hero-grid,.edu-grid{grid-template-columns:1fr}
- .progression{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:650px){
- .career-map{height:390px}.map-card{width:150px;padding:10px}
- .timeline::before{left:12px}
- .role{grid-template-columns:1fr;gap:10px;padding-left:38px}
- .role-date{text-align:left}.role-dot{left:5px}
- .edu-detail,.progression{grid-template-columns:1fr}
-}
-
-.skills-hero{min-height:82vh;display:flex;align-items:center;padding:135px 0 80px;position:relative;overflow:hidden}.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.skills-hero h1{font-size:clamp(54px,7vw,96px);line-height:.92;letter-spacing:-.065em;margin:22px 0}.skills-hero h1 span{background:linear-gradient(90deg,var(--blue),#4b87ef,var(--cyan));-webkit-background-clip:text;color:transparent}.skills-hero p{font-size:19px;line-height:1.75;color:var(--muted)}
-.radar{height:480px;position:relative;display:grid;place-items:center}.ring{position:absolute;border:1px solid rgba(28,95,212,.14);border-radius:50%;animation:spin 32s linear infinite}.r1{width:180px;height:180px}.r2{width:300px;height:300px;animation-direction:reverse}.r3{width:420px;height:420px}.radar-core{width:145px;height:145px;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#fff,#e6f4ff);box-shadow:var(--shadow-strong);z-index:2}.radar-core strong{font-size:30px;color:var(--blue)}.bubble{position:absolute;padding:11px 14px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);font-size:11px;font-weight:800;animation:float 5s ease-in-out infinite}.b1{left:3%;top:18%}.b2{right:3%;top:20%;animation-delay:-1s}.b3{left:0;bottom:20%;animation-delay:-2s}.b4{right:0;bottom:18%;animation-delay:-3s}.b5{bottom:1%;animation-delay:-4s}
-.cap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.cap{min-height:350px;padding:23px;border-radius:23px;background:rgba(255,255,255,.78);border:1px solid var(--line);position:relative;transition:.3s}.cap:hover{transform:translateY(-7px);box-shadow:var(--shadow-strong)}.cap .idx{font-size:10px;color:var(--blue);font-weight:800}.cap h3{font-size:25px;margin:65px 0 10px}.cap p{font-size:13px;color:var(--muted);line-height:1.65}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:15px}.tags span{padding:7px 9px;border-radius:999px;background:var(--bg-soft);border:1px solid var(--line);font-size:10px;font-weight:700}.toggle{position:absolute;right:18px;bottom:16px;border:0;background:none;color:var(--blue);font-weight:800;cursor:pointer}.drawer{max-height:0;overflow:hidden;opacity:0;transition:.45s}.drawer.open{max-height:240px;opacity:1;margin-top:15px}.drawer ul{padding-left:18px;margin-bottom:32px}.drawer li{font-size:12px;color:var(--muted);line-height:1.55;margin-bottom:4px}
-.systems{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.sys{min-height:170px;padding:18px;border-radius:19px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);transition:.3s}.sys:hover{transform:translateY(-6px);background:rgba(255,255,255,.1)}.sys span{font-size:10px;color:#7de6f1;font-weight:800}.sys strong{display:block;margin-top:45px;font-size:19px;color:#fff}.sys small{display:block;color:#aebfd0;margin-top:5px}
-@media(max-width:1000px){.skills-grid{grid-template-columns:1fr}.cap-grid{grid-template-columns:repeat(2,1fr)}.systems{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.radar{height:390px}.r3{width:340px;height:340px}.cap-grid,.systems{grid-template-columns:1fr}}
-
-.project-hero{min-height:82vh;display:flex;align-items:center;padding:135px 0 80px;position:relative;overflow:hidden}
-.project-hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center}
-.project-hero h1{font-size:clamp(54px,7vw,96px);line-height:.92;letter-spacing:-.065em;margin:22px 0;font-weight:800}
-.project-hero h1 span{background:linear-gradient(90deg,var(--blue),#4b87ef,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
-.project-hero p{font-size:19px;line-height:1.75;color:var(--muted);max-width:700px}
-.impact-stage{height:500px;position:relative}
-.impact-orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid rgba(28,95,212,.13);animation:spin 35s linear infinite}
-.io1{width:400px;height:400px}.io2{width:280px;height:280px;animation-direction:reverse;animation-duration:25s}
-.impact-core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:170px;height:170px;border-radius:50%;display:grid;place-items:center;text-align:center;background:linear-gradient(145deg,#fff,#e8f5ff);box-shadow:var(--shadow-strong);z-index:2}
-.impact-core strong{font-size:36px;color:var(--blue)}.impact-core span{font-size:10px;color:var(--muted);display:block}
-.impact-float{position:absolute;width:175px;padding:14px;border-radius:16px;background:rgba(255,255,255,.86);border:1px solid var(--line);box-shadow:var(--shadow);backdrop-filter:blur(12px);animation:float 5s ease-in-out infinite}
-.impact-float b{font-size:20px;color:var(--blue);display:block}.impact-float span{font-size:10px;color:var(--muted)}
-.if1{left:0;top:13%}.if2{right:0;top:25%;animation-delay:-1.5s}.if3{left:4%;bottom:15%;animation-delay:-3s}.if4{right:5%;bottom:7%;animation-delay:-4s}
-
-.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
-.project-card{padding:25px;border-radius:24px;background:rgba(255,255,255,.78);border:1px solid var(--line);position:relative;overflow:hidden;transition:.3s}
-.project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-strong)}
-.project-card .num{font-size:10px;color:var(--blue);font-weight:800}.project-card h3{font-size:28px;line-height:1.08;margin:55px 0 10px}.project-card p{font-size:13px;color:var(--muted);line-height:1.65}
-.metric-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.metric-pill{padding:8px 10px;border-radius:999px;background:#eef7ff;border:1px solid var(--line);font-size:10px;font-weight:800;color:var(--navy)}
-.project-toggle{width:100%;margin-top:20px;padding:11px 13px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.6);color:var(--blue);font-weight:800;cursor:pointer;display:flex;justify-content:space-between}
-.project-detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease,margin .3s ease}.project-detail.open{grid-template-rows:1fr;margin-top:15px}.project-detail>div{overflow:hidden}.project-detail ul{padding-left:18px;margin:0}.project-detail li{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:5px}
-
-.award-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px;align-items:stretch}
-.award-visual{min-height:430px;border-radius:28px;border:1px solid rgba(255,255,255,.12);background:radial-gradient(circle at 50% 20%,rgba(125,230,241,.12),transparent 28%),rgba(255,255,255,.055);display:grid;place-items:center;position:relative;overflow:hidden}
-.medal{width:190px;height:190px;border-radius:50%;border:1px solid rgba(125,230,241,.3);display:grid;place-items:center;text-align:center;box-shadow:0 0 0 30px rgba(125,230,241,.03),0 0 0 60px rgba(125,230,241,.02);animation:medalPulse 4s ease-in-out infinite}
-.medal strong{font-size:46px;color:#7de6f1}.medal span{display:block;font-size:10px;color:#b9cada}
-@keyframes medalPulse{50%{transform:scale(1.04);box-shadow:0 0 0 38px rgba(125,230,241,.035),0 0 0 75px rgba(125,230,241,.015)}}
-.award-copy{padding:35px;border-radius:28px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06)}
-.award-copy h3{font-size:40px;line-height:1.04;color:#fff;margin:60px 0 15px}.award-copy p{color:#bdd0e3;line-height:1.75}
-.award-facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:25px}.award-facts div{padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04)}.award-facts small{display:block;color:#7de6f1;font-size:9px}.award-facts strong{display:block;color:#fff;font-size:13px;margin-top:4px}
-
-.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.impact-stat{min-height:190px;padding:20px;border-radius:21px;background:#fff;border:1px solid var(--line);transition:.3s}.impact-stat:hover{transform:translateY(-6px);box-shadow:var(--shadow)}.impact-stat b{display:block;font-size:38px;color:var(--blue);margin-top:45px}.impact-stat span{font-size:11px;color:var(--muted);line-height:1.4}
-
-@media(max-width:1000px){.project-hero-grid,.award-grid{grid-template-columns:1fr}.impact-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.project-grid{grid-template-columns:1fr}.impact-stage{height:410px}.io1{width:330px;height:330px}.impact-float{width:135px;padding:10px}.impact-grid,.award-facts{grid-template-columns:1fr}}
-
 /* === FINAL SITE ALIGNMENT PATCH === */
 :root{--max:1480px}
 .site-header .shell.nav{width:min(var(--max),calc(100% - 48px))}
@@ -442,7 +324,8 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 .guide-card p,.guide-card li{font-size:15.5px;line-height:1.72}.detail-block h4{font-size:14px}.detail-block p,.detail-block li{font-size:15.5px;line-height:1.72}
 .doc-card p{font-size:14px;line-height:1.6}.doc-card button{font-size:12.5px}.seo-link-card span,.seo-official{font-size:14px}.global-search-result p{font-size:13px}.global-search-helper{font-size:12.5px}
 @media(max-width:820px){.nav-links a{font-size:15px}.nav-dropdown strong{font-size:14px}.nav-dropdown small{font-size:12.5px}.acc-content,.detail-block p,.detail-block li{font-size:16px}}
-</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfilePage","@id":"https://munawar.in/projects-awards/#webpage","url":"https://munawar.in/projects-awards/","name":"HR Projects &amp; Recognition | Munawar K A","description":"Explore HR operations, payroll and process-improvement projects, achievements and professional recognition.","isPartOf":{"@id":"https://munawar.in/#website"},"inLanguage":"en","mainEntity":{"@id":"https://munawar.in/#person"},"dateModified":"2026-09-01T00:00:00+04:00","publisher":{"@type":"Person","@id":"https://munawar.in/#person","name":"Munawar K A"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://munawar.in/"},{"@type":"ListItem","position":2,"name":"Projects & Awards","item":"https://munawar.in/projects-awards/"}]}]}</script>
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfilePage","@id":"https://munawar.in/about/#webpage","url":"https://munawar.in/about/","name":"About Munawar K A | HR Operations &amp; Payroll Professional UAE","description":"Learn about Munawar K A, an HR operations and payroll professional focused on practical UAE HR processes, payroll and people operations.","inLanguage":"en","mainEntity":{"@id":"https://munawar.in/#person"},"dateModified":"2026-09-01T00:00:00+04:00","publisher":{"@type":"Person","@id":"https://munawar.in/#person","name":"Munawar K A"}},{"@type":"Person","@id":"https://munawar.in/#person","name":"Munawar K A","url":"https://munawar.in/","jobTitle":"HR Operations and Payroll Professional"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://munawar.in/"},{"@type":"ListItem","position":2,"name":"About","item":"https://munawar.in/about/"}]}]}</script>
 
 <style id="munawar-responsive-spacing-v2">
 /* Compact hero + responsive optimization.
@@ -658,37 +541,181 @@ label,.form-group label,.tool-form label{font-size:13.5px!important;line-height:
 .footer-grid strong,.footer-bottom{font-size:12.5px!important}
 @media(max-width:768px){body{font-size:16px!important}p,li,dd,.body-copy,.content-copy,.hero p,.knowledge-hero p,.article-hero p,.section-head p,.hero-panel p,.k-card p,.ai-card p,.article-card p,.article-card-new p,.story-card p,.guide-card p,.guide-card li,.detail-block p,.detail-block li,.doc-card p,.acc-content{font-size:16px!important;line-height:1.7!important}input,select,textarea,button{font-size:16px!important}.nav-links a,.nav-top{font-size:15px!important}}
 </style>
-</head><body>
-<div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div>
+</head>
+<body>
+<div class="noise"></div>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
 {% include site-header.html %}
+
 <main>
-<section class="project-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell project-hero-grid">
-<div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.projects.page.eyebrow | escape }}</div><h1>{{ site.data.projects.page.hero_title | escape }}</h1><p>{{ site.data.projects.page.hero_description | escape }}</p><div class="actions"><a class="btn primary" href="#projects">Explore Projects ↓</a><a class="btn secondary" href="#recognition">Recognition</a></div></div>
-<div class="impact-stage reveal-right"><div class="impact-orbit io1"></div><div class="impact-orbit io2"></div><div class="impact-core"><div><strong>IMPACT</strong><span>People • Process • Delivery</span></div></div><div class="impact-float if1"><b>5,000+</b><span>workforce operations exposure</span></div><div class="impact-float if2"><b>30%</b><span>onboarding improvement</span></div><div class="impact-float if3"><b>40%</b><span>offboarding efficiency</span></div><div class="impact-float if4"><b>300+</b><span>mass hiring support</span></div></div>
-</div></section>
-<div class="marquee"><div class="track">{% for item in site.data.projects.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in site.data.projects.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}</div></div>
+<section class="about-hero">
+  <div class="aurora a1"></div><div class="aurora a2"></div>
+  <div class="shell about-grid">
+    <div class="reveal">
+      <div class="eyebrow"><span class="dot"></span> {{ site.data.about.page.eyebrow | escape }}</div>
+      <h1>{{ site.data.about.page.hero_title | escape }}</h1>
+      <p>{{ site.data.about.page.hero_description_1 | escape }}</p>
+      <p style="font-size:15px">{{ site.data.about.page.hero_description_2 | escape }}</p>
+      <div class="actions">
+        <a class="btn primary" href="#journey">Explore My Approach <span>→</span></a>
+        <a class="btn secondary" href="#explore-more">View Career Sections</a>
+      </div>
+    </div>
 
-<section class="section theme-blue" id="projects"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.projects.page.projects_label | escape }}</div><h2>{{ site.data.projects.page.projects_title | escape }}</h2></div><p>{{ site.data.projects.page.projects_description | escape }}</p></div><div class="project-grid">{% for item in site.data.projects.projects %}{% if item.published %}<article class="project-card reveal"><span class="num">{{ item.number | escape }}</span><h3>{{ item.title | escape }}</h3><p>{{ item.summary | escape }}</p><div class="metric-row">{% for metric in item.metrics %}<span class="metric-pill">{{ metric | escape }}</span>{% endfor %}</div><button class="project-toggle"><span>View project detail</span><span>+</span></button><div class="project-detail"><div><ul>{% for point in item.details %}<li>{{ point | escape }}</li>{% endfor %}</ul></div></div></article>{% endif %}{% endfor %}</div></div></section>
+    <div class="portrait-wrap reveal-right">
+      <div class="profile-orbit po1"></div>
+      <div class="profile-orbit po2"></div>
+      <div class="portrait-placeholder profile-photo-frame">
+        <img src="/assets/images/munawar-profile.webp" alt="Professional portrait" class="profile-photo" loading="lazy">
+      </div>
+      {% for item in site.data.about.page.profile_chips %}<span class="profile-chip pc{{ forloop.index }}">{{ item | escape }}</span>{% endfor %}
+    </div>
+  </div>
+</section>
 
-<section class="section theme-dark" id="recognition"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">{{ site.data.projects.page.recognition_label | escape }}</div><h2>{{ site.data.projects.page.recognition_title | escape }}</h2></div><p>{{ site.data.projects.page.recognition_description | escape }}</p></div>
-<div class="award-grid"><div class="award-visual reveal"><div class="medal"><div><strong>★</strong><span>PROFESSIONAL<br>RECOGNITION</span></div></div></div><div class="award-copy reveal-right"><div class="section-label" style="color:#7de6f1">{{ site.data.projects.award.label | escape }}</div><h3>{{ site.data.projects.award.title | escape }}</h3><p>{{ site.data.projects.award.description | escape }}</p><div class="award-facts">{% for fact in site.data.projects.award.facts %}<div><small>{{ fact.label | escape }}</small><strong>{{ fact.value | escape }}</strong></div>{% endfor %}</div></div></div>
-</div></section>
+<div class="marquee">
+  <div class="track">
+    {% for item in site.data.about.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in site.data.about.page.marquee %}<span>{{ item | escape }}</span>{% endfor %}
+  </div>
+</div>
 
-<section class="section theme-mist"><div class="shell"><div class="section-head reveal-left"><div><div class="section-label">03 / IMPACT SNAPSHOT</div><h2>Numbers with<br>operational context.</h2></div><p>Scale alone is not the objective - the goal is reliable delivery, better controls and a smoother employee experience.</p></div>
-<div class="impact-grid">{% for item in site.data.projects.impact_stats %}{% if item.published %}<div class="impact-stat reveal"><b>{{ item.value | escape }}</b><span>{{ item.description | escape }}</span></div>{% endif %}{% endfor %}</div>
-</div></section>
+<section class="section theme-blue">
+  <div class="shell">
+    <div class="section-head reveal-left">
+      <div>
+        <div class="section-label">{{ site.data.about.page.facts_label | escape }}</div>
+        <h2>{{ site.data.about.page.facts_title | escape }}</h2>
+      </div>
+      <p>{{ site.data.about.page.facts_description | escape }}</p>
+    </div>
 
-<section class="section"><div class="shell"><div class="final-cta reveal"><div class="section-label">04 / ABOUT SECTION COMPLETE</div><h2>Experience. Capability.<br>Impact.</h2><p>The professional profile is now connected across About, Experience & Education, Skills & Expertise, and Projects & Awards.</p><div class="actions"><a class="btn primary" href="/#knowledge">Explore HR Hub →</a><a class="btn secondary" href="/skills-expertise/">Back to Skills</a></div></div></div></section>
+    <div class="fact-grid">
+      {% for item in site.data.about.facts %}{% if item.published %}<div class="fact reveal"><span class="n">{{ item.number | escape }}</span><strong>{{ item.value | escape }}</strong><span>{{ item.description | escape }}</span></div>{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section theme-dark" id="journey">
+  <div class="shell story-grid">
+    <div class="reveal-left">
+      <div class="section-label">{{ site.data.about.page.approach_label | escape }}</div>
+      <h2 style="margin-top:12px">{{ site.data.about.page.approach_title | escape }}</h2>
+    </div>
+    <div class="story-copy reveal-right">
+      {% for item in site.data.about.page.approach_paragraphs %}<p>{{ item | escape }}</p>{% endfor %}
+      <div class="story-points">{% for item in site.data.about.principles %}{% if item.published %}<div class="story-point"><b>{{ item.number | escape }}</b><div><strong>{{ item.title | escape }}</strong><span>{{ item.description | escape }}</span></div></div>{% endif %}{% endfor %}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section theme-mist">
+  <div class="shell">
+    <div class="section-head reveal-left">
+      <div>
+        <div class="section-label">{{ site.data.about.page.mvv_label | escape }}</div>
+        <h2>{{ site.data.about.page.mvv_title | escape }}</h2>
+      </div>
+      <p>{{ site.data.about.page.mvv_description | escape }}</p>
+    </div>
+
+    <div class="mvv-grid">
+      {% for item in site.data.about.mission_vision_values %}{% if item.published %}<article class="mvv reveal"><span class="index">{{ item.index | escape }}</span><h3>{{ item.title | escape }}</h3>{% if item.description and item.description != "" %}<p>{{ item.description | escape }}</p>{% endif %}{% if item.values %}<div class="values">{% for value in item.values %}<span class="value-chip">{{ value | escape }}</span>{% endfor %}</div>{% endif %}</article>{% endif %}{% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section theme-dark" id="explore-more">
+  <div class="shell">
+    <div class="section-head reveal-left">
+      <div>
+        <div class="section-label">04 / CONTINUE EXPLORING</div>
+        <h2>More of the<br>professional journey.</h2>
+      </div>
+      <p>Explore the detailed career history, capability areas and evidence of impact behind the platform.</p>
+    </div>
+
+    <div class="child-grid">
+      <a class="child-card reveal" href="/experience-education/">
+        <span class="idx">01 / EXPERIENCE</span>
+        <h3>Experience & Education</h3>
+        <p>Career journey, professional roles, responsibilities and academic background.</p>
+        <span class="go">Explore ↗</span>
+      </a>
+      <a class="child-card reveal delay1" href="/skills-expertise/">
+        <span class="idx">02 / CAPABILITY</span>
+        <h3>Skills & Expertise</h3>
+        <p>HR operations, payroll, employee relations, technology, data and professional systems.</p>
+        <span class="go">Explore ↗</span>
+      </a>
+      <a class="child-card reveal delay2" href="/projects-awards/">
+        <span class="idx">03 / IMPACT</span>
+        <h3>Projects & Awards</h3>
+        <p>Selected projects, process improvements, achievements and professional recognition.</p>
+        <span class="go">Explore ↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="final-cta reveal">
+      <div class="section-label">05 / THE PLATFORM</div>
+      <h2>Experience becomes more valuable<br>when it can be shared.</h2>
+      <p>Munawar.in turns practical experience into knowledge, resources and tools designed to help others navigate HR with greater clarity.</p>
+      <div class="actions">
+        <a class="btn primary" href="/#knowledge">Explore HR Hub <span>→</span></a>
+        <a class="btn secondary" href="/">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</section>
 </main>
+
 {% include site-footer.html %}
+
 <script>
-const h=document.querySelector('.site-header');window.addEventListener('scroll',()=>h.classList.toggle('scrolled',scrollY>18));
-const m=document.querySelector('.menu-btn'),n=document.querySelector('.nav-links');m.onclick=()=>n.classList.toggle('open');
-const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');o.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(e=>o.observe(e));
-const p=document.getElementById('scrollProgress');window.addEventListener('scroll',()=>{let x=document.documentElement.scrollHeight-innerHeight;p.style.width=(x?scrollY/x*100:0)+'%'});
-const g=document.getElementById('cursorGlow');if(matchMedia('(pointer:fine)').matches)window.addEventListener('mousemove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});else g.style.display='none';
-document.querySelectorAll('.project-toggle').forEach(b=>b.onclick=()=>{const d=b.nextElementSibling,x=d.classList.toggle('open');b.classList.toggle('open',x);b.children[0].textContent=x?'Hide project detail':'View project detail';b.children[1].textContent=x?'×':'+'});
-</script><div class="global-search-overlay" id="globalSearchOverlay" aria-hidden="true"><div class="global-search-panel" role="dialog" aria-modal="true" aria-label="Search Munawar.in"><div class="global-search-head"><div class="global-search-input-wrap"><span>⌕</span><input id="globalSearchInput" type="search" autocomplete="off" placeholder="Search Labour Law, Q&amp;A, calculators, templates, payroll, career tools..."></div><button class="global-search-close" id="globalSearchClose" type="button" aria-label="Close search">×</button></div><div class="global-search-helper">Search across Munawar.in. Try “annual leave”, “gratuity”, “salary deduction”, “offer letter” or “CV”.</div><div class="global-search-results" id="globalSearchResults"></div></div></div>
+const header=document.querySelector('.site-header');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>18));
+
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('.nav-links');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+  })
+},{threshold:.10,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el=>observer.observe(el));
+
+const progress=document.getElementById('scrollProgress');
+window.addEventListener('scroll',()=>{
+  const max=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.width=(max>0?(window.scrollY/max)*100:0)+'%';
+});
+
+const glow=document.getElementById('cursorGlow');
+if(glow && window.matchMedia('(pointer:fine)').matches){
+  window.addEventListener('mousemove',e=>{
+    glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px';
+  });
+}else if(glow){glow.style.display='none'}
+
+document.querySelectorAll('.fact,.mvv,.child-card').forEach(card=>{
+  card.addEventListener('mousemove',e=>{
+    if(!window.matchMedia('(pointer:fine)').matches)return;
+    const r=card.getBoundingClientRect();
+    const x=(e.clientX-r.left)/r.width-.5;
+    const y=(e.clientY-r.top)/r.height-.5;
+    card.style.transform=`perspective(700px) rotateX(${-y*3}deg) rotateY(${x*4}deg) translateY(-5px)`;
+  });
+  card.addEventListener('mouseleave',()=>card.style.transform='');
+});
+</script>
+<div class="global-search-overlay" id="globalSearchOverlay" aria-hidden="true"><div class="global-search-panel" role="dialog" aria-modal="true" aria-label="Search Munawar.in"><div class="global-search-head"><div class="global-search-input-wrap"><span>⌕</span><input id="globalSearchInput" type="search" autocomplete="off" placeholder="Search Labour Law, Q&amp;A, calculators, templates, payroll, career tools..."></div><button class="global-search-close" id="globalSearchClose" type="button" aria-label="Close search">×</button></div><div class="global-search-helper">Search across Munawar.in. Try “annual leave”, “gratuity”, “salary deduction”, “offer letter” or “CV”.</div><div class="global-search-results" id="globalSearchResults"></div></div></div>
 <div id="globalSearchData" hidden>
 <span data-title="HR Hub" data-type="Page" data-url="/hr-hub/" data-text="UAE HR knowledge labour law payroll insights processes resources"></span><span data-title="UAE Labour Law" data-type="Page" data-url="/hr-hub/uae-labour-law/" data-text="UAE labour law employment rules probation leave wages overtime termination EOSB"></span><span data-title="Labour Law Q&amp;A" data-type="Page" data-url="/hr-hub/labour-law-qa/" data-text="UAE labour law questions answers probation leave salary gratuity termination"></span><span data-title="HR Insights" data-type="Page" data-url="/hr-hub/hr-insights/" data-text="HR insights employee lifecycle culture performance technology people operations"></span><span data-title="Payroll Insights" data-type="Page" data-url="/hr-hub/payroll-insights/" data-text="payroll WPS salary deductions EOSB controls reconciliation"></span><span data-title="HR Process Guide" data-type="Page" data-url="/hr-hub/hr-process-guide/" data-text="HR process onboarding offboarding payroll recruitment employee lifecycle"></span><span data-title="Emirati Insights" data-type="Page" data-url="/hr-hub/emirati-insights/" data-text="Emiratisation UAE nationals Nafis pension workforce"></span><span data-title="Payroll Calculator" data-type="Calculator" data-url="/hr-hub/calculator/#pay" data-text="payroll salary proration calculator monthly salary payable days"></span><span data-title="EOSB Calculator" data-type="Calculator" data-url="/hr-hub/calculator/#eosb" data-text="EOSB gratuity end of service calculator basic salary 21 days 30 days"></span><span data-title="Leave Calculator" data-type="Calculator" data-url="/hr-hub/calculator/#leave" data-text="annual leave balance value calculator leave salary"></span><span data-title="HR Resource Library" data-type="Resources" data-url="/hr-hub/library/" data-text="HR letters forms templates downloads offer warning termination salary certificate"></span><span data-title="Career Hub" data-type="Page" data-url="/career-hub/" data-text="jobs CV interview learning career growth opportunities"></span><span data-title="AI Hub" data-type="Page" data-url="/hr-hub/ai-hub/" data-text="AI labour law payroll letters job descriptions policy documents skills decision"></span><span data-title="Articles" data-type="Page" data-url="/articles/" data-text="UAE HR payroll labour law Emiratisation people operations practical articles journal"></span>{% for article in site.articles %}{% if article.published != false %}<span data-title="{{ article.title | escape }}" data-type="Article" data-url="{{ article.url }}" data-text="{{ article.description | append: ' ' | append: article.keywords | escape }}"></span>{% endif %}{% endfor %}<span data-title="About Munawar.in" data-type="Page" data-url="/about/" data-text="about Munawar HR payroll professional experience"></span><span data-title="Contact" data-type="Page" data-url="/contact/" data-text="contact Munawar email LinkedIn UAE"></span>
 {% for item in site.data.labour_law.sections %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="Labour Law" data-url="/hr-hub/uae-labour-law/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.search | escape }} {{ item.reference | escape }} {{ item.content | escape }}"></span>{% endif %}{% endfor %}
@@ -699,4 +726,5 @@ document.querySelectorAll('.project-toggle').forEach(b=>b.onclick=()=>{const d=b
 {% for item in site.data.library.documents %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="HR Resource" data-url="/hr-hub/library/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.search | escape }} {{ item.description | escape }}"></span>{% endif %}{% endfor %}
 </div>
 <script id="munawar-global-navigation-search-js-v1">(function(){const nav=document.querySelector('.global-nav');if(nav){nav.querySelectorAll('.nav-menu>.nav-top').forEach(a=>a.addEventListener('click',function(e){if(window.innerWidth<=820){e.preventDefault();const m=this.parentElement;nav.querySelectorAll('.nav-menu.open').forEach(x=>{if(x!==m)x.classList.remove('open')});m.classList.toggle('open')}}))}const trigger=document.getElementById('globalSearchTrigger'),overlay=document.getElementById('globalSearchOverlay'),close=document.getElementById('globalSearchClose'),input=document.getElementById('globalSearchInput'),results=document.getElementById('globalSearchResults');if(!trigger||!overlay||!input||!results)return;const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();const records=[...document.querySelectorAll('#globalSearchData span')].map(el=>({title:el.dataset.title||'',type:el.dataset.type||'',url:el.dataset.url||'/',text:el.dataset.text||''}));function score(r,q){const nq=norm(q);if(!nq)return 0;const words=nq.split(/\s+/).filter(Boolean),title=norm(r.title),text=norm(r.text+' '+r.type),all=title+' '+text;let s=0;if(title===nq)s+=120;if(title.startsWith(nq))s+=70;if(title.includes(nq))s+=45;if(text.includes(nq))s+=20;for(const w of words){if(title.includes(w))s+=14;if(text.includes(w))s+=5;if(!all.includes(w))s-=8}return s}function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}function render(){const q=input.value.trim();if(!q){results.innerHTML='<div class="global-search-empty">Start typing to search the whole website.</div>';return}const found=records.map(r=>({r,s:score(r,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,18);if(!found.length){results.innerHTML='<div class="global-search-empty">No matching result found. Try a broader term.</div>';return}results.innerHTML=found.map(({r})=>'<a class="global-search-result" href="'+esc(r.url)+'"><span><strong>'+esc(r.title)+'</strong><p>'+esc((r.text||'').replace(/\s+/g,' ').trim().slice(0,150))+'</p></span><em>'+esc(r.type)+'</em></a>').join('')}function open(){overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>input.focus(),30);render()}function shut(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';trigger.focus()}trigger.addEventListener('click',open);close.addEventListener('click',shut);overlay.addEventListener('click',e=>{if(e.target===overlay)shut()});input.addEventListener('input',render);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))shut();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();open()}});if(location.pathname.includes('/hr-hub/calculator/')&&location.hash){const id=location.hash.slice(1),tab=document.querySelector('.calc-tab[data-calc="'+id+'"]');if(tab)setTimeout(()=>tab.click(),50)}})();</script>
-</body></html>
+</body>
+</html>
