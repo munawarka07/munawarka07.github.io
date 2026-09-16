@@ -1,37 +1,16 @@
-MUNAWAR.IN - FULL WEBSITE V1
+SEO INDEX CORRECTION ONLY
 
-This package is ready for GitHub Pages preview.
+Upload these files to the same paths in the main GitHub Pages repository:
 
-Main pages:
-- index.html
-- about.html
-- experience-education.html
-- skills-expertise.html
-- projects-awards.html
-- career-hub.html
-- contact.html
+1) index.html -> repository root (replace existing root index.html)
+2) hr-hub/index.html -> hr-hub/index.html (replace existing file)
 
-HR Hub:
-- hr-hub/index.html
-- hr-hub/uae-labour-law.html
-- hr-hub/labour-law-qa.html
-- hr-hub/hr-insights.html
-- hr-hub/payroll-insights.html
-- hr-hub/hr-process-guide.html
-- hr-hub/emirati-insights.html
-- hr-hub/library.html
-- hr-hub/calculator.html
+Do NOT upload README.txt if you do not want it in the repository.
 
-Document Center:
-The visual library is complete. Actual DOCX/XLSX/PDF template files should be added to /documents before public launch.
+Purpose:
+- Restores the real homepage and HR Hub content.
+- When a visitor explicitly requests /index.html, browser redirects to /.
+- When a visitor explicitly requests /hr-hub/index.html, browser redirects to /hr-hub/.
+- Clean URLs continue to render the normal pages.
 
-IMPORTANT:
-Legal, payroll, pension and Emiratisation pages are educational. Current official source links are included. Re-check official rules before relying on content operationally.
-
-GitHub Pages:
-Upload the CONTENTS of this folder to the repository root.
-Settings > Pages > Deploy from branch > main > /(root).
-Test the github.io preview before moving munawar.in from Google Sites.
-
-V2 CONTENT UPDATE:
-HR Insights, Payroll Insights and Emirati Insights now use expandable detail cards with practical actions, examples and related-resource links.
+GitHub Pages cannot issue different server-side responses for / and /index.html because they resolve to the same static file. This conditional client-side redirect avoids breaking the clean page while reinforcing the canonical URL.
