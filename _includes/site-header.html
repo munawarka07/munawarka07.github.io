@@ -26,3 +26,31 @@
 {% if site.data.site_settings.search.enabled %}<button aria-label="{{ site.data.site_settings.search.aria_label | escape }}" class="global-search-trigger" id="globalSearchTrigger" title="{{ site.data.site_settings.search.button_title | escape }}" type="button">⌕</button>{% endif %}
 {% if page.nav_cta_text and page.nav_cta_href %}<a class="nav-cta" href="{{ page.nav_cta_href | escape }}">{{ page.nav_cta_text | escape }}</a>{% elsif page.collection == 'articles' %}<a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a>{% endif %}<button class="menu-btn" aria-label="Open navigation" aria-expanded="false">Menu</button></div></header>
 {% include site-announcement.html %}
+
+<style id="munawar-nav-hover-bridge-v2">
+@media (min-width:821px){
+  .global-nav .nav-menu{position:relative}
+  .global-nav .nav-menu::after{content:"";position:absolute;left:-18px;right:-18px;top:100%;height:28px;pointer-events:auto}
+  .global-nav .nav-dropdown{top:calc(100% + 10px)!important}
+  .global-nav .nav-dropdown a{min-height:48px}
+  .global-nav .nav-menu.hover-open>.nav-dropdown{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translate(-50%,0)!important}
+  .global-nav .nav-menu.hover-open>.nav-top .nav-chevron{transform:rotate(180deg)}
+}
+</style>
+<script id="munawar-nav-hover-intent-v2">
+(function(){
+  function init(){
+    if(window.innerWidth<=820)return;
+    document.querySelectorAll('.global-nav .nav-menu').forEach(function(menu){
+      var timer=null;
+      function open(){if(timer){clearTimeout(timer);timer=null;} menu.classList.add('hover-open');}
+      function closeSoon(){if(timer)clearTimeout(timer);timer=setTimeout(function(){menu.classList.remove('hover-open');timer=null;},320);}
+      menu.addEventListener('mouseenter',open);
+      menu.addEventListener('mouseleave',closeSoon);
+      var dd=menu.querySelector('.nav-dropdown');
+      if(dd){dd.addEventListener('mouseenter',open);dd.addEventListener('mouseleave',closeSoon);}
+    });
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
+</script>
