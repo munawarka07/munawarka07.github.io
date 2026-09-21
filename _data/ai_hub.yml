@@ -1,8 +1,9 @@
 hero:
   eyebrow: AI HUB
   title: Practical AI for modern HR decisions.
-  description: An advanced HR brainstorming workspace for analysis, drafting, learning and structured decision support. Built
-    to help HR professionals think more clearly - not replace professional judgement.
+  description: An advanced HR brainstorming workspace for analysis, drafting, learning
+    and structured decision support. Built to help HR professionals think more clearly
+    - not replace professional judgement.
   chips:
   - Analyze
   - Decide
@@ -10,121 +11,99 @@ hero:
   - Develop
 workspace:
   label: 01 / HR INTELLIGENCE WORKSPACE
-  title: Eight tools. One HR thinking space.
-  description: Each module is designed around a specific HR workflow rather than a generic chat box.
+  title: Five tools. One responsible HR workspace.
+  description: Focused AI tools for drafting, reviewing and self-development. AI output
+    must be independently reviewed and verified before use.
   categories:
-  - title: ADVISE
-    description: Labour Law · Payroll
   - title: CREATE
     description: Letters · Job Descriptions
   - title: REVIEW
     description: Policies · Documents
-  - title: DEVELOP & DECIDE
-    description: Skills · Decision Lab
+  - title: SELF-DEVELOP
+    description: HR Skill Self-Assessment
 tools:
-  law:
-    number: '01'
-    icon: LAW
-    title: AI UAE Labour Law Assistant
-    description: Structure UAE employment scenarios into facts, HR checks, risk flags and questions to verify.
-    tags:
-    - Scenario analysis
-    - HR checks
-    - Risk flags
-    button: Open workspace
-  payroll:
-    number: '02'
-    icon: PAY
-    title: AI Payroll Assistant
-    description: Analyze payroll situations, assumptions, controls and validation points before a payroll decision.
-    tags:
-    - Payroll logic
-    - Validation
-    - Reconciliation
-    button: Open workspace
   letter:
-    number: '03'
+    number: '01'
     icon: LTR
     title: AI HR Letter Generator
-    description: Turn approved facts into a professional, editable HR communication draft.
+    description: Turn approved facts into a professional, editable HR communication
+      draft.
     tags:
     - Letters
     - Employee comms
     - Editable
     button: Open workspace
   jd:
-    number: '04'
+    number: '02'
     icon: JD
     title: Job Description Generator
-    description: Create candidate-friendly job descriptions with responsibilities, requirements and competencies.
+    description: Create candidate-friendly job descriptions with responsibilities,
+      requirements and competencies.
     tags:
     - Responsibilities
     - Requirements
     - Competencies
     button: Open workspace
   policy:
-    number: '05'
+    number: '03'
     icon: POL
     title: HR Policy Assistant
-    description: Brainstorm, structure or review HR policies, gaps, implementation questions and communication.
+    description: Brainstorm, structure or review HR policies, gaps, implementation
+      questions and communication.
     tags:
     - Policy design
     - Gap review
     - Implementation
     button: Open workspace
   document:
-    number: '06'
+    number: '04'
     icon: DOC
     title: Document Quality Checker
-    description: Review HR documents for clarity, completeness, tone, consistency and ambiguity.
+    description: Review HR documents for clarity, completeness, tone, consistency
+      and ambiguity.
     tags:
     - Quality score
     - Missing items
     - Improvements
     button: Open workspace
   skills:
-    number: '07'
+    number: '05'
     icon: SKL
-    title: HR Skill Assessment
-    description: Take a level-based real-life HR self-assessment with practical scenarios, capability results and focused development areas.
+    title: HR Skill Self-Assessment
+    description: Analyze your own HR knowledge and development areas through practical
+      scenarios. For personal learning and self-assessment only.
     tags:
-    - Level-based questions
+    - Self-assessment
     - Practical scenarios
     - Development roadmap
     button: Start assessment
-  decision:
-    number: 08
-    icon: LAB
-    title: HR Decision Lab
-    description: Work through complex HR cases with options, risk flags, required checks and an action plan.
-    tags:
-    - Decision options
-    - Risk level
-    - Action plan
-    button: Open workspace
 thinking:
   label: 02 / HOW THE HUB THINKS
   title: AI output should support judgement.
-  description: Brainstorming is separated from verified rules. Current law, policy and company-specific facts still need validation
-    before action.
+  description: Brainstorming is separated from verified rules. Current law, policy
+    and company-specific facts still need validation before action.
   principles:
   - title: Facts before output
-    description: Structured inputs reduce guessing and force the scenario to include the facts that matter.
+    description: Structured inputs reduce guessing and force the scenario to include
+      the facts that matter.
   - title: Explain the logic
-    description: Payroll and decision tools surface assumptions, checks and risks instead of giving an unexplained answer.
+    description: Payroll and decision tools surface assumptions, checks and risks
+      instead of giving an unexplained answer.
   - title: Human review stays essential
-    description: Generated analysis and drafts are working material, not a substitute for current official guidance or employer
-      policy.
+    description: Generated analysis and drafts are working material, not a substitute
+      for current official guidance or employer policy.
 cta:
   label: HR × AI
   title: Better questions. Better HR thinking.
-  description: Structure complex work, challenge assumptions and turn HR knowledge into practical next steps.
+  description: Structure complex work, challenge assumptions and turn HR knowledge
+    into practical next steps.
   primary_button: Explore HR Hub
   secondary_button: Career Hub
 related:
   kicker: Explore next
   title: Ground AI answers in HR context
-  description: Use AI for structured thinking, then verify regulated decisions against current official guidance.
+  description: Use AI for structured thinking, then verify regulated decisions against
+    current official guidance.
   cards:
   - title: UAE Labour Law
     description: Review practical employment-law guidance.
