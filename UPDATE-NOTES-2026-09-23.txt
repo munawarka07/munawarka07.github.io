@@ -1,0 +1,18 @@
+MUNAWAR.IN UI/UX UPDATE PACKAGE — 23 SEP 2026
+
+Implemented without changing SEO configuration, sitemap, robots.txt, canonical SEO include, CNAME or URL structure.
+
+1. Site-wide spacing/alignment refinement layer.
+2. Homepage hero spacing tightened.
+3. Homepage AI section now derives tool count from _data/ai_hub.yml and shows two featured tools + Explore all CTA.
+4. HR Process Guide rebuilt as an interactive visual journey with expandable stages and scroll progress.
+5. Six approved light/fresh illustration crops added as subtle homepage section backgrounds.
+6. Platform section aligned to the same outer grid as other homepage sections.
+7. Restrained 3D hover/parallax interactions added for fine-pointer devices; reduced-motion respected.
+8. Experience admin now supports optional company-logo upload; frontend auto-fits logos without distortion.
+9. Awards/Recognition admin now supports optional certificate/image upload + alt text; frontend auto-fits media and retains the star fallback when no image is uploaded.
+10. Responsive behavior added/retained for desktop, tablet and mobile.
+
+SEO integrity check completed: _config.yml, _data/seo.yml, _includes/site-seo.html, sitemap.xml, robots.txt and CNAME remain unchanged from the supplied working ZIP.
+
+Note: Local Jekyll compilation could not be run because Bundler/Jekyll is not installed in the execution environment. YAML configuration/data files were parsed successfully and targeted HTML/Liquid structure was checked programmatically.

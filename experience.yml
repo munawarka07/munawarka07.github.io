@@ -101,6 +101,7 @@ roles:
   - Reporting
   - Employee Queries
   published: true
+  logo: ''
 - period: '2025'
   company: HAIER GULF ELECTRONICS • UAE
   title: HR Operations Associate
@@ -138,6 +139,7 @@ roles:
   - Workday
   - HR Administration
   published: true
+  logo: ''
 - period: Earlier Career
   company: SUNDUS GROUP • UAE
   title: Team Lead - HR Operations
@@ -176,6 +178,7 @@ roles:
   - Compliance
   - Employee Relations
   published: true
+  logo: ''
 - period: Foundation
   company: PAYROLL & FINANCE
   title: Finance / Payroll Specialist
@@ -213,6 +216,7 @@ roles:
   - EOSB
   - Reconciliation
   published: true
+  logo: ''
 education:
 - period: 2017 - 2020
   qualification: Bachelor of Commerce - Finance

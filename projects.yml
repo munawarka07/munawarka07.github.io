@@ -99,6 +99,8 @@ award:
     value: '2025'
   - label: FOCUS
     value: Service & Relationships
+  image: ''
+  image_alt: ''
 impact_stats:
 - value: 5,000+
   description: Employees supported within large-scale outsourced HR operations.

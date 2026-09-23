@@ -164,15 +164,14 @@ platform:
   secondary_button: Start Exploring
 ai:
   label: 06 / AI INTELLIGENCE
-  title: Eight tools. One HR thinking space.
+  title: Five tools. One HR thinking space.
   description: Practical AI tools built for HR decisions, payroll, UAE labour law, policies, documents, skills and workforce
     scenarios.
   cards:
   - icon: AI
     number: '01'
-    title: Munawar.in AI Hub
-    description: Eight purpose-built AI tools in one HR intelligence workspace. Analyze, create, review, develop and make
-      better-informed HR decisions.
+    title: AI Hub
+    description: Five purpose-built AI tools in one HR intelligence workspace. Create, review, self-assess and support better-informed HR work.
     link: /hr-hub/ai-hub/
     action: Explore AI Hub
     published: true

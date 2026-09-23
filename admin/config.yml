@@ -2053,6 +2053,11 @@ collections:
       - label: Company
         name: company
         widget: string
+      - label: Company Logo
+        name: logo
+        widget: image
+        required: false
+        hint: Upload a PNG, JPG or WebP logo. It will be fitted automatically without stretching.
       - label: Job Title
         name: title
         widget: string
@@ -2353,6 +2358,15 @@ collections:
       - label: Description
         name: description
         widget: text
+      - label: Recognition Image / Certificate
+        name: image
+        widget: image
+        required: false
+        hint: Upload a certificate, award image, badge or photo. If empty, the recognition graphic remains.
+      - label: Image Alt Text
+        name: image_alt
+        widget: string
+        required: false
       - label: Facts
         name: facts
         widget: list
