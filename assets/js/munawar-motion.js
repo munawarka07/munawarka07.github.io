@@ -12,7 +12,14 @@
   /* ---------- 1. Cards get the spotlight surface ---------- */
   var CARD='.k-card,.ai-card,.purpose-card,.role-card,.guide-card,.guide-stage,.article-card,.article-card-new,.doc-card,.story-card,.experience-card,.skill-card,.project-card,.award-card,.seo-link-card,.calc-card,.insight-expand-card,.law-card,.job-card,.map-card,.qa-item,.child-card,.impact-stat';
   var cards=$$('main '+CARD.split(',').join(',main '));
-  cards.forEach(function(c){c.classList.add('ds-spot');});
+  // Cards that are absolutely positioned or already transformed (orbit/map layouts) keep their geometry:
+  // they get the glow but no lift and no entrance transform.
+  function free(c){var cs=getComputedStyle(c);return cs.position!=='absolute'&&cs.position!=='fixed'&&cs.transform==='none';}
+  cards.forEach(function(c){
+    c.classList.add('ds-spot');
+    if(getComputedStyle(c).position==='static')c.style.position='relative';
+    if(free(c))c.classList.add('ds-lift');
+  });
   if(fine&&!reduce){
     d.addEventListener('pointermove',function(e){
       var c=e.target.closest&&e.target.closest('.ds-spot');
@@ -46,6 +53,7 @@
   var groups=new Map();
   cards.forEach(function(c){
     if(c.closest('.ds-r')&&!c.classList.contains('ds-r'))return; // parent already animates
+    if(!c.classList.contains('ds-lift'))return; // positioned layouts animate themselves
     var p=c.parentElement; if(!groups.has(p))groups.set(p,[]); groups.get(p).push(c);
   });
   groups.forEach(function(list){

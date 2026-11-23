@@ -126,7 +126,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
    5. Cards — one surface language
    -------------------------------------------------------------------------- */
 :root body main :is(.k-card,.ai-card,.purpose-card,.role-card,.guide-card,.guide-stage,.article-card,.article-card-new,.doc-card,.story-card,.experience-card,.skill-card,.project-card,.award-card,.seo-link-card,.calc-card,.result-card,.insight-expand-card,.law-card,.job-card,.map-card,.qa-item,.child-card,.impact-stat,.detail-box){
-  position:relative;isolation:isolate;
+  isolation:isolate;
   border-radius:var(--ds-radius)!important;
   border:1px solid var(--ds-line)!important;
   box-shadow:var(--ds-shadow)!important;
@@ -141,7 +141,7 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(54,200,223,.9),rgba(28,95,212,.45) 40%,transparent 70%);
   -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
 @media (hover:hover){
-  :root body main .ds-spot:hover{transform:translateY(-5px);box-shadow:var(--ds-shadow-hover)!important;border-color:rgba(28,95,212,.18)!important}
+  :root body main .ds-spot.ds-lift:hover{transform:translateY(-5px);box-shadow:var(--ds-shadow-hover)!important;border-color:rgba(28,95,212,.18)!important}
   :root body main .ds-spot:hover::before,:root body main .ds-spot:hover::after{opacity:1}
 }
 :root body main .theme-dark .ds-spot::before{background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(78,190,255,.16),transparent 46%)}
