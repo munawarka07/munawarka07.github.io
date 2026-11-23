@@ -118,7 +118,7 @@ The company's **HRMS accrual mechanism** and the employee's **statutory entitlem
 
 ## 4. Can an Employee Take Annual Leave During Probation?
 
-Yes, it can be possible.
+Yes, it is possible.
 
 An employer may approve annual leave from the employee's annual-leave balance during the probationary period.
 

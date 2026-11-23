@@ -25,7 +25,7 @@ page:
   - PROCESS IMPROVEMENT
   capabilities_label: 01 / CORE CAPABILITIES
   capabilities_title: What I work with every day.
-  capabilities_description: Technical knowledge, operational execution and practical judgment developed in real HR environments.
+  capabilities_description: Technical knowledge, operational execution and practical judgement developed in real HR environments.
   systems_label: 02 / SYSTEMS & TECHNOLOGY
   systems_title: Tools behind the work.
   systems_description: HR platforms, enterprise systems and analytical tools supporting people operations and payroll.
@@ -35,7 +35,7 @@ page:
 capabilities:
 - index: 01 / PAYROLL
   title: Payroll & Compensation
-  summary: End-to-end payroll understanding with focus on accuracy, controls and employee pay.
+  summary: End-to-end payroll understanding with a focus on accuracy, controls and employee pay.
   tags:
   - WPS
   - EOSB

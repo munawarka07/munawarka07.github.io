@@ -50,7 +50,7 @@ projects:
   details:
   - Improved tracking and coordination across exit formalities and employee clearance.
   - Reduced repetitive manual follow-up through structured process controls.
-  - Contributed to approximately 40% improvement in offboarding workflow efficiency.
+  - Contributed to an approximately 40% improvement in offboarding workflow efficiency.
   published: true
 - number: 04 / HR CONTROLS
   title: HR Audit & Compliance Support
@@ -76,10 +76,10 @@ projects:
   published: true
 - number: 06 / MASS HIRING
   title: High-Volume Recruitment Support
-  summary: Supporting mass hiring and workforce mobilization while maintaining documentation and onboarding controls.
+  summary: Supporting mass hiring and workforce mobilisation while maintaining documentation and onboarding controls.
   metrics:
   - 300+ hires
-  - Mobilization
+  - Mobilisation
   details:
   - Supported high-volume recruitment and onboarding requirements for workforce projects.
   - Coordinated candidate documentation and joining readiness.
@@ -88,10 +88,10 @@ projects:
 award:
   label: CUSTOMER RAPPORT RECOGNITION
   title: Building trust through service.
-  description: Recognized at Sundus for strong customer rapport - reflecting effective stakeholder communication, dependable
+  description: Recognised at Sundus for strong customer rapport — reflecting effective stakeholder communication, dependable
     HR service delivery and the ability to maintain productive professional relationships.
   facts:
-  - label: ORGANIZATION
+  - label: ORGANISATION
     value: Sundus Group
   - label: RECOGNITION
     value: Customer Rapport
@@ -109,8 +109,8 @@ impact_stats:
   description: Visa and security-related workforce operations exposure.
   published: true
 - value: 300+
-  description: High-volume hiring and workforce mobilization support.
+  description: High-volume hiring and workforce mobilisation support.
   published: true
 - value: 95%
-  description: Strong grievance-resolution outcome referenced across prior operational work.
+  description: Strong grievance-resolution outcomes across prior operational work.
   published: true

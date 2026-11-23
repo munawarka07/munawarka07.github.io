@@ -90,7 +90,7 @@ knowledge:
   - icon: ▤
     number: '07'
     title: HR Library
-    description: Templates, guides, checklists and practical HR resources organized for easier use.
+    description: Templates, guides, checklists and practical HR resources organised for easier use.
     link: '#resources'
     search: library templates documents letters checklist
     published: true
@@ -104,7 +104,7 @@ knowledge:
 tools:
   label: 02 / TOOLS
   title: From information to answers.
-  description: Use practical calculators designed around common HR and payroll tasks. Each tool will explain the logic behind
+  description: Use practical calculators designed around common HR and payroll tasks. Each tool explains the logic behind
     the result instead of only showing a number.
   button: Open Calculators
   pills:
@@ -158,7 +158,7 @@ career:
 platform:
   label: 05 / THE PLATFORM
   title: Built from experience. Created for sharing.
-  description: Munawar.in brings together practical HR knowledge, structured resources and useful tools in one place - helping
+  description: Munawar.in brings together practical HR knowledge, structured resources and useful tools in one place — helping
     professionals understand complex topics and apply them with greater clarity.
   primary_button: About the Platform
   secondary_button: Start Exploring

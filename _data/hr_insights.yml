@@ -27,7 +27,7 @@ insights:
     views HR.
   takeaway: Treat offboarding as an employee-experience moment, not only an administrative closure.
   detailed: Offboarding is often reduced to asset return, visa cancellation and final settlement. But the employee is also
-    forming a final judgment about the organisation. A clear, respectful and well-controlled exit reduces uncertainty for
+    forming a final judgement about the organisation. A clear, respectful and well-controlled exit reduces uncertainty for
     the employee and operational risk for the business.
   actions:
   - Use one owner or tracker for resignation, notice, handover, assets, access, leave, final payroll and cancellation steps.
@@ -53,7 +53,7 @@ insights:
   actions:
   - Forecast targets early instead of hiring close to a compliance deadline.
   - Review whether roles provide real responsibility and career progression.
-  - Track retention, internal movement and development - not only the number hired.
+  - Track retention, internal movement and development — not only the number hired.
   example: A business reaches its required hiring number but experiences repeated early turnover. The better HR response is
     to analyse role fit, manager support, career expectations and development opportunities rather than treating recruitment
     volume as the only KPI.
@@ -80,7 +80,7 @@ insights:
   links:
   - label: Labour Law
     url: /hr-hub/uae-labour-law/
-  - label: Labour Q&A
+  - label: Labour Law Q&A
     url: /hr-hub/labour-law-qa/
   published: true
 - id: culture-is-everyone-s-responsibility
@@ -97,7 +97,7 @@ insights:
   - Equip managers to handle feedback, conflict and recognition consistently.
   - Use employee feedback and case trends to identify gaps between stated and experienced culture.
   example: If a company says it values transparency but employees routinely learn about important changes through rumours,
-    the issue is not the wording of the value - it is the operating behaviour behind it.
+    the issue is not the wording of the value — it is the operating behaviour behind it.
   links:
   - label: HR Process Guide
     url: /hr-hub/hr-process-guide/
@@ -148,7 +148,7 @@ insights:
 - id: hr-technology-should-remove-friction
   category: Technology
   title: HR technology should remove friction.
-  summary: An HR system creates value when it improves data quality, access, controls, automation and decision-making - not
+  summary: An HR system creates value when it improves data quality, access, controls, automation and decision-making — not
     simply because a process has become digital.
   takeaway: Design the process before automating the process.
   detailed: Automating a weak process can make the same problems happen faster. Before configuring a workflow, HR should understand

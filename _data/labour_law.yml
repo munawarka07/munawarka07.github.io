@@ -11,7 +11,7 @@ page:
   eyebrow: UAE LABOUR LAW
   hero_highlight: Explained clearly.
   notice_title: Educational reference.
-  notice_text: This page summarizes common provisions of Federal Decree-Law No. 33
+  notice_text: This page summarises common provisions of Federal Decree-Law No. 33
     of 2021 and its Executive Regulation. Always check the latest official
     legislation and the facts of the individual case before making a legal or HR
     decision.
@@ -139,7 +139,7 @@ sections:
     title: Annual Leave
     reference: Article 29
     content: Employees are entitled to at least 30 days of annual leave for each
-      year of extended service. Additional rules apply for service below one
+      year of service. Additional rules apply for service below one
       year.
     published: true
   - id: maternity-leave

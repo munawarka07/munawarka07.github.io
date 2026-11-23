@@ -3,9 +3,9 @@ hero:
   title: Practical AI for modern HR decisions.
   description: An advanced HR brainstorming workspace for analysis, drafting, learning
     and structured decision support. Built to help HR professionals think more clearly
-    - not replace professional judgement.
+    — not replace professional judgement.
   chips:
-  - Analyze
+  - Analyse
   - Decide
   - Create
   - Develop
@@ -70,7 +70,7 @@ tools:
     number: '05'
     icon: SKL
     title: HR Skill Self-Assessment
-    description: Analyze your own HR knowledge and development areas through practical
+    description: Analyse your own HR knowledge and development areas through practical
       scenarios. For personal learning and self-assessment only.
     tags:
     - Self-assessment
