@@ -3,11 +3,6 @@
 const d=document,w=window,reduce=w.matchMedia('(prefers-reduced-motion: reduce)').matches,fine=w.matchMedia('(pointer:fine)').matches;
 const $=(s,r=d)=>r.querySelector(s), $$=(s,r=d)=>[...r.querySelectorAll(s)];
 const home=!!$('#knowledge');
-// First-session boot: visual only, never blocks repeated navigation.
-if(!reduce && !sessionStorage.getItem('munawarHudBoot')){
-  const boot=d.createElement('div'); boot.className='hud-boot'; boot.innerHTML='<div class="hud-boot-box"><div class="hud-boot-brand">MUNAWAR<span>.IN</span></div><div class="hud-boot-line"><span>KNOWLEDGE</span><b class="hud-ok">READY</b></div><div class="hud-boot-line"><span>TOOLS</span><b class="hud-ok">READY</b></div><div class="hud-boot-line"><span>AI WORKSPACE</span><b class="hud-ok">READY</b></div><div class="hud-boot-line"><span>INTERFACE</span><b class="hud-ok">ONLINE</b></div></div>';
-  d.body.prepend(boot); sessionStorage.setItem('munawarHudBoot','1'); setTimeout(()=>boot.classList.add('out'),850); setTimeout(()=>boot.remove(),1400);
-}
 // Global HUD layers.
 const field=d.createElement('div');field.className='hud-field';field.setAttribute('aria-hidden','true');d.body.append(field);
 const prog=d.createElement('div');prog.className='hud-progress';prog.setAttribute('aria-hidden','true');d.body.append(prog);

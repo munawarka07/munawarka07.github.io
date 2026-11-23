@@ -10,3 +10,5 @@ defaults:
       type: articles
     values:
       layout: article
+exclude:
+  - docs
