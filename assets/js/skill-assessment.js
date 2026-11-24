@@ -294,7 +294,7 @@
     var dom = Object.keys(byD).map(function (k) { return { k: k, n: byD[k].n, c: byD[k].c, p: byD[k].c / byD[k].n }; }).sort(function (a, b) { return b.p - a.p || b.n - a.n; });
     $('skillDomainResults').innerHTML = lvlHtml + dom.map(function (x) { var p = Math.round(x.p * 100); return '<div class="domain-row"><span>' + esc(DOMAINS[x.k]) + '</span><div class="domain-track"><i style="width:' + p + '%"></i></div><b>' + x.c + '/' + x.n + '</b></div>'; }).join('');
     var strong = dom.filter(function (x) { return x.p >= 0.75 && x.n >= 2; }), weak = dom.filter(function (x) { return x.p < 0.6; }).sort(function (a, b) { return a.p - b.p; });
-    $('skillStrengths').innerHTML = (strong.length ? strong : dom.slice(0, 1)).map(function (x) { return '<li><b>' + esc(DOMAINS[x.k]) + '</b> · ' + x.c + ' of ' + x.n + ' correct</li>'; }).join('');
+    $('skillStrengths').innerHTML = strong.length ? strong.map(function (x) { return '<li><b>' + esc(DOMAINS[x.k]) + '</b> · ' + x.c + ' of ' + x.n + ' correct</li>'; }).join('') : '<li>No area reached 75% in this attempt yet. Focus on the priority areas first.</li>';
     $('skillGaps').innerHTML = weak.length ? weak.map(function (x) { return '<li><b>' + esc(DOMAINS[x.k]) + '</b> · ' + x.c + ' of ' + x.n + ' correct</li>'; }).join('') : '<li>No area fell below 60% in this attempt. Try a higher experience level to stretch further.</li>';
     var acts = []; (weak.length ? weak : dom.slice(-2)).slice(0, 3).forEach(function (x) { (ACTIONS[x.k] || []).slice(0, 2).forEach(function (a) { acts.push('<li>' + esc(a) + '</li>'); }); });
     $('skillActions').innerHTML = acts.join('');
@@ -303,10 +303,25 @@
       return '<details class="skill-review-item ' + (ok ? 'ok' : 'bad') + '"><summary><span class="sk-n">' + (i + 1) + '</span><span class="sk-q">' + esc(q.q) + '</span><span class="sk-res">' + (ok ? 'Correct' : q.pick < 0 ? 'Unanswered' : 'Incorrect') + '</span></summary>' +
         '<div class="sk-rv"><p><span>Your answer</span>' + (q.pick < 0 ? '—' : esc(q.opts[q.pick])) + '</p>' + (ok ? '' : '<p><span>Best answer</span>' + esc(q.opts[q.ans]) + '</p>') + '<p class="sk-why"><span>Why</span>' + esc(q.e) + '</p><p class="sk-tag">' + esc(DOMAINS[q.d]) + ' · difficulty ' + q.l + ' of 5</p></div></details>';
     }).join('');
+    var actText = []; (weak.length ? weak : dom.slice(-2)).slice(0, 3).forEach(function (x) { (ACTIONS[x.k] || []).slice(0, 2).forEach(function (a) { actText.push(a); }); });
+    S.R = { profile: { name: S.p.name, level: LEVELS[S.p.level].label, region: REGIONS[S.p.region], focus: FOCUS[S.p.focus].label }, used: fmtTime(S.used), timedOut: !!timedOut, date: new Date(),
+      score: score, correct: correct, total: TOTAL, band: band, demo: demo, demoName: demo ? TIERS[demo] : '', expect: expect, expectName: TIERS[expect], rel: rel,
+      byLevel: [1, 2, 3, 4, 5].map(function (l) { var b = byL[l]; return b ? { n: b.n, c: b.c } : null; }),
+      domains: dom.map(function (x) { return { name: DOMAINS[x.k], c: x.c, n: x.n }; }),
+      strengths: strong.map(function (x) { return { name: DOMAINS[x.k], c: x.c, n: x.n }; }),
+      gaps: weak.map(function (x) { return { name: DOMAINS[x.k], c: x.c, n: x.n }; }), actions: actText,
+      review: S.qs.map(function (q) { return { q: q.q, mine: q.pick < 0 ? null : q.opts[q.pick], best: q.opts[q.ans], ok: q.pick === q.ans, why: q.e, area: DOMAINS[q.d], l: q.l }; }) };
     show('skillResults');
   }
-  function pdf(ev) { if (ev) ev.preventDefault(); [].forEach.call(document.querySelectorAll('#skillReview details'), function (d) { d.open = true; }); document.documentElement.classList.add('sk-printing'); setTimeout(function () { window.print(); }, 60); return false; }
-  window.addEventListener('afterprint', function () { document.documentElement.classList.remove('sk-printing'); });
+  function pdf(ev) {
+    if (ev) ev.preventDefault();
+    if (!S || !S.R || !window.MunawarSkillPDF) return false;
+    var btn = $('skillPdfBtn'), label = btn ? btn.textContent : '';
+    try { if (btn) { btn.disabled = true; btn.textContent = 'Preparing PDF…'; } window.MunawarSkillPDF.download(S.R); }
+    catch (e) { alert('The PDF could not be created on this device. Please try again.'); }
+    finally { if (btn) setTimeout(function () { btn.disabled = false; btn.textContent = label; }, 600); }
+    return false;
+  }
   function retake(ev) { if (ev) ev.preventDefault(); S = null; review(); return false; }
 
   /* ---------- wiring ---------- */
