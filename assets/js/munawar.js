@@ -295,3 +295,12 @@ let ticking=false;function update(){const max=Math.max(1,d.documentElement.scrol
 ;
 /* hero visual: calculator result ticker */
 (function(){var el=document.querySelector('[data-hv-count]');if(!el)return;var vals=[18450,7350.5,26280,4125.75],i=0,red=matchMedia('(prefers-reduced-motion: reduce)').matches;function fmt(v){return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}if(red){el.textContent=fmt(vals[0]);return}function run(){var to=vals[i++%vals.length],from=0,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-p,3);el.textContent=fmt(from+(to-from)*e);if(p<1)requestAnimationFrame(f)})(t0)}run();setInterval(run,3600)})();
+/* hero visuals: pointer depth + scroll hand-off (desktop, motion allowed) */
+(function(){var hv=document.querySelector('main .knowledge-hero .hv');if(!hv||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var hero=hv.closest('section'),fine=matchMedia('(pointer:fine)').matches,tx=0,ty=0,x=0,y=0,sp=0,raf=0;
+function loop(){x+=(tx-x)*.08;y+=(ty-y)*.08;var m=Math.sqrt(x*x+y*y);hv.style.rotate=m>.001?((-y).toFixed(3)+' '+x.toFixed(3)+' 0 '+(m*7).toFixed(2)+'deg'):'none';hv.style.translate='0 '+(-sp*40).toFixed(1)+'px';hv.style.opacity=(1-sp*.9).toFixed(3);if(Math.abs(tx-x)>.001||Math.abs(ty-y)>.001)raf=requestAnimationFrame(loop);else raf=0}
+function kick(){if(!raf)raf=requestAnimationFrame(loop)}
+if(fine)hero.addEventListener('pointermove',function(e){var r=hv.getBoundingClientRect();tx=Math.max(-1,Math.min(1,(e.clientX-r.left-r.width/2)/r.width));ty=Math.max(-1,Math.min(1,(e.clientY-r.top-r.height/2)/r.height));kick()});
+hero.addEventListener('pointerleave',function(){tx=0;ty=0;kick()});
+addEventListener('scroll',function(){var r=hero.getBoundingClientRect();sp=Math.max(0,Math.min(1,-r.top/Math.max(1,r.height)));kick()},{passive:true});
+hv.classList.add('hv-live')})();

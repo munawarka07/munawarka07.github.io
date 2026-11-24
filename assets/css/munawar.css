@@ -794,3 +794,8 @@ html.pt-enter:not(.pt-ready) body>main{animation:pt-safe .01s 1.6s forwards}
 :root body main .knowledge-hero + .section{padding-top:clamp(36px,4vw,64px)!important}
 :root body main .searchbar{grid-template-columns:minmax(0,1fr) auto!important;min-width:0}
 :root body main .searchbar input{min-width:0;width:100%}
+/* readable copy on dark panels */
+:root body main .theme-dark :is(.section-head p,.section-head>p,p.lead){color:rgba(230,240,255,.74)!important}
+/* hero visual depth */
+:root body main .knowledge-hero .knowledge-hero-grid{perspective:1400px}
+.hv.hv-live{transform-style:preserve-3d;will-change:rotate,translate}
