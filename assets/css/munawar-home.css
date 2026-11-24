@@ -602,3 +602,79 @@ main.jhome{overflow-x:clip}
 .jhome .jhero{overflow:hidden}
 .jhome .art .meta,.jhome .art h3,.jhome .art p{font-family:'Tajawal',system-ui,-apple-system,'Segoe UI',sans-serif!important}
 @media(max-width:960px){.jhome .ab-badge.b2{left:auto!important;right:8px!important;max-width:calc(100% - 16px)}}
+
+/* ===================== v6: homepage as a quick, swipeable summary ===================== */
+.jhome .inside{padding:clamp(110px,11vw,160px) 0 clamp(70px,7vw,100px)}
+.jhome .in-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end;margin-bottom:clamp(48px,5vw,72px)}
+.jhome .in-head .t-lead{margin:0!important;padding-bottom:6px}
+.jhome .gt{background:linear-gradient(100deg,#1c5fd4,#3f86ff 45%,#1fb6d6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.jhome .shelf{margin-top:clamp(40px,4vw,60px)}
+.jhome .shelf-h{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:18px}
+.jhome .shelf-h h3{font-size:clamp(22px,1.8vw,26px)!important;font-weight:800!important;letter-spacing:-.02em!important;margin:0}
+.jhome .see{font-size:15px;font-weight:700;color:#1c5fd4;white-space:nowrap;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.jhome .see:hover{transform:translateX(4px)}
+
+/* poster cards */
+.jhome .pc{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;
+  aspect-ratio:4/5;min-height:330px;padding:24px;border-radius:26px;color:#0b1220;text-decoration:none;
+  background:rgba(255,255,255,.6);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);
+  box-shadow:0 0 0 1px rgba(255,255,255,.8) inset,0 26px 60px -36px rgba(11,18,32,.38)}
+.jhome .pc:before{content:"";position:absolute;inset:-30% -30% auto auto;width:85%;aspect-ratio:1;border-radius:50%;z-index:-1;filter:blur(26px);opacity:.75;background:var(--tint,#9cc0ff);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.jhome .pc:hover:before{transform:translate(-14%,14%) scale(1.25)}
+.jhome .t1{--tint:#8fb6ff}.jhome .t2{--tint:#8de6f3}.jhome .t3{--tint:#8fe3c4}.jhome .t4{--tint:#c4b5ff}.jhome .t5{--tint:#ffc2ad}
+.jhome .pc.tdark{background:linear-gradient(160deg,#101a33,#0b1220);color:#fff}.jhome .pc.tdark:before{--tint:#2f74e0;opacity:.6}
+.jhome .pc.tdark em{color:#a9b6cc!important}.jhome .pc.tdark .pc-n{color:#7fdcf0}.jhome .pc.tdark .pc-ic{background:rgba(255,255,255,.1);color:#7fdcf0}.jhome .pc.tdark u{color:#7fdcf0}
+.jhome .pc-n{position:absolute;left:24px;top:22px;font-size:13.5px;font-weight:700;color:#1c5fd4;letter-spacing:.01em}
+.jhome .pc-ic{position:absolute;right:20px;top:18px;min-width:54px;height:54px;padding:0 10px;border-radius:17px;display:grid;place-items:center;
+  font-size:22px;font-weight:800;color:#1c5fd4;background:rgba(255,255,255,.75);box-shadow:0 0 0 1px rgba(255,255,255,.9) inset,0 10px 24px -14px rgba(11,18,32,.4);transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.jhome .pc:hover .pc-ic{transform:rotate(-8deg) scale(1.08)}
+.jhome .pc-b{display:block}
+.jhome .pc-b b{display:block;font-size:22px;font-weight:800;line-height:1.2;letter-spacing:-.02em}
+.jhome .pc-b em{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-top:10px;font-style:normal;font-size:15px;line-height:1.6;color:#3b4658}
+.jhome .pc-b u{display:inline-block;margin-top:16px;text-decoration:none;font-size:15px;font-weight:700;color:#1c5fd4;transition:transform .35s cubic-bezier(.16,1,.3,1)}
+.jhome .pc:hover .pc-b u{transform:translateX(5px)}
+/* image posters (articles, photo) */
+.jhome .art-pc,.jhome .photo-pc{color:#fff;background:#0b1220}
+.jhome .art-pc img,.jhome .photo-pc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.jhome .photo-pc img{object-position:50% 18%}
+.jhome .art-pc:hover img,.jhome .photo-pc:hover img{transform:scale(1.07)}
+.jhome .art-pc:before,.jhome .photo-pc:before{inset:0;width:auto;aspect-ratio:auto;border-radius:0;filter:none;opacity:1;background:linear-gradient(180deg,rgba(11,18,32,.05) 25%,rgba(11,18,32,.86) 88%);transform:none!important}
+.jhome .art-pc .pc-n,.jhome .photo-pc .pc-n{color:#fff;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.2);backdrop-filter:blur(10px);font-size:12.5px}
+.jhome .art-pc em,.jhome .photo-pc em{color:rgba(255,255,255,.82)!important}
+.jhome .art-pc u,.jhome .photo-pc u{color:#fff!important}
+/* first knowledge card is the feature: brand gradient */
+.jhome .shelf-1 .pc:first-child{background:linear-gradient(150deg,#1c5fd4,#3f86ff 55%,#1fb6d6);color:#fff}
+.jhome .shelf-1 .pc:first-child .pc-n,.jhome .shelf-1 .pc:first-child u{color:#fff}
+.jhome .shelf-1 .pc:first-child em{color:rgba(255,255,255,.85)}
+.jhome .shelf-1 .pc:first-child .pc-ic{background:rgba(255,255,255,.2);color:#fff}
+
+/* numbers strip */
+.jhome .nums{padding:clamp(30px,4vw,50px) 0}
+.jhome .nums-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-radius:28px;padding:34px 10px;
+  background:rgba(255,255,255,.55);backdrop-filter:blur(20px) saturate(160%);-webkit-backdrop-filter:blur(20px) saturate(160%);box-shadow:0 0 0 1px rgba(255,255,255,.8) inset,0 30px 70px -44px rgba(11,18,32,.35)}
+.jhome .nums-in div{text-align:center;padding:4px 10px;border-left:1px solid rgba(11,18,32,.07)}
+.jhome .nums-in div:first-child{border-left:0}
+.jhome .nums-in strong{display:block;font-size:clamp(36px,3.8vw,56px);font-weight:800;letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums}
+.jhome .nums-in span{display:block;margin-top:6px;font-size:15px;color:#6b7585}
+/* short contact card */
+.jhome .cta-short{min-height:0}
+.jhome .ghost.light{color:#fff;border-color:rgba(255,255,255,.45)}
+.jhome .ghost.light:hover{border-color:#fff;color:#fff}
+
+@media(max-width:960px){
+  .jhome .in-head{grid-template-columns:1fr;gap:16px}
+  .jhome .nums-in{grid-template-columns:1fr 1fr;row-gap:26px}
+  .jhome .nums-in div:nth-child(3){border-left:0}
+}
+@media(max-width:560px){
+  .jhome .pc{min-height:300px;padding:20px}
+  .jhome .pc-n{left:20px;top:18px}.jhome .pc-ic{right:16px;top:14px;min-width:46px;height:46px;font-size:19px}
+  .jhome .pc-b b{font-size:20px}
+}
+
+/* rows bleed to the right edge of the screen, like a streaming shelf */
+.jhome .shelf .sw{margin-right:calc((100% - 100vw)/2)}
+.jhome .shelf .sw-track{padding-right:max(24px,calc((100vw - 100%)/2))!important}
+.jhome .shelf .sw-next{right:max(14px,calc((100vw - 1180px)/2 - 10px))}
+.jhome .shelf .sw:after{width:90px}
+.jhome .cta-sec{padding-top:clamp(50px,6vw,90px)!important}

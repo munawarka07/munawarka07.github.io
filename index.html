@@ -382,6 +382,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 
 <link rel="stylesheet" href="/assets/css/munawar-ds.css">
 <link rel="stylesheet" href="/assets/css/munawar-v5.css">
+<link rel="stylesheet" href="/assets/css/munawar-swipe.css">
 <link rel="stylesheet" href="/assets/css/munawar-home.css">
 </head>
 <body class="jpage">
@@ -435,112 +436,57 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 
 <div class="jmarq" aria-hidden="true"><div class="jmtrack">{% for item in H.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in H.marquee %}<span>{{ item | escape }}</span>{% endfor %}</div></div>
 
-<!-- ============ PLATFORM ============ -->
-<section class="sec state" id="platform"><div class="wrap">
-  <div class="kick rv">{{ H.platform.label | escape }}</div>
-  <h2 class="t-h2 rv" style="margin-top:12px">{{ H.platform.title | escape }}</h2>
-  <p class="statement" id="statement">{{ H.platform.description | escape }}</p>
-  <div class="acts rv"><a class="pbtn" href="/about/">{{ H.platform.primary_button | escape }} <i>›</i></a><a class="ghost" href="/hr-hub/">{{ H.platform.secondary_button | escape }}</a></div>
-</div></section>
+<!-- ============ WHAT'S INSIDE: swipe rows ============ -->
+<section class="inside" id="inside">
+ <div class="wrap">
+  <div class="in-head rv"><div><div class="kick">What’s inside</div><h2 class="t-h2" style="margin-top:10px">Everything on Munawar.in,<br><span class="gt">at a glance.</span></h2></div><p class="t-lead">Swipe through each shelf and open what you need. Drag with your mouse, swipe on your phone or use the arrows.</p></div>
 
-<!-- ============ CLARITY ============ -->
-<section class="zoom" id="zoom"><div class="pin">
-  <div class="word" id="zword" aria-hidden="true">Clarity.</div>
-  <div class="sub" id="zsub"><p>{{ H.knowledge.title | escape }}</p>
-    <div class="stats"><div><strong data-count="{{ workforce | remove: ',' | remove: '+' }}" data-suf="+">{{ workforce }}</strong><span>Workforce supported</span></div><div><strong data-count="{{ law_count }}">{{ law_count }}</strong><span>Labour-law topics</span></div><div><strong data-count="{{ doc_count }}">{{ doc_count }}</strong><span>HR templates</span></div><div><strong data-count="{{ ai_count }}">{{ ai_count }}</strong><span>AI tools</span></div></div></div>
-</div></section>
-
-<!-- ============ KNOWLEDGE (horizontal rail) ============ -->
-<section class="rail" id="knowledge"><div class="pin">
-  <div class="wrap head"><div><div class="kick">{{ H.knowledge.label | escape }}</div><h2 class="t-h2" style="margin-top:10px">{{ H.knowledge.title | escape }}</h2></div><div><p>{{ H.knowledge.description | escape }}</p><button class="searchpill" type="button" data-open-search>⌕ <span>{{ H.knowledge.search_placeholder | escape }}</span></button></div></div>
-  <div class="track" id="track">{% assign tints = "#3f86ff,#1fb6d6,#20c08a,#7b61ff,#ff8a65,#3f86ff,#ff8a65,#7b61ff" | split: "," %}{% for c in H.knowledge.cards %}{% if c.published %}<a class="card" href="{{ c.link | escape }}"><span class="orb" style="background:{{ tints[forloop.index0] }}"></span><span class="n">{{ c.number | escape }}</span><span class="cico">{{ c.icon | escape }}</span><h3 class="t-h3">{{ c.title | escape }}</h3><p>{{ c.description | escape }}</p><span class="go">Explore ›</span></a>{% endif %}{% endfor %}</div>
-  <div class="railbar"><i id="railbar"></i></div>
-</div></section>
-
-<!-- ============ TOOLS (pinned story) ============ -->
-<section class="story" id="tools"><div class="pin"><div class="wrap grid">
-  <div>
-    <div class="kick">{{ H.tools.label | escape }}</div>
-    <div class="dots" id="dots"><i><b></b></i><i><b></b></i><i><b></b></i></div>
-    <div class="steps">
-      <div class="step on"><h2 class="t-h2">{{ site.data.labour_law.page.hero_line1 | escape }} {{ site.data.labour_law.page.hero_highlight | escape }}</h2><p>{{ site.data.labour_law.page.hero_description | escape }}</p><a href="/hr-hub/uae-labour-law/">UAE Labour Law ›</a></div>
-      <div class="step"><h2 class="t-h2">{{ H.tools.title | escape }}</h2><p>{{ H.tools.description | escape }}</p><a href="/hr-hub/calculator/">{{ H.tools.button | escape }} ›</a></div>
-      <div class="step"><h2 class="t-h2">{{ H.ai.title | escape }}</h2><p>{{ H.ai.description | escape }}</p><a href="/hr-hub/ai-hub/">AI Hub ›</a></div>
-    </div>
+  <div class="shelf shelf-1 rv">
+   <div class="shelf-h"><h3>HR knowledge</h3><a class="see" href="/hr-hub/">See HR Hub ›</a></div>
+   <div class="row" data-swipe aria-label="HR knowledge — swipe for more">{% assign tints = "t1,t2,t3,t4,t5,t1,t5,t4" | split: "," %}{% for c in H.knowledge.cards %}{% if c.published %}<a class="pc {{ tints[forloop.index0] }}" href="{{ c.link | escape }}"><span class="pc-n">{{ c.number | escape }}</span><span class="pc-ic">{{ c.icon | escape }}</span><span class="pc-b"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em><u>Explore ›</u></span></a>{% endif %}{% endfor %}</div>
   </div>
-  <div class="device" aria-hidden="true">
-    <div class="chrome"><i></i><i></i><i></i><span id="url">munawar.in/hr-hub/uae-labour-law</span></div>
-    <div class="scr">
-      <div class="sc on"><small>UAE Labour Law</small><h4>Article-based guidance</h4>
-        {% assign shown = 0 %}{% for s in site.data.labour_law.sections %}{% if s.published and shown < 3 %}<div class="acc{% if shown == 0 %} open{% endif %}"><span><strong>{{ s.reference | escape }} · {{ s.title | escape }}</strong></span>{% if shown == 0 %}<p>{{ s.content | strip_html | truncate: 150 | escape }}</p>{% else %}<em>+</em>{% endif %}</div>{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}</div>
-      <div class="sc"><small>Statutory EOSB estimator</small><h4>End-of-service gratuity</h4>
-        <div class="fields"><div class="fld">Eligible service<b>6 years</b></div><div class="fld">Last basic salary<b>AED 8,000</b></div><div class="fld">First 5 years<b>105 days</b></div><div class="fld">Above 5 years<b>30 days</b></div></div>
-        <div class="result"><div><span>Estimated EOSB</span><strong id="eosb">AED 36,000</strong></div><em>21 days × 5 years<br>+ 30 days × 1 year</em></div></div>
-      <div class="sc chat"><small>AI Hub · HR Policy Assistant</small>
-        <div class="q">Review our probation policy for gaps.</div>
-        <div class="a">Three points to check: probation may not exceed six months; employer termination needs at least 14 days' written notice; the same worker can't be placed on probation twice. Confirm against current MoHRE guidance.</div>
-        <div class="a" style="width:72px"><span class="typing"><i></i><i></i><i></i></span></div></div>
-    </div>
+
+  <div class="shelf rv">
+   <div class="shelf-h"><h3>Tools, templates &amp; AI</h3><a class="see" href="/hr-hub/calculator/">Open calculators ›</a></div>
+   <div class="row" data-swipe aria-label="Tools, templates and AI — swipe for more">
+    {% assign calcdesc = "Gross pay, prorated salary and deductions with the formula shown.|Statutory end-of-service estimate based on service and last basic wage.|Accrued leave, balance and leave salary in a few steps.|More practical HR utilities and quick estimators." | split: "|" %}
+    {% assign calclink = "/hr-hub/calculator/#payroll,/hr-hub/calculator/#eosb,/hr-hub/calculator/#leave,/hr-hub/calculator/" | split: "," %}
+    {% for t in H.tools.items %}<a class="pc t{% cycle '2','3','1','4' %} tool" href="{{ calclink[forloop.index0] }}"><span class="pc-n">Calculator</span><span class="pc-ic">∑</span><span class="pc-b"><b>{{ t | escape }}</b><em>{{ calcdesc[forloop.index0] }}</em><u>Calculate ›</u></span></a>{% endfor %}
+    <a class="pc t5" href="/hr-hub/library/"><span class="pc-n">Document Center</span><span class="pc-ic">{{ doc_count }}</span><span class="pc-b"><b>{{ H.resources.card_title | escape }}</b><em>{{ H.resources.card_description | escape }}</em><u>{{ H.resources.button | escape }} ›</u></span></a>
+    {% for c in H.ai.cards %}{% if c.published %}<a class="pc {% cycle 'tdark','t4','t1','t2' %}" href="{{ c.link | default: '/hr-hub/ai-hub/' | escape }}"><span class="pc-n">AI Hub</span><span class="pc-ic">{{ c.icon | escape }}</span><span class="pc-b"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em><u>{{ c.action | default: "Explore" | escape }} ›</u></span></a>{% endif %}{% endfor %}
+   </div>
   </div>
+
+  <div class="shelf rv">
+   <div class="shelf-h"><h3>Articles, career &amp; about</h3><a class="see" href="/articles/">All articles ›</a></div>
+   <div class="row" data-swipe aria-label="Articles, career and about — swipe for more">
+    {% assign posts = site.articles | sort: "date" | reverse %}{% for p in posts %}<a class="pc art-pc" href="{{ p.url | relative_url }}">{% if p.featured_image %}<img src="{{ p.featured_image | escape }}" alt="" loading="lazy">{% endif %}<span class="pc-n">{{ p.category | escape }} · {{ p.date | date: "%-d %b %Y" }}</span><span class="pc-b"><b>{{ p.title | escape }}</b><em>{{ p.description | escape }}</em><u>Read article ›</u></span></a>{% endfor %}
+    {% for c in H.career.cards %}{% if c.published %}<a class="pc t{% cycle '3','2','4','1' %}" href="/career-hub/"><span class="pc-n">Career Hub</span><span class="pc-ic">{{ c.icon | escape }}</span><span class="pc-b"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em><u>Open ›</u></span></a>{% endif %}{% endfor %}
+    <a class="pc photo-pc" href="/about/"><img src="/assets/images/munawar-profile.webp" alt="" loading="lazy"><span class="pc-n">About</span><span class="pc-b"><b>About Munawar</b><em>{{ site.data.about.page.hero_description_1 | truncate: 120 | escape }}</em><u>Read more ›</u></span></a>
+    <a class="pc t1" href="/experience-education/"><span class="pc-n">About</span><span class="pc-ic">↗</span><span class="pc-b"><b>Experience &amp; Education</b><em>{{ site.data.experience.roles[0].title | escape }} · {{ site.data.experience.roles[0].company | escape }} and the journey before it.</em><u>View journey ›</u></span></a>
+    <a class="pc t4" href="/skills-expertise/"><span class="pc-n">About</span><span class="pc-ic">✦</span><span class="pc-b"><b>Skills &amp; Expertise</b><em>Payroll, HR operations, employee lifecycle, HR technology and compliance.</em><u>See skills ›</u></span></a>
+    <a class="pc t5" href="/projects-awards/"><span class="pc-n">About</span><span class="pc-ic">★</span><span class="pc-b"><b>Projects &amp; Awards</b><em>Selected improvements and professional recognition.</em><u>See projects ›</u></span></a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ============ NUMBERS ============ -->
+<section class="nums"><div class="wrap"><div class="nums-in rv">
+ <div><strong data-count="{{ workforce | remove: ',' | remove: '+' }}" data-suf="+">{{ workforce }}</strong><span>Workforce supported</span></div>
+ <div><strong data-count="{{ law_count }}">{{ law_count }}</strong><span>Labour-law topics</span></div>
+ <div><strong data-count="{{ doc_count }}">{{ doc_count }}</strong><span>HR templates</span></div>
+ <div><strong data-count="{{ ai_count }}">{{ ai_count }}</strong><span>AI tools</span></div>
 </div></div></section>
 
-<!-- ============ AI HUB (bento) ============ -->
-<section class="sec" id="ai-hub"><div class="wrap">
-  <div class="head-c rv"><div class="kick">{{ H.ai.label | escape }}</div><h2 class="t-h2" style="margin-top:10px">{{ H.ai.title | escape }}</h2><p class="t-lead">{{ H.ai.description | escape }}</p></div>
-  <div class="bento">
-    {% assign spans = "s7 t-blue,s5,s5 t-violet,s7 t-dark" | split: "," %}
-    {% assign shown = 0 %}{% for c in H.ai.cards %}{% if c.published %}<a class="tile {{ spans[shown] }} rv" href="{{ c.link | default: '/hr-hub/ai-hub/' | escape }}" style="--d:{{ shown | times: 0.06 }}s"><span class="tico">{{ c.icon | escape }}</span><div class="kick">{{ c.number | escape }}</div><h3 class="t-h3">{{ c.title | escape }}</h3><p>{{ c.description | escape }}</p><span class="go">{{ c.action | default: "Explore" | escape }} <span>→</span></span></a>{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}
-  </div>
-</div></section>
-
-<!-- ============ RESOURCES ============ -->
-<section class="sec docs" id="resources"><div class="wrap dc">
-  <div>
-    <div class="kick rv">{{ H.resources.label | escape }}</div>
-    <h2 class="t-h2 rv" style="margin-top:10px">{{ H.resources.title | escape }}</h2>
-    <p class="t-lead rv" style="--d:.08s;margin-top:22px">{{ H.resources.description | escape }}</p>
-    <div class="dtags rv" style="--d:.14s">{% for l in H.resources.links %}<span>{{ l | escape }}</span>{% endfor %}</div>
-    <div class="acts rv" style="--d:.2s;margin-top:34px"><a class="pbtn" href="/hr-hub/library/">{{ H.resources.button | escape }} <i>›</i></a></div>
-  </div>
-  <div class="fan" id="fan" aria-hidden="true">{% assign shown = 0 %}{% for d in site.data.library.documents %}{% if d.published and shown < 4 %}{% assign shown = shown | plus: 1 %}<div class="doc d{{ shown }}"><i class="tp{% if d.file_type != 'DOCX' %} x{% endif %}">{{ d.file_type | escape }}</i><b>{{ d.title | escape }}</b><span>{{ d.description | escape }}</span><p></p><p></p><p class="s"></p></div>{% endif %}{% endfor %}</div>
-</div></section>
-
-<!-- ============ CAREER ============ -->
-<section class="sec" id="career"><div class="wrap">
-  <div class="split2"><div><div class="kick rv">{{ H.career.label | escape }}</div><h2 class="t-h2 rv" style="margin-top:10px">{{ H.career.title | escape }}</h2></div><p class="t-lead rv">{{ H.career.description | escape }}</p></div>
-  <div class="cgrid">{% for c in H.career.cards %}{% if c.published %}<a class="ccard rv" href="/career-hub/" style="--d:{{ forloop.index0 | times: 0.06 }}s"><span class="cico">{{ c.icon | escape }}</span><span class="n">{{ c.number | escape }}</span><h3 class="t-h3">{{ c.title | escape }}</h3><p>{{ c.description | escape }}</p><span class="go">Open ›</span></a>{% endif %}{% endfor %}</div>
-</div></section>
-
-<!-- ============ ABOUT ============ -->
-<section class="sec about" id="about-preview"><div class="wrap ab">
-  <div class="ab-photo rv"><img src="/assets/images/munawar-profile.webp" alt="Munawar K A" loading="lazy"><div class="ab-badge"><b>{{ workforce }}</b><span>workforce supported</span></div><div class="ab-badge b2"><b>{{ site.data.experience.roles[0].title | escape }}</b><span>{{ site.data.experience.roles[0].company | escape }}</span></div></div>
-  <div>
-    <div class="kick rv">{{ site.data.about.page.eyebrow | escape }}</div>
-    <h2 class="t-h2 rv" style="margin-top:10px">{{ site.data.about.page.hero_title | escape }}</h2>
-    <p class="t-lead rv" style="--d:.08s;margin-top:22px">{{ site.data.about.page.hero_description_1 | escape }}</p>
-    <ol class="tl rv">{% for r in site.data.experience.roles %}{% if r.published %}<li><span class="yr">{{ r.period | escape }}</span><div><b>{{ r.title | escape }}</b><em>{{ r.company | escape }}</em></div></li>{% endif %}{% endfor %}</ol>
-    <div class="acts rv"><a class="pbtn" href="/about/">About Munawar <i>›</i></a><a class="ghost" href="/experience-education/">Experience &amp; education</a></div>
-  </div>
-</div></section>
-
-<!-- ============ ARTICLES ============ -->
-{% assign posts = site.articles | sort: "date" | reverse %}
-{% if posts.size > 0 %}
-<section class="sec arts" id="articles-preview"><div class="wrap">
-  <div class="arts-head"><div><div class="kick rv">Articles</div><h2 class="t-h2 rv" style="margin-top:10px">Practical ideas. Built for UAE HR.</h2></div><a class="ghost rv" href="/articles/">All articles</a></div>
-  <div class="agrid">{% for p in posts limit:2 %}<a class="art rv" href="{{ p.url | relative_url }}" style="--d:{{ forloop.index0 | times: 0.08 }}s"><div class="im">{% if p.featured_image %}<img src="{{ p.featured_image | escape }}" alt="{{ p.title | escape }}" loading="lazy">{% endif %}</div><div class="tx"><span class="meta">{{ p.category | escape }} · {{ p.date | date: "%-d %b %Y" }}</span><h3 class="t-h3">{{ p.title | escape }}</h3><p>{{ p.description | escape }}</p><span class="go">Read article ›</span></div></a>{% endfor %}</div>
-</div></section>
-{% endif %}
-
-<!-- ============ CONTACT ============ -->
+<!-- ============ CONNECT ============ -->
 <section class="sec cta-sec" id="connect"><div class="wrap">
-  <div class="cta-card rv">
+  <div class="cta-card cta-short rv">
     <div class="orbs" aria-hidden="true"><i></i><i></i><i></i><span class="core"><img src="/assets/images/munawar-logo-256.webp" alt=""></span></div>
     <div class="cta-in">
       <div class="kick" style="color:#bfe9ff">{{ site.data.contact.page.cta_label | escape }}</div>
       <h2 class="t-h2" style="margin-top:10px">{{ site.data.contact.page.cta_title | escape }}</h2>
-      <p>{{ site.data.contact.page.cta_description | escape }}</p>
-      <div class="contacts">{% for c in site.data.contact.contacts %}{% if c.published %}{% if c.url != "" %}<a class="ct" href="{{ c.url | escape }}"{% if c.url contains "http" %} target="_blank" rel="noopener"{% endif %}{% if c.aria_label != "" %} aria-label="{{ c.aria_label | escape }}"{% endif %}>{% else %}<div class="ct">{% endif %}<i>{{ c.icon | escape }}</i><div><small>{{ c.label | escape }}</small>{{ c.value | escape }}</div>{% if c.url != "" %}</a>{% else %}</div>{% endif %}{% endif %}{% endfor %}</div>
+      <div class="acts" style="margin-top:34px"><a class="pbtn" href="/contact/">Get in touch <i>›</i></a><a class="ghost light" href="/about/">About Munawar</a></div>
     </div>
   </div>
 </div></section>
@@ -564,8 +510,7 @@ const bh=[21,42,63,84,105,135,165,195,225,255].map(v=>Math.round(v/255*100));$('
 
 /* split hero heading into characters (screen readers use the aria-label) */
 let ci=0;$$('[data-split]').forEach(el=>{const g=el.hasAttribute('data-g');el.setAttribute('aria-hidden','true');el.innerHTML=el.textContent.split(' ').map(w=>`<span class="w">${[...w].map(c=>`<span class="c ${g?'g':''}" style="--i:${ci++}">${c}</span>`).join('')}</span>`).join(' ')});
-/* statement words light up while scrolling */
-const st=$('#statement');st.innerHTML=st.textContent.trim().split(/\s+/).map(x=>`<span class="w">${x}</span>`).join(' ');const sw=$$('#statement .w');
+
 
 /* reveal the hero once the opening animation (if any) has finished */
 function ready(){d.body.classList.add('ready')}
@@ -575,42 +520,24 @@ if(d.documentElement.classList.contains('mi-intro')){const mo=new MutationObserv
 function count(n){const end=+n.dataset.count,suf=n.dataset.suf||'';if(!end||reduce)return;const t0=performance.now();(function f(t){const p=Math.min(1,(t-t0)/1700);n.textContent=Math.round(end*(1-Math.pow(1-p,4))).toLocaleString('en-US')+(p<1?'':suf);if(p<1)requestAnimationFrame(f);else n.textContent=end.toLocaleString('en-US')+suf})(t0)}
 const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;en.target.classList.add('in');io.unobserve(en.target)}),{threshold:.15});
 $$('.rv,.tile').forEach(el=>io.observe(el));
-const fan=$('#fan');if(fan)new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){fan.classList.add('open');o.disconnect()}},{threshold:.4}).observe(fan);
 
 /* hero glass card rotates through the visual cards */
 const slides=$$('#gcard .gslide'),hcn=$('#hcn'),hbar=$('#hbar');let gi=0,gt0=performance.now();
 function showSlide(i){slides.forEach((s,k)=>s.classList.toggle('on',k===i));hcn.textContent=String(i+1).padStart(2,'0')}
 if(slides.length>1&&!reduce)(function cyc(t){const p=(t-gt0)/5200;hbar.style.setProperty('--hp',Math.min(1,p));if(p>=1){gt0=t;gi=(gi+1)%slides.length;showSlide(gi)}requestAnimationFrame(cyc)})(gt0);
 
-/* one scroll engine */
-const prog=$('#scrollProgress'),shot=$('#shot'),ui=$('.ui'),zoom=$('#zoom'),zword=$('#zword'),zsub=$('#zsub');
-const story=$('#tools'),steps=$$('.step'),scs=$$('.sc'),dots=$$('#dots i b'),url=$('#url');
-const rail=$('#knowledge'),track=$('#track'),railbar=$('#railbar');
-const urls=['munawar.in/hr-hub/uae-labour-law','munawar.in/hr-hub/calculator','munawar.in/hr-hub/ai-hub'];
-let stepNow=-1,grown=false,zCounted=false;
-function railShift(){return Math.max(0,track.scrollWidth-innerWidth+Math.max(56,(innerWidth-1180)/2))}
-function sizeRail(){if(mobile()){rail.style.removeProperty('--h');return}rail.style.setProperty('--h',(innerHeight+railShift())+'px')}
-sizeRail();addEventListener('resize',sizeRail);addEventListener('load',sizeRail);
-function setStep(s){if(s===stepNow)return;stepNow=s;steps.forEach((el,i)=>el.classList.toggle('on',i===s||mobile()));scs.forEach((el,i)=>el.classList.toggle('on',i===s));url.textContent=urls[s]}
+/* light scroll engine: progress bar + laptop opening */
+const prog=$('#scrollProgress'),shot=$('#shot'),ui=$('.ui');let grown=false;
 function frame(){
  const y=scrollY,vh=innerHeight,H=d.documentElement.scrollHeight-vh;
  if(prog)prog.style.width=(y/Math.max(1,H)*100)+'%';
  const sr=shot.getBoundingClientRect(),tilt=reduce?0:clamp((sr.top-vh*.05)/(vh*.6));shot.style.setProperty('--tilt',tilt);
  if(!grown&&tilt<.6){grown=true;ui.style.setProperty('--grow',1)}
- for(const el of sw)el.classList.toggle('on',el.getBoundingClientRect().top<vh*.7);
- const zr=zoom.getBoundingClientRect(),zp=clamp(-zr.top/(zr.height-vh));
- const s=reduce?1:3.2-2.6*clamp(zp/.55);zword.style.setProperty('--zo',reduce?1:clamp(zp*4));zsub.style.setProperty('--zsub',reduce?1:clamp((zp-.5)/.25));
- zword.style.transform=`scale(${s}) translateY(${-clamp((zp-.5)/.3)*12}vh)`;
- if(!zCounted&&zp>.55){zCounted=true;zsub.querySelectorAll('[data-count]').forEach(count)}
- if(!mobile()){
-  const r=story.getBoundingClientRect(),p=clamp(-r.top/(r.height-vh));
-  setStep(Math.min(2,Math.floor(p*3)));dots.forEach((b,i)=>b.style.setProperty('--p',clamp(p*3-i)));
-  const rr=rail.getBoundingClientRect(),rp=clamp(-rr.top/(rr.height-vh));
-  track.style.transform=`translate3d(${-rp*railShift()}px,0,0)`;railbar.style.setProperty('--rp',rp);
- }else if(stepNow<0)setStep(1);
  requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
+/* count up the numbers strip */
+const nums=$('.nums-in');if(nums)new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){nums.querySelectorAll('[data-count]').forEach(count);o.disconnect()}},{threshold:.4}).observe(nums);
 }
 </script>
 
