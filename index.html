@@ -383,6 +383,7 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 <link rel="stylesheet" href="/assets/css/munawar-ds.css">
 <link rel="stylesheet" href="/assets/css/munawar-v5.css">
 <link rel="stylesheet" href="/assets/css/munawar-swipe.css">
+<link rel="stylesheet" href="/assets/css/munawar-wide.css">
 <link rel="stylesheet" href="/assets/css/munawar-home.css">
 </head>
 <body class="jpage">
@@ -436,48 +437,75 @@ footer{padding:48px 0;background:#07111f;color:#d9e5f0}.footer-grid{display:grid
 
 <div class="jmarq" aria-hidden="true"><div class="jmtrack">{% for item in H.marquee %}<span>{{ item | escape }}</span>{% endfor %}{% for item in H.marquee %}<span>{{ item | escape }}</span>{% endfor %}</div></div>
 
-<!-- ============ WHAT'S INSIDE: swipe rows ============ -->
-<section class="inside" id="inside">
- <div class="wrap">
-  <div class="in-head rv"><div><div class="kick">What’s inside</div><h2 class="t-h2" style="margin-top:10px">Everything on Munawar.in,<br><span class="gt">at a glance.</span></h2></div><p class="t-lead">Swipe through each shelf and open what you need. Drag with your mouse, swipe on your phone or use the arrows.</p></div>
+<!-- ============ HIGHLIGHTS (right after the intro) ============ -->
+<section class="hl" id="highlights"><div class="wrap"><div class="hl-in rv">
+ <div class="hl-i"><span class="hl-ic">◎</span><strong data-count="{{ workforce | remove: ',' | remove: '+' }}" data-suf="+">{{ workforce }}</strong><span>Workforce supported</span></div>
+ <div class="hl-i"><span class="hl-ic">§</span><strong data-count="{{ law_count }}">{{ law_count }}</strong><span>Labour-law topics explained</span></div>
+ <div class="hl-i"><span class="hl-ic">▤</span><strong data-count="{{ doc_count }}">{{ doc_count }}</strong><span>Ready-to-use HR templates</span></div>
+ <div class="hl-i"><span class="hl-ic">✦</span><strong data-count="{{ ai_count }}">{{ ai_count }}</strong><span>Responsible AI tools</span></div>
+</div></div></section>
 
-  <div class="shelf shelf-1 rv">
-   <div class="shelf-h"><h3>HR knowledge</h3><a class="see" href="/hr-hub/">See HR Hub ›</a></div>
-   <div class="row" data-swipe aria-label="HR knowledge — swipe for more">{% assign tints = "t1,t2,t3,t4,t5,t1,t5,t4" | split: "," %}{% for c in H.knowledge.cards %}{% if c.published %}<a class="pc {{ tints[forloop.index0] }}" href="{{ c.link | escape }}"><span class="pc-n">{{ c.number | escape }}</span><span class="pc-ic">{{ c.icon | escape }}</span><span class="pc-b"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em><u>Explore ›</u></span></a>{% endif %}{% endfor %}</div>
-  </div>
+<!-- ============ SECTION BAR ============ -->
+<nav class="secbar" id="secbar" aria-label="Homepage sections"><div class="wrap"><div class="secbar-in">
+ <a href="#s-hub" class="on">HR Hub</a><a href="#s-tools">Tools</a><a href="#s-ai">AI Hub</a><a href="#s-docs">Documents</a><a href="#s-career">Career</a><a href="#s-about">About</a><a href="#s-articles">Articles</a><i class="secbar-pill" aria-hidden="true"></i>
+</div></div></nav>
 
-  <div class="shelf rv">
-   <div class="shelf-h"><h3>Tools, templates &amp; AI</h3><a class="see" href="/hr-hub/calculator/">Open calculators ›</a></div>
-   <div class="row" data-swipe aria-label="Tools, templates and AI — swipe for more">
-    {% assign calcdesc = "Gross pay, prorated salary and deductions with the formula shown.|Statutory end-of-service estimate based on service and last basic wage.|Accrued leave, balance and leave salary in a few steps.|More practical HR utilities and quick estimators." | split: "|" %}
-    {% assign calclink = "/hr-hub/calculator/#payroll,/hr-hub/calculator/#eosb,/hr-hub/calculator/#leave,/hr-hub/calculator/" | split: "," %}
-    {% for t in H.tools.items %}<a class="pc t{% cycle '2','3','1','4' %} tool" href="{{ calclink[forloop.index0] }}"><span class="pc-n">Calculator</span><span class="pc-ic">∑</span><span class="pc-b"><b>{{ t | escape }}</b><em>{{ calcdesc[forloop.index0] }}</em><u>Calculate ›</u></span></a>{% endfor %}
-    <a class="pc t5" href="/hr-hub/library/"><span class="pc-n">Document Center</span><span class="pc-ic">{{ doc_count }}</span><span class="pc-b"><b>{{ H.resources.card_title | escape }}</b><em>{{ H.resources.card_description | escape }}</em><u>{{ H.resources.button | escape }} ›</u></span></a>
-    {% for c in H.ai.cards %}{% if c.published %}<a class="pc {% cycle 'tdark','t4','t1','t2' %}" href="{{ c.link | default: '/hr-hub/ai-hub/' | escape }}"><span class="pc-n">AI Hub</span><span class="pc-ic">{{ c.icon | escape }}</span><span class="pc-b"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em><u>{{ c.action | default: "Explore" | escape }} ›</u></span></a>{% endif %}{% endfor %}
-   </div>
-  </div>
+<!-- ============ HR HUB ============ -->
+<section class="zs" id="s-hub"><div class="wrap">
+ <div class="zs-head rv"><div><div class="kick">HR Hub</div><h2 class="t-h2">Complex HR topics. <span class="gt">Made practical.</span></h2></div><div class="zs-side"><p>{{ H.knowledge.description | escape }}</p><a class="pbtn sm" href="/hr-hub/">Open HR Hub <i>›</i></a></div></div>
+ <div class="mini g4">{% assign tints = "t1,t2,t3,t4,t5,t1,t5,t4" | split: "," %}{% for c in H.knowledge.cards %}{% if c.published %}<a class="mc {{ tints[forloop.index0] }} rv" style="--d:{{ forloop.index0 | times: 0.05 }}s" href="{{ c.link | escape }}"><span class="mc-ic">{{ c.icon | escape }}</span><span class="mc-t"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em></span><span class="mc-go">›</span></a>{% endif %}{% endfor %}</div>
+</div></section>
 
-  <div class="shelf rv">
-   <div class="shelf-h"><h3>Articles, career &amp; about</h3><a class="see" href="/articles/">All articles ›</a></div>
-   <div class="row" data-swipe aria-label="Articles, career and about — swipe for more">
-    {% assign posts = site.articles | sort: "date" | reverse %}{% for p in posts %}<a class="pc art-pc" href="{{ p.url | relative_url }}">{% if p.featured_image %}<img src="{{ p.featured_image | escape }}" alt="" loading="lazy">{% endif %}<span class="pc-n">{{ p.category | escape }} · {{ p.date | date: "%-d %b %Y" }}</span><span class="pc-b"><b>{{ p.title | escape }}</b><em>{{ p.description | escape }}</em><u>Read article ›</u></span></a>{% endfor %}
-    {% for c in H.career.cards %}{% if c.published %}<a class="pc t{% cycle '3','2','4','1' %}" href="/career-hub/"><span class="pc-n">Career Hub</span><span class="pc-ic">{{ c.icon | escape }}</span><span class="pc-b"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em><u>Open ›</u></span></a>{% endif %}{% endfor %}
-    <a class="pc photo-pc" href="/about/"><img src="/assets/images/munawar-profile.webp" alt="" loading="lazy"><span class="pc-n">About</span><span class="pc-b"><b>About Munawar</b><em>{{ site.data.about.page.hero_description_1 | truncate: 120 | escape }}</em><u>Read more ›</u></span></a>
-    <a class="pc t1" href="/experience-education/"><span class="pc-n">About</span><span class="pc-ic">↗</span><span class="pc-b"><b>Experience &amp; Education</b><em>{{ site.data.experience.roles[0].title | escape }} · {{ site.data.experience.roles[0].company | escape }} and the journey before it.</em><u>View journey ›</u></span></a>
-    <a class="pc t4" href="/skills-expertise/"><span class="pc-n">About</span><span class="pc-ic">✦</span><span class="pc-b"><b>Skills &amp; Expertise</b><em>Payroll, HR operations, employee lifecycle, HR technology and compliance.</em><u>See skills ›</u></span></a>
-    <a class="pc t5" href="/projects-awards/"><span class="pc-n">About</span><span class="pc-ic">★</span><span class="pc-b"><b>Projects &amp; Awards</b><em>Selected improvements and professional recognition.</em><u>See projects ›</u></span></a>
-   </div>
+<!-- ============ TOOLS ============ -->
+<section class="zs zs-alt" id="s-tools"><div class="wrap zs-split">
+ <div class="zs-head rv"><div><div class="kick">HR Calculators</div><h2 class="t-h2">Calculate. <span class="gt">Understand the logic.</span></h2></div><div class="zs-side"><p>{{ H.tools.description | escape }}</p><a class="pbtn sm" href="/hr-hub/calculator/">Open calculators <i>›</i></a></div></div>
+ <div class="mini g2">
+  {% assign calcdesc = "Gross pay, prorated salary and deductions with the formula shown.|Statutory end-of-service estimate from service and last basic wage.|Accrued leave, balance and leave salary in a few steps.|More practical HR utilities and quick estimators." | split: "|" %}{% assign calclink = "/hr-hub/calculator/#payroll,/hr-hub/calculator/#eosb,/hr-hub/calculator/#leave,/hr-hub/calculator/" | split: "," %}
+  {% for t in H.tools.items %}<a class="mc t{% cycle '2','3','1','4' %} rv" style="--d:{{ forloop.index0 | times: 0.06 }}s" href="{{ calclink[forloop.index0] }}"><span class="mc-ic">∑</span><span class="mc-t"><b>{{ t | escape }}</b><em>{{ calcdesc[forloop.index0] }}</em></span><span class="mc-go">›</span></a>{% endfor %}
+ </div>
+</div></section>
+
+<!-- ============ AI HUB ============ -->
+<section class="zs zs-dark" id="s-ai"><div class="wrap">
+ <div class="zs-head rv"><div><div class="kick">AI Hub</div><h2 class="t-h2">{{ H.ai.title | default: "Five tools. One HR thinking space." | escape }}</h2></div><div class="zs-side"><p>{{ H.ai.description | escape }}</p><a class="pbtn sm" href="/hr-hub/ai-hub/">Explore AI Hub <i>›</i></a></div></div>
+ <div class="mini g4">{% for c in H.ai.cards %}{% if c.published %}<a class="mc rv" style="--d:{{ forloop.index0 | times: 0.06 }}s" href="{{ c.link | default: '/hr-hub/ai-hub/' | escape }}"><span class="mc-ic">{{ c.icon | escape }}</span><span class="mc-t"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em></span><span class="mc-go">›</span></a>{% endif %}{% endfor %}</div>
+</div></section>
+
+<!-- ============ DOCUMENTS ============ -->
+<section class="zs" id="s-docs"><div class="wrap zs-split">
+ <div class="zs-head rv"><div><div class="kick">Document Center</div><h2 class="t-h2">{{ H.resources.card_title | escape }}</h2></div><div class="zs-side"><p>{{ H.resources.card_description | escape }}</p><a class="pbtn sm" href="/hr-hub/library/">{{ H.resources.button | escape }} <i>›</i></a></div></div>
+ <div class="docstack rv" aria-hidden="true">
+  {% assign shown = 0 %}{% for doc in site.data.library.documents %}{% if shown < 5 %}<div class="dcard d{{ shown }}"><i>{{ doc.file_type | default: "DOCX" | upcase | escape }}</i><b>{{ doc.title | escape }}</b><span>{{ doc.category | escape }}</span><p></p><p></p><p class="s"></p></div>{% assign shown = shown | plus: 1 %}{% endif %}{% endfor %}
+  <div class="dcount"><strong>{{ doc_count }}</strong><span>editable templates</span></div>
+ </div>
+</div></section>
+
+<!-- ============ CAREER ============ -->
+<section class="zs zs-alt" id="s-career"><div class="wrap">
+ <div class="zs-head rv"><div><div class="kick">Career Hub</div><h2 class="t-h2">{{ H.career.title | default: "Prepare with more clarity." | escape }}</h2></div><div class="zs-side"><p>{{ H.career.description | escape }}</p><a class="pbtn sm" href="/career-hub/">Open Career Hub <i>›</i></a></div></div>
+ <div class="mini g4">{% for c in H.career.cards %}{% if c.published %}<a class="mc t{% cycle '3','2','4','1' %} rv" style="--d:{{ forloop.index0 | times: 0.06 }}s" href="/career-hub/"><span class="mc-ic">{{ c.icon | escape }}</span><span class="mc-t"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em></span><span class="mc-go">›</span></a>{% endif %}{% endfor %}</div>
+</div></section>
+
+<!-- ============ ABOUT ============ -->
+<section class="zs" id="s-about"><div class="wrap ab2">
+ <a class="ab2-photo rv" href="/about/"><img src="/assets/images/munawar-profile.webp" alt="Munawar K A" loading="lazy"><span class="ab2-tag">{{ site.data.experience.roles[0].title | escape }} · {{ site.data.experience.roles[0].company | escape }}</span></a>
+ <div>
+  <div class="zs-head rv" style="display:block;margin-bottom:26px"><div class="kick">About</div><h2 class="t-h2">People operations with <span class="gt">purpose &amp; structure.</span></h2></div>
+  <p class="t-lead rv">{{ site.data.about.page.hero_description_1 | escape }}</p>
+  <div class="mini g2 sm rv" style="margin-top:30px">
+   <a class="mc t1" href="/about/"><span class="mc-ic">◉</span><span class="mc-t"><b>About Munawar</b><em>The person and purpose behind the platform.</em></span><span class="mc-go">›</span></a>
+   <a class="mc t2" href="/experience-education/"><span class="mc-ic">↗</span><span class="mc-t"><b>Experience &amp; Education</b><em>Payroll, HR operations and the journey so far.</em></span><span class="mc-go">›</span></a>
+   <a class="mc t4" href="/skills-expertise/"><span class="mc-ic">✦</span><span class="mc-t"><b>Skills &amp; Expertise</b><em>Payroll, HR operations, technology and compliance.</em></span><span class="mc-go">›</span></a>
+   <a class="mc t5" href="/projects-awards/"><span class="mc-ic">★</span><span class="mc-t"><b>Projects &amp; Awards</b><em>Selected improvements and recognition.</em></span><span class="mc-go">›</span></a>
   </div>
  </div>
-</section>
+</div></section>
 
-<!-- ============ NUMBERS ============ -->
-<section class="nums"><div class="wrap"><div class="nums-in rv">
- <div><strong data-count="{{ workforce | remove: ',' | remove: '+' }}" data-suf="+">{{ workforce }}</strong><span>Workforce supported</span></div>
- <div><strong data-count="{{ law_count }}">{{ law_count }}</strong><span>Labour-law topics</span></div>
- <div><strong data-count="{{ doc_count }}">{{ doc_count }}</strong><span>HR templates</span></div>
- <div><strong data-count="{{ ai_count }}">{{ ai_count }}</strong><span>AI tools</span></div>
-</div></div></section>
+<!-- ============ ARTICLES ============ -->
+<section class="zs zs-alt" id="s-articles"><div class="wrap">
+ <div class="zs-head rv"><div><div class="kick">Articles</div><h2 class="t-h2">Practical ideas. <span class="gt">Built for UAE HR.</span></h2></div><div class="zs-side"><p>Readable, experience-led articles on HR operations, payroll and UAE employment practice.</p><a class="pbtn sm" href="/articles/">All articles <i>›</i></a></div></div>
+ <div class="arts2">{% assign posts = site.articles | sort: "date" | reverse %}{% for p in posts limit: 3 %}<a class="ac rv" style="--d:{{ forloop.index0 | times: 0.08 }}s" href="{{ p.url | relative_url }}"><span class="ac-im">{% if p.featured_image %}<img src="{{ p.featured_image | escape }}" alt="" loading="lazy">{% endif %}</span><span class="ac-tx"><small>{{ p.category | escape }} · {{ p.date | date: "%-d %b %Y" }}</small><b>{{ p.title | escape }}</b><em>{{ p.description | escape }}</em><u>Read article ›</u></span></a>{% endfor %}</div>
+</div></section>
 
 <!-- ============ CONNECT ============ -->
 <section class="sec cta-sec" id="connect"><div class="wrap">
@@ -536,8 +564,18 @@ function frame(){
  requestAnimationFrame(frame);
 }
 requestAnimationFrame(frame);
-/* count up the numbers strip */
-const nums=$('.nums-in');if(nums)new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){nums.querySelectorAll('[data-count]').forEach(count);o.disconnect()}},{threshold:.4}).observe(nums);
+/* highlights count up */
+const hl=$('.hl-in');if(hl)new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){hl.querySelectorAll('[data-count]').forEach(count);o.disconnect()}},{threshold:.4}).observe(hl);
+/* section bar: active section + sliding pill */
+const sb=$('#secbar'),sbl=[...sb.querySelectorAll('a')],pill=sb.querySelector('.secbar-pill'),secs=sbl.map(a=>$(a.getAttribute('href')));
+function movePill(a){pill.style.width=a.offsetWidth+'px';pill.style.transform=`translateX(${a.offsetLeft}px)`;const sc=a.parentElement;if(sc.scrollWidth>sc.clientWidth)sc.scrollTo({left:a.offsetLeft-sc.clientWidth/2+a.offsetWidth/2,behavior:'smooth'})}
+let curA=sbl[0];requestAnimationFrame(()=>movePill(curA));addEventListener('resize',()=>movePill(curA));
+const secIO=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){const a=sbl[secs.indexOf(en.target)];if(a&&a!==curA){curA.classList.remove('on');curA=a;a.classList.add('on');movePill(a)}}})},{rootMargin:'-45% 0px -50% 0px'});secs.forEach(sec=>sec&&secIO.observe(sec));
+sbl.forEach(a=>a.addEventListener('click',e=>{e.preventDefault();const t=$(a.getAttribute('href'));scrollTo({top:t.offsetTop-90,behavior:reduce?'auto':'smooth'})}));
+/* small cards: 3D tilt + spotlight following the pointer */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!reduce){d.querySelectorAll('.mc,.ac,.hl-i').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%');c.style.transform=`perspective(900px) rotateX(${(.5-y)*6}deg) rotateY(${(x-.5)*8}deg) translateY(-4px)`});c.addEventListener('pointerleave',()=>{c.style.transform=''})})}
+/* document stack fans out when seen */
+const ds=$('.docstack');if(ds)new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){ds.classList.add('open');o.disconnect()}},{threshold:.35}).observe(ds);
 }
 </script>
 
