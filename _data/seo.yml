@@ -187,3 +187,11 @@ law_updates:
   og_title: UAE Labour Law Updates 2026 | WPS, Emiratisation & HR Changes
   og_description: What changed in UAE employment and payroll rules, and what HR teams should do about it.
   indexable: true
+ar_home:
+  title: Munawar.in بالعربية | الموارد البشرية وقانون العمل في الإمارات
+  description: دليل عملي لقانون العمل الإماراتي والرواتب والتوطين، مع حاسبات ونماذج وأدوات لفرق الموارد البشرية والموظفين.
+  canonical: https://munawar.in/ar/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  og_title: Munawar.in بالعربية | الموارد البشرية في الإمارات
+  og_description: قانون العمل والرواتب والتوطين وأدوات الموارد البشرية في مكان واحد.
+  indexable: true

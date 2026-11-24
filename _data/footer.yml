@@ -8,6 +8,8 @@ main:
       href: /hr-hub/calculator/
     - label: Resources
       href: /hr-hub/library/
+    - label: Law updates
+      href: /hr-hub/labour-law-updates/
   - heading: Explore
     links:
     - label: Career Hub
@@ -36,6 +38,8 @@ hr:
       href: /hr-hub/payroll-insights/
     - label: Process Guide
       href: /hr-hub/hr-process-guide/
+    - label: Law updates
+      href: /hr-hub/labour-law-updates/
   - heading: Resources
     links:
     - label: Calculators

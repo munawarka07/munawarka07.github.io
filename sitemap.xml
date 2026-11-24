@@ -21,6 +21,7 @@ layout: null
   <url><loc>https://munawar.in/hr-hub/labour-law-updates/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://munawar.in/hr-hub/payroll-insights/</loc><lastmod>2026-09-01</lastmod></url>
   <url><loc>https://munawar.in/hr-hub/uae-labour-law/</loc><lastmod>2026-09-01</lastmod></url>
+  <url><loc>https://munawar.in/ar/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://munawar.in/articles/</loc><lastmod>2026-09-03</lastmod></url>
 {% assign sitemap_articles = site.articles | where_exp: "a", "a.published != false" %}
 {% for article in sitemap_articles %}  <url><loc>https://munawar.in{{ article.url }}</loc><lastmod>{{ article.updated | default: article.date | date: "%Y-%m-%d" }}</lastmod></url>
