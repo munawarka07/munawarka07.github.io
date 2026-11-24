@@ -187,11 +187,57 @@ law_updates:
   og_title: UAE Labour Law Updates 2026 | WPS, Emiratisation & HR Changes
   og_description: What changed in UAE employment and payroll rules, and what HR teams should do about it.
   indexable: true
-ar_home:
+lang_ar:
   title: Munawar.in بالعربية | الموارد البشرية وقانون العمل في الإمارات
   description: دليل عملي لقانون العمل الإماراتي والرواتب والتوطين، مع حاسبات ونماذج وأدوات لفرق الموارد البشرية والموظفين.
   canonical: https://munawar.in/ar/
   robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
-  og_title: Munawar.in بالعربية | الموارد البشرية في الإمارات
-  og_description: قانون العمل والرواتب والتوطين وأدوات الموارد البشرية في مكان واحد.
+  indexable: true
+lang_hi:
+  title: Munawar.in हिन्दी में | यूएई एचआर, श्रम कानून और पेरोल गाइड
+  description: यूएई श्रम कानून, पेरोल और अमीरातीकरण पर व्यावहारिक गाइड, साथ में ग्रेच्युटी और वेतन कैलकुलेटर।
+  canonical: https://munawar.in/hi/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_ur:
+  title: Munawar.in اردو میں | یو اے ای ایچ آر، لیبر قانون اور پے رول رہنما
+  description: یو اے ای کے لیبر قانون، پے رول اور اماراتائزیشن پر عملی رہنما، ساتھ میں گریجویٹی اور تنخواہ کیلکولیٹر۔
+  canonical: https://munawar.in/ur/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_ml:
+  title: Munawar.in മലയാളത്തിൽ | യുഎഇ എച്ച്ആർ, തൊഴിൽ നിയമം, പേറോൾ ഗൈഡ്
+  description: യുഎഇ തൊഴിൽ നിയമം, പേറോൾ, എമിറാറ്റൈസേഷൻ എന്നിവയ്ക്കുള്ള പ്രായോഗിക ഗൈഡ്, ഗ്രാറ്റുവിറ്റി, ശമ്പള കാൽക്കുലേറ്ററുകൾ സഹിതം.
+  canonical: https://munawar.in/ml/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_ta:
+  title: Munawar.in தமிழில் | அமீரக மனிதவளம், தொழிலாளர் சட்டம், சம்பள வழிகாட்டி
+  description: அமீரக தொழிலாளர் சட்டம், சம்பளம் மற்றும் எமிரேடிசேஷனுக்கான நடைமுறை வழிகாட்டி, பணிக்கொடை மற்றும் சம்பளக் கணிப்பான்களுடன்.
+  canonical: https://munawar.in/ta/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_bn:
+  title: Munawar.in বাংলায় | আমিরাতের এইচআর, শ্রম আইন ও পে-রোল গাইড
+  description: আমিরাতের শ্রম আইন, পে-রোল ও আমিরাতিকরণের ব্যবহারিক গাইড, সঙ্গে গ্র্যাচুইটি ও বেতন ক্যালকুলেটর।
+  canonical: https://munawar.in/bn/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_tl:
+  title: Munawar.in sa Filipino | Gabay sa HR, Labour Law at Payroll sa UAE
+  description: Praktikal na gabay sa UAE labour law, payroll at Emiratisation, kasama ang gratuity at salary calculator.
+  canonical: https://munawar.in/tl/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_ne:
+  title: Munawar.in नेपालीमा | यूएई एचआर, श्रम कानुन र पेरोल गाइड
+  description: यूएईको श्रम कानुन, पेरोल र इमिराटाइजेसनबारे व्यावहारिक गाइड, ग्र्याच्युटी र तलब क्याल्कुलेटरसहित।
+  canonical: https://munawar.in/ne/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_zh:
+  title: Munawar.in 中文版 | 阿联酋人力资源、劳动法与薪资指南
+  description: 阿联酋劳动法、薪资与阿联酋化实用指南，附服务终止酬金和工资计算器。
+  canonical: https://munawar.in/zh/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
   indexable: true
