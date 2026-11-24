@@ -2,9 +2,9 @@ page:
   eyebrow: ABOUT THE PERSON BEHIND THE PLATFORM
   hero_title: People operations with purpose & structure.
   hero_description_1: My professional journey has developed across payroll, HR operations, employee services and process improvement
-    - building practical experience around the systems and decisions that keep people operations moving.
+    — building practical experience around the systems and decisions that keep people operations moving.
   hero_description_2: I believe good HR is not only about policy and process. It is about creating clarity, maintaining trust
-    and making complex employee matters easier for people and organizations to navigate.
+    and making complex employee matters easier for people and organisations to navigate.
   profile_chips:
   - HR Operations
   - Payroll
@@ -18,7 +18,7 @@ page:
   - COMPLIANCE
   facts_label: 01 / QUICK FACTS
   facts_title: Experience behind the knowledge.
-  facts_description: A concise view of the areas that have shaped my professional experience and the perspective behind munawar.in.
+  facts_description: A concise view of the areas that have shaped my professional experience and the perspective behind Munawar.in.
   approach_label: 02 / MY APPROACH
   approach_title: HR works best when clarity meets empathy.
   approach_paragraphs:
@@ -60,8 +60,8 @@ principles:
   description: Strong processes should improve both operational control and the employee experience.
   published: true
 - number: '03'
-  title: People at the center
-  description: Policies, systems and payroll ultimately affect real people - that context matters.
+  title: People at the centre
+  description: Policies, systems and payroll ultimately affect real people — that context matters.
   published: true
 mission_vision_values:
 - index: 01 / MISSION

@@ -2,7 +2,7 @@ page:
   eyebrow: EXPERIENCE & EDUCATION
   hero_title_line1: Built through
   hero_title_highlight: progression.
-  hero_description: A career shaped across payroll, HR operations, employee services and team responsibility - supported by
+  hero_description: A career shaped across payroll, HR operations, employee services and team responsibility — supported by
     a finance foundation and continuous practical learning.
   primary_button: Explore Experience
   secondary_button: Education
@@ -28,7 +28,7 @@ page:
   - PROCESS IMPROVEMENT
   progression_label: 01 / PROGRESSION
   progression_title: From numbers to people operations.
-  progression_description: The experience has expanded step by step - from payroll and finance discipline into broader HR
+  progression_description: The experience has expanded step by step — from payroll and finance discipline into broader HR
     operations, employee services and specialist payroll responsibility.
   experience_label: 02 / CAREER TIMELINE
   experience_title: Professional experience.
@@ -61,10 +61,10 @@ progression:
   published: true
 - step: 04 / SPECIALISM
   title: Payroll Specialist
-  description: Combining payroll depth with broader HR operations understanding and process thinking.
+  description: Combined payroll depth with a broader understanding of HR operations and process thinking.
   published: true
 roles:
-- period: 2025 - Present
+- period: 2025 – Present
   company: IMKAN PROPERTIES • ABU DHABI
   title: Payroll Specialist
   summary: Payroll operations, attendance controls, employee pay-related processes, reporting and coordination across HR and
@@ -142,7 +142,7 @@ roles:
   logo: ''
 - period: Earlier Career
   company: SUNDUS GROUP • UAE
-  title: Team Lead - HR Operations
+  title: Team Lead – HR Operations
   summary: Progressed through HR operations and payroll responsibilities into team leadership, supporting large outsourced
     workforces and coordinating HR service delivery.
   tags:
@@ -192,14 +192,14 @@ roles:
   detail_blocks:
   - heading: Payroll Processing
     points:
-    - Processed payroll for large employee populations with focus on accuracy and cut-off discipline.
+    - Processed payroll for large employee populations with a focus on accuracy and cut-off discipline.
     - Supported WPS preparation, employee salary inputs and payment controls.
     - Handled EOSB calculations and payroll-related employee adjustments.
   - heading: Finance & Reconciliation
     points:
     - Prepared reconciliations and reviewed payroll/finance discrepancies.
     - Supported invoicing and client-account reconciliation activities.
-    - Followed receivables and supported cash-flow related coordination.
+    - Followed up on receivables and supported cash-flow-related coordination.
   - heading: Reporting & Controls
     points:
     - Prepared payroll and financial reports for review and follow-up.
@@ -218,11 +218,11 @@ roles:
   published: true
   logo: ''
 education:
-- period: 2017 - 2020
-  qualification: Bachelor of Commerce - Finance
+- period: 2017 – 2020
+  qualification: Bachelor of Commerce – Finance
   institution: University of Calicut
   faculty: Faculty of Commerce and Management Studies
-  description: University of Calicut, Faculty of Commerce and Management Studies. The program provided a foundation across
+  description: University of Calicut, Faculty of Commerce and Management Studies. The programme provided a foundation across
     finance, accounting, commerce and business disciplines.
   details:
   - label: University

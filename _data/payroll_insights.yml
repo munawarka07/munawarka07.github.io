@@ -65,7 +65,7 @@ insights:
   published: true
 - id: payroll-recordkeeping-is-a-control
   category: Records
-  title: Payroll recordkeeping is a control.
+  title: Payroll record-keeping is a control.
   summary: Approvals, payslips, adjustment evidence and payment records need a structured archive.
   takeaway: If a payroll decision is not documented, defending it later becomes difficult.
   detailed: Payroll questions often arise months after a payment. A good archive allows the team to reconstruct what changed,
@@ -103,14 +103,14 @@ insights:
 - id: deductions-need-a-lawful-basis
   category: Deductions
   title: Deductions need a lawful basis.
-  summary: Salary deductions should follow applicable law, policy, documentation and authorization.
+  summary: Salary deductions should follow applicable law, policy, documentation and authorisation.
   takeaway: The UAE Labour Relations Law limits aggregate deductions for multiple lawful reasons to 50% of the wage.
   detailed: Article 25 lists situations in which deductions may be made and places conditions or limits on them. A company
     rule should not be used to override the statutory framework. Payroll should identify the deduction reason, evidence and
     applicable cap before processing.
   actions:
   - Identify the legal/policy basis for every deduction code.
-  - Keep employee authorization where required.
+  - Keep employee authorisation where required.
   - Review individual and aggregate deduction limits.
   - Escalate unusual deductions instead of processing them automatically.
   example: If several recoveries apply in the same month, payroll should not simply deduct every amount requested. The aggregate
@@ -118,13 +118,13 @@ insights:
   links:
   - label: Labour Law
     url: /hr-hub/uae-labour-law/
-  - label: Labour Q&A
+  - label: Labour Law Q&A
     url: /hr-hub/labour-law-qa/
   published: true
 - id: payroll-data-is-sensitive
   category: Confidentiality
   title: Payroll data is sensitive.
-  summary: Salary, bank and personal information should be restricted to authorized roles and shared only through appropriate
+  summary: Salary, bank and personal information should be restricted to authorised roles and shared only through appropriate
     channels.
   takeaway: Treat payroll information as sensitive personal data.
   detailed: Payroll files can contain salary, allowances, bank details, identification data and deductions. Access should
@@ -165,7 +165,7 @@ insights:
   summary: Late attendance corrections and unapproved changes create rework, rushed checks and avoidable employee issues.
   takeaway: Publish cut-offs and make exceptions visible and auditable.
   detailed: A cut-off is a control point, not just an administrative deadline. Stakeholders should know what must be submitted,
-    who approves it, what happens to late items and who can authorize an exception.
+    who approves it, what happens to late items and who can authorise an exception.
   actions:
   - Publish a recurring payroll calendar.
   - Send targeted reminders before cut-off.

@@ -12,7 +12,7 @@ page:
   search_button: Search
   download_label: Download
   notice_title: 'Editable resource library:'
-  notice_text: Download buttons are connected to the actual reusable templates stored in the website /documents folder. Personal
+  notice_text: Each download button links to the actual reusable template stored in the website’s /documents folder. Personal
     sample identifiers have been replaced with reusable placeholders where applicable.
 last_reviewed: '2026-09-02'
 documents:

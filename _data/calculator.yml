@@ -20,7 +20,7 @@ payroll:
   calendar_option: Calendar days in start month
   fixed_option: Fixed 30-day basis
   date_from_label: Date From
-  date_till_label: Date Till
+  date_till_label: Date To
   calculate_button: Calculate
   reset_button: Reset
   result_label: ESTIMATED PRORATED SALARY
