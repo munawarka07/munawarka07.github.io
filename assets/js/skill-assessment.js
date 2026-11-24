@@ -5,7 +5,7 @@
    - Options are shuffled; no feedback is shown until the report */
 (function () {
   'use strict';
-  var BANK_URL = '/assets/data/skill-bank.json?v=2';
+  var BANK_URL = '/assets/data/skill-bank.json?v=3';
   var TOTAL = 20, MAX_PAUSES = 3;
   function setLength(p) { TOTAL = p.length === 'quick' ? 10 : 20; }
   function minutesFor(p) { var m = LEVELS[p.level].minutes; return p.length === 'quick' ? Math.ceil(m / 2) + 1 : m; }
