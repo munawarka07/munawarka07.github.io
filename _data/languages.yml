@@ -6,67 +6,99 @@ list:
   name: English
   english_name: English
   url: /
+  locale: en_AE
+  hreflang: en
 - code: ar
   name: العربية
   english_name: Arabic
   url: /ar/
+  locale: ar_AE
+  hreflang: ar
 - code: hi
   name: हिन्दी
   english_name: Hindi
   url: /hi/
+  locale: hi_IN
+  hreflang: hi
 - code: ur
   name: اردو
   english_name: Urdu
   url: /ur/
+  locale: ur_PK
+  hreflang: ur
 - code: ml
   name: മലയാളം
   english_name: Malayalam
   url: /ml/
+  locale: ml_IN
+  hreflang: ml
 - code: ta
   name: தமிழ்
   english_name: Tamil
   url: /ta/
+  locale: ta_IN
+  hreflang: ta
 - code: bn
   name: বাংলা
   english_name: Bengali
   url: /bn/
+  locale: bn_BD
+  hreflang: bn
 - code: tl
   name: Filipino
   english_name: Filipino
   url: /tl/
+  locale: fil_PH
+  hreflang: fil
 - code: ne
   name: नेपाली
   english_name: Nepali
   url: /ne/
+  locale: ne_NP
+  hreflang: ne
 - code: zh
   name: 中文
   english_name: Chinese
   url: /zh/
+  locale: zh_CN
+  hreflang: zh-Hans
 
 - code: fr
   name: Français
   english_name: French
   url: /fr/
+  locale: fr_FR
+  hreflang: fr
 - code: de
   name: Deutsch
   english_name: German
   url: /de/
+  locale: de_DE
+  hreflang: de
 - code: es
   name: Español
   english_name: Spanish
   url: /es/
+  locale: es_ES
+  hreflang: es
 - code: it
   name: Italiano
   english_name: Italian
   url: /it/
+  locale: it_IT
+  hreflang: it
 - code: pt
   name: Português
   english_name: Portuguese
   url: /pt/
+  locale: pt_BR
+  hreflang: pt
 - code: ru
   name: Русский
   english_name: Russian
   url: /ru/
+  locale: ru_RU
+  hreflang: ru
 pages:
   ar:
     dir: rtl

@@ -4,7 +4,8 @@
 <meta name="robots" content="{% if seo.indexable %}{{ seo.robots | escape }}{% else %}noindex,nofollow{% endif %}">
 <meta name="author" content="Munawar.in">
 <link rel="canonical" href="{{ seo.canonical | escape }}">
-<meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:site_name" content="Munawar.in">
+<meta property="og:type" content="website">{% assign seo_locale = "en_US" %}{% if page.lang_code %}{% for l in site.data.languages.list %}{% if l.code == page.lang_code %}{% assign seo_locale = l.locale %}{% endif %}{% endfor %}{% endif %}<meta property="og:locale" content="{{ seo_locale }}"><meta property="og:site_name" content="Munawar.in">
 <meta property="og:title" content="{{ seo.og_title | default: seo.title | escape }}"><meta property="og:description" content="{{ seo.og_description | default: seo.description | escape }}"><meta property="og:url" content="{{ seo.canonical | escape }}">
 <meta name="twitter:card" content="summary"><meta name="twitter:title" content="{{ seo.og_title | default: seo.title | escape }}"><meta name="twitter:description" content="{{ seo.og_description | default: seo.description | escape }}">
+{% if page.lang_code or page.seo_key == "home" %}{% for l in site.data.languages.list %}<link rel="alternate" hreflang="{{ l.hreflang }}" href="https://munawar.in{{ l.url }}">{% endfor %}<link rel="alternate" hreflang="x-default" href="https://munawar.in/">{% endif %}
 {% endif %}
