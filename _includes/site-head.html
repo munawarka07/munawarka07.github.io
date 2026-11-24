@@ -10,6 +10,6 @@
 <link rel="apple-touch-icon" sizes="180x180" href="{{ s.apple_touch_icon | escape }}">
 <meta name="theme-color" content="{{ s.theme_color | escape }}">
 
-<link rel="stylesheet" href="/assets/css/munawar-base.css">
+<link rel="stylesheet" href="/assets/css/munawar-base.css?v={{ site.time | date: '%Y%m%d%H%M' }}">
 <script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('pt-enter')}catch(e){}</script>
-<script src="/assets/js/munawar.js" defer></script>
+<script src="/assets/js/munawar.js?v={{ site.time | date: '%Y%m%d%H%M' }}" defer></script>
