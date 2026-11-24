@@ -799,3 +799,4 @@ html.pt-enter:not(.pt-ready) body>main{animation:pt-safe .01s 1.6s forwards}
 /* hero visual depth */
 :root body main .knowledge-hero .knowledge-hero-grid{perspective:1400px}
 .hv.hv-live{transform-style:preserve-3d;will-change:rotate,translate}
+@media(min-width:1900px){:root body main .knowledge-hero .hv{height:560px}.hv>:not(.hv-glow){zoom:1.25}}
