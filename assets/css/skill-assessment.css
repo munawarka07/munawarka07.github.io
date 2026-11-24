@@ -1,0 +1,161 @@
+/* HR skill self-assessment: modal, exam and report (AI Hub only) */
+#skillModal{--sk-ink:#0b1b2d;--sk-muted:#5d6f84;--sk-line:rgba(11,27,45,.09);--sk-blue:#1c5fd4;--sk-grad:linear-gradient(120deg,#1c5fd4,#4e8fff 55%,#36c8df);--sk-ok:#12a173;--sk-bad:#d9483b;
+  position:fixed;inset:0;z-index:1300;display:none;align-items:center;justify-content:center;padding:clamp(10px,2.5vw,28px);background:rgba(6,18,38,.52);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2)}
+#skillModal.open{display:flex;animation:skFade .35s ease both}
+@keyframes skFade{from{opacity:0}}
+@keyframes skRise{from{opacity:0;transform:translateY(18px) scale(.985)}}
+#skillModal .ai-box{position:relative;width:min(980px,100%);max-height:min(92vh,980px);overflow:auto;overscroll-behavior:contain;padding:clamp(22px,3.4vw,44px);border-radius:30px;
+  background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(246,250,255,.95));border:1px solid rgba(255,255,255,.9);box-shadow:0 1px 0 #fff inset,0 50px 120px -30px rgba(6,18,38,.55);color:var(--sk-ink);font-family:inherit;animation:skRise .5s cubic-bezier(.16,1,.3,1) both;scrollbar-width:thin}
+#skillModal .sk-close-bar{position:sticky;top:-8px;height:0;z-index:6}
+#skillModal .close-ai{position:absolute;right:-10px;top:-10px;width:42px;height:42px;border-radius:14px;border:1px solid var(--sk-line);background:rgba(255,255,255,.92);color:var(--sk-ink);font-size:22px;line-height:1;cursor:pointer;transition:.2s}
+#skillModal .close-ai:hover{background:#fff;transform:rotate(90deg)}
+#skillModal .skill-assess{display:none}
+#skillModal .skill-assess.open{display:block;animation:skRise .45s cubic-bezier(.16,1,.3,1) both}
+#skillModal .section-label{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:var(--sk-blue);letter-spacing:0;text-transform:none}
+#skillModal h2{font-size:clamp(26px,3vw,38px);line-height:1.12;letter-spacing:-.02em;margin:10px 0 12px;font-weight:800}
+#skillModal p{color:var(--sk-muted);font-size:16px;line-height:1.65;margin:0 0 10px}
+#skillModal .skill-intro{display:grid;gap:22px}
+#skillModal .skill-intro-note{padding:14px 16px;border-radius:16px;background:rgba(28,95,212,.05);border:1px solid rgba(28,95,212,.12);font-size:14.5px}
+#skillModal .skill-intro-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#skillModal .tool-form{display:grid;gap:7px}
+#skillModal .tool-form label{font-size:14px;font-weight:700;color:var(--sk-ink)}
+#skillModal .tool-form input,#skillModal .tool-form select{height:52px;width:100%;padding:0 16px;border-radius:15px;border:1px solid var(--sk-line);background:#fff;font:inherit;font-size:15.5px;color:var(--sk-ink);transition:.2s;appearance:auto}
+#skillModal .tool-form input:focus,#skillModal .tool-form select:focus{outline:0;border-color:rgba(28,95,212,.5);box-shadow:0 0 0 4px rgba(28,95,212,.12)}
+#skillModal .skill-required{display:none;margin-top:4px;padding:11px 14px;border-radius:13px;background:rgba(217,72,59,.08);color:#a63328;font-size:14px;font-weight:600}
+#skillModal .skill-required.show{display:block}
+#skillModal .tool-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin-top:6px}
+#skillModal .skill-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 22px;border-radius:15px;border:1px solid transparent;font:inherit;font-size:15.5px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s,opacity .2s}
+#skillModal .skill-btn.primary{background:var(--sk-grad);color:#fff;box-shadow:0 16px 34px -16px rgba(28,95,212,.75)}
+#skillModal .skill-btn.primary:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 22px 40px -16px rgba(28,95,212,.8)}
+#skillModal .skill-btn.secondary{background:#fff;border-color:var(--sk-line);color:var(--sk-ink)}
+#skillModal .skill-btn.secondary:hover:not(:disabled){border-color:rgba(28,95,212,.35)}
+#skillModal .skill-btn.pdf{background:#0b1b2d;color:#fff}
+#skillModal .skill-btn:disabled{opacity:.42;cursor:not-allowed;box-shadow:none}
+/* instructions */
+#skillModal .skill-instructions-lead{font-size:16.5px}
+#skillModal .skill-profile-card{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}
+#skillModal .skill-profile-card div{padding:13px 15px;border-radius:16px;background:#fff;border:1px solid var(--sk-line)}
+#skillModal .skill-profile-card span{display:block;font-size:12.5px;color:var(--sk-muted);margin-bottom:3px}
+#skillModal .skill-profile-card b{font-size:14.5px}
+#skillModal .skill-instruction-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#skillModal .skill-instruction-card{display:flex;gap:14px;padding:16px;border-radius:18px;background:#fff;border:1px solid var(--sk-line)}
+#skillModal .skill-instruction-card>span{flex:none;width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(28,95,212,.08);color:var(--sk-blue);font-weight:800;font-size:13px}
+#skillModal .skill-instruction-card strong{display:block;font-size:15.5px;margin-bottom:4px}
+#skillModal .skill-instruction-card p{font-size:14.5px;margin:0}
+#skillModal .skill-honour{display:flex;gap:12px;align-items:flex-start;margin:18px 0 6px;padding:15px 16px;border-radius:16px;background:rgba(28,95,212,.05);border:1px solid rgba(28,95,212,.14);font-size:15px;line-height:1.5;cursor:pointer}
+#skillModal .skill-honour input{width:20px;height:20px;margin-top:1px;accent-color:#1c5fd4;flex:none}
+/* exam */
+#skillModal .skill-exam-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 52px 14px 0}
+#skillModal .skill-count{font-size:15px;color:var(--sk-muted)}
+#skillModal .skill-count b{color:var(--sk-ink);font-size:20px}
+#skillModal .skill-timer-wrap{display:flex;align-items:center;gap:8px}
+#skillModal .skill-timer{min-width:86px;text-align:center;padding:9px 14px;border-radius:13px;background:#0b1b2d;color:#fff;font-weight:800;font-size:17px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+#skillModal .skill-timer.low{background:#d9483b;animation:skPulse 1s infinite}
+@keyframes skPulse{50%{box-shadow:0 0 0 8px rgba(217,72,59,.15)}}
+#skillModal .skill-pause-btn{padding:10px 14px;border-radius:13px;border:1px solid var(--sk-line);background:#fff;font:inherit;font-size:14px;font-weight:700;color:var(--sk-ink);cursor:pointer}
+#skillModal .skill-pause-btn:disabled{opacity:.45;cursor:not-allowed}
+#skillModal .skill-progress{height:6px;border-radius:6px;background:rgba(28,95,212,.1);overflow:hidden;margin-bottom:14px}
+#skillModal .skill-progress span{display:block;height:100%;width:0;background:var(--sk-grad);border-radius:6px;transition:width .5s cubic-bezier(.16,1,.3,1)}
+#skillModal .skill-exam-note{font-size:14px;color:var(--sk-muted);margin-bottom:18px}
+#skillModal .sk-qwrap.sk-in{animation:skSlide .45s cubic-bezier(.16,1,.3,1) both}
+@keyframes skSlide{from{opacity:0;transform:translateX(26px)}}
+#skillModal #skillDomain{display:flex;align-items:center;gap:12px}
+#skillModal .sk-diff{display:inline-flex;gap:3px}
+#skillModal .sk-diff i{width:14px;height:5px;border-radius:3px;background:rgba(28,95,212,.15)}
+#skillModal .sk-diff i.on{background:var(--sk-blue)}
+#skillModal .skill-question{font-size:clamp(19px,1.9vw,24px);line-height:1.42;font-weight:700;letter-spacing:-.01em;margin:12px 0 20px;color:var(--sk-ink)}
+#skillModal .skill-options{display:grid;gap:10px}
+#skillModal .skill-option{display:flex;align-items:flex-start;gap:14px;width:100%;text-align:left;padding:16px 18px;border-radius:18px;border:1.5px solid var(--sk-line);background:#fff;font:inherit;font-size:16px;line-height:1.5;color:var(--sk-ink);cursor:pointer;transition:border-color .2s,box-shadow .2s,transform .2s,background .2s}
+#skillModal .skill-option:hover{border-color:rgba(28,95,212,.35);transform:translateY(-1px);box-shadow:0 12px 26px -18px rgba(18,62,120,.45)}
+#skillModal .skill-option.selected{border-color:#1c5fd4;background:linear-gradient(180deg,#f5f9ff,#eef5ff);box-shadow:0 0 0 4px rgba(28,95,212,.12)}
+#skillModal .sk-letter{flex:none;width:30px;height:30px;border-radius:10px;display:grid;place-items:center;background:rgba(11,27,45,.05);font-weight:800;font-size:14px;color:var(--sk-muted);transition:.2s}
+#skillModal .skill-option.selected .sk-letter{background:var(--sk-grad);color:#fff}
+#skillModal .sk-text{padding-top:3px}
+#skillModal .skill-nav{display:flex;justify-content:space-between;gap:10px;margin-top:22px;position:sticky;bottom:-44px;padding:14px 0 6px;background:linear-gradient(180deg,rgba(247,250,255,0),rgba(247,250,255,.96) 35%)}
+/* pause */
+#skillModal .skill-pause-overlay{position:absolute;inset:0;display:none;align-items:center;justify-content:center;padding:20px;border-radius:30px;background:rgba(246,250,255,.86);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);z-index:10}
+#skillModal .skill-pause-overlay.open{display:flex;animation:skFade .3s both}
+#skillModal .skill-pause-card{text-align:center;max-width:420px}
+#skillModal .skill-pause-card h3{font-size:26px;margin:8px 0}
+#skillModal .skill-pause-time{font-size:44px;font-weight:800;margin:10px 0 18px;font-variant-numeric:tabular-nums}
+/* results */
+#skillModal .skill-result-head{padding-right:64px!important;display:grid;grid-template-columns:auto 1fr;grid-template-areas:"label label" "score title" "score sum" "meta meta";column-gap:26px;align-items:center;padding:clamp(20px,3vw,32px);margin:-6px 0 18px;border-radius:24px;background:radial-gradient(120% 140% at 0% 0%,#163f8f,#0b1b2d 60%);color:#fff}
+#skillModal .skill-result-head .section-label{grid-area:label;color:#9fd8ff!important;margin-bottom:14px}
+#skillModal .skill-score{grid-area:score}
+#skillModal #skillResultTitle{grid-area:title;color:#fff;margin:0 0 4px}
+#skillModal #skillResultSummary{grid-area:sum;color:rgba(255,255,255,.75);margin:0}
+#skillModal .skill-meta-row{grid-area:meta;display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+#skillModal .skill-meta-pill{font-size:13px;font-weight:600;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14);color:#e6f1ff}
+#skillModal .sk-ring{--p:0;position:relative;width:132px;height:132px;border-radius:50%;display:grid;place-content:center;text-align:center;background:conic-gradient(#5fe0b8 calc(var(--p)*1%),rgba(255,255,255,.12) 0);animation:skRing 1.4s cubic-bezier(.16,1,.3,1) both}
+#skillModal .sk-ring::before{content:"";position:absolute;inset:10px;border-radius:50%;background:#0f2445}
+#skillModal .sk-ring b,#skillModal .sk-ring small{position:relative}
+#skillModal .sk-ring b{font-size:40px;line-height:1}
+#skillModal .sk-ring small{font-size:13px;opacity:.7}
+@keyframes skRing{from{transform:scale(.6) rotate(-90deg);opacity:0}}
+#skillModal .domain-list{display:grid;gap:10px}
+#skillModal .sk-level{padding:20px;border-radius:20px;background:#fff;border:1px solid var(--sk-line);margin-bottom:8px}
+#skillModal .sk-level h3,#skillModal .result-panel h3,#skillModal .skill-review-heading{font-size:19px;margin:0 0 6px;font-weight:800}
+#skillModal .sk-level p{font-size:15px}
+#skillModal .sk-curve{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px;align-items:end}
+#skillModal .sk-col{text-align:center}
+#skillModal .sk-bar{height:110px;border-radius:12px;background:rgba(28,95,212,.06);display:flex;align-items:flex-end;overflow:hidden}
+#skillModal .sk-bar i{display:block;width:100%;border-radius:12px;background:var(--sk-grad);animation:skGrow 1.2s cubic-bezier(.16,1,.3,1) both;transform-origin:bottom}
+#skillModal .sk-col.exp .sk-bar{outline:2px dashed rgba(28,95,212,.35);outline-offset:3px}
+#skillModal .sk-col b{display:block;font-size:15px;margin-top:8px}
+#skillModal .sk-col span{font-size:12.5px;color:var(--sk-muted)}
+@keyframes skGrow{from{transform:scaleY(0)}}
+#skillModal .domain-row{display:grid;grid-template-columns:minmax(150px,220px) 1fr 52px;gap:14px;align-items:center;padding:12px 16px;border-radius:15px;background:#fff;border:1px solid var(--sk-line);font-size:15px;font-weight:600}
+#skillModal .domain-track{height:9px;border-radius:6px;background:rgba(28,95,212,.08);overflow:hidden}
+#skillModal .domain-track i{display:block;height:100%;border-radius:6px;background:var(--sk-grad);animation:skBar 1.2s cubic-bezier(.16,1,.3,1) both}
+@keyframes skBar{from{width:0}}
+#skillModal .domain-row b{text-align:right}
+#skillModal .result-panels{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+#skillModal .result-panel{padding:20px;border-radius:20px;background:#fff;border:1px solid var(--sk-line)}
+#skillModal .result-panel ul{margin:8px 0 0;padding-left:18px;color:var(--sk-muted);font-size:15px;line-height:1.6}
+#skillModal .result-panel li+li{margin-top:6px}
+#skillModal .result-panel li b{color:var(--sk-ink)}
+#skillModal .skill-review-heading{margin-top:26px}
+#skillModal .skill-review{display:grid;gap:8px;margin-top:10px}
+#skillModal .skill-review-item{border-radius:16px;background:#fff;border:1px solid var(--sk-line);overflow:hidden}
+#skillModal .skill-review-item summary{display:grid;grid-template-columns:30px 1fr auto;gap:12px;align-items:center;padding:13px 16px;cursor:pointer;list-style:none;font-size:15px}
+#skillModal .skill-review-item summary::-webkit-details-marker{display:none}
+#skillModal .sk-n{width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-size:13px;font-weight:800;background:rgba(11,27,45,.05)}
+#skillModal .sk-q{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--sk-ink)}
+#skillModal details[open] .sk-q{white-space:normal}
+#skillModal .sk-res{font-size:13px;font-weight:800;padding:5px 10px;border-radius:999px}
+#skillModal .ok .sk-res{background:rgba(18,161,115,.1);color:var(--sk-ok)}
+#skillModal .bad .sk-res{background:rgba(217,72,59,.1);color:var(--sk-bad)}
+#skillModal .sk-rv{padding:2px 18px 16px 58px;display:grid;gap:8px}
+#skillModal .sk-rv p{margin:0;font-size:15px;color:var(--sk-ink)}
+#skillModal .sk-rv p span{display:block;font-size:12.5px;font-weight:700;color:var(--sk-muted);margin-bottom:2px}
+#skillModal .sk-rv .sk-why{color:var(--sk-muted)}
+#skillModal .sk-rv .sk-tag{font-size:13px;color:var(--sk-blue)}
+#skillModal .skill-disclaimer{margin-top:18px;font-size:13.5px}
+#skillModal .skill-result-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:flex-end;margin-top:14px}
+@media(max-width:760px){
+  #skillModal .close-ai{right:-4px;top:-6px}
+  #skillModal .skill-intro h2,#skillModal .skill-instructions h2{padding-right:44px}
+  #skillModal{padding:0;align-items:stretch}
+  #skillModal .ai-box{max-height:none;height:100%;border-radius:0;padding:20px 16px 24px}
+  #skillModal .skill-intro-grid,#skillModal .skill-instruction-grid,#skillModal .result-panels{grid-template-columns:1fr}
+  #skillModal .skill-profile-card{grid-template-columns:1fr 1fr}
+  #skillModal .skill-exam-toolbar{margin-right:48px;flex-wrap:wrap}
+  #skillModal .skill-result-head{grid-template-columns:1fr;grid-template-areas:"label" "score" "title" "sum" "meta";text-align:left}
+  #skillModal .sk-ring{width:112px;height:112px;margin-bottom:14px}
+  #skillModal .domain-row{grid-template-columns:1fr 46px;row-gap:8px}
+  #skillModal .domain-track{grid-column:1/-1;grid-row:2}
+  #skillModal .sk-rv{padding-left:18px}
+  #skillModal .skill-nav{bottom:-24px}
+  #skillModal .skill-btn{flex:1}
+}
+@media(prefers-reduced-motion:reduce){#skillModal *,#skillModal{animation:none!important;transition:none!important}}
+/* print the report only */
+@media print{
+  html.sk-printing body>*:not(#skillModal){display:none!important}
+  html.sk-printing #skillModal{position:static;display:block;padding:0;background:none;backdrop-filter:none}
+  html.sk-printing #skillModal .ai-box{max-height:none;overflow:visible;box-shadow:none;border:0;padding:0;width:auto}
+  html.sk-printing #skillModal .close-ai,html.sk-printing #skillModal .skill-result-actions,html.sk-printing #skillIntro,html.sk-printing #skillInstructions,html.sk-printing #skillQuestions,html.sk-printing #skillPauseOverlay{display:none!important}
+  html.sk-printing #skillModal .skill-result-head{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  html.sk-printing #skillModal .skill-review-item,html.sk-printing #skillModal .result-panel,html.sk-printing #skillModal .sk-level{break-inside:avoid}
+  html.sk-printing #skillModal *{animation:none!important}
+}
