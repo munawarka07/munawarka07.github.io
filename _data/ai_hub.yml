@@ -1,5 +1,5 @@
 hero:
-  eyebrow: AI HUB
+  eyebrow: AI Hub
   title: Practical AI for modern HR decisions.
   description: An advanced HR brainstorming workspace for analysis, drafting, learning
     and structured decision support. Built to help HR professionals think more clearly
@@ -10,16 +10,16 @@ hero:
   - Create
   - Develop
 workspace:
-  label: 01 / HR INTELLIGENCE WORKSPACE
+  label: 01 / HR intelligence workspace
   title: Five tools. One responsible HR workspace.
   description: Focused AI tools for drafting, reviewing and self-development. AI output
     must be independently reviewed and verified before use.
   categories:
-  - title: CREATE
+  - title: Create
     description: Letters · Job Descriptions
-  - title: REVIEW
+  - title: Review
     description: Policies · Documents
-  - title: SELF-DEVELOP
+  - title: Self-develop
     description: HR Skill Self-Assessment
 tools:
   letter:
@@ -78,7 +78,7 @@ tools:
     - Development roadmap
     button: Start assessment
 thinking:
-  label: 02 / HOW THE HUB THINKS
+  label: 02 / How the hub thinks
   title: AI output should support judgement.
   description: Brainstorming is separated from verified rules. Current law, policy
     and company-specific facts still need validation before action.

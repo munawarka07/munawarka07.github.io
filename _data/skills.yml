@@ -1,5 +1,5 @@
 page:
-  eyebrow: SKILLS & EXPERTISE
+  eyebrow: Skills & Expertise
   hero_title_line1: Capability built
   hero_title_highlight: practice.
   hero_description: A practical skill set spanning HR operations, payroll, employee lifecycle management, HR technology, analytics,
@@ -15,25 +15,25 @@ page:
   - HRIS & Data
   - Compliance
   marquee:
-  - PAYROLL
-  - HR OPERATIONS
-  - EMPLOYEE RELATIONS
+  - Payroll
+  - HR operations
+  - Employee relations
   - HRIS
-  - EXCEL
-  - UAE LABOUR LAW
-  - ANALYTICS
-  - PROCESS IMPROVEMENT
-  capabilities_label: 01 / CORE CAPABILITIES
+  - Excel
+  - UAE Labour Law
+  - Analytics
+  - Process improvement
+  capabilities_label: 01 / Core capabilities
   capabilities_title: What I work with every day.
   capabilities_description: Technical knowledge, operational execution and practical judgement developed in real HR environments.
-  systems_label: 02 / SYSTEMS & TECHNOLOGY
+  systems_label: 02 / Systems & technology
   systems_title: Tools behind the work.
   systems_description: HR platforms, enterprise systems and analytical tools supporting people operations and payroll.
-  cta_label: 03 / NEXT
+  cta_label: 03 / Next
   cta_title: Capability matters most when it creates impact.
   cta_description: Continue to Projects & Awards to explore selected improvements, achievements and professional recognition.
 capabilities:
-- index: 01 / PAYROLL
+- index: 01 / Payroll
   title: Payroll & Compensation
   summary: End-to-end payroll understanding with a focus on accuracy, controls and employee pay.
   tags:
@@ -46,7 +46,7 @@ capabilities:
   - Salary adjustments, deductions, allowances and final settlement inputs.
   - EOSB, leave salary and payroll-related employee queries.
   published: true
-- index: 02 / OPERATIONS
+- index: 02 / Operations
   title: HR Operations
   summary: Employee lifecycle administration from onboarding through separation.
   tags:
@@ -59,7 +59,7 @@ capabilities:
   - Leave, attendance, records and HR service delivery.
   - Visa, work-permit and employee lifecycle coordination.
   published: true
-- index: 03 / PEOPLE
+- index: 03 / People
   title: Employee Relations
   summary: Employee support and issue resolution grounded in process, communication and fairness.
   tags:
@@ -72,7 +72,7 @@ capabilities:
   - Policy communication and practical employee guidance.
   - Confidential handling of employee and payroll matters.
   published: true
-- index: 04 / COMPLIANCE
+- index: 04 / Compliance
   title: UAE HR Compliance
   summary: Working knowledge across UAE employment requirements and operational controls.
   tags:
@@ -85,7 +85,7 @@ capabilities:
   - Pension-related coordination and employee administration.
   - HR audit support and compliance checks.
   published: true
-- index: 05 / DATA
+- index: 05 / Data
   title: Excel & HR Analytics
   summary: Advanced spreadsheet capability for payroll, attendance, budgeting and reporting.
   tags:
@@ -98,7 +98,7 @@ capabilities:
   - Pivot tables, slicers and management dashboards.
   - Payroll, attendance and workforce-budget analysis.
   published: true
-- index: 06 / IMPROVEMENT
+- index: 06 / Improvement
   title: Process Improvement
   summary: Turning repetitive HR work into clearer, faster and more controlled workflows.
   tags:
@@ -120,11 +120,11 @@ systems:
   name: Darwinbox
   description: Modern HR technology platform
   published: true
-- category: HR / PAYROLL
+- category: HR / Payroll
   name: Ramco
   description: HR and payroll system exposure
   published: true
-- category: ENTERPRISE
+- category: Enterprise
   name: SAP
   description: Enterprise-system exposure
   published: true
@@ -132,15 +132,15 @@ systems:
   name: Oracle HRMS
   description: HR information management
   published: true
-- category: PROCUREMENT
+- category: Procurement
   name: Ariba
   description: Enterprise workflow exposure
   published: true
-- category: FINANCE
+- category: Finance
   name: QuickBooks
   description: Finance & accounting workflows
   published: true
-- category: ANALYTICS
+- category: Analytics
   name: Microsoft Excel
   description: Advanced formulas, pivots & dashboards
   published: true

@@ -1,5 +1,5 @@
 hero:
-  eyebrow: CAREER HUB
+  eyebrow: Career Hub
   title: Learn. Prepare. Grow.
   description: Practical resources for job search preparation, HR learning and professional development.
   chips:
@@ -8,7 +8,7 @@ hero:
   - Learning
   - Growth
 opportunities:
-  label: 01 / LIVE OPPORTUNITIES
+  label: 01 / Live opportunities
   title: Find the right next move.
   description: Approved opportunities submitted to Munawar.in appear here automatically. Search by role, location, department
     or work arrangement.
@@ -19,7 +19,7 @@ opportunities:
   loading_text: Connecting to opportunities...
   empty_text: Live opportunities will appear here once the Google Sheet connection is enabled.
 tools:
-  label: 02 / CAREER TOOLS
+  label: 02 / Career tools
   title: Prepare with more clarity.
   description: Four practical tools in one place. Use AI only when you need personalised guidance — otherwise each card gives
     you the core principle at a glance.

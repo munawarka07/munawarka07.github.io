@@ -1,5 +1,5 @@
 page:
-  eyebrow: ABOUT THE PERSON BEHIND THE PLATFORM
+  eyebrow: About the person behind the platform
   hero_title: People operations with purpose & structure.
   hero_description_1: My professional journey has developed across payroll, HR operations, employee services and process improvement
     — building practical experience around the systems and decisions that keep people operations moving.
@@ -10,23 +10,23 @@ page:
   - Payroll
   - People & Process
   marquee:
-  - HR OPERATIONS
-  - PAYROLL
-  - EMPLOYEE SERVICES
-  - PROCESS IMPROVEMENT
-  - PEOPLE FIRST
-  - COMPLIANCE
-  facts_label: 01 / QUICK FACTS
+  - HR operations
+  - Payroll
+  - Employee services
+  - Process improvement
+  - People first
+  - Compliance
+  facts_label: 01 / Quick facts
   facts_title: Experience behind the knowledge.
   facts_description: A concise view of the areas that have shaped my professional experience and the perspective behind Munawar.in.
-  approach_label: 02 / MY APPROACH
+  approach_label: 02 / My approach
   approach_title: HR works best when clarity meets empathy.
   approach_paragraphs:
   - My career began with payroll and finance foundations and gradually expanded into broader HR operations, employee lifecycle
     management, compliance, employee relations and people services.
   - 'That journey shaped how I approach HR today: understand the detail, simplify the process, communicate clearly and keep
     the human experience in view.'
-  mvv_label: 03 / MISSION • VISION • VALUES
+  mvv_label: 03 / Mission • Vision • Values
   mvv_title: What guides the platform.
   mvv_description: Munawar.in exists to make practical HR knowledge clearer, more useful and easier to access.
 facts:
@@ -64,19 +64,19 @@ principles:
   description: Policies, systems and payroll ultimately affect real people — that context matters.
   published: true
 mission_vision_values:
-- index: 01 / MISSION
+- index: 01 / Mission
   title: Make complexity clearer.
   description: Share practical HR knowledge and experience in a way that helps people understand processes, make informed
     decisions and approach HR with greater confidence.
   values: []
   published: true
-- index: 02 / VISION
+- index: 02 / Vision
   title: Make HR knowledge more accessible.
   description: Build a practical knowledge platform where professionals can explore people operations, payroll and workplace
     topics through clear information, useful tools and real-world context.
   values: []
   published: true
-- index: 03 / VALUES
+- index: 03 / Values
   title: How the work should feel.
   description: ''
   values:

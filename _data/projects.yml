@@ -1,25 +1,25 @@
 page:
-  eyebrow: PROJECTS & AWARDS
+  eyebrow: Projects & Awards
   hero_title: Work measured by impact.
   hero_description: Selected improvements, high-volume HR initiatives and professional recognition that reflect a practical
     approach to people operations, payroll and process improvement.
   marquee:
-  - PROCESS IMPROVEMENT
-  - HR OPERATIONS
-  - WORKFORCE SCALE
-  - COMPLIANCE
-  - EMPLOYEE EXPERIENCE
-  - RECOGNITION
-  projects_label: 01 / SELECTED PROJECTS
+  - Process improvement
+  - HR operations
+  - Workforce scale
+  - Compliance
+  - Employee experience
+  - Recognition
+  projects_label: 01 / Selected projects
   projects_title: Turning work into improvement.
   projects_description: Each project is shown as a concise overview first. Open any card to explore the operational detail
     behind it.
-  recognition_label: 02 / PROFESSIONAL RECOGNITION
+  recognition_label: 02 / Professional recognition
   recognition_title: Recognition built on relationships.
   recognition_description: Professional recognition matters most when it reflects consistency, service quality and the trust
     created through day-to-day work.
 projects:
-- number: 01 / WORKFORCE OPERATIONS
+- number: 01 / Workforce operations
   title: Large-Scale HR Operations
   summary: Supporting high-volume HR operations across large outsourced employee populations with structured service delivery.
   metrics:
@@ -30,7 +30,7 @@ projects:
   - Supported onboarding, employee services, payroll-related processes and offboarding activities.
   - Helped maintain service quality, documentation control and issue resolution at scale.
   published: true
-- number: 02 / ONBOARDING
+- number: 02 / Onboarding
   title: Onboarding Process Improvement
   summary: Improving the employee onboarding journey through clearer coordination, documentation and process structure.
   metrics:
@@ -41,7 +41,7 @@ projects:
   - Improved coordination and tracking across employee documentation and joining activities.
   - Contributed to an estimated 30% improvement in onboarding turnaround.
   published: true
-- number: 03 / OFFBOARDING
+- number: 03 / Offboarding
   title: Offboarding Workflow Improvement
   summary: Strengthening separation workflows, clearance tracking and final documentation through better process structure.
   metrics:
@@ -52,7 +52,7 @@ projects:
   - Reduced repetitive manual follow-up through structured process controls.
   - Contributed to an approximately 40% improvement in offboarding workflow efficiency.
   published: true
-- number: 04 / HR CONTROLS
+- number: 04 / HR controls
   title: HR Audit & Compliance Support
   summary: Building disciplined HR documentation, validation and audit-readiness across operational processes.
   metrics:
@@ -63,7 +63,7 @@ projects:
   - Maintained focus on completeness, accuracy and traceability of HR documentation.
   - Contributed to strong audit outcomes through recurring compliance checks.
   published: true
-- number: 05 / WORKFORCE MOBILITY
+- number: 05 / Workforce mobility
   title: Visa & Security Operations
   summary: Coordinating employee visa, security and workforce documentation requirements in high-volume operations.
   metrics:
@@ -74,7 +74,7 @@ projects:
   - Coordinated required records and stakeholder follow-up for timely processing.
   - Maintained structured controls around sensitive employee documentation.
   published: true
-- number: 06 / MASS HIRING
+- number: 06 / Mass hiring
   title: High-Volume Recruitment Support
   summary: Supporting mass hiring and workforce mobilisation while maintaining documentation and onboarding controls.
   metrics:
@@ -86,18 +86,18 @@ projects:
   - Helped align recruitment delivery with downstream HR operations and deployment requirements.
   published: true
 award:
-  label: CUSTOMER RAPPORT RECOGNITION
+  label: Customer rapport recognition
   title: Building trust through service.
   description: Recognised at Sundus for strong customer rapport — reflecting effective stakeholder communication, dependable
     HR service delivery and the ability to maintain productive professional relationships.
   facts:
-  - label: ORGANISATION
+  - label: Organisation
     value: Sundus Group
-  - label: RECOGNITION
+  - label: Recognition
     value: Customer Rapport
-  - label: YEAR
+  - label: Year
     value: '2025'
-  - label: FOCUS
+  - label: Focus
     value: Service & Relationships
   image: ''
   image_alt: ''

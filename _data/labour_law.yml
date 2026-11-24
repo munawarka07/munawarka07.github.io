@@ -8,7 +8,7 @@ page:
   connected_description: Legal guidance is more useful when it connects to
     questions, processes and calculators.
   search_button: Search
-  eyebrow: UAE LABOUR LAW
+  eyebrow: UAE Labour Law
   hero_highlight: Explained clearly.
   notice_title: Educational reference.
   notice_text: This page summarises common provisions of Federal Decree-Law No. 33
@@ -18,7 +18,7 @@ page:
   hero_description: Employment rules, explained in a practical and searchable format.
   hero_line1: Employment rules.
   search_placeholder: Search probation, annual leave, overtime, EOSB...
-  connected_label: 02 / CONNECTED KNOWLEDGE
+  connected_label: 02 / Connected knowledge
 last_reviewed: 2026-09-02
 sections:
   - published: true
