@@ -93,6 +93,10 @@ related:
   title: Start with the task you need to solve
   description: The HR Hub connects UAE employment guidance with practical payroll tools, templates and process resources.
   cards:
+  - title: Labour Law Updates
+    description: What changed in UAE employment, payroll and Emiratisation rules, with practical next steps.
+    link: /hr-hub/labour-law-updates/
+    published: true
   - title: UAE Labour Law
     description: Practical reference for employment rules and common HR topics.
     link: /hr-hub/uae-labour-law/

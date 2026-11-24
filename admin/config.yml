@@ -1495,6 +1495,35 @@ collections:
         name: published
         widget: boolean
         default: true
+  - name: law_updates
+    label: Labour Law Updates
+    file: _data/law_updates.yml
+    fields:
+    - label: Page header
+      name: page
+      widget: object
+      fields:
+      - {label: Label, name: label, widget: string}
+      - {label: Title, name: title, widget: string}
+      - {label: Highlighted word in title, name: title_highlight, widget: string}
+      - {label: Description, name: description, widget: text}
+      - {label: Filter chips (must match update tags), name: hero_chips, widget: list}
+      - {label: Last reviewed, name: reviewed, widget: string}
+      - {label: Disclaimer, name: disclaimer, widget: text}
+    - label: Updates (newest first)
+      name: updates
+      widget: list
+      fields:
+      - {label: Date (YYYY-MM-DD), name: date, widget: string}
+      - {label: Date as shown, name: display_date, widget: string}
+      - {label: Tag, name: tag, widget: string}
+      - {label: Title, name: title, widget: string}
+      - {label: Summary, name: summary, widget: text}
+      - {label: Key points, name: points, widget: list, required: false}
+      - {label: What HR should do, name: action, widget: text}
+      - {label: Source name, name: source_name, widget: string}
+      - {label: Source link, name: source_url, widget: string}
+      - {label: Related article link, name: article, widget: string, required: false}
   - name: hr_process_guide
     label: HR Process Guide
     file: _data/hr_process_guide.yml

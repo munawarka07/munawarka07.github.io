@@ -1,0 +1,96 @@
+page:
+  label: Labour law updates
+  title: What changed, and what to do about it
+  title_highlight: changed
+  description: A dated log of UAE employment and payroll changes that affect HR teams, with a plain summary and practical next steps for each.
+  hero_chips:
+    - Payroll & WPS
+    - Emiratisation
+    - Public holidays
+    - Labour law
+  reviewed: 24 November 2026
+  disclaimer: Summaries are general guidance based on official announcements and published legal summaries. Always confirm details with MOHRE or qualified advice before acting.
+updates:
+  - date: 2026-11-13
+    display_date: 13 November 2026
+    tag: Public holidays
+    title: Eid Al Etihad holiday confirmed for the private sector
+    summary: MOHRE confirmed a two-day paid holiday for private-sector employees on Wednesday 2 and Thursday 3 December 2026 for the 55th Eid Al Etihad.
+    points:
+      - Applies to private-sector establishments across the UAE.
+      - Federal government employees have a separate, longer break.
+    action: Update attendance calendars and plan cover. Staff asked to work on the holiday are owed a substitute day off or extra pay under the Labour Law.
+    source_name: Gulf News
+    source_url: https://gulfnews.com/uae/government/uae-announces-two-day-paid-eid-al-etihad-holiday-for-private-sector-1.500746419
+  - date: 2026-07-01
+    display_date: 1 July 2026
+    tag: Emiratisation
+    title: Contributions applied for missed first-half 2026 Emiratisation targets
+    summary: Companies with 50 or more employees needed a 1% increase in skilled Emirati employees by 30 June 2026. From 1 July, MOHRE began applying contributions for unfilled positions.
+    points:
+      - AED 10,000 per month (AED 120,000 a year) for each required position not filled.
+      - Another 1% is required in the second half, for 2% across 2026.
+      - Fake Emiratisation is treated as a serious violation.
+    action: Confirm your second-half number now and finish hiring well before 31 December. Use the Nafis platform to reach Emirati jobseekers.
+    source_name: WAM
+    source_url: https://www.wam.ae/en/article/c0uqocb-mohre-reaffirms-june-deadline-for-private-sector
+    article: /articles/emiratisation-targets-2026-deadlines-contributions-planning/
+  - date: 2026-06-01
+    display_date: 1 June 2026
+    tag: Payroll & WPS
+    title: New Wage Protection System rules take effect
+    summary: Ministerial Resolution No. 340 of 2026 replaced the 2022 WPS resolution for MOHRE-licensed private-sector employers.
+    points:
+      - Wages for each month are due on the first day of the following month.
+      - At least 85% of wages due must be paid on time to be compliant (previously 80%).
+      - Warnings from day 2 after the due date; new work permits can be suspended from day 5.
+      - New joiners are covered from their first month; the 30-day exemption has gone.
+    action: Move your payroll calendar so salaries land by the 1st and keep WPS deductions within 15% of monthly wages.
+    source_name: Morgan Lewis
+    source_url: https://www.morganlewis.com/pubs/2026/05/uae-introduces-new-wage-protection-system-resolution-effective-1-june-2026
+    article: /articles/uae-wps-rules-june-2026-what-payroll-teams-must-change/
+  - date: 2026-01-01
+    display_date: 1 January 2026
+    tag: Emiratisation
+    title: Contributions applied for missed 2025 Emiratisation targets
+    summary: MOHRE applied financial contributions from 1 January 2026 to companies that did not reach their required 2025 Emiratisation rates by 31 December 2025.
+    points:
+      - Applies to companies subject to Emiratisation policies.
+    action: Review whether your 2025 position was finalised and keep evidence of registrations and contributions for each Emirati hire.
+    source_name: MOHRE
+    source_url: https://mohre.gov.ae/en/media-center/news/27/10/2025/mohre-urges-private-sector-companies-subject-to-emiratisation-policies-to-ensure-2025-targets-are
+  - date: 2025-10-01
+    display_date: October 2025
+    tag: Labour law
+    title: MOHRE publishes guidance on leave types and work models
+    summary: MOHRE issued guidance setting out seven categories of leave for private-sector employees and described six approved employment models.
+    points:
+      - A useful reference when reviewing leave policies and contract types.
+    action: Compare your leave policy and contract templates against the published guidance.
+    source_name: DLA Piper
+    source_url: https://knowledge.dlapiper.com/dlapiperknowledge/globalemploymentlatestdevelopments/2025/MOHRE-releases-new-employment-guide
+  - date: 2024-08-31
+    display_date: 31 August 2024
+    tag: Labour law
+    title: Labour claims changed by Federal Decree-Law No. 9 of 2024
+    summary: Amendments to the Labour Law changed how disputes are raised and enforced.
+    points:
+      - Two years from the end of employment to bring a claim (previously one year).
+      - MOHRE decisions on claims up to AED 50,000 are enforceable like court orders.
+      - Challenges go to the Court of First Instance.
+      - MOHRE can order wages to continue for up to two months during a dispute.
+      - Higher fines for certain violations.
+    action: Keep exit records for at least the two-year window and avoid stopping wages during disputes without advice.
+    source_name: Simmons & Simmons
+    source_url: https://www.simmons-simmons.com/en/publications/cm0mihiiy008uvc5khrvmjvdz/key-amendments-to-the-uae-labour-law-federal-decree-law-no-9-of-2024
+    article: /articles/uae-labour-claims-2024-amendments-time-limits-mohre/
+  - date: 2023-01-01
+    display_date: 2023
+    tag: Labour law
+    title: Three-year cap on fixed-term contracts removed
+    summary: An amendment kept the requirement for fixed-term private-sector contracts but removed the maximum three-year duration.
+    points:
+      - Contracts still need a defined term; renewals and extensions remain possible.
+    action: Check that contract templates no longer refer to a three-year maximum.
+    source_name: Arabian Business
+    source_url: https://www.arabianbusiness.com/gcc/uae/uae-employment-law-three-year-limit-on-private-sector-contracts-scrapped
