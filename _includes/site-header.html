@@ -17,12 +17,14 @@
 <a href="/hr-hub/emirati-insights/"><strong>Emirati Insights</strong><small>Emiratisation and UAE workforce topics</small></a>
 <a href="/hr-hub/calculator/"><strong>Calculator</strong><small>Payroll, EOSB and leave calculators</small></a>
 <a href="/hr-hub/library/"><strong>Library</strong><small>Letters, forms and practical resources</small></a>
+<a href="/hr-hub/labour-law-updates/"><strong>Law Updates</strong><small>Latest changes and what to do</small></a>
 </div></div>
 <a class="nav-top nav-simple" data-section="ai" href="/hr-hub/ai-hub/">AI Hub</a>
 <a class="nav-top nav-simple" data-section="career" href="/career-hub/">Career Hub</a>
 <a class="nav-top nav-simple" data-section="articles" href="/articles/">Articles</a>
 <a class="nav-top nav-simple" data-section="contact" href="/contact/">Contact</a>
 </nav>
+{% if page.seo_key == "ar_home" %}<a class="lang-switch" href="/" lang="en" hreflang="en" aria-label="Switch to English">English</a>{% else %}<a class="lang-switch" href="/ar/" lang="ar" hreflang="ar" aria-label="التبديل إلى العربية">العربية</a>{% endif %}
 {% if site.data.site_settings.search.enabled %}<button aria-label="{{ site.data.site_settings.search.aria_label | escape }}" class="global-search-trigger" id="globalSearchTrigger" title="{{ site.data.site_settings.search.button_title | escape }}" type="button">⌕</button>{% endif %}
 {% if page.nav_cta_text and page.nav_cta_href %}<a class="nav-cta" href="{{ page.nav_cta_href | escape }}">{{ page.nav_cta_text | escape }}</a>{% elsif page.collection == 'articles' %}<a class="nav-cta" href="/hr-hub/">Explore Knowledge ↗</a>{% endif %}<button class="menu-btn" aria-label="Open navigation" aria-expanded="false">Menu</button></div></header>
 {% include site-announcement.html %}
