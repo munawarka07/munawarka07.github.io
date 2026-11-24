@@ -134,9 +134,9 @@ footer_variant: hr
 </head><body>
 <div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div>
 {% include site-header.html %}<main>
-<section class="knowledge-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid">
+<section class="knowledge-hero hv-page-calc"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid">
 <div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.calculator.hero.eyebrow | escape }}</div><h1>{{ site.data.calculator.hero.title | escape }}</h1><p>{{ site.data.calculator.hero.description | escape }}</p></div>
-<div class="hero-panel reveal-right">{% for item in site.data.calculator.hero.chips %}<span class="panel-chip {% cycle 'pc-a', 'pc-b', 'pc-c', 'pc-d' %}">{{ item | escape }}</span>{% endfor %}</div>
+{% include hero-visual.html kind="calc" chips=site.data.calculator.hero.chips %}
 </div></section>
 <section class="section theme-blue"><div class="shell">
 <div class="info-note"><strong>{{ site.data.calculator.notice.title | escape }}</strong> {{ site.data.calculator.notice.text | escape }}</div><div style="height:22px"></div>

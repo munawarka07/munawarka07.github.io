@@ -162,9 +162,9 @@ footer_variant: hr
 </head><body>
 <div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div>
 {% include site-header.html %}<main>
-<section class="knowledge-hero"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid">
+<section class="knowledge-hero hv-page-career"><div class="aurora a1"></div><div class="aurora a2"></div><div class="shell knowledge-hero-grid">
 <div class="reveal"><div class="eyebrow"><span class="dot"></span> {{ site.data.career_hub.hero.eyebrow | escape }}</div><h1>{{ site.data.career_hub.hero.title | escape }}</h1><p>{{ site.data.career_hub.hero.description | escape }}</p></div>
-<div class="hero-panel reveal-right">{% for item in site.data.career_hub.hero.chips %}<span class="panel-chip {% cycle 'pc-a', 'pc-b', 'pc-c', 'pc-d' %}">{{ item | escape }}</span>{% endfor %}</div>
+{% include hero-visual.html kind="career" chips=site.data.career_hub.hero.chips %}
 </div></section>
 <section class="section theme-blue" id="opportunities"><div class="shell">
 <div class="section-head reveal-left"><div><div class="section-label">{{ site.data.career_hub.opportunities.label | escape }}</div><h2>{{ site.data.career_hub.opportunities.title | escape }}</h2></div><p>{{ site.data.career_hub.opportunities.description | escape }}</p></div>

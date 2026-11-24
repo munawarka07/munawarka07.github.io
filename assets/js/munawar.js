@@ -60,7 +60,7 @@ let ticking=false;function update(){const max=Math.max(1,d.documentElement.scrol
   }
 
   // orbit sweep inside inner-page hero panels (decorative)
-  $$('main .knowledge-hero .hero-panel').forEach(function(p){if(!p.querySelector('.ds-orbit')){var o=d.createElement('span');o.className='ds-orbit';o.setAttribute('aria-hidden','true');p.appendChild(o);}});
+
 
   /* ---------- 2. Unify reveals ---------- */
   // Older per-page reveal classes are converted to one system so every page moves the same way.
@@ -293,3 +293,5 @@ let ticking=false;function update(){const max=Math.max(1,d.documentElement.scrol
   }
 })();
 ;
+/* hero visual: calculator result ticker */
+(function(){var el=document.querySelector('[data-hv-count]');if(!el)return;var vals=[18450,7350.5,26280,4125.75],i=0,red=matchMedia('(prefers-reduced-motion: reduce)').matches;function fmt(v){return v.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}if(red){el.textContent=fmt(vals[0]);return}function run(){var to=vals[i++%vals.length],from=0,t0=performance.now();(function f(t){var p=Math.min(1,(t-t0)/1400),e=1-Math.pow(1-p,3);el.textContent=fmt(from+(to-from)*e);if(p<1)requestAnimationFrame(f)})(t0)}run();setInterval(run,3600)})();
