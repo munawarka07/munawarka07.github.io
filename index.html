@@ -123,7 +123,7 @@ footer_variant: main
 <section class="zs zs-alt" id="s-tools"><div class="wrap zs-split">
  <div class="zs-head rv"><div><div class="kick">HR Calculators</div><h2 class="t-h2">Calculate. <span class="gt">Understand the logic.</span></h2></div><div class="zs-side"><p>{{ H.tools.description | escape }}</p><a class="pbtn sm" href="/hr-hub/calculator/">Open calculators <i>›</i></a></div></div>
  <div class="mini g2">
-  {% assign calcdesc = "Gross pay, prorated salary and deductions with the formula shown.|Statutory end-of-service estimate from service and last basic wage.|Accrued leave, balance and leave salary in a few steps.|More practical HR utilities and quick estimators." | split: "|" %}{% assign calclink = "/hr-hub/calculator/#payroll,/hr-hub/calculator/#eosb,/hr-hub/calculator/#leave,/hr-hub/calculator/" | split: "," %}
+  {% assign calcdesc = "Gross pay, prorated salary and deductions with the formula shown.|Statutory end-of-service estimate from service and last basic wage.|Accrued leave, balance and leave salary in a few steps.|More practical HR utilities and quick estimators." | split: "|" %}{% assign calclink = "/hr-hub/calculator/#pay,/hr-hub/calculator/#eosb,/hr-hub/calculator/#leave,/hr-hub/calculator/" | split: "," %}
   {% for t in H.tools.items %}<a class="mc t{% cycle '2','3','1','4' %} rv" style="--d:{{ forloop.index0 | times: 0.06 }}s" href="{{ calclink[forloop.index0] }}"><span class="mc-ic">∑</span><span class="mc-t"><b>{{ t | escape }}</b><em>{{ calcdesc[forloop.index0] }}</em></span><span class="mc-go">›</span></a>{% endfor %}
  </div>
 </div></section>

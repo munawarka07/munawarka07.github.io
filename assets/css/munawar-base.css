@@ -13,7 +13,7 @@
 @media(prefers-reduced-motion:reduce){.k-card,.role-card,.project-card,.guide-stage,.purpose-card,.article-card,.article-card-new{transform:none!important;transition:none!important}}
 #knowledge .section-art{background-image:url('/assets/images/home-sections/knowledge.webp');opacity:.16}
 #tools .section-art{background-image:url('/assets/images/home-sections/tools.webp');opacity:.15;filter:saturate(.85) brightness(1.08)}
-#resources .section-art{background-image:url('/assets/images/home-sections/resources.webp');opacity:.17}
+
 #career .section-art{background-image:url('/assets/images/home-sections/career.jpg');opacity:.13;filter:saturate(.8) brightness(1.05)}
 #platform .section-art{background-image:url('/assets/images/home-sections/platform.jpg');opacity:.18}
 #ai-hub .section-art{background-image:url('/assets/images/home-sections/ai.jpg');opacity:.16}
