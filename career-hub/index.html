@@ -186,7 +186,7 @@ const glow=document.getElementById('cursorGlow');if(glow&&matchMedia('(pointer:f
 document.querySelectorAll('.acc-head').forEach(b=>b.onclick=()=>{const body=b.nextElementSibling;const open=body.classList.toggle('open');b.querySelector('b').textContent=open?'×':'+'});
 function showToast(t){const x=document.getElementById('toast');if(!x)return;x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)}
 
-// ===== CAREER HUB CONFIGURATION =====
+// ===== Career Hub CONFIGURATION =====
 // After deploying the Google Apps Script web app, paste its /exec URL below.
 const CAREER_API_URL='https://script.google.com/macros/s/AKfycbxaXl1o0-qRQFyUeq7AVnuIWLHnaWE_X-wCfZ9Dt0VA7C3sb9KLalY5q-53I788Hj2yMA/exec';
 let allJobs=[];

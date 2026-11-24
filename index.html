@@ -119,7 +119,7 @@ footer_variant: main
  <div class="mini g4">{% assign tints = "t1,t2,t3,t4,t5,t1,t5,t4" | split: "," %}{% for c in H.knowledge.cards %}{% if c.published %}<a class="mc {{ tints[forloop.index0] }} rv" style="--d:{{ forloop.index0 | times: 0.05 }}s" href="{{ c.link | escape }}"><span class="mc-ic">{{ c.icon | escape }}</span><span class="mc-t"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em></span><span class="mc-go">›</span></a>{% endif %}{% endfor %}</div>
 </div></section>
 
-<!-- ============ TOOLS ============ -->
+<!-- ============ Tools ============ -->
 <section class="zs zs-alt" id="s-tools"><div class="wrap zs-split">
  <div class="zs-head rv"><div><div class="kick">HR Calculators</div><h2 class="t-h2">Calculate. <span class="gt">Understand the logic.</span></h2></div><div class="zs-side"><p>{{ H.tools.description | escape }}</p><a class="pbtn sm" href="/hr-hub/calculator/">Open calculators <i>›</i></a></div></div>
  <div class="mini g2">
@@ -128,7 +128,7 @@ footer_variant: main
  </div>
 </div></section>
 
-<!-- ============ AI HUB ============ -->
+<!-- ============ AI Hub ============ -->
 <section class="zs zs-dark" id="s-ai"><div class="wrap">
  <div class="zs-head rv"><div><div class="kick">AI Hub</div><h2 class="t-h2">{{ H.ai.title | default: "Five tools. One HR thinking space." | escape }}</h2></div><div class="zs-side"><p>{{ H.ai.description | escape }}</p><a class="pbtn sm" href="/hr-hub/ai-hub/">Explore AI Hub <i>›</i></a></div></div>
  <div class="mini g4">{% for c in H.ai.cards %}{% if c.published %}<a class="mc rv" style="--d:{{ forloop.index0 | times: 0.06 }}s" href="{{ c.link | default: '/hr-hub/ai-hub/' | escape }}"><span class="mc-ic">{{ c.icon | escape }}</span><span class="mc-t"><b>{{ c.title | escape }}</b><em>{{ c.description | escape }}</em></span><span class="mc-go">›</span></a>{% endif %}{% endfor %}</div>

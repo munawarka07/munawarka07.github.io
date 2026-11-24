@@ -678,3 +678,6 @@ html.pt-enter:not(.pt-ready) body>main{animation:pt-safe .01s 1.6s forwards}
 @media(min-width:1700px){
   :root body main :is(.knowledge-grid,.article-grid,.doc-grid,.insight-expand-grid,.project-grid,.aihub-grid):not(.sw-track){grid-template-columns:repeat(auto-fill,minmax(300px,1fr))!important}
 }
+
+/* sentence case everywhere */
+:root body *{text-transform:none!important}

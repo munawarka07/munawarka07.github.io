@@ -1,5 +1,5 @@
 hero:
-  eyebrow: HR • PAYROLL • PEOPLE • PROCESS
+  eyebrow: HR • Payroll • People • Process
   title_line1: People-First.
   title_highlight: Process-Driven.
   description: Practical HR knowledge, tools and insights designed to make the UAE workplace easier to understand and everyday
@@ -29,14 +29,14 @@ hero:
     title: Calculators
     subtitle: Useful HR tools
 marquee:
-- UAE LABOUR LAW
-- PAYROLL
+- UAE Labour Law
+- Payroll
 - WPS
 - EOSB
-- HR OPERATIONS
-- EMIRATISATION
-- PEOPLE SERVICES
-- HR TOOLS
+- HR operations
+- Emiratisation
+- People services
+- HR tools
 knowledge:
   label: 01 / KNOWLEDGE
   title: Complex HR topics. Made practical.
@@ -102,7 +102,7 @@ knowledge:
     search: calculator payroll eosb leave tool
     published: true
 tools:
-  label: 02 / TOOLS
+  label: 02 / Tools
   title: From information to answers.
   description: Use practical calculators designed around common HR and payroll tasks. Each tool explains the logic behind
     the result instead of only showing a number.
@@ -120,7 +120,7 @@ resources:
   label: 03 / RESOURCES
   title: Useful things you can actually take away.
   description: Reference material, templates and practical resources designed to support everyday HR work and learning.
-  card_label: DOCUMENT CENTER
+  card_label: Document center
   card_title: HR templates, letters & checklists.
   card_description: A structured document library for commonly used HR communication, onboarding, payroll, employee relations
     and offboarding materials.
@@ -156,7 +156,7 @@ career:
     description: Grow through better systems knowledge, analytics, labour law and HR operations capability.
     published: true
 platform:
-  label: 05 / THE PLATFORM
+  label: 05 / The platform
   title: Built from experience. Created for sharing.
   description: Munawar.in brings together practical HR knowledge, structured resources and useful tools in one place — helping
     professionals understand complex topics and apply them with greater clarity.
@@ -175,14 +175,14 @@ ai:
     link: /hr-hub/ai-hub/
     action: Explore AI Hub
     published: true
-  - icon: LAW
+  - icon: Law
     number: '02'
     title: AI UAE Labour Law
     description: Structure UAE employment scenarios into facts, verification points, HR checks and practical next steps.
     link: /hr-hub/ai-hub/?tool=law
     action: Open Tool
     published: true
-  - icon: PAY
+  - icon: Pay
     number: '03'
     title: AI Payroll Assistant
     description: Review payroll scenarios, assumptions, AED calculations, controls, risks and reconciliation points.
