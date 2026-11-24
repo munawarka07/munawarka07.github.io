@@ -1,0 +1,172 @@
+---
+seo_key: lang_pt
+lang_code: pt
+brand_href: /
+nav_cta_text: Explore Knowledge
+nav_cta_href: /hr-hub/
+footer_variant: hr
+---
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+{% include site-seo.html %}
+{% include site-head.html %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
+.hero h1{font-size:clamp(58px,7.4vw,104px);line-height:.92;letter-spacing:-.065em;margin:24px 0 22px;font-weight:800}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-metrics{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+.knowledge-hero{min-height:72vh;display:flex;align-items:center;padding:135px 0 75px;position:relative;overflow:hidden}
+.knowledge-hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.knowledge-hero h1{font-size:clamp(52px,6.7vw,90px);line-height:.94;letter-spacing:-.06em;margin:22px 0;font-weight:800}
+.knowledge-hero h1 span{background:linear-gradient(90deg,var(--blue),#4b87ef,var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.knowledge-hero p{font-size:18px;line-height:1.75;color:var(--muted);max-width:720px}
+.hero-panel{min-height:420px;position:relative;overflow:visible;padding:28px;border:0;border-radius:0;background:transparent;box-shadow:none}
+.hero-panel::before{content:"";position:absolute;inset:2% 0 0 8%;background-image:linear-gradient(rgba(28,95,212,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(28,95,212,.035) 1px,transparent 1px);background-size:38px 38px;mask-image:radial-gradient(circle at 42% 48%,#000,transparent 72%);pointer-events:none}
+.hero-panel .big{position:relative;z-index:2;font-size:54px;font-weight:800;color:var(--blue);margin-top:105px;letter-spacing:-.05em}
+.hero-panel p{position:relative;z-index:2;font-size:13px;max-width:320px}
+.panel-chip{position:absolute;padding:10px 12px;border-radius:13px;background:rgba(255,255,255,.82);border:1px solid var(--line);box-shadow:var(--shadow);font-size:10px;font-weight:800;animation:float 5s ease-in-out infinite}
+.pc-a{top:34px;left:30px}
+.pc-b{top:122px;left:112px;animation-delay:-1.5s}
+.pc-c{bottom:126px;left:44px;animation-delay:-3s}
+.pc-d{bottom:38px;left:138px;animation-delay:-4s}
+.searchbar{display:grid;grid-template-columns:1fr auto;gap:10px;padding:13px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.searchbar input{height:46px;border:0;outline:0;padding:0 10px;color:var(--text);background:transparent}
+.searchbar button{border:0;border-radius:12px;padding:0 18px;background:var(--navy);color:white;font-weight:800;cursor:pointer}
+.filter-row{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 24px}
+.filter-btn{padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:#53677c;font-size:11px;font-weight:700;cursor:pointer;transition:.2s}
+.filter-btn.active,.filter-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.info-note{padding:16px 18px;border:1px solid rgba(28,95,212,.13);border-radius:16px;background:rgba(28,95,212,.04);color:#5d7187;font-size:12px;line-height:1.7}
+.source-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.source-link{padding:9px 11px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--blue);font-size:10px;font-weight:800}
+.article-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.article-card{padding:21px;border-radius:21px;border:1px solid var(--line);background:rgba(255,255,255,.78);position:relative;transition:.3s}
+.article-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.article-card .cat{font-size:9px;color:var(--blue);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.article-card h3{font-size:20px;line-height:1.15;margin:38px 0 9px}
+.article-card p{font-size:12.5px;color:var(--muted);line-height:1.65}
+.article-card .takeaway{margin-top:14px;padding:11px 12px;border-left:2px solid var(--cyan);background:rgba(54,200,223,.05);font-size:11px;color:#476278;line-height:1.55}
+.hidden{display:none!important}
+.accordion{display:grid;gap:10px}
+.acc-item{border:1px solid var(--line);border-radius:17px;background:#fff;overflow:hidden}
+.acc-head{width:100%;border:0;background:transparent;text-align:left;padding:16px 18px;display:flex;justify-content:space-between;gap:15px;cursor:pointer;color:var(--text);font-weight:700}
+.acc-head small{display:block;color:var(--blue);font-size:9px;margin-bottom:5px;letter-spacing:.08em}
+.acc-head b{color:var(--blue);font-size:18px}
+.acc-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s ease}
+.acc-body.open{grid-template-rows:1fr}
+.acc-inner{overflow:hidden}
+.acc-content{padding:0 18px 18px;color:var(--muted);font-size:13px;line-height:1.7}
+.guide-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.guide-card{padding:22px;border-radius:22px;border:1px solid var(--line);background:#fff;transition:.3s}
+.guide-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.guide-card .stepno{font-size:10px;color:var(--blue);font-weight:800}
+.guide-card h3{font-size:23px;margin:45px 0 10px}
+.guide-card p,.guide-card li{font-size:12px;color:var(--muted);line-height:1.65}
+.guide-card ul{padding-left:18px}
+.dark-list .guide-card{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)}
+.dark-list .guide-card h3{color:#fff}
+.dark-list .guide-card p,.dark-list .guide-card li{color:#bdd0e3}
+.dark-list .guide-card .stepno{color:#7de6f1}
+.doc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+.doc-card{padding:19px;border-radius:20px;border:1px solid var(--line);background:#fff;position:relative;min-height:190px;transition:.25s}
+.doc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.doc-card .type{font-size:9px;color:var(--blue);font-weight:800}
+.doc-card h3{font-size:17px;margin:35px 0 8px}
+.doc-card p{font-size:11px;color:var(--muted);line-height:1.5}
+.doc-card button{position:absolute;bottom:15px;left:18px;border:0;background:transparent;color:var(--blue);font-weight:800;font-size:11px;cursor:pointer}
+.calc-shell{display:grid;grid-template-columns:220px 1fr;gap:18px}
+.calc-nav{display:grid;gap:8px;align-content:start}
+.calc-tab{padding:14px;border-radius:14px;border:1px solid var(--line);background:#fff;text-align:left;font-weight:700;color:#5c7085;cursor:pointer}
+.calc-tab.active{background:var(--navy);color:#fff}
+.calc-panel{display:none}
+.calc-panel.active{display:block}
+.calc-card{padding:25px;border-radius:24px;border:1px solid var(--line);background:#fff;box-shadow:0 20px 60px rgba(23,77,140,.08)}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px}
+.form-group label{display:block;font-size:11px;font-weight:700;margin-bottom:6px;color:#50657a}
+.form-group input,.form-group select{width:100%;height:46px;border:1px solid var(--line);border-radius:11px;padding:0 12px;background:#fbfdff;color:var(--text);outline:none}
+.result-card{margin-top:18px;padding:20px;border-radius:18px;background:linear-gradient(135deg,#edf8ff,#f6fbff);border:1px solid rgba(28,95,212,.10)}
+.result-card strong{display:block;font-size:34px;color:var(--blue);margin:8px 0}
+.breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.breakdown div{padding:10px;border-radius:11px;background:#fff;border:1px solid var(--line)}
+.breakdown small{display:block;font-size:9px;color:var(--muted)}
+.breakdown b{font-size:12px}
+.toast{position:fixed;right:20px;bottom:20px;z-index:1000;padding:12px 15px;border-radius:13px;background:var(--navy);color:#fff;box-shadow:var(--shadow);font-size:12px;opacity:0;transform:translateY(12px);pointer-events:none;transition:.3s}
+.toast.show{opacity:1;transform:none}
+@media(max-width:1000px){.knowledge-hero-grid{grid-template-columns:1fr}.article-grid,.doc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.article-grid,.guide-grid,.doc-grid{grid-template-columns:1fr}.calc-shell{grid-template-columns:1fr}.calc-nav{grid-template-columns:repeat(3,1fr)}.form-grid,.breakdown{grid-template-columns:1fr}.knowledge-hero{padding-top:110px}.hero-panel{min-height:340px}}
+@media(max-width:900px){
+  .hero-panel{min-height:260px;padding:10px 0 0}
+  .hero-panel::before{inset:0 4%;background-size:34px 34px}
+  .pc-a{top:24px;left:8%}
+  .pc-b{top:78px;left:42%}
+  .pc-c{bottom:70px;left:14%}
+  .pc-d{bottom:20px;left:48%}
+}
+</style>
+<style>
+main.lang-main,main.lang-main *{font-family:var(--lang-font),Tajawal,system-ui,sans-serif}
+main.lang-main .hv *{font-family:var(--lang-font),Tajawal,system-ui,sans-serif}
+main.lang-main .knowledge-hero h1{letter-spacing:0!important;line-height:1.25!important;font-size:clamp(36px,4.8vw,68px)!important}main.lang-main h2{letter-spacing:0!important;line-height:1.3!important}main[lang=ur] h1,main[lang=ur] h2{line-height:1.7!important}main[lang=ur] p,main[lang=ur] span{line-height:2!important}
+main.lang-main .section-label{letter-spacing:0}
+.ar-note{font-size:15px!important;color:var(--blue)!important;font-weight:700}
+.ar-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.ar-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.ar-card{display:flex;flex-direction:column;gap:10px;padding:24px;border-radius:24px;background:rgba(255,255,255,.86);border:1px solid rgba(255,255,255,.95);box-shadow:0 24px 60px -36px rgba(18,62,120,.4);color:var(--navy);transition:transform .35s,box-shadow .35s}
+.ar-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px -34px rgba(18,62,120,.5)}
+.ar-ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(28,95,212,.12),rgba(54,200,223,.12));color:var(--blue);font-size:20px;font-weight:800}
+.ar-card b{font-size:20px}.ar-card span:not(.ar-ic){color:var(--muted);font-size:16px;line-height:1.7}
+.ar-card em{font-style:normal;color:var(--blue);font-weight:700;margin-top:auto}
+.ar-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ar-fact{padding:24px;border-radius:24px;background:#0b1b2d;color:#fff}
+.ar-fact time{display:inline-block;padding:5px 12px;border-radius:999px;background:rgba(95,224,184,.15);color:#5fe0b8;font-weight:700;font-size:14px}
+.ar-fact b{display:block;font-size:21px;margin:14px 0 8px}.ar-fact p{color:rgba(230,240,255,.78);font-size:16px;line-height:1.8;margin:0}
+.ar-disc{margin-top:18px;font-size:15px;color:var(--muted)}.ar-disc a{color:var(--blue);font-weight:700}
+.ar-cta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:clamp(26px,4vw,48px);border-radius:30px;background:linear-gradient(135deg,#1c5fd4,#36c8df);color:#fff}
+.ar-cta h2{color:#fff!important;margin:0 0 8px}.ar-cta p{color:rgba(255,255,255,.88);margin:0;font-size:17px}
+.ar-cta .btn.primary{background:#fff!important;color:#1c5fd4!important}
+@media(max-width:900px){.ar-facts{grid-template-columns:1fr}}
+</style>
+
+
+<link rel="stylesheet" href="/assets/css/munawar.css?v={{ site.time | date: '%Y%m%d%H%M' }}">
+</head><body>
+<div class="noise"></div><div class="scroll-progress" id="scrollProgress"></div><div class="cursor-glow" id="cursorGlow"></div><div class="toast" id="toast"></div>
+{% include site-header.html %}{% include lang-page.html %}{% include site-footer.html %}<script>
+const header=document.querySelector('.site-header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>18));
+const mb=document.querySelector('.menu-btn'),nv=document.querySelector('.nav-links');if(mb&&nv)mb.onclick=()=>nv.classList.toggle('open');
+const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ob.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(e=>ob.observe(e));
+const prog=document.getElementById('scrollProgress');if(prog)window.addEventListener('scroll',()=>{let x=document.documentElement.scrollHeight-innerHeight;prog.style.width=(x?scrollY/x*100:0)+'%'});
+const glow=document.getElementById('cursorGlow');if(glow&&matchMedia('(pointer:fine)').matches)window.addEventListener('mousemove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});else if(glow)glow.style.display='none';
+document.querySelectorAll('.acc-head').forEach(b=>b.onclick=()=>{const body=b.nextElementSibling;const open=body.classList.toggle('open');b.querySelector('b').textContent=open?'×':'+'});
+function showToast(t){const x=document.getElementById('toast');if(!x)return;x.textContent=t;x.classList.add('show');setTimeout(()=>x.classList.remove('show'),2200)}
+</script>
+<script>
+document.querySelectorAll('.insight-open').forEach(btn=>btn.addEventListener('click',()=>{
+ const d=btn.nextElementSibling,open=d.classList.toggle('open');
+ btn.classList.toggle('open',open);
+ btn.querySelector('.label').textContent=open?'Close detailed insight':'Read full insight';
+}));
+</script>
+<div class="global-search-overlay" id="globalSearchOverlay" aria-hidden="true"><div class="global-search-panel" role="dialog" aria-modal="true" aria-label="Search Munawar.in"><div class="global-search-head"><div class="global-search-input-wrap"><span>⌕</span><input id="globalSearchInput" type="search" autocomplete="off" placeholder="Search Labour Law, Q&amp;A, calculators, templates, payroll, career tools..."></div><button class="global-search-close" id="globalSearchClose" type="button" aria-label="Close search">×</button></div><div class="global-search-helper">Search across Munawar.in. Try “annual leave”, “gratuity”, “salary deduction”, “offer letter” or “CV”.</div><div class="global-search-results" id="globalSearchResults"></div></div></div>
+<div id="globalSearchData" hidden>
+<span data-title="HR Hub" data-type="Page" data-url="/hr-hub/" data-text="UAE HR knowledge labour law payroll insights processes resources"></span><span data-title="UAE Labour Law" data-type="Page" data-url="/hr-hub/uae-labour-law/" data-text="UAE labour law employment rules probation leave wages overtime termination EOSB"></span><span data-title="Labour Law Q&amp;A" data-type="Page" data-url="/hr-hub/labour-law-qa/" data-text="UAE labour law questions answers probation leave salary gratuity termination"></span><span data-title="HR Insights" data-type="Page" data-url="/hr-hub/hr-insights/" data-text="HR insights employee lifecycle culture performance technology people operations"></span><span data-title="Payroll Insights" data-type="Page" data-url="/hr-hub/payroll-insights/" data-text="payroll WPS salary deductions EOSB controls reconciliation"></span><span data-title="HR Process Guide" data-type="Page" data-url="/hr-hub/hr-process-guide/" data-text="HR process onboarding offboarding payroll recruitment employee lifecycle"></span><span data-title="Emirati Insights" data-type="Page" data-url="/hr-hub/emirati-insights/" data-text="Emiratisation UAE nationals Nafis pension workforce"></span><span data-title="Payroll Calculator" data-type="Calculator" data-url="/hr-hub/calculator/#pay" data-text="payroll salary proration calculator monthly salary payable days"></span><span data-title="EOSB Calculator" data-type="Calculator" data-url="/hr-hub/calculator/#eosb" data-text="EOSB gratuity end of service calculator basic salary 21 days 30 days"></span><span data-title="Leave Calculator" data-type="Calculator" data-url="/hr-hub/calculator/#leave" data-text="annual leave balance value calculator leave salary"></span><span data-title="HR Resource Library" data-type="Resources" data-url="/hr-hub/library/" data-text="HR letters forms templates downloads offer warning termination salary certificate"></span><span data-title="Career Hub" data-type="Page" data-url="/career-hub/" data-text="jobs CV interview learning career growth opportunities"></span><span data-title="AI Hub" data-type="Page" data-url="/hr-hub/ai-hub/" data-text="AI labour law payroll letters job descriptions policy documents skills decision"></span><span data-title="Articles" data-type="Page" data-url="/articles/" data-text="UAE HR payroll labour law Emiratisation people operations practical articles journal"></span>{% for article in site.articles %}{% if article.published != false %}<span data-title="{{ article.title | escape }}" data-type="Article" data-url="{{ article.url }}" data-text="{{ article.description | append: ' ' | append: article.keywords | escape }}"></span>{% endif %}{% endfor %}<span data-title="About Munawar.in" data-type="Page" data-url="/about/" data-text="about Munawar HR payroll professional experience"></span><span data-title="Contact" data-type="Page" data-url="/contact/" data-text="contact Munawar email LinkedIn UAE"></span>
+{% for item in site.data.labour_law.sections %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="Labour Law" data-url="/hr-hub/uae-labour-law/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.search | escape }} {{ item.reference | escape }} {{ item.content | escape }}"></span>{% endif %}{% endfor %}
+{% for item in site.data.labour_law_qa.questions %}{% if item.published %}<span data-title="{{ item.question | escape }}" data-type="Labour Law Q&amp;A" data-url="/hr-hub/labour-law-qa/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.search | escape }} {{ item.answer | escape }}"></span>{% endif %}{% endfor %}
+{% for item in site.data.hr_insights.insights %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="HR Insight" data-url="/hr-hub/hr-insights/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.summary | escape }} {{ item.takeaway | escape }}"></span>{% endif %}{% endfor %}
+{% for item in site.data.payroll_insights.insights %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="Payroll Insight" data-url="/hr-hub/payroll-insights/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.summary | escape }} {{ item.takeaway | escape }}"></span>{% endif %}{% endfor %}
+{% for item in site.data.emirati_insights.insights %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="Emirati Insight" data-url="/hr-hub/emirati-insights/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.summary | escape }} {{ item.takeaway | escape }}"></span>{% endif %}{% endfor %}
+{% for item in site.data.library.documents %}{% if item.published %}<span data-title="{{ item.title | escape }}" data-type="HR Resource" data-url="/hr-hub/library/#{{ item.id | escape }}" data-text="{{ item.category | escape }} {{ item.search | escape }} {{ item.description | escape }}"></span>{% endif %}{% endfor %}
+</div>
+<script id="munawar-global-navigation-search-js-v1">(function(){const nav=document.querySelector('.global-nav');if(nav){nav.querySelectorAll('.nav-menu>.nav-top').forEach(a=>a.addEventListener('click',function(e){if(window.innerWidth<=820){e.preventDefault();const m=this.parentElement;nav.querySelectorAll('.nav-menu.open').forEach(x=>{if(x!==m)x.classList.remove('open')});m.classList.toggle('open')}}))}const trigger=document.getElementById('globalSearchTrigger'),overlay=document.getElementById('globalSearchOverlay'),close=document.getElementById('globalSearchClose'),input=document.getElementById('globalSearchInput'),results=document.getElementById('globalSearchResults');if(!trigger||!overlay||!input||!results)return;const norm=s=>(s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,' ').trim();const records=[...document.querySelectorAll('#globalSearchData span')].map(el=>({title:el.dataset.title||'',type:el.dataset.type||'',url:el.dataset.url||'/',text:el.dataset.text||''}));function score(r,q){const nq=norm(q);if(!nq)return 0;const words=nq.split(/\s+/).filter(Boolean),title=norm(r.title),text=norm(r.text+' '+r.type),all=title+' '+text;let s=0;if(title===nq)s+=120;if(title.startsWith(nq))s+=70;if(title.includes(nq))s+=45;if(text.includes(nq))s+=20;for(const w of words){if(title.includes(w))s+=14;if(text.includes(w))s+=5;if(!all.includes(w))s-=8}return s}function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}function render(){const q=input.value.trim();if(!q){results.innerHTML='<div class="global-search-empty">Start typing to search the whole website.</div>';return}const found=records.map(r=>({r,s:score(r,q)})).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,18);if(!found.length){results.innerHTML='<div class="global-search-empty">No matching result found. Try a broader term.</div>';return}results.innerHTML=found.map(({r})=>'<a class="global-search-result" href="'+esc(r.url)+'"><span><strong>'+esc(r.title)+'</strong><p>'+esc((r.text||'').replace(/\s+/g,' ').trim().slice(0,150))+'</p></span><em>'+esc(r.type)+'</em></a>').join('')}function open(){overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';setTimeout(()=>input.focus(),30);render()}function shut(){overlay.classList.remove('open');overlay.setAttribute('aria-hidden','true');document.body.style.overflow='';trigger.focus()}trigger.addEventListener('click',open);close.addEventListener('click',shut);overlay.addEventListener('click',e=>{if(e.target===overlay)shut()});input.addEventListener('input',render);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))shut();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();open()}});if(location.pathname.includes('/hr-hub/calculator/')&&location.hash){const id=location.hash.slice(1),tab=document.querySelector('.calc-tab[data-calc="'+id+'"]');if(tab)setTimeout(()=>tab.click(),50)}})();</script>
+</body></html>
