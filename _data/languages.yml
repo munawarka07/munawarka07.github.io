@@ -43,6 +43,30 @@ list:
   english_name: Chinese
   url: /zh/
 
+- code: fr
+  name: Français
+  english_name: French
+  url: /fr/
+- code: de
+  name: Deutsch
+  english_name: German
+  url: /de/
+- code: es
+  name: Español
+  english_name: Spanish
+  url: /es/
+- code: it
+  name: Italiano
+  english_name: Italian
+  url: /it/
+- code: pt
+  name: Português
+  english_name: Portuguese
+  url: /pt/
+- code: ru
+  name: Русский
+  english_name: Russian
+  url: /ru/
 pages:
   ar:
     dir: rtl
@@ -394,3 +418,237 @@ pages:
     chips: [劳动法, 薪资, 阿联酋化, 计算器]
     seo_title: Munawar.in 中文版 | 阿联酋人力资源、劳动法与薪资指南
     seo_description: 阿联酋劳动法、薪资与阿联酋化实用指南，附服务终止酬金和工资计算器。
+
+  fr:
+    dir: ltr
+    gt: fr
+    font: Tajawal
+    label: Munawar.in en français
+    title_pre: Des connaissances
+    title_hl: RH pratiques
+    title_post: pour les Émirats
+    intro: Un guide pratique du droit du travail émirien, de la paie et de l'émiratisation, avec des calculateurs, des modèles et des outils pour les équipes RH et les salariés.
+    note: Les pages détaillées sont en anglais. Cette page est votre guide rapide, et vous pouvez lire n'importe quelle page dans votre langue avec Google Traduction.
+    btn_hub: Commencer par le HR Hub
+    btn_translate: Ouvrir le site en français
+    what_label: Ce que vous trouverez ici
+    what_title: Tout ce dont vous avez besoin, au même endroit
+    read_more: En savoir plus
+    cards:
+    - ["Droit du travail émirien", "Droits, congés, période d'essai, temps de travail, fin de contrat et indemnité de fin de service."]
+    - ["Questions-réponses", "Des réponses claires et rapides aux questions les plus fréquentes sur le travail dans le secteur privé."]
+    - ["Mises à jour juridiques", "Un historique daté des derniers changements en droit du travail, paie et émiratisation, avec des actions concrètes."]
+    - ["Paie et WPS", "Contrôles de la paie, retenues, rapprochements et règles du Wage Protection System."]
+    - ["Talents émiriens", "Conseils pratiques sur les objectifs d'émiratisation et le développement des talents émiriens."]
+    - ["Calculateurs", "Calculez le salaire au prorata, l'indemnité de fin de service et l'indemnité de congés, puis téléchargez le résultat en PDF."]
+    - ["Centre de documents", "Lettres, formulaires et listes de contrôle prêts à l'emploi pour les équipes RH."]
+    - ["AI Hub", "Des outils d'IA utiles et une auto-évaluation des compétences RH dont la difficulté augmente au fil des questions."]
+    news_label: Mises à jour clés
+    news_title: Les changements à connaître
+    facts:
+    - ["1er juin 2026", "Wage Protection System", "Les salaires de chaque mois sont dus le premier jour du mois suivant. Au moins 85 % des salaires dus doivent être versés à temps."]
+    - ["2026", "Émiratisation", "Les entreprises de 50 salariés ou plus doivent augmenter de 2 % par an la part d'Émiriens dans les postes qualifiés, soit 1 % par semestre."]
+    - ["31 août 2024", "Réclamations", "Vous disposez désormais de deux ans après la fin du contrat pour déposer une réclamation, au lieu d'un an."]
+    disclaimer: Résumés généraux à titre informatif uniquement. Vérifiez toujours les directives officielles du MOHRE avant de prendre une décision.
+    details_link: Détails et sources (en anglais)
+    cta_title: Une question ou une idée de collaboration ?
+    cta_text: Je serais ravi d'échanger avec toute personne intéressée par les RH, la paie et l'amélioration des processus.
+    cta_btn: Me contacter
+    chips: [Droit du travail, Paie, Émiratisation, Calculateurs]
+    seo_title: "Munawar.in en français | RH, droit du travail et paie aux Émirats"
+    seo_description: Guide pratique du droit du travail émirien, de la paie et de l'émiratisation, avec calculateurs d'indemnité de fin de service et de salaire.
+
+  de:
+    dir: ltr
+    gt: de
+    font: Tajawal
+    label: Munawar.in auf Deutsch
+    title_pre: Praktisches
+    title_hl: HR-Wissen
+    title_post: für die VAE
+    intro: Ein praxisnaher Leitfaden zum Arbeitsrecht der VAE, zur Lohnabrechnung und zur Emiratisierung, mit Rechnern, Vorlagen und Tools für HR-Teams und Mitarbeitende.
+    note: Die ausführlichen Seiten sind auf Englisch. Diese Seite ist Ihr Kurzleitfaden, und mit Google Übersetzer können Sie jede Seite in Ihrer Sprache lesen.
+    btn_hub: Im HR Hub starten
+    btn_translate: Website auf Deutsch öffnen
+    what_label: Was Sie hier finden
+    what_title: Alles, was Sie brauchen, an einem Ort
+    read_more: Mehr erfahren
+    cards:
+    - ["Arbeitsrecht der VAE", "Rechte, Urlaub, Probezeit, Arbeitszeit, Beendigung und Abfindung zum Dienstende."]
+    - ["Fragen und Antworten", "Klare, schnelle Antworten auf die häufigsten Fragen zur Arbeit in der Privatwirtschaft."]
+    - ["Rechtliche Neuerungen", "Eine datierte Übersicht der neuesten Änderungen bei Arbeitsrecht, Lohnabrechnung und Emiratisierung, mit konkreten Schritten."]
+    - ["Lohnabrechnung und WPS", "Gehaltskontrollen, Abzüge, Abstimmungen und die Regeln des Wage Protection System."]
+    - ["Emiratische Talente", "Praktische Hinweise zu Emiratisierungszielen und zur Förderung emiratischer Talente."]
+    - ["Rechner", "Anteiliges Gehalt, Abfindung und Urlaubsentgelt berechnen und das Ergebnis als PDF herunterladen."]
+    - ["Dokumentencenter", "Fertige Briefe, Formulare und Checklisten für HR-Teams."]
+    - ["AI Hub", "Nützliche KI-Tools und eine HR-Selbsteinschätzung, die von Frage zu Frage schwieriger wird."]
+    news_label: Wichtige Neuerungen
+    news_title: Änderungen, die Sie kennen sollten
+    facts:
+    - ["1. Juni 2026", "Wage Protection System", "Löhne für jeden Monat sind am ersten Tag des Folgemonats fällig. Mindestens 85 % der fälligen Löhne müssen pünktlich gezahlt werden."]
+    - ["2026", "Emiratisierung", "Unternehmen mit 50 oder mehr Beschäftigten müssen den Anteil von Emiratis in Fachpositionen jährlich um 2 % erhöhen, 1 % pro Halbjahr."]
+    - ["31. August 2024", "Arbeitsrechtliche Ansprüche", "Ansprüche können jetzt innerhalb von zwei Jahren nach Ende des Arbeitsverhältnisses geltend gemacht werden, statt bisher einem Jahr."]
+    disclaimer: Allgemeine Zusammenfassungen nur zur Information. Prüfen Sie vor jeder Entscheidung die offiziellen Vorgaben des MOHRE.
+    details_link: Details und Quellen (auf Englisch)
+    cta_title: Eine Frage oder eine Idee zur Zusammenarbeit?
+    cta_text: Ich freue mich über den Austausch mit allen, die sich für HR, Lohnabrechnung und bessere Prozesse interessieren.
+    cta_btn: Kontakt aufnehmen
+    chips: [Arbeitsrecht, Lohnabrechnung, Emiratisierung, Rechner]
+    seo_title: "Munawar.in auf Deutsch | HR, Arbeitsrecht und Lohnabrechnung in den VAE"
+    seo_description: Praxisleitfaden zu Arbeitsrecht, Lohnabrechnung und Emiratisierung in den VAE, mit Abfindungs- und Gehaltsrechnern.
+
+  es:
+    dir: ltr
+    gt: es
+    font: Tajawal
+    label: Munawar.in en español
+    title_pre: Conocimiento
+    title_hl: práctico de RR. HH.
+    title_post: para los EAU
+    intro: Una guía práctica sobre la legislación laboral de los Emiratos, las nóminas y la emiratización, con calculadoras, plantillas y herramientas para equipos de RR. HH. y empleados.
+    note: Las páginas detalladas están en inglés. Esta página es tu guía rápida, y puedes leer cualquier página en tu idioma con Google Traductor.
+    btn_hub: Empieza en el HR Hub
+    btn_translate: Abrir el sitio en español
+    what_label: Qué encontrarás aquí
+    what_title: Todo lo que necesitas, en un solo lugar
+    read_more: Leer más
+    cards:
+    - ["Legislación laboral de los EAU", "Derechos, vacaciones, periodo de prueba, jornada, fin de la relación laboral e indemnización por fin de servicio."]
+    - ["Preguntas y respuestas", "Respuestas claras y rápidas a las dudas laborales más comunes en el sector privado."]
+    - ["Novedades legales", "Un registro fechado de los últimos cambios en legislación laboral, nóminas y emiratización, con pasos prácticos."]
+    - ["Nóminas y WPS", "Controles de nómina, deducciones, conciliaciones y normas del Wage Protection System."]
+    - ["Talento emiratí", "Orientación práctica sobre los objetivos de emiratización y el desarrollo del talento emiratí."]
+    - ["Calculadoras", "Calcula el salario proporcional, la indemnización y el pago de vacaciones, y descarga el resultado en PDF."]
+    - ["Centro de documentos", "Cartas, formularios y listas de verificación listos para usar por equipos de RR. HH."]
+    - ["AI Hub", "Herramientas de IA útiles y una autoevaluación de competencias de RR. HH. que se vuelve más difícil a medida que avanzas."]
+    news_label: Novedades clave
+    news_title: Cambios que debes conocer
+    facts:
+    - ["1 de junio de 2026", "Wage Protection System", "Los salarios de cada mes vencen el primer día del mes siguiente. Al menos el 85 % de los salarios adeudados debe pagarse a tiempo."]
+    - ["2026", "Emiratización", "Las empresas con 50 o más empleados deben aumentar un 2 % al año la proporción de emiratíes en puestos cualificados, un 1 % por semestre."]
+    - ["31 de agosto de 2024", "Reclamaciones laborales", "Ahora hay dos años desde el fin de la relación laboral para presentar una reclamación, en lugar de uno."]
+    disclaimer: Resúmenes generales solo con fines informativos. Consulta siempre las directrices oficiales del MOHRE antes de tomar una decisión.
+    details_link: Detalles y fuentes (en inglés)
+    cta_title: ¿Tienes una pregunta o una idea para colaborar?
+    cta_text: Me encantará conectar con cualquier persona interesada en RR. HH., nóminas y mejores procesos.
+    cta_btn: Contactar
+    chips: [Legislación laboral, Nóminas, Emiratización, Calculadoras]
+    seo_title: "Munawar.in en español | RR. HH., legislación laboral y nóminas en los EAU"
+    seo_description: Guía práctica de legislación laboral, nóminas y emiratización en los EAU, con calculadoras de indemnización y salario.
+
+  it:
+    dir: ltr
+    gt: it
+    font: Tajawal
+    label: Munawar.in in italiano
+    title_pre: Conoscenze
+    title_hl: HR pratiche
+    title_post: per gli Emirati
+    intro: Una guida pratica al diritto del lavoro degli Emirati, alle paghe e all'emiratizzazione, con calcolatori, modelli e strumenti per i team HR e i dipendenti.
+    note: Le pagine dettagliate sono in inglese. Questa pagina è la tua guida rapida, e puoi leggere qualsiasi pagina nella tua lingua con Google Traduttore.
+    btn_hub: Inizia dall'HR Hub
+    btn_translate: Apri il sito in italiano
+    what_label: Cosa troverai qui
+    what_title: Tutto ciò che ti serve, in un unico posto
+    read_more: Scopri di più
+    cards:
+    - ["Diritto del lavoro degli EAU", "Diritti, ferie, periodo di prova, orario di lavoro, cessazione del rapporto e indennità di fine servizio."]
+    - ["Domande e risposte", "Risposte chiare e rapide alle domande più comuni sul lavoro nel settore privato."]
+    - ["Aggiornamenti normativi", "Un registro datato delle ultime novità su diritto del lavoro, paghe ed emiratizzazione, con azioni pratiche."]
+    - ["Paghe e WPS", "Controlli sulle paghe, trattenute, riconciliazioni e regole del Wage Protection System."]
+    - ["Talenti emiratini", "Indicazioni pratiche sugli obiettivi di emiratizzazione e sullo sviluppo dei talenti emiratini."]
+    - ["Calcolatori", "Calcola lo stipendio pro rata, l'indennità di fine servizio e il pagamento delle ferie, e scarica il risultato in PDF."]
+    - ["Centro documenti", "Lettere, moduli e checklist pronti all'uso per i team HR."]
+    - ["AI Hub", "Strumenti di IA utili e un'autovalutazione delle competenze HR che diventa più difficile man mano che si procede."]
+    news_label: Aggiornamenti principali
+    news_title: Cambiamenti da conoscere
+    facts:
+    - ["1 giugno 2026", "Wage Protection System", "Gli stipendi di ogni mese sono dovuti il primo giorno del mese successivo. Almeno l'85 % degli stipendi dovuti deve essere pagato puntualmente."]
+    - ["2026", "Emiratizzazione", "Le aziende con 50 o più dipendenti devono aumentare del 2 % all'anno la quota di emiratini nei ruoli qualificati, l'1 % per semestre."]
+    - ["31 agosto 2024", "Reclami di lavoro", "Ora ci sono due anni dalla fine del rapporto di lavoro per presentare un reclamo, invece di uno."]
+    disclaimer: Sintesi generali a solo scopo informativo. Verifica sempre le indicazioni ufficiali del MOHRE prima di prendere qualsiasi decisione.
+    details_link: Dettagli e fonti (in inglese)
+    cta_title: Hai una domanda o un'idea di collaborazione?
+    cta_text: Sarò felice di entrare in contatto con chiunque sia interessato a HR, paghe e processi migliori.
+    cta_btn: Contattami
+    chips: [Diritto del lavoro, Paghe, Emiratizzazione, Calcolatori]
+    seo_title: "Munawar.in in italiano | HR, diritto del lavoro e paghe negli Emirati"
+    seo_description: Guida pratica al diritto del lavoro, alle paghe e all'emiratizzazione negli Emirati, con calcolatori di fine servizio e stipendio.
+
+  pt:
+    dir: ltr
+    gt: pt
+    font: Tajawal
+    label: Munawar.in em português
+    title_pre: Conhecimento
+    title_hl: prático de RH
+    title_post: para os EAU
+    intro: Um guia prático sobre a legislação trabalhista dos Emirados, folha de pagamento e emiratização, com calculadoras, modelos e ferramentas para equipes de RH e funcionários.
+    note: As páginas detalhadas estão em inglês. Esta página é o seu guia rápido, e você pode ler qualquer página no seu idioma com o Google Tradutor.
+    btn_hub: Comece pelo HR Hub
+    btn_translate: Abrir o site em português
+    what_label: O que você vai encontrar
+    what_title: Tudo o que você precisa, num só lugar
+    read_more: Saiba mais
+    cards:
+    - ["Legislação trabalhista dos EAU", "Direitos, férias, período de experiência, jornada, rescisão e indenização de fim de serviço."]
+    - ["Perguntas e respostas", "Respostas claras e rápidas às dúvidas mais comuns sobre trabalho no setor privado."]
+    - ["Atualizações legais", "Um registro datado das mudanças mais recentes em legislação trabalhista, folha de pagamento e emiratização, com ações práticas."]
+    - ["Folha de pagamento e WPS", "Controles de folha, descontos, conciliações e regras do Wage Protection System."]
+    - ["Talentos emiradenses", "Orientação prática sobre metas de emiratização e o desenvolvimento de talentos emiradenses."]
+    - ["Calculadoras", "Calcule salário proporcional, indenização de fim de serviço e pagamento de férias, e baixe o resultado em PDF."]
+    - ["Central de documentos", "Cartas, formulários e checklists prontos para equipes de RH."]
+    - ["AI Hub", "Ferramentas de IA úteis e uma autoavaliação de competências de RH que fica mais difícil à medida que você avança."]
+    news_label: Principais atualizações
+    news_title: Mudanças que você precisa conhecer
+    facts:
+    - ["1 de junho de 2026", "Wage Protection System", "Os salários de cada mês vencem no primeiro dia do mês seguinte. Pelo menos 85 % dos salários devidos devem ser pagos em dia."]
+    - ["2026", "Emiratização", "Empresas com 50 ou mais funcionários devem aumentar em 2 % ao ano a participação de emiradenses em cargos qualificados, 1 % por semestre."]
+    - ["31 de agosto de 2024", "Reclamações trabalhistas", "Agora há dois anos após o fim do contrato para apresentar uma reclamação, em vez de um."]
+    disclaimer: Resumos gerais apenas para fins informativos. Consulte sempre as orientações oficiais do MOHRE antes de tomar qualquer decisão.
+    details_link: Detalhes e fontes (em inglês)
+    cta_title: Tem uma pergunta ou uma ideia de parceria?
+    cta_text: Terei prazer em conversar com qualquer pessoa interessada em RH, folha de pagamento e processos melhores.
+    cta_btn: Entrar em contato
+    chips: [Legislação trabalhista, Folha de pagamento, Emiratização, Calculadoras]
+    seo_title: "Munawar.in em português | RH, legislação trabalhista e folha nos EAU"
+    seo_description: Guia prático de legislação trabalhista, folha de pagamento e emiratização nos EAU, com calculadoras de indenização e salário.
+
+  ru:
+    dir: ltr
+    gt: ru
+    font: Noto Sans
+    label: Munawar.in на русском
+    title_pre: Практические
+    title_hl: знания по HR
+    title_post: для ОАЭ
+    intro: Практическое руководство по трудовому законодательству ОАЭ, расчёту зарплаты и эмиратизации, а также калькуляторы, шаблоны и инструменты для HR-команд и сотрудников.
+    note: Подробные страницы на английском языке. Эта страница — ваш краткий путеводитель, а с помощью Google Переводчика можно прочитать любую страницу на своём языке.
+    btn_hub: Начать с HR Hub
+    btn_translate: Открыть сайт на русском
+    what_label: Что вы здесь найдёте
+    what_title: Всё необходимое в одном месте
+    read_more: Подробнее
+    cards:
+    - ["Трудовое право ОАЭ", "Права, отпуска, испытательный срок, рабочее время, увольнение и выплата при окончании службы."]
+    - ["Вопросы и ответы", "Чёткие и быстрые ответы на самые частые вопросы о работе в частном секторе."]
+    - ["Изменения в законах", "Датированный список последних изменений в трудовом праве, зарплате и эмиратизации с практическими шагами."]
+    - ["Зарплата и WPS", "Контроль расчёта зарплаты, удержания, сверки и правила Wage Protection System."]
+    - ["Эмиратские кадры", "Практические рекомендации по целям эмиратизации и развитию эмиратских специалистов."]
+    - ["Калькуляторы", "Рассчитайте пропорциональную зарплату, выплату при окончании службы и отпускные и скачайте результат в PDF."]
+    - ["Центр документов", "Готовые письма, формы и чек-листы для HR-команд."]
+    - ["AI Hub", "Полезные ИИ-инструменты и самооценка HR-навыков, которая усложняется по мере прохождения."]
+    news_label: Ключевые изменения
+    news_title: Изменения, о которых стоит знать
+    facts:
+    - ["1 июня 2026", "Wage Protection System", "Зарплата за каждый месяц должна быть выплачена в первый день следующего месяца. Не менее 85 % причитающейся зарплаты нужно выплатить вовремя."]
+    - ["2026", "Эмиратизация", "Компании с 50 и более сотрудниками должны ежегодно увеличивать долю эмиратцев на квалифицированных должностях на 2 %, по 1 % за полугодие."]
+    - ["31 августа 2024", "Трудовые иски", "Теперь подать трудовой иск можно в течение двух лет после окончания работы, а не одного года."]
+    disclaimer: Общие сводки только для ознакомления. Перед принятием решения всегда сверяйтесь с официальными разъяснениями MOHRE.
+    details_link: Подробности и источники (на английском)
+    cta_title: Есть вопрос или идея для сотрудничества?
+    cta_text: Буду рад общению со всеми, кто интересуется HR, расчётом зарплаты и улучшением процессов.
+    cta_btn: Связаться
+    chips: [Трудовое право, Зарплата, Эмиратизация, Калькуляторы]
+    seo_title: "Munawar.in на русском | HR, трудовое право и зарплата в ОАЭ"
+    seo_description: Практическое руководство по трудовому праву, расчёту зарплаты и эмиратизации в ОАЭ, с калькуляторами выплат и зарплаты.

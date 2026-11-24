@@ -30,6 +30,12 @@ layout: null
   <url><loc>https://munawar.in/tl/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://munawar.in/ne/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://munawar.in/zh/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://munawar.in/fr/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://munawar.in/de/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://munawar.in/es/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://munawar.in/it/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://munawar.in/pt/</loc><lastmod>2026-11-24</lastmod></url>
+  <url><loc>https://munawar.in/ru/</loc><lastmod>2026-11-24</lastmod></url>
   <url><loc>https://munawar.in/articles/</loc><lastmod>2026-09-03</lastmod></url>
 {% assign sitemap_articles = site.articles | where_exp: "a", "a.published != false" %}
 {% for article in sitemap_articles %}  <url><loc>https://munawar.in{{ article.url }}</loc><lastmod>{{ article.updated | default: article.date | date: "%Y-%m-%d" }}</lastmod></url>

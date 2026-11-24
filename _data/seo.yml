@@ -241,3 +241,39 @@ lang_zh:
   canonical: https://munawar.in/zh/
   robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
   indexable: true
+lang_fr:
+  title: Munawar.in en français | RH, droit du travail et paie aux Émirats
+  description: Guide pratique du droit du travail émirien, de la paie et de l'émiratisation, avec calculateurs d'indemnité de fin de service et de salaire.
+  canonical: https://munawar.in/fr/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_de:
+  title: Munawar.in auf Deutsch | HR, Arbeitsrecht und Lohnabrechnung in den VAE
+  description: Praxisleitfaden zu Arbeitsrecht, Lohnabrechnung und Emiratisierung in den VAE, mit Abfindungs- und Gehaltsrechnern.
+  canonical: https://munawar.in/de/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_es:
+  title: Munawar.in en español | RR. HH., legislación laboral y nóminas en los EAU
+  description: Guía práctica de legislación laboral, nóminas y emiratización en los EAU, con calculadoras de indemnización y salario.
+  canonical: https://munawar.in/es/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_it:
+  title: Munawar.in in italiano | HR, diritto del lavoro e paghe negli Emirati
+  description: Guida pratica al diritto del lavoro, alle paghe e all'emiratizzazione negli Emirati, con calcolatori di fine servizio e stipendio.
+  canonical: https://munawar.in/it/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_pt:
+  title: Munawar.in em português | RH, legislação trabalhista e folha nos EAU
+  description: Guia prático de legislação trabalhista, folha de pagamento e emiratização nos EAU, com calculadoras de indenização e salário.
+  canonical: https://munawar.in/pt/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
+lang_ru:
+  title: Munawar.in на русском | HR, трудовое право и зарплата в ОАЭ
+  description: Практическое руководство по трудовому праву, расчёту зарплаты и эмиратизации в ОАЭ, с калькуляторами выплат и зарплаты.
+  canonical: https://munawar.in/ru/
+  robots: index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1
+  indexable: true
