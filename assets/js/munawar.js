@@ -304,3 +304,11 @@ if(fine)hero.addEventListener('pointermove',function(e){var r=hv.getBoundingClie
 hero.addEventListener('pointerleave',function(){tx=0;ty=0;kick()});
 addEventListener('scroll',function(){var r=hero.getBoundingClientRect();sp=Math.max(0,Math.min(1,-r.top/Math.max(1,r.height)));kick()},{passive:true});
 hv.classList.add('hv-live')})();
+/* language menu */
+(function(){var m=document.querySelector('.site-header .lang-menu');if(!m)return;var b=m.querySelector('.lang-switch');
+function set(o){m.classList.toggle('open',o);b.setAttribute('aria-expanded',o?'true':'false')}
+b.addEventListener('click',function(e){e.stopPropagation();set(!m.classList.contains('open'))});
+document.addEventListener('click',function(e){if(!m.contains(e.target))set(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+var host=location.hostname.replace(/-/g,'--').replace(/\./g,'-')+'.translate.goog';if(/^(localhost|127\.)/.test(location.hostname))host='munawar-in.translate.goog';
+m.querySelectorAll('[data-tl]').forEach(function(a){var tl=a.getAttribute('data-tl');a.href='https://'+host+location.pathname+'?_x_tr_sl=en&_x_tr_tl='+tl+'&_x_tr_hl='+tl+'&_x_tr_pto=wapp'})})();

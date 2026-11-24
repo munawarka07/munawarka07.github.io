@@ -801,9 +801,22 @@ html.pt-enter:not(.pt-ready) body>main{animation:pt-safe .01s 1.6s forwards}
 .hv.hv-live{transform-style:preserve-3d;will-change:rotate,translate}
 @media(min-width:1900px){:root body main .knowledge-hero .hv{height:560px}.hv>:not(.hv-glow){zoom:1.25}}
 :root body main .calc-pdf-btn{margin-top:14px;min-height:44px;font-size:14.5px}
-/* language switch */
-:root body .site-header .lang-switch{display:inline-flex;align-items:center;justify-content:center;height:38px;padding:0 14px;margin-left:6px;border-radius:999px;border:1px solid rgba(28,95,212,.18);background:rgba(255,255,255,.75);color:#1c5fd4;font:700 14px/1 Tajawal,sans-serif;white-space:nowrap;transition:background .2s,border-color .2s;flex:none}
-:root body .site-header .lang-switch:hover{background:#fff;border-color:rgba(28,95,212,.4)}
-@media(max-width:760px){:root body .site-header .lang-switch{height:32px;padding:0 9px;font-size:12.5px;margin-left:auto;margin-right:0}:root body .site-header .lang-switch+.global-search-trigger{margin-left:0!important}}
-@media(max-width:420px){:root body .site-header .brand-name{font-size:16px!important}:root body .site-header .brand-mark{width:34px!important;height:34px!important}:root body .site-header .brand{gap:7px!important}:root body .site-header .menu-btn{padding:0 11px!important}:root body .site-header .lang-switch{padding:0 8px;font-size:12px}}
+/* language menu */
+:root body .site-header .lang-menu{position:relative;flex:none;margin-left:6px}
+:root body .site-header .lang-switch{display:inline-flex;align-items:center;gap:7px;height:38px;padding:0 13px;border-radius:999px;border:1px solid rgba(28,95,212,.18);background:rgba(255,255,255,.75);color:#1c5fd4;font:700 14px/1 Tajawal,system-ui,sans-serif;white-space:nowrap;cursor:pointer;transition:background .2s,border-color .2s}
+:root body .site-header .lang-switch:hover,:root body .site-header .lang-menu.open .lang-switch{background:#fff;border-color:rgba(28,95,212,.4)}
+:root body .site-header .lang-list{position:absolute;right:0;top:calc(100% + 10px);width:300px;max-height:min(70vh,560px);overflow:auto;padding:10px;border-radius:20px;background:rgba(255,255,255,.97);border:1px solid rgba(11,27,45,.08);box-shadow:0 30px 80px -24px rgba(6,18,38,.4);backdrop-filter:blur(18px);opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .2s,transform .2s,visibility .2s;z-index:60;text-align:left}
+:root body .site-header .lang-menu.open .lang-list{opacity:1;visibility:visible;transform:none}
+:root body .site-header .lang-head{font:700 12.5px/1 Tajawal,sans-serif;color:#5d6f84;padding:8px 10px 6px}
+:root body .site-header .lang-list>a{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:9px 10px;border-radius:12px;color:#0b1b2d;font-size:15px}
+:root body .site-header .lang-list>a:hover{background:rgba(28,95,212,.06)}
+:root body .site-header .lang-list>a[aria-current]{background:rgba(28,95,212,.09)}
+:root body .site-header .lang-list>a b{font-weight:700;font-family:system-ui,sans-serif}
+:root body .site-header .lang-list>a small{color:#5d6f84;font-size:12.5px}
+:root body .site-header .lang-gt-head{margin-top:6px;border-top:1px solid rgba(11,27,45,.07);padding-top:12px}
+:root body .site-header .lang-gt{display:flex;flex-wrap:wrap;gap:6px;padding:4px 8px 2px}
+:root body .site-header .lang-gt a{padding:6px 10px;border-radius:999px;background:rgba(28,95,212,.07);color:#1c5fd4;font:600 13px/1.2 system-ui,sans-serif}
+:root body .site-header .lang-foot{margin:8px 10px 4px;font-size:11.5px;color:#7b8ba0}
+@media(max-width:760px){:root body .site-header .lang-menu{margin-left:auto}:root body .site-header .lang-switch{height:34px;padding:0 10px;font-size:12.5px}:root body .site-header .lang-switch span{max-width:64px;overflow:hidden;text-overflow:ellipsis}:root body .site-header .lang-menu+.global-search-trigger{margin-left:0!important}:root body .site-header .lang-list{position:fixed;left:12px;right:12px;top:76px;width:auto}}
+@media(max-width:420px){:root body .site-header .brand-name{font-size:16px!important}:root body .site-header .brand-mark{width:34px!important;height:34px!important}:root body .site-header .brand{gap:7px!important}:root body .site-header .menu-btn{padding:0 11px!important}:root body .site-header .lang-switch{padding:0 9px;font-size:12px}:root body .site-header .lang-switch svg{display:none}}
 @media(max-width:380px){:root body .site-header .nav{column-gap:6px!important;gap:6px!important}:root body .site-header .brand-name{font-size:15px!important}:root body .site-header .global-search-trigger{width:32px!important;height:32px!important;min-width:32px!important}}
