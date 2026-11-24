@@ -123,7 +123,7 @@
         o: distinct(c, [lost / (H * 30), lost / H / 100, lost / (H * days) * 12, lost / (H * 5)], function (v) { return pct(v, 2); }),
         e: 'Absence rate = days lost ÷ available days = ' + lost + ' ÷ (' + H + ' × ' + days + ') = ' + pct(c, 2) + '.' }; } },
     { d: 'tal', l: 4, r: 'any', make: function () {
-      var aA = rnd(80, 200), aB = rnd(60, 180), rA = rnd(30, 50) / 100, rB = rA * (Math.random() < 0.55 ? rnd(55, 76) : rnd(84, 98)) / 100, hA = Math.round(aA * rA), hB = Math.round(aB * rB), sA = hA / aA, sB = hB / aB, lo = Math.min(sA, sB), hi = Math.max(sA, sB), ratio = lo / hi, flag = ratio < 0.8;
+      var aA = rnd(80, 200), aB = rnd(60, 180), rA = rnd(30, 50) / 100, rB = rA * (Math.random() < 0.55 ? rnd(55, 76) : rnd(84, 98)) / 100, hA = Math.round(aA * rA), hB = Math.round(aB * rB), sA = hA / aA, sB = hB / aB, lo = Math.min(sA, sB), hi = Math.max(sA, sB), ratio = lo / hi, flag = +num(ratio, 2) < 0.8;
       var right = num(ratio, 2) + (flag ? ' — below 0.8, possible adverse impact' : ' — at or above 0.8, no adverse impact indicated');
       var wrong = [num(ratio, 2) + (flag ? ' — at or above 0.8, no adverse impact indicated' : ' — below 0.8, possible adverse impact'),
         num(hi / lo, 2) + ' — above 1, so no adverse impact is indicated',
