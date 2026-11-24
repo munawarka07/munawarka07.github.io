@@ -800,3 +800,4 @@ html.pt-enter:not(.pt-ready) body>main{animation:pt-safe .01s 1.6s forwards}
 :root body main .knowledge-hero .knowledge-hero-grid{perspective:1400px}
 .hv.hv-live{transform-style:preserve-3d;will-change:rotate,translate}
 @media(min-width:1900px){:root body main .knowledge-hero .hv{height:560px}.hv>:not(.hv-glow){zoom:1.25}}
+:root body main .calc-pdf-btn{margin-top:14px;min-height:44px;font-size:14.5px}
