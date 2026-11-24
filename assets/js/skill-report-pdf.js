@@ -119,8 +119,8 @@ var CP={8364:128,8218:130,402:131,8222:132,8230:133,8224:134,8225:135,710:136,82
     d.text(M, 116, R.profile.name, 13, { color: [214, 228, 246] });
     d.text(M, 134, dateStr + '   ·   Time used ' + R.used + (R.timedOut ? ' (time limit reached)' : ''), 9.5, { color: [150, 172, 200] });
     // profile chips
-    var cx = M, chips = [R.profile.level, R.profile.region, R.profile.focus];
-    chips.forEach(function (t) { var w = width(t, 8.5) + 18; d.rr(cx, 156, w, 22, 11, C.navy2); d.text(cx + 9, 170.5, t, 8.5, { color: [222, 234, 250] }); cx += w + 6; });
+    var cx = M, chips = [R.profile.level, R.profile.region, R.profile.focus].concat(R.profile.format ? [R.profile.format] : []);
+    var cy = 152; chips.forEach(function (t) { var w = width(t, 8.5) + 18; if (cx + w > PW - M - 136) { cx = M; cy += 27; } d.rr(cx, cy, w, 22, 11, C.navy2); d.text(cx + 9, cy + 14.5, t, 8.5, { color: [222, 234, 250] }); cx += w + 6; });
     // score ring
     var rx = PW - M - 58, ry = 112, rr = 50;
     d.circle(rx, ry, rr + 10, [17, 40, 72]);

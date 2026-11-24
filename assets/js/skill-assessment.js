@@ -7,6 +7,9 @@
   'use strict';
   var BANK_URL = '/assets/data/skill-bank.json?v=2';
   var TOTAL = 20, MAX_PAUSES = 3;
+  function setLength(p) { TOTAL = p.length === 'quick' ? 10 : 20; }
+  function minutesFor(p) { var m = LEVELS[p.level].minutes; return p.length === 'quick' ? Math.ceil(m / 2) + 1 : m; }
+  function rampFor(p) { var r = LEVELS[p.level].ramp; return p.length === 'quick' ? r.filter(function (_, i) { return i % 2 === 1; }) : r.slice(); }
   var LEVELS = {
     starter:     { label: '0–1 year · Foundation',            minutes: 26, ramp: [1,1,1,1,1,2,2,2,2,2,2,2,2,3,3,3,3,3,3,4], expect: 2 },
     developing:  { label: '2–4 years · Independent practitioner', minutes: 28, ramp: [2,2,2,2,2,3,3,3,3,3,3,3,3,4,4,4,4,4,5,5], expect: 3 },
@@ -160,18 +163,20 @@
   function seenIds() { try { return JSON.parse(localStorage.getItem('mwSkillSeen') || '[]'); } catch (e) { return []; } }
   function saveSeen(ids) { try { var s = seenIds().concat(ids).slice(-120); localStorage.setItem('mwSkillSeen', JSON.stringify(s)); } catch (e) {} }
 
-  function domainPlan(focus, region) {
+  function domainPlan(focus, region, only) {
     var all = ['pay', 'ops', 'life', 'tal', 'er', 'ana', 'str'], plan = [];
     var fd = FOCUS[focus].d;
-    if (fd) { for (var i = 0; i < 10; i++) plan.push(fd); var others = shuffle(all.filter(function (x) { return x !== fd; })); for (var k = 0; plan.length < TOTAL; k++) plan.push(others[k % others.length]); }
+    if (fd && only) { while (plan.length < TOTAL) plan.push(fd); return plan; }
+    if (fd) { for (var i = 0; i < TOTAL / 2; i++) plan.push(fd); var others = shuffle(all.filter(function (x) { return x !== fd; })); for (var k = 0; plan.length < TOTAL; k++) plan.push(others[k % others.length]); }
     else { var base = shuffle(all); for (var j = 0; plan.length < TOTAL; j++) plan.push(base[j % base.length]); }
     if (region === 'uae') { var n = fd ? 3 : 4, idx = shuffle(plan.map(function (_, i) { return i; }).filter(function (i) { return plan[i] !== fd; })).slice(0, n); idx.forEach(function (i) { plan[i] = 'law'; }); }
     return shuffle(plan);
   }
-  function build(level, region, focus) {
-    var ramp = LEVELS[level].ramp.slice(), plan = domainPlan(focus, region), seen = seenIds(), used = {};
+  function build(level, region, focus, p) {
+    p = p || { level: level }; var only = p.mix === 'topic' && FOCUS[focus].d;
+    var ramp = rampFor(p), plan = domainPlan(focus, region, only), seen = seenIds(), used = {};
     var pool = bank.filter(function (q) { return region === 'uae' || q.r !== 'uae'; });
-    var fd = FOCUS[focus].d, numericN = FOCUS[focus].numeric, out = [];
+    var fd = FOCUS[focus].d, numericN = Math.round(FOCUS[focus].numeric * TOTAL / 20), out = [];
     // pick slots for numeric questions, spread across the ramp
     var gens = GEN.filter(function (g) { return (region === 'uae' || g.r !== 'uae') && (!fd || g.d === fd || (g.f || []).indexOf(fd) >= 0 || numericN <= 3); });
     gens = gens.filter(function (g) { return g.l >= ramp[0]; }); numericN = Math.min(numericN, gens.length);
@@ -205,7 +210,7 @@
   /* ---------- views ---------- */
   var VIEWS = ['skillIntro', 'skillInstructions', 'skillQuestions', 'skillResults'];
   function show(id) { VIEWS.forEach(function (v) { var el = $(v); if (el) el.classList.toggle('open', v === id); }); var box = document.querySelector('#skillModal .ai-box'); if (box) { box.scrollTop = 0; box.setAttribute('data-stage', id); } }
-  function profile() { return { name: ($('skillName').value || '').trim(), level: $('skillLevel').value, region: $('skillRegion').value, focus: $('skillFocus').value }; }
+  function profile() { return { name: ($('skillName').value || '').trim(), level: $('skillLevel').value, region: $('skillRegion').value, focus: $('skillFocus').value, length: ($('skillLength') || {}).value || 'full', mix: ($('skillMix') || {}).value || 'mixed' }; }
   function fmtTime(s) { s = Math.max(0, Math.round(s)); return String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(s % 60).padStart(2, '0'); }
 
   function open(ev) {
@@ -229,8 +234,8 @@
     if (!p.name || !p.level || !p.region || !p.focus) { req.classList.add('show'); return false; }
     req.classList.remove('show');
     var L = LEVELS[p.level];
-    $('skillProfileSummary').innerHTML = '<div><span>Candidate</span><b>' + esc(p.name) + '</b></div><div><span>Experience</span><b>' + esc(L.label) + '</b></div><div><span>Context</span><b>' + esc(REGIONS[p.region]) + '</b></div><div><span>Specialism</span><b>' + esc(FOCUS[p.focus].label) + '</b></div>';
-    $('skillInstructionTime').textContent = 'You have ' + L.minutes + ' minutes for 20 questions. Questions start at your level and get harder as you go, so budget more time for the later ones.';
+    $('skillProfileSummary').innerHTML = '<div><span>Candidate</span><b>' + esc(p.name) + '</b></div><div><span>Experience</span><b>' + esc(L.label) + '</b></div><div><span>Context</span><b>' + esc(REGIONS[p.region]) + '</b></div><div><span>Specialism</span><b>' + esc(FOCUS[p.focus].label) + (p.mix === 'topic' && FOCUS[p.focus].d ? ' only' : '') + '</b></div><div><span>Format</span><b>' + (p.length === 'quick' ? 'Quick check · 10 questions' : 'Full assessment · 20 questions') + '</b></div>';
+    $('skillInstructionTime').textContent = 'You have ' + minutesFor(p) + ' minutes for ' + (p.length === 'quick' ? 10 : 20) + ' questions. Questions start at your level and get harder as you go, so budget more time for the later ones.';
     $('skillHonour').checked = false; $('skillInstructionRequired').classList.remove('show');
     show('skillInstructions');
     return false;
@@ -242,7 +247,8 @@
     var btn = $('skillStartExamBtn'); btn.disabled = true; btn.textContent = 'Preparing questions…';
     loadBank().then(function () {
       var p = profile();
-      S = { p: p, qs: build(p.level, p.region, p.focus), i: 0, left: LEVELS[p.level].minutes * 60, pauses: MAX_PAUSES, started: true, done: false, t0: Date.now() };
+      setLength(p);
+      S = { p: p, qs: build(p.level, p.region, p.focus, p), i: 0, left: minutesFor(p) * 60, pauses: MAX_PAUSES, started: true, done: false, t0: Date.now() };
       renderQ(); show('skillQuestions'); startTimer();
     }).catch(function () {
       alert('The question bank could not be loaded. Please check your connection and try again.');
@@ -272,7 +278,7 @@
 
   /* ---------- results ---------- */
   function submit(timedOut) {
-    stopTimer(); S.done = true; S.timedOut = timedOut; S.used = LEVELS[S.p.level].minutes * 60 - Math.max(0, S.left);
+    stopTimer(); S.done = true; S.timedOut = timedOut; S.used = minutesFor(S.p) * 60 - Math.max(0, S.left);
     saveSeen(S.qs.filter(function (q) { return !q.gen; }).map(function (q) { return q.id; }));
     var w = 0, got = 0, correct = 0, byD = {}, byL = {};
     S.qs.forEach(function (q) {
@@ -282,12 +288,12 @@
     });
     var score = Math.round(got / w * 100), expect = LEVELS[S.p.level].expect;
     // demonstrated tier: climb the difficulty levels while accuracy holds at 60%+ (levels with fewer than 2 questions are skipped)
-    var demo = 0, first = 0; for (var l = 1; l <= 5; l++) { var b = byL[l]; if (!b || b.n < 2) continue; if (!first) first = l; if (b.c / b.n >= 0.6) demo = l; else { if (!demo && l > 1) demo = l - 1; break; } }
+    var demo = 0, first = 0; for (var l = 1; l <= 5; l++) { var b = byL[l]; if (!b || b.n < 2) continue; if (!first) first = l; if (b.c / b.n >= 0.6) demo = l; else { if (!demo && l > 1 && byL[l - 1] && byL[l - 1].c / byL[l - 1].n >= 0.5) demo = l - 1; break; } }
     var band = score >= 85 ? ['Strong command', 'You handled difficult scenarios with consistent judgement.'] : score >= 70 ? ['Solid capability', 'Your judgement is reliable on most scenarios, with a few gaps at higher difficulty.'] : score >= 55 ? ['Developing capability', 'You have a working base, but harder scenarios exposed gaps worth closing.'] : ['Foundation gaps', 'Several core areas need structured learning before tackling complex cases.'];
     var rel = demo > expect ? 'above' : demo === expect ? 'in line with' : 'below';
     $('skillScore').innerHTML = '<span class="sk-ring" style="--p:' + score + '"><b>' + score + '</b><small>/100</small></span>';
     $('skillResultTitle').textContent = band[0];
-    $('skillResultSummary').textContent = band[1] + ' You answered ' + correct + ' of 20 correctly' + (timedOut ? ' before time ran out' : '') + '. The score is weighted, so harder questions count for more.';
+    $('skillResultSummary').textContent = band[1] + ' You answered ' + correct + ' of ' + TOTAL + ' correctly' + (timedOut ? ' before time ran out' : '') + '. The score is weighted, so harder questions count for more.';
     $('skillMeta').innerHTML = [esc(S.p.name), esc(LEVELS[S.p.level].label), esc(REGIONS[S.p.region]), esc(FOCUS[S.p.focus].label), 'Time used ' + fmtTime(S.used)].map(function (x) { return '<span class="skill-meta-pill">' + x + '</span>'; }).join('');
     var lvlHtml = '<div class="sk-level"><div class="sk-level-head"><h3>Demonstrated level</h3><p>' + (demo ? 'You performed at <b>' + TIERS[demo] + '</b> level, ' + rel + ' what is typical for your selected experience (' + TIERS[expect] + ').' : 'Accuracy stayed below 60% across difficulty levels in this attempt, so no level could be confirmed yet.') + '</p></div><div class="sk-curve">' +
       [1, 2, 3, 4, 5].map(function (l) { var b = byL[l]; var v = b ? Math.round(b.c / b.n * 100) : null; return '<div class="sk-col' + (l === expect ? ' exp' : '') + '"><div class="sk-bar"><i style="height:' + (v == null ? 0 : Math.max(4, v)) + '%"></i></div><b>' + (v == null ? '–' : v + '%') + '</b><span>Level ' + l + '</span></div>'; }).join('') + '</div></div>';
@@ -304,7 +310,7 @@
         '<div class="sk-rv"><p><span>Your answer</span>' + (q.pick < 0 ? '—' : esc(q.opts[q.pick])) + '</p>' + (ok ? '' : '<p><span>Best answer</span>' + esc(q.opts[q.ans]) + '</p>') + '<p class="sk-why"><span>Why</span>' + esc(q.e) + '</p><p class="sk-tag">' + esc(DOMAINS[q.d]) + ' · difficulty ' + q.l + ' of 5</p></div></details>';
     }).join('');
     var actText = []; (weak.length ? weak : dom.slice(-2)).slice(0, 3).forEach(function (x) { (ACTIONS[x.k] || []).slice(0, 2).forEach(function (a) { actText.push(a); }); });
-    S.R = { profile: { name: S.p.name, level: LEVELS[S.p.level].label, region: REGIONS[S.p.region], focus: FOCUS[S.p.focus].label }, used: fmtTime(S.used), timedOut: !!timedOut, date: new Date(),
+    S.R = { profile: { name: S.p.name, level: LEVELS[S.p.level].label, region: REGIONS[S.p.region], focus: FOCUS[S.p.focus].label + (S.p.mix === 'topic' && FOCUS[S.p.focus].d ? ' only' : ''), format: S.p.length === 'quick' ? 'Quick check' : 'Full assessment' }, used: fmtTime(S.used), timedOut: !!timedOut, date: new Date(),
       score: score, correct: correct, total: TOTAL, band: band, demo: demo, demoName: demo ? TIERS[demo] : '', expect: expect, expectName: TIERS[expect], rel: rel,
       byLevel: [1, 2, 3, 4, 5].map(function (l) { var b = byL[l]; return b ? { n: b.n, c: b.c } : null; }),
       domains: dom.map(function (x) { return { name: DOMAINS[x.k], c: x.c, n: x.n }; }),
@@ -322,6 +328,54 @@
     finally { if (btn) setTimeout(function () { btn.disabled = false; btn.textContent = label; }, 600); }
     return false;
   }
+  /* ---------- share card (1200 x 630 PNG) ---------- */
+  function rr(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  function drawCard(R) {
+    var W = 1200, H = 630, c = document.createElement('canvas'); c.width = W; c.height = H;
+    var x = c.getContext('2d'), F = function (w, s) { return w + ' ' + s + 'px Tajawal, "Segoe UI", system-ui, sans-serif'; };
+    var g = x.createLinearGradient(0, 0, W, H); g.addColorStop(0, '#0b1b2d'); g.addColorStop(0.6, '#10284a'); g.addColorStop(1, '#163f8f'); x.fillStyle = g; x.fillRect(0, 0, W, H);
+    var gl = x.createRadialGradient(980, 120, 10, 980, 120, 520); gl.addColorStop(0, 'rgba(78,143,255,.35)'); gl.addColorStop(1, 'rgba(78,143,255,0)'); x.fillStyle = gl; x.fillRect(0, 0, W, H);
+    x.fillStyle = '#1c5fd4'; x.fillRect(0, 0, W, 8);
+    rr(x, 70, 62, 44, 44, 12); x.fillStyle = '#1c5fd4'; x.fill(); x.fillStyle = '#fff'; x.font = F(800, 24); x.textAlign = 'center'; x.fillText('M', 92, 93);
+    x.textAlign = 'left'; x.font = F(800, 26); x.fillText('Munawar.in', 128, 93);
+    x.fillStyle = '#9fb6d6'; x.font = F(500, 22); x.fillText('HR skill self-assessment', 70, 165);
+    x.fillStyle = '#ffffff'; x.font = F(800, 56); x.fillText(R.band[0], 70, 235);
+    x.fillStyle = '#d6e4f6'; x.font = F(500, 30); x.fillText(R.profile.name.slice(0, 40), 70, 285);
+    var lvl = R.demoName ? 'Demonstrated level: ' + R.demoName : 'Level: building foundations';
+    x.font = F(700, 26); var lw = x.measureText(lvl).width + 40; rr(x, 70, 318, lw, 52, 26); x.fillStyle = 'rgba(95,224,184,.16)'; x.fill(); x.fillStyle = '#5fe0b8'; x.fillText(lvl, 90, 353);
+    var cx = 70, cy = 400; x.font = F(600, 20);
+    [R.profile.level, R.profile.region, R.profile.focus].forEach(function (t) { var w = x.measureText(t).width + 32; if (cx + w > 720) { cx = 70; cy += 50; } rr(x, cx, cy, w, 40, 20); x.fillStyle = 'rgba(255,255,255,.1)'; x.fill(); x.fillStyle = '#e6f1ff'; x.fillText(t, cx + 16, cy + 27); cx += w + 10; });
+    x.fillStyle = '#9fb6d6'; x.font = F(500, 22); x.fillText(R.correct + ' of ' + R.total + ' correct  ·  questions get harder as you go', 70, 560);
+    // ring
+    var rx = 960, ry = 320, r = 150;
+    x.lineCap = 'round'; x.lineWidth = 26; x.strokeStyle = 'rgba(255,255,255,.12)'; x.beginPath(); x.arc(rx, ry, r, 0, Math.PI * 2); x.stroke();
+    var rg = x.createLinearGradient(rx - r, ry - r, rx + r, ry + r); rg.addColorStop(0, '#36c8df'); rg.addColorStop(1, '#5fe0b8');
+    if (R.score > 0) { x.strokeStyle = rg; x.beginPath(); x.arc(rx, ry, r, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * R.score / 100); x.stroke(); }
+    x.textAlign = 'center'; x.fillStyle = '#fff'; x.font = F(800, 110); x.fillText(String(R.score), rx, ry + 30); x.fillStyle = '#9fb6d6'; x.font = F(600, 24); x.fillText('out of 100', rx, ry + 72);
+    x.fillStyle = '#ffffff'; x.font = F(700, 22); x.fillText('Take the test at munawar.in/hr-hub/ai-hub', rx, 560);
+    return c;
+  }
+  function share(ev) {
+    if (ev) ev.preventDefault(); if (!S || !S.R) return false;
+    var R = S.R, btn = $('skillShareBtn');
+    var ready = (document.fonts && document.fonts.load) ? Promise.all([document.fonts.load('800 56px Tajawal'), document.fonts.load('500 22px Tajawal')]).catch(function () {}) : Promise.resolve();
+    ready.then(function () {
+      drawCard(R).toBlob(function (blob) {
+        var name = 'HR-Skill-Result-' + (R.profile.name || 'me').replace(/[^\w]+/g, '-') + '.png';
+        var file = typeof File === 'function' ? new File([blob], name, { type: 'image/png' }) : null;
+        var text = 'I scored ' + R.score + '/100 (' + R.band[0] + (R.demoName ? ', ' + R.demoName + ' level' : '') + ') on the HR skill self-assessment at munawar.in. Questions get harder as you go. Try it: https://munawar.in/hr-hub/ai-hub/';
+        if (file && navigator.canShare && navigator.canShare({ files: [file] }) && matchMedia('(pointer:coarse)').matches) {
+          navigator.share({ files: [file], text: text }).catch(function () {});
+        } else {
+          var url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(function () { URL.revokeObjectURL(url); }, 20000);
+          try { navigator.clipboard && navigator.clipboard.writeText(text); } catch (e) {}
+          if (btn) { var t = btn.textContent; btn.textContent = 'Image saved · caption copied ✓'; setTimeout(function () { btn.textContent = t; }, 2600); }
+        }
+      }, 'image/png');
+    });
+    return false;
+  }
+  function linkedin(ev) { if (ev) ev.preventDefault(); window.open('https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent('https://munawar.in/hr-hub/ai-hub/'), '_blank', 'noopener,width=640,height=640'); return false; }
   function retake(ev) { if (ev) ev.preventDefault(); S = null; review(); return false; }
 
   /* ---------- wiring ---------- */
@@ -333,7 +387,7 @@
     var k = 'abcd'.indexOf(e.key.toLowerCase()); if (k < 0) k = '1234'.indexOf(e.key);
     if (k >= 0) choose(k); else if (e.key === 'Enter' && !$('skillNext').disabled) next(); else if (e.key === 'ArrowLeft') prev();
   });
-  window.MunawarAssessment = { open: open, review: review, edit: edit, start: start, pause: pause, resume: resume, prev: prev, next: next, pdf: pdf, retake: retake, close: close };
+  window.MunawarAssessment = { open: open, review: review, edit: edit, start: start, pause: pause, resume: resume, prev: prev, next: next, pdf: pdf, share: share, linkedin: linkedin, retake: retake, close: close };
   window.closeSkillAssessment = close; window.openSkillAssessment = open;
   // test hook for automated checks
   window.__skillTest = { build: function (l, r, f) { return loadBank().then(function () { return build(l, r, f); }); }, gen: GEN };
